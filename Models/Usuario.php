@@ -27,7 +27,7 @@ class Usuario{
     public function crearUsuario()
     {
         $objAccesoDatos = AccesoDatos::obtenerInstancia();
-        $consulta = $objAccesoDatos->prepararConsulta("INSERT INTO usuarios (NOMBRE, FECHA_CREACION,USER,PASSWORD,SECTOR,TIPO) VALUES (?,?,?,?,?,?)");
+        $consulta = $objAccesoDatos->prepararConsulta("INSERT INTO usuarios (nombre, fechaCreacion,user,password,sector,tipo) VALUES (?,?,?,?,?,?)");
         $fecha = new DateTime("now",new DateTimeZone("America/Argentina/Buenos_Aires"));
         $claveHash = password_hash($this->password, PASSWORD_DEFAULT);
         $consulta->bindParam(1, $this->nombre);
@@ -62,7 +62,7 @@ class Usuario{
     {
         $rtn = false;
         $objAccesoDatos = AccesoDatos::obtenerInstancia();
-        $consulta = $objAccesoDatos->prepararConsulta("SELECT * FROM usuarios WHERE ID_USUARIO = ?");
+        $consulta = $objAccesoDatos->prepararConsulta("SELECT * FROM usuarios WHERE idUsuario = ?");
         $consulta->bindParam(1, $id);
         $consulta->execute();
 
@@ -81,7 +81,7 @@ class Usuario{
     {
         $rtn = false;
         $objAccesoDatos = AccesoDatos::obtenerInstancia();
-        $consulta = $objAccesoDatos->prepararConsulta("SELECT * FROM usuarios WHERE NOMBRE = ?");
+        $consulta = $objAccesoDatos->prepararConsulta("SELECT * FROM usuarios WHERE nombre = ?");
         $consulta->bindParam(1, $nombreUsuario);
         $consulta->execute();
 
@@ -119,7 +119,7 @@ class Usuario{
     public static function modificarUsuario($usuario)
     {
         $objAccesoDato = AccesoDatos::obtenerInstancia();
-        $consulta = $objAccesoDato->prepararConsulta("UPDATE usuarios SET NOMBRE = ?, USER = ?, PASSWORD = ?, SECTOR = ?, TIPO = ?  WHERE ID_USUARIO = ?");
+        $consulta = $objAccesoDato->prepararConsulta("UPDATE usuarios SET nombre = ?, user = ?, password = ?, sector = ?, tipo = ?  WHERE idUsuario = ?");
         $claveHash = password_hash($usuario->password, PASSWORD_DEFAULT);
         $consulta->bindParam(1, $usuario->nombre);
         $consulta->bindParam(2, $usuario->user);
@@ -133,7 +133,7 @@ class Usuario{
     public static function borrarUsuario($usuario)
     {
         $objAccesoDato = AccesoDatos::obtenerInstancia();
-        $consulta = $objAccesoDato->prepararConsulta("UPDATE usuarios SET FECHA_BAJA = ? WHERE ID_USUARIO = ?");
+        $consulta = $objAccesoDato->prepararConsulta("UPDATE usuarios SET fechaFinalizacion = ? WHERE idUsuario = ?");
         $fecha = new DateTime("now",new DateTimeZone("America/Argentina/Buenos_Aires"));
         $fechaString = date_format($fecha, 'Y-m-d H:i:s');
         $consulta->bindParam(1, $fechaString);
