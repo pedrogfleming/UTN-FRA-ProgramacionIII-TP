@@ -40,8 +40,7 @@ class Producto
         $objAccesoDatos = AccesoDatos::obtenerInstancia();
         $consulta = $objAccesoDatos->prepararConsulta("SELECT * FROM productos");
         $consulta->execute();
-        // $consulta->fetchAll(PDO::FETCH_OBJ);
-        // return $consulta->fetchAll(PDO::FETCH_CLASS, 'Producto');
+
         $arrayProductos = array();
         foreach ($consulta->fetchAll(PDO::FETCH_OBJ) as $prototipo) {
             array_push($arrayProductos, Producto::transformarPrototipo($prototipo));

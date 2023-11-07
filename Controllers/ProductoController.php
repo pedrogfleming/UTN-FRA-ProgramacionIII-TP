@@ -27,15 +27,11 @@ class ProductoController extends Producto implements IApiUsable
         $payload = json_encode(array("mensaje" => "Producto creado con exito"));
 
         $response->getBody()->write($payload);
-        return $response
-          ->withHeader('Content-Type', 'application/json');
+        return $response->withHeader('Content-Type', 'application/json');
     }
 
     public function TraerUno($request, $response, $args)
     {
-        // Buscamos producto por nombre
-        // $queryParams = $request->getQueryParams();
-        // $id = $queryParams['idProducto'];
         $id = $args["producto"];
         $producto = Producto::obtenerProducto($id);
         if(!$producto){
@@ -89,7 +85,6 @@ class ProductoController extends Producto implements IApiUsable
 
     public function BorrarUno($request, $response, $args)
     {
-        // $parametros = $request->getParsedBody();
         $id = $args['producto'];
         $producto = Producto::obtenerProducto($id);
         Producto::borrarProducto($producto);

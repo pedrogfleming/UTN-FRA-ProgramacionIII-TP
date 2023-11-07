@@ -7,7 +7,7 @@ include_once MODELS . "/Comanda.php";
 include_once MODELS . "/Producto.php";
 include_once MODELS . "/Usuario.php";
 require_once INTERFACES . '/IApiUsable.php';
-ECHO __DIR__ ;
+
 class PedidoController extends Pedido implements IApiUsable
 {
     public function CargarUno($request, $response, $args)
@@ -23,7 +23,14 @@ class PedidoController extends Pedido implements IApiUsable
         $pedido = new Pedido();
         $pedido->comanda = Comanda::obtenerComanda($idComada);
         $pedido->usuarioAsignado = Usuario::obtenerUsuarioByName($nombreEmpleado);
+
+        $pedido->producto = new Producto();
+        $pedido->producto->titulo = $nombreProducto;
+
+        $pedido->producto->idProducto = $pedido->producto->crearProducto();
+
         $pedido->producto = Producto::obtenerProductoByName($nombreProducto);
+
         $pedido->cantidad = (int)$cantidad;
 
         $pedido->crearPedido();
@@ -36,14 +43,19 @@ class PedidoController extends Pedido implements IApiUsable
 
     public function TraerUno($request, $response, $args)
     {
-        // Buscamos pedido por nombre
-        // $queryParams = $request->getQueryParams();
-        // $id = $queryParams['idPedido'];
         $id = $args["pedido"];
         $pedido = Pedido::obtenerPedido($id);
-        $payload = json_encode($pedido);
+        if(!$pedido){
+            $ret = new stdClass();
+            $ret->err = "no se encontro el pedido con el id solicitado";
+            $err_payload = json_encode($ret);
+            $response->getBody()->write($err_payload);
+        }
+        else{
+            $payload = json_encode($pedido);
+            $response->getBody()->write($payload);
+        }
 
-        $response->getBody()->write($payload);
         return $response->withHeader('Content-Type', 'application/json');
     }
 
@@ -84,7 +96,6 @@ class PedidoController extends Pedido implements IApiUsable
 
     public function BorrarUno($request, $response, $args)
     {
-        // $parametros = $request->getParsedBody();
         $id = $args['pedido'];
         $pedido = Pedido::obtenerPedido($id);
         Pedido::borrarPedido($pedido);

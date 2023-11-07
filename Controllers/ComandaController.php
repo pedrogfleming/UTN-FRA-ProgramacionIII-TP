@@ -32,9 +32,6 @@ class ComandaController extends Comanda implements IApiUsable
 
     public function TraerUno($request, $response, $args)
     {
-        // Buscamos comanda por nombre
-        // $queryParams = $request->getQueryParams();
-        // $id = $queryParams['idComanda'];
         $id = $args["comanda"];
         $comanda = Comanda::obtenerComanda($id);
         $payload = json_encode($comanda);
@@ -76,7 +73,6 @@ class ComandaController extends Comanda implements IApiUsable
 
     public function BorrarUno($request, $response, $args)
     {
-        // $parametros = $request->getParsedBody();
         $id = $args['comanda'];
         $comanda = Comanda::obtenerComanda($id);
         Comanda::borrarComanda($comanda);

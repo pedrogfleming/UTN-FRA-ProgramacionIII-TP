@@ -3,7 +3,6 @@ require_once DB . "/AccesoDatos.php";
 
 class Mesa
 {
-
     public $idMesa;
     public $mozo;
     public $comanda;
@@ -12,7 +11,6 @@ class Mesa
     public $estado;
     public $fechaApertura;
     public $fechaCierre;
-
 
     const ESTADO_PENDIENTE = "pendiente";
     const ESTADO_PREPARACION = "en preparación";

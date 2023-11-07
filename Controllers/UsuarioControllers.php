@@ -31,9 +31,6 @@ class UsuarioController extends Usuario implements IApiUsable
 
     public function TraerUno($request, $response, $args)
     {
-        // Buscamos usuario por nombre
-        // $queryParams = $request->getQueryParams();
-        // $id = $queryParams['idUsuario'];
         $id = $args["usuario"];
         $usuario = Usuario::obtenerUsuario($id);
         if(!$usuario){
@@ -86,7 +83,6 @@ class UsuarioController extends Usuario implements IApiUsable
 
     public function BorrarUno($request, $response, $args)
     {
-        // $parametros = $request->getParsedBody();
         $id = $args['usuario'];
         $usuario = Usuario::obtenerUsuario($id);
         Usuario::borrarUsuario($usuario);

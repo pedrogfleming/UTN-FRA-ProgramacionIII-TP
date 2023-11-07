@@ -1,8 +1,8 @@
 <?php
 
-include_once "./Models/Pedido.php";
-include_once "./Models/Mesa.php";
-include_once "./Models/Usuario.php";
+include_once "Pedido.php";
+include_once "Mesa.php";
+include_once "Usuario.php";
 
 
 class Comanda{
@@ -20,7 +20,7 @@ class Comanda{
         $fechaString = date_format($this->fechaComanda, 'Y-m-d H:i:s');
 
         $consulta->bindParam(1, $this->mesa->_idMesa);
-        $consulta->bindParam(2, $this->mozo->_idUsuario);
+        $consulta->bindParam(2, $this->mozo->idUsuario);
         $consulta->bindParam(3, $fechaString);
 
         $consulta->execute();
@@ -33,8 +33,6 @@ class Comanda{
         $objAccesoDatos = AccesoDatos::obtenerInstancia();
         $consulta = $objAccesoDatos->prepararConsulta("SELECT * FROM comandas");
         $consulta->execute();
-        // $consulta->fetchAll(PDO::FETCH_OBJ);
-        // return $consulta->fetchAll(PDO::FETCH_CLASS, 'Comanda');
         $arrayComandas = array();
         foreach($consulta->fetchAll(PDO::FETCH_OBJ) as $prototipo)
         {
@@ -53,8 +51,6 @@ class Comanda{
         $consulta->bindParam(1, $id);
         $consulta->execute();
 
-        // return $consulta->fetchObject('Comanda');
-        // return $consulta->fetch(PDO::FETCH_OBJ);
         $prototipeObject = $consulta->fetch(PDO::FETCH_OBJ);
         if($prototipeObject != false)
         {
@@ -83,7 +79,7 @@ class Comanda{
         $consulta = $objAccesoDato->prepararConsulta("UPDATE comandas SET id_mozo = ?, id_mesa = ? WHERE id_comanda = ?");
 
         
-        $consulta->bindParam(1, $comanda->mozo->_idUsuario);
+        $consulta->bindParam(1, $comanda->mozo->idUsuario);
         $consulta->bindParam(2, $comanda->mesa->_idMesa);
         $consulta->bindParam(3, $comanda->id_comanda);
 

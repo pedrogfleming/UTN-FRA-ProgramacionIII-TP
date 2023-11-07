@@ -46,8 +46,7 @@ class Usuario{
         $objAccesoDatos = AccesoDatos::obtenerInstancia();
         $consulta = $objAccesoDatos->prepararConsulta("SELECT * FROM usuarios");
         $consulta->execute();
-        // $consulta->fetchAll(PDO::FETCH_OBJ);
-        // return $consulta->fetchAll(PDO::FETCH_CLASS, 'Usuario');
+
         $arrayUsuarios = array();
         foreach($consulta->fetchAll(PDO::FETCH_OBJ) as $prototipo)
         {
@@ -66,8 +65,6 @@ class Usuario{
         $consulta->bindParam(1, $id);
         $consulta->execute();
 
-        // return $consulta->fetchObject('Usuario');
-        // return $consulta->fetch(PDO::FETCH_OBJ);
         $prototipeObject = $consulta->fetch(PDO::FETCH_OBJ);
         if($prototipeObject != false)
         {
@@ -85,8 +82,6 @@ class Usuario{
         $consulta->bindParam(1, $nombreUsuario);
         $consulta->execute();
 
-        // return $consulta->fetchObject('Usuario');
-        // return $consulta->fetch(PDO::FETCH_OBJ);
         $prototipeObject = $consulta->fetch(PDO::FETCH_OBJ);
         if($prototipeObject != false)
         {
