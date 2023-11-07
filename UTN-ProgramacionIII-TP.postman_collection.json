@@ -251,7 +251,7 @@
 									"formdata": [
 										{
 											"key": "nombre",
-											"value": "Juan",
+											"value": "Oscar",
 											"type": "text"
 										},
 										{
@@ -261,17 +261,17 @@
 										},
 										{
 											"key": "sector",
-											"value": "cerveza",
+											"value": "barra",
 											"type": "text"
 										},
 										{
 											"key": "tipo",
-											"value": "cervecero",
+											"value": "mozo",
 											"type": "text"
 										},
 										{
 											"key": "password",
-											"value": "juan123",
+											"value": "oscar123",
 											"type": "text"
 										}
 									]
@@ -1109,7 +1109,7 @@
 					]
 				},
 				{
-					"name": "ObtenerPedido Copy",
+					"name": "CargarrPedido",
 					"request": {
 						"method": "POST",
 						"header": [],
@@ -1128,7 +1128,7 @@
 								},
 								{
 									"key": "nombreProducto",
-									"value": "Milanesa con papa fristas",
+									"value": "Gancia",
 									"type": "text"
 								},
 								{
@@ -1153,12 +1153,37 @@
 					},
 					"response": [
 						{
-							"name": "ObtenerPedidos Ok",
+							"name": "ObtenerPedido Ok",
 							"originalRequest": {
-								"method": "GET",
+								"method": "POST",
 								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "idComanda",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "nombreEmpleado",
+											"value": "Juan",
+											"type": "text"
+										},
+										{
+											"key": "nombreProducto",
+											"value": "Gancia",
+											"type": "text"
+										},
+										{
+											"key": "cantidad",
+											"value": "1",
+											"type": "text"
+										}
+									]
+								},
 								"url": {
-									"raw": "{{protocolo}}://{{server}}:{{puerto}}/{{app}}/{{pedidos}}/2",
+									"raw": "{{protocolo}}://{{server}}:{{puerto}}/{{app}}/{{pedidos}}",
 									"protocol": "{{protocolo}}",
 									"host": [
 										"{{server}}"
@@ -1166,8 +1191,7 @@
 									"port": "{{puerto}}",
 									"path": [
 										"{{app}}",
-										"{{pedidos}}",
-										"2"
+										"{{pedidos}}"
 									]
 								}
 							},
@@ -1181,7 +1205,7 @@
 								},
 								{
 									"key": "Date",
-									"value": "Tue, 07 Nov 2023 19:33:04 GMT"
+									"value": "Tue, 07 Nov 2023 23:22:55 GMT"
 								},
 								{
 									"key": "Connection",
@@ -1197,7 +1221,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "{\n    \"idPedido\": 2,\n    \"comanda\": 2,\n    \"usuarioAsignado\": 2,\n    \"producto\": 2,\n    \"cantidad\": 3,\n    \"fechaEstimadaDeFinalizacion\": {\n        \"date\": \"2023-11-07 09:15:00.000000\",\n        \"timezone_type\": 3,\n        \"timezone\": \"America/Argentina/Buenos_Aires\"\n    },\n    \"fechaFinalizacion\": null,\n    \"sector\": \"cerveza\",\n    \"estado\": \"pendiente\"\n}"
+							"body": "{\n    \"mensaje\": \"Pedido creado con exito\"\n}"
 						}
 					]
 				}

@@ -14,25 +14,20 @@ class PedidoController implements IApiUsable
     {
         $parametros = $request->getParsedBody();
 
-        $idComada = $parametros['idComanda'];
+        $idComanda = $parametros['idComanda'];
         $nombreEmpleado = $parametros['nombreEmpleado'];
         $nombreProducto = $parametros['nombreProducto'];
         $cantidad = $parametros['cantidad'];
 
         // Creamos el pedido
         $pedido = new Pedido();
-        $pedido->comanda = Comanda::obtenerComanda($idComada);
         $pedido->usuarioAsignado = Usuario::obtenerUsuarioByName($nombreEmpleado);
-
-        $pedido->producto = new Producto();
-        $pedido->producto->titulo = $nombreProducto;
         
-        $pedido->producto->idProducto = $pedido->producto->crearProducto();
-
         $pedido->producto = Producto::obtenerProductoByName($nombreProducto);
-
+        
+        $pedido->comanda = Comanda::obtenerComanda($idComanda);
+        
         $pedido->cantidad = (int)$cantidad;
-
         $pedido->crearPedido();
 
         $payload = json_encode(array("mensaje" => "Pedido creado con exito"));
