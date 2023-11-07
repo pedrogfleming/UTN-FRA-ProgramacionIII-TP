@@ -36,9 +36,16 @@ class UsuarioController extends Usuario implements IApiUsable
         // $id = $queryParams['idUsuario'];
         $id = $args["usuario"];
         $usuario = Usuario::obtenerUsuario($id);
-        $payload = json_encode($usuario);
-
-        $response->getBody()->write($payload);
+        if(!$usuario){
+            $ret = new stdClass();
+            $ret->err = "no se encontro el usuario con el id solicitado";
+            $err_payload = json_encode($ret);
+            $response->getBody()->write($err_payload);
+        }
+        else{
+            $payload = json_encode($usuario);
+            $response->getBody()->write($payload);
+        }
         return $response->withHeader('Content-Type', 'application/json');
     }
 
