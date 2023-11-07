@@ -2,7 +2,7 @@
 require_once MODELS . "/Usuario.php";
 require_once INTERFACES . '/IApiUsable.php';
 
-class UsuarioController extends Usuario implements IApiUsable
+class UsuarioController implements IApiUsable
 {
     public function CargarUno($request, $response, $args)
     {

@@ -1,0 +1,1274 @@
+{
+	"info": {
+		"_postman_id": "640bb705-10c4-4edf-9e41-efcdcbf27ce1",
+		"name": "UTN-ProgramacionIII-TP",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20134243"
+	},
+	"item": [
+		{
+			"name": "Usuarios",
+			"item": [
+				{
+					"name": "ObtenerUsuarios",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{protocolo}}://{{server}}:{{puerto}}/{{app}}/{{usuarios}}",
+							"protocol": "{{protocolo}}",
+							"host": [
+								"{{server}}"
+							],
+							"port": "{{puerto}}",
+							"path": [
+								"{{app}}",
+								"{{usuarios}}"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "ObtenerUsuarios Ok",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{protocolo}}://{{server}}:{{puerto}}/{{app}}/{{usuarios}}",
+									"protocol": "{{protocolo}}",
+									"host": [
+										"{{server}}"
+									],
+									"port": "{{puerto}}",
+									"path": [
+										"{{app}}",
+										"{{usuarios}}"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:666"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 07 Nov 2023 03:28:56 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.4"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"listaUsuario\": [\n        {\n            \"idUsuario\": 1,\n            \"nombre\": \"Usuario1\",\n            \"fechaCreacion\": {\n                \"date\": \"2023-11-06 00:00:00.000000\",\n                \"timezone_type\": 3,\n                \"timezone\": \"America/Argentina/Buenos_Aires\"\n            },\n            \"fechaFinalizacion\": {\n                \"date\": \"2023-11-12 00:00:00.000000\",\n                \"timezone_type\": 3,\n                \"timezone\": \"America/Argentina/Buenos_Aires\"\n            },\n            \"user\": \"user1\",\n            \"password\": \"password1\",\n            \"sector\": \"Sector1\",\n            \"tipo\": \"Tipo1\"\n        },\n        {\n            \"idUsuario\": 2,\n            \"nombre\": \"Usuario2\",\n            \"fechaCreacion\": {\n                \"date\": \"2023-11-07 00:00:00.000000\",\n                \"timezone_type\": 3,\n                \"timezone\": \"America/Argentina/Buenos_Aires\"\n            },\n            \"fechaFinalizacion\": {\n                \"date\": \"2023-11-13 00:00:00.000000\",\n                \"timezone_type\": 3,\n                \"timezone\": \"America/Argentina/Buenos_Aires\"\n            },\n            \"user\": \"user2\",\n            \"password\": \"password2\",\n            \"sector\": \"Sector2\",\n            \"tipo\": \"Tipo2\"\n        },\n        {\n            \"idUsuario\": 3,\n            \"nombre\": \"Usuario3\",\n            \"fechaCreacion\": {\n                \"date\": \"2023-11-08 00:00:00.000000\",\n                \"timezone_type\": 3,\n                \"timezone\": \"America/Argentina/Buenos_Aires\"\n            },\n            \"fechaFinalizacion\": {\n                \"date\": \"2023-11-14 00:00:00.000000\",\n                \"timezone_type\": 3,\n                \"timezone\": \"America/Argentina/Buenos_Aires\"\n            },\n            \"user\": \"user3\",\n            \"password\": \"password3\",\n            \"sector\": \"Sector3\",\n            \"tipo\": \"Tipo3\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "ObtenerUsuario",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{protocolo}}://{{server}}:{{puerto}}/{{app}}/{{usuarios}}/999",
+							"protocol": "{{protocolo}}",
+							"host": [
+								"{{server}}"
+							],
+							"port": "{{puerto}}",
+							"path": [
+								"{{app}}",
+								"{{usuarios}}",
+								"999"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "ObtenerUsuario Ok",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{protocolo}}://{{server}}:{{puerto}}/{{app}}/{{usuarios}}/1",
+									"protocol": "{{protocolo}}",
+									"host": [
+										"{{server}}"
+									],
+									"port": "{{puerto}}",
+									"path": [
+										"{{app}}",
+										"{{usuarios}}",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:666"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 07 Nov 2023 04:04:51 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.4"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"idUsuario\": 1,\n    \"nombre\": \"Usuario1\",\n    \"fechaCreacion\": {\n        \"date\": \"2023-11-06 00:00:00.000000\",\n        \"timezone_type\": 3,\n        \"timezone\": \"America/Argentina/Buenos_Aires\"\n    },\n    \"fechaFinalizacion\": {\n        \"date\": \"2023-11-12 00:00:00.000000\",\n        \"timezone_type\": 3,\n        \"timezone\": \"America/Argentina/Buenos_Aires\"\n    },\n    \"user\": \"user1\",\n    \"password\": \"password1\",\n    \"sector\": \"Sector1\",\n    \"tipo\": \"Tipo1\"\n}"
+						},
+						{
+							"name": "ObtenerUsuario Error: No encontrado",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{protocolo}}://{{server}}:{{puerto}}/{{app}}/{{usuarios}}/999",
+									"protocol": "{{protocolo}}",
+									"host": [
+										"{{server}}"
+									],
+									"port": "{{puerto}}",
+									"path": [
+										"{{app}}",
+										"{{usuarios}}",
+										"999"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:666"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 07 Nov 2023 04:20:24 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.4"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"err\": \"no se encontro el usuario con el id solicitado\"\n}"
+						}
+					]
+				},
+				{
+					"name": "CargarUsuario",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "nombre",
+									"value": "Juan",
+									"type": "text"
+								},
+								{
+									"key": "user",
+									"value": "Dominguez",
+									"type": "text"
+								},
+								{
+									"key": "sector",
+									"value": "cerveza",
+									"type": "text"
+								},
+								{
+									"key": "tipo",
+									"value": "cervecero",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "juan123",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{protocolo}}://{{server}}:{{puerto}}/{{app}}/{{usuarios}}",
+							"protocol": "{{protocolo}}",
+							"host": [
+								"{{server}}"
+							],
+							"port": "{{puerto}}",
+							"path": [
+								"{{app}}",
+								"{{usuarios}}"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "CargarUsuario Ok",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "nombre",
+											"value": "Juan",
+											"type": "text"
+										},
+										{
+											"key": "user",
+											"value": "Dominguez",
+											"type": "text"
+										},
+										{
+											"key": "sector",
+											"value": "cerveza",
+											"type": "text"
+										},
+										{
+											"key": "tipo",
+											"value": "cervecero",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "juan123",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{protocolo}}://{{server}}:{{puerto}}/{{app}}/{{usuarios}}",
+									"protocol": "{{protocolo}}",
+									"host": [
+										"{{server}}"
+									],
+									"port": "{{puerto}}",
+									"path": [
+										"{{app}}",
+										"{{usuarios}}"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:666"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 07 Nov 2023 04:23:31 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.4"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"mensaje\": \"Usuario creado con exito\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Producto",
+			"item": [
+				{
+					"name": "ObtenerProductos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{protocolo}}://{{server}}:{{puerto}}/{{app}}/{{productos}}",
+							"protocol": "{{protocolo}}",
+							"host": [
+								"{{server}}"
+							],
+							"port": "{{puerto}}",
+							"path": [
+								"{{app}}",
+								"{{productos}}"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "ObtenerProductos Ok",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{protocolo}}://{{server}}:{{puerto}}/{{app}}/{{productos}}",
+									"protocol": "{{protocolo}}",
+									"host": [
+										"{{server}}"
+									],
+									"port": "{{puerto}}",
+									"path": [
+										"{{app}}",
+										"{{productos}}"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:666"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 07 Nov 2023 04:40:07 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.4"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"listaProducto\": [\n        {\n            \"idProducto\": 1,\n            \"titulo\": \"Producto1\",\n            \"tiempoPreparacion\": 30,\n            \"precio\": \"19.99\",\n            \"estado\": \"Activo\",\n            \"sector\": \"Sector1\",\n            \"fechaCreacion\": {\n                \"date\": \"2023-11-07 01:40:02.000000\",\n                \"timezone_type\": 3,\n                \"timezone\": \"America/Argentina/Buenos_Aires\"\n            }\n        },\n        {\n            \"idProducto\": 2,\n            \"titulo\": \"Producto2\",\n            \"tiempoPreparacion\": 45,\n            \"precio\": \"29.99\",\n            \"estado\": \"Activo\",\n            \"sector\": \"Sector2\",\n            \"fechaCreacion\": {\n                \"date\": \"2023-11-07 01:40:02.000000\",\n                \"timezone_type\": 3,\n                \"timezone\": \"America/Argentina/Buenos_Aires\"\n            }\n        },\n        {\n            \"idProducto\": 3,\n            \"titulo\": \"Producto3\",\n            \"tiempoPreparacion\": 60,\n            \"precio\": \"39.99\",\n            \"estado\": \"Inactivo\",\n            \"sector\": \"Sector3\",\n            \"fechaCreacion\": {\n                \"date\": \"2023-11-07 01:40:02.000000\",\n                \"timezone_type\": 3,\n                \"timezone\": \"America/Argentina/Buenos_Aires\"\n            }\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "ObtenerProducto",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{protocolo}}://{{server}}:{{puerto}}/{{app}}/{{productos}}/999",
+							"protocol": "{{protocolo}}",
+							"host": [
+								"{{server}}"
+							],
+							"port": "{{puerto}}",
+							"path": [
+								"{{app}}",
+								"{{productos}}",
+								"999"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "ObtenerProductos Ok",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{protocolo}}://{{server}}:{{puerto}}/{{app}}/{{productos}}/2",
+									"protocol": "{{protocolo}}",
+									"host": [
+										"{{server}}"
+									],
+									"port": "{{puerto}}",
+									"path": [
+										"{{app}}",
+										"{{productos}}",
+										"2"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:666"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 07 Nov 2023 04:41:22 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.4"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"idProducto\": 2,\n    \"titulo\": \"Producto2\",\n    \"tiempoPreparacion\": 45,\n    \"precio\": \"29.99\",\n    \"estado\": \"Activo\",\n    \"sector\": \"Sector2\",\n    \"fechaCreacion\": {\n        \"date\": \"2023-11-07 01:40:02.000000\",\n        \"timezone_type\": 3,\n        \"timezone\": \"America/Argentina/Buenos_Aires\"\n    }\n}"
+						},
+						{
+							"name": "ObtenerProductos Error: No encontrado",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{protocolo}}://{{server}}:{{puerto}}/{{app}}/{{productos}}/999",
+									"protocol": "{{protocolo}}",
+									"host": [
+										"{{server}}"
+									],
+									"port": "{{puerto}}",
+									"path": [
+										"{{app}}",
+										"{{productos}}",
+										"999"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:666"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 07 Nov 2023 04:42:57 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.4"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"err\": \"no se encontro el producto con el id solicitado\"\n}"
+						}
+					]
+				},
+				{
+					"name": "CargarProducto",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "titulo",
+									"value": "Gancia",
+									"type": "text"
+								},
+								{
+									"key": "tiempoPreparacion",
+									"value": "10",
+									"type": "text"
+								},
+								{
+									"key": "sector",
+									"value": "bar",
+									"type": "text"
+								},
+								{
+									"key": "estado",
+									"value": "activo",
+									"type": "text"
+								},
+								{
+									"key": "precio",
+									"value": "170.453",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{protocolo}}://{{server}}:{{puerto}}/{{app}}/{{productos}}",
+							"protocol": "{{protocolo}}",
+							"host": [
+								"{{server}}"
+							],
+							"port": "{{puerto}}",
+							"path": [
+								"{{app}}",
+								"{{productos}}"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "CargarProducto Ok",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "titulo",
+											"value": "Gancia",
+											"type": "text"
+										},
+										{
+											"key": "tiempoPreparacion",
+											"value": "10",
+											"type": "text"
+										},
+										{
+											"key": "sector",
+											"value": "bar",
+											"type": "text"
+										},
+										{
+											"key": "estado",
+											"value": "activo",
+											"type": "text"
+										},
+										{
+											"key": "precio",
+											"value": "170.453",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{protocolo}}://{{server}}:{{puerto}}/{{app}}/{{productos}}",
+									"protocol": "{{protocolo}}",
+									"host": [
+										"{{server}}"
+									],
+									"port": "{{puerto}}",
+									"path": [
+										"{{app}}",
+										"{{productos}}"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:666"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 07 Nov 2023 04:44:41 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.4"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"mensaje\": \"Producto creado con exito\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Mesa",
+			"item": [
+				{
+					"name": "ObtenerMesas",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{protocolo}}://{{server}}:{{puerto}}/{{app}}/{{mesas}}",
+							"protocol": "{{protocolo}}",
+							"host": [
+								"{{server}}"
+							],
+							"port": "{{puerto}}",
+							"path": [
+								"{{app}}",
+								"{{mesas}}"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "ObtenerProductos Ok",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{protocolo}}://{{server}}:{{puerto}}/{{app}}/{{mesas}}",
+									"protocol": "{{protocolo}}",
+									"host": [
+										"{{server}}"
+									],
+									"port": "{{puerto}}",
+									"path": [
+										"{{app}}",
+										"{{mesas}}"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:666"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 07 Nov 2023 05:24:07 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.4"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"listaMesas\": [\n        {\n            \"idMesa\": 1,\n            \"mozo\": \"Mozo1\",\n            \"comanda\": 1,\n            \"importeTotal\": \"50.00\",\n            \"nombreCliente\": \"Cliente1\",\n            \"estado\": \"pendiente\",\n            \"fechaApertura\": {\n                \"date\": \"2023-11-07 02:16:50.000000\",\n                \"timezone_type\": 3,\n                \"timezone\": \"America/Argentina/Buenos_Aires\"\n            },\n            \"fechaCierre\": null\n        },\n        {\n            \"idMesa\": 2,\n            \"mozo\": \"Mozo2\",\n            \"comanda\": 2,\n            \"importeTotal\": \"75.50\",\n            \"nombreCliente\": \"Cliente2\",\n            \"estado\": \"en preparación\",\n            \"fechaApertura\": {\n                \"date\": \"2023-11-07 02:16:50.000000\",\n                \"timezone_type\": 3,\n                \"timezone\": \"America/Argentina/Buenos_Aires\"\n            },\n            \"fechaCierre\": null\n        },\n        {\n            \"idMesa\": 3,\n            \"mozo\": \"Mozo3\",\n            \"comanda\": 3,\n            \"importeTotal\": \"100.00\",\n            \"nombreCliente\": \"Cliente3\",\n            \"estado\": \"listo para servir\",\n            \"fechaApertura\": {\n                \"date\": \"2023-11-07 02:16:50.000000\",\n                \"timezone_type\": 3,\n                \"timezone\": \"America/Argentina/Buenos_Aires\"\n            },\n            \"fechaCierre\": null\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "ObtenerMesa",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{protocolo}}://{{server}}:{{puerto}}/{{app}}/{{mesas}}/999",
+							"protocol": "{{protocolo}}",
+							"host": [
+								"{{server}}"
+							],
+							"port": "{{puerto}}",
+							"path": [
+								"{{app}}",
+								"{{mesas}}",
+								"999"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "ObtenerMesas Ok",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{protocolo}}://{{server}}:{{puerto}}/{{app}}/{{mesas}}/2",
+									"protocol": "{{protocolo}}",
+									"host": [
+										"{{server}}"
+									],
+									"port": "{{puerto}}",
+									"path": [
+										"{{app}}",
+										"{{mesas}}",
+										"2"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:666"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 07 Nov 2023 05:25:07 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.4"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"idMesa\": 2,\n    \"mozo\": \"Mozo2\",\n    \"comanda\": 2,\n    \"importeTotal\": \"75.50\",\n    \"nombreCliente\": \"Cliente2\",\n    \"estado\": \"en preparación\",\n    \"fechaApertura\": {\n        \"date\": \"2023-11-07 02:16:50.000000\",\n        \"timezone_type\": 3,\n        \"timezone\": \"America/Argentina/Buenos_Aires\"\n    },\n    \"fechaCierre\": null\n}"
+						},
+						{
+							"name": "ObtenerMesas Error: No encontrada",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{protocolo}}://{{server}}:{{puerto}}/{{app}}/{{mesas}}/999",
+									"protocol": "{{protocolo}}",
+									"host": [
+										"{{server}}"
+									],
+									"port": "{{puerto}}",
+									"path": [
+										"{{app}}",
+										"{{mesas}}",
+										"999"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:666"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 07 Nov 2023 05:28:04 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.4"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"err\": \"No se encontró la mesa con el ID solicitado\"\n}"
+						}
+					]
+				},
+				{
+					"name": "CargarMesa",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "mozo",
+									"value": "Mozo1",
+									"type": "text"
+								},
+								{
+									"key": "comanda",
+									"value": "9",
+									"type": "text"
+								},
+								{
+									"key": "importeTotal",
+									"value": "700",
+									"type": "text"
+								},
+								{
+									"key": "nombreCliente",
+									"value": "Pepe Alvarez",
+									"type": "text"
+								},
+								{
+									"key": "estado",
+									"value": "pendiente",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{protocolo}}://{{server}}:{{puerto}}/{{app}}/{{mesas}}",
+							"protocol": "{{protocolo}}",
+							"host": [
+								"{{server}}"
+							],
+							"port": "{{puerto}}",
+							"path": [
+								"{{app}}",
+								"{{mesas}}"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "ObtenerMesas Ok",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{protocolo}}://{{server}}:{{puerto}}/{{app}}/{{mesas}}/2",
+									"protocol": "{{protocolo}}",
+									"host": [
+										"{{server}}"
+									],
+									"port": "{{puerto}}",
+									"path": [
+										"{{app}}",
+										"{{mesas}}",
+										"2"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:666"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 07 Nov 2023 05:25:07 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.4"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"idMesa\": 2,\n    \"mozo\": \"Mozo2\",\n    \"comanda\": 2,\n    \"importeTotal\": \"75.50\",\n    \"nombreCliente\": \"Cliente2\",\n    \"estado\": \"en preparación\",\n    \"fechaApertura\": {\n        \"date\": \"2023-11-07 02:16:50.000000\",\n        \"timezone_type\": 3,\n        \"timezone\": \"America/Argentina/Buenos_Aires\"\n    },\n    \"fechaCierre\": null\n}"
+						},
+						{
+							"name": "ObtenerMesas Error: No encontrada",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{protocolo}}://{{server}}:{{puerto}}/{{app}}/{{mesas}}/999",
+									"protocol": "{{protocolo}}",
+									"host": [
+										"{{server}}"
+									],
+									"port": "{{puerto}}",
+									"path": [
+										"{{app}}",
+										"{{mesas}}",
+										"999"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:666"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 07 Nov 2023 05:28:04 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.4"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"err\": \"No se encontró la mesa con el ID solicitado\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Pedido",
+			"item": [
+				{
+					"name": "ObtenerPedidos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{protocolo}}://{{server}}:{{puerto}}/{{app}}/{{pedidos}}",
+							"protocol": "{{protocolo}}",
+							"host": [
+								"{{server}}"
+							],
+							"port": "{{puerto}}",
+							"path": [
+								"{{app}}",
+								"{{pedidos}}"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "ObtenerPedidos Ok",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{protocolo}}://{{server}}:{{puerto}}/{{app}}/{{pedidos}}",
+									"protocol": "{{protocolo}}",
+									"host": [
+										"{{server}}"
+									],
+									"port": "{{puerto}}",
+									"path": [
+										"{{app}}",
+										"{{pedidos}}"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:666"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 07 Nov 2023 19:32:23 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.4"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"listaPedido\": [\n        {\n            \"idPedido\": 1,\n            \"comanda\": 1,\n            \"usuarioAsignado\": 1,\n            \"producto\": 1,\n            \"cantidad\": 2,\n            \"fechaEstimadaDeFinalizacion\": {\n                \"date\": \"2023-11-06 08:30:00.000000\",\n                \"timezone_type\": 3,\n                \"timezone\": \"America/Argentina/Buenos_Aires\"\n            },\n            \"fechaFinalizacion\": null,\n            \"sector\": \"cerveza\",\n            \"estado\": \"pendiente\"\n        },\n        {\n            \"idPedido\": 2,\n            \"comanda\": 2,\n            \"usuarioAsignado\": 2,\n            \"producto\": 2,\n            \"cantidad\": 3,\n            \"fechaEstimadaDeFinalizacion\": {\n                \"date\": \"2023-11-07 09:15:00.000000\",\n                \"timezone_type\": 3,\n                \"timezone\": \"America/Argentina/Buenos_Aires\"\n            },\n            \"fechaFinalizacion\": null,\n            \"sector\": \"cerveza\",\n            \"estado\": \"pendiente\"\n        },\n        {\n            \"idPedido\": 3,\n            \"comanda\": 3,\n            \"usuarioAsignado\": 3,\n            \"producto\": 3,\n            \"cantidad\": 1,\n            \"fechaEstimadaDeFinalizacion\": {\n                \"date\": \"2023-11-08 10:00:00.000000\",\n                \"timezone_type\": 3,\n                \"timezone\": \"America/Argentina/Buenos_Aires\"\n            },\n            \"fechaFinalizacion\": null,\n            \"sector\": \"cerveza\",\n            \"estado\": \"pendiente\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "ObtenerPedido",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{protocolo}}://{{server}}:{{puerto}}/{{app}}/{{pedidos}}/999",
+							"protocol": "{{protocolo}}",
+							"host": [
+								"{{server}}"
+							],
+							"port": "{{puerto}}",
+							"path": [
+								"{{app}}",
+								"{{pedidos}}",
+								"999"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "ObtenerPedidos Ok",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{protocolo}}://{{server}}:{{puerto}}/{{app}}/{{pedidos}}/2",
+									"protocol": "{{protocolo}}",
+									"host": [
+										"{{server}}"
+									],
+									"port": "{{puerto}}",
+									"path": [
+										"{{app}}",
+										"{{pedidos}}",
+										"2"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:666"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 07 Nov 2023 19:33:04 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.4"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"idPedido\": 2,\n    \"comanda\": 2,\n    \"usuarioAsignado\": 2,\n    \"producto\": 2,\n    \"cantidad\": 3,\n    \"fechaEstimadaDeFinalizacion\": {\n        \"date\": \"2023-11-07 09:15:00.000000\",\n        \"timezone_type\": 3,\n        \"timezone\": \"America/Argentina/Buenos_Aires\"\n    },\n    \"fechaFinalizacion\": null,\n    \"sector\": \"cerveza\",\n    \"estado\": \"pendiente\"\n}"
+						}
+					]
+				},
+				{
+					"name": "ObtenerPedido Copy",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "idComanda",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "nombreEmpleado",
+									"value": "Juan",
+									"type": "text"
+								},
+								{
+									"key": "nombreProducto",
+									"value": "Milanesa con papa fristas",
+									"type": "text"
+								},
+								{
+									"key": "cantidad",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{protocolo}}://{{server}}:{{puerto}}/{{app}}/{{pedidos}}",
+							"protocol": "{{protocolo}}",
+							"host": [
+								"{{server}}"
+							],
+							"port": "{{puerto}}",
+							"path": [
+								"{{app}}",
+								"{{pedidos}}"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "ObtenerPedidos Ok",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{protocolo}}://{{server}}:{{puerto}}/{{app}}/{{pedidos}}/2",
+									"protocol": "{{protocolo}}",
+									"host": [
+										"{{server}}"
+									],
+									"port": "{{puerto}}",
+									"path": [
+										"{{app}}",
+										"{{pedidos}}",
+										"2"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:666"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 07 Nov 2023 19:33:04 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.4"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"idPedido\": 2,\n    \"comanda\": 2,\n    \"usuarioAsignado\": 2,\n    \"producto\": 2,\n    \"cantidad\": 3,\n    \"fechaEstimadaDeFinalizacion\": {\n        \"date\": \"2023-11-07 09:15:00.000000\",\n        \"timezone_type\": 3,\n        \"timezone\": \"America/Argentina/Buenos_Aires\"\n    },\n    \"fechaFinalizacion\": null,\n    \"sector\": \"cerveza\",\n    \"estado\": \"pendiente\"\n}"
+						}
+					]
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "controller",
+			"value": "usuarios",
+			"type": "string"
+		},
+		{
+			"key": "server",
+			"value": "localhost",
+			"type": "string"
+		},
+		{
+			"key": "protocolo",
+			"value": "http",
+			"type": "string"
+		},
+		{
+			"key": "app",
+			"value": "app",
+			"type": "string"
+		},
+		{
+			"key": "puerto",
+			"value": "666",
+			"type": "string"
+		},
+		{
+			"key": "usuarios",
+			"value": "usuarios",
+			"type": "string"
+		},
+		{
+			"key": "productos",
+			"value": "productos",
+			"type": "string"
+		},
+		{
+			"key": "mesas",
+			"value": "mesas",
+			"type": "string"
+		},
+		{
+			"key": "pedidos",
+			"value": "pedidos",
+			"type": "string"
+		}
+	]
+}

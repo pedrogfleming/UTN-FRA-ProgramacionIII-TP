@@ -8,7 +8,7 @@ include_once MODELS . "/Producto.php";
 include_once MODELS . "/Usuario.php";
 require_once INTERFACES . '/IApiUsable.php';
 
-class PedidoController extends Pedido implements IApiUsable
+class PedidoController implements IApiUsable
 {
     public function CargarUno($request, $response, $args)
     {
@@ -26,7 +26,7 @@ class PedidoController extends Pedido implements IApiUsable
 
         $pedido->producto = new Producto();
         $pedido->producto->titulo = $nombreProducto;
-
+        
         $pedido->producto->idProducto = $pedido->producto->crearProducto();
 
         $pedido->producto = Producto::obtenerProductoByName($nombreProducto);
