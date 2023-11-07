@@ -57,8 +57,7 @@ class ProductoController extends Producto implements IApiUsable
         $lista = Producto::obtenerTodos();
         $payload = json_encode(array("listaProducto" => $lista));
         $response->getBody()->write($payload);
-        return $response
-          ->withHeader('Content-Type', 'application/json');
+        return $response->withHeader('Content-Type', 'application/json');
     }
     
     public function ModificarUno($request, $response, $args)
@@ -85,8 +84,7 @@ class ProductoController extends Producto implements IApiUsable
         $payload = json_encode(array("mensaje" => "Producto modificado con exito"));
 
         $response->getBody()->write($payload);
-        return $response
-          ->withHeader('Content-Type', 'application/json');
+        return $response->withHeader('Content-Type', 'application/json');
     }
 
     public function BorrarUno($request, $response, $args)
@@ -99,8 +97,7 @@ class ProductoController extends Producto implements IApiUsable
         $payload = json_encode(array("mensaje" => "Producto borrado con exito"));
 
         $response->getBody()->write($payload);
-        return $response
-          ->withHeader('Content-Type', 'application/json');
+        return $response->withHeader('Content-Type', 'application/json');
     }
 }
 

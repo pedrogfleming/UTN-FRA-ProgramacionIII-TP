@@ -16,7 +16,8 @@ class AccesoDatos
             die();
         }
     }
-    private function CrearDb(){
+    private function CrearDb()
+    {
         $dbnombre = "db_utn_tp_comanda";
         $dbusername = "root";
         $dbpassword = "";
@@ -54,6 +55,21 @@ class AccesoDatos
         SQL;
 
         $this->objetoPDO->exec($crear_tabla_productos);
+
+        $crear_tabla_mesas = <<<SQL
+        CREATE TABLE IF NOT EXISTS Mesas (
+            idMesa INT AUTO_INCREMENT PRIMARY KEY,
+            mozo VARCHAR(255) NOT NULL,
+            comanda INT NOT NULL,
+            importeTotal DECIMAL(10, 2) NOT NULL,
+            nombreCliente VARCHAR(255) NOT NULL,
+            estado ENUM('pendiente', 'en preparación', 'listo para servir', 'cancelado') NOT NULL,
+            fechaApertura DATETIME NOT NULL,
+            fechaCierre DATETIME
+        )
+        SQL;
+
+        $this->objetoPDO->exec($crear_tabla_mesas);
     }
 
     public static function obtenerInstancia()

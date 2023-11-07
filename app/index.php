@@ -12,6 +12,7 @@ require_once "../globals.php";
 require __DIR__ . '/../vendor/autoload.php';
 require_once CONTROLLERS . '/UsuarioControllers.php';
 require_once CONTROLLERS . '/ProductoController.php';
+require_once CONTROLLERS . '/MesaController.php';
 // Instantiate App
 $app = AppFactory::create();
 $app->setBasePath('/app');
@@ -23,29 +24,6 @@ $app->addErrorMiddleware(true, true, true);
 $app->addBodyParsingMiddleware();
 
 // Routes
-$app->get('[/]', function (Request $request, Response $response) {
-    $payload = json_encode(array('method' => 'GET', 'msg' => "Bienvenido a SlimFramework 2023"));
-    $response->getBody()->write($payload);
-    return $response->withHeader('Content-Type', 'application/json');
-});
-
-$app->get('/test', function (Request $request, Response $response) {
-    $payload = json_encode(array('method' => 'GET', 'msg' => "Bienvenido a SlimFramework 2023"));
-    $response->getBody()->write($payload);
-    return $response->withHeader('Content-Type', 'application/json');
-});
-
-$app->post('[/]', function (Request $request, Response $response) {
-    $payload = json_encode(array('method' => 'POST', 'msg' => "Bienvenido a SlimFramework 2023"));
-    $response->getBody()->write($payload);
-    return $response->withHeader('Content-Type', 'application/json');
-});
-
-$app->post('/test', function (Request $request, Response $response) {
-    $payload = json_encode(array('method' => 'POST', 'msg' => "Bienvenido a SlimFramework 2023"));
-    $response->getBody()->write($payload);
-    return $response->withHeader('Content-Type', 'application/json');
-});
 
 $app->group('/usuarios', function (RouteCollectorProxy $group) {
     $group->get('[/]', \UsuarioController::class . ':TraerTodos');
@@ -61,6 +39,14 @@ $app->group('/productos', function (RouteCollectorProxy $group) {
     $group->post('[/]', \ProductoController::class . ':CargarUno');
     $group->put('/{producto}', \ProductoController::class . ':ModificarUno');
     $group->delete('/{producto}', \ProductoController::class . ':BorrarUno');
+});
+
+$app->group('/mesas', function (RouteCollectorProxy $group) {
+    $group->get('[/]', \MesaController::class . ':TraerTodos');
+    $group->get('/{mesa}', \MesaController::class . ':TraerUno');
+    $group->post('[/]', \MesaController::class . ':CargarUno');
+    $group->put('/{mesa}', \MesaController::class . ':ModificarUno');
+    $group->delete('/{mesa}', \MesaController::class . ':BorrarUno');
 });
 
 $app->run();

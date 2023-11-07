@@ -1,6 +1,7 @@
 <?php
 require_once DB . "/AccesoDatos.php";
-class Producto{
+class Producto
+{
 
     public $idProducto;
     public $titulo;
@@ -10,7 +11,7 @@ class Producto{
     public $sector;
     public $fechaCreacion;
 
-    
+
     const estado_ACTIVO = "activo";
     const estado_INACTIVO = "inactivo";
     const sector_CERVEZA = "cerveza";
@@ -21,7 +22,7 @@ class Producto{
     {
         $objAccesoDatos = AccesoDatos::obtenerInstancia();
         $consulta = $objAccesoDatos->prepararConsulta("INSERT INTO productos (titulo,tiempo_preparacion,precio,estado,sector,fecha_creacion) VALUES (?,?,?,?,?,?)");
-        $fecha = new DateTime("now",new DateTimeZone("America/Argentina/Buenos_Aires"));
+        $fecha = new DateTime("now", new DateTimeZone("America/Argentina/Buenos_Aires"));
         $fechaString = date_format($fecha, 'Y-m-d H:i:s');
         $consulta->bindParam(1, $this->titulo);
         $consulta->bindParam(2, $this->tiempoPreparacion);
@@ -42,9 +43,8 @@ class Producto{
         // $consulta->fetchAll(PDO::FETCH_OBJ);
         // return $consulta->fetchAll(PDO::FETCH_CLASS, 'Producto');
         $arrayProductos = array();
-        foreach($consulta->fetchAll(PDO::FETCH_OBJ) as $prototipo)
-        {
-            array_push($arrayProductos,Producto::transformarPrototipo($prototipo));
+        foreach ($consulta->fetchAll(PDO::FETCH_OBJ) as $prototipo) {
+            array_push($arrayProductos, Producto::transformarPrototipo($prototipo));
         }
 
         return $arrayProductos;
@@ -58,11 +58,8 @@ class Producto{
         $consulta->bindParam(1, $id);
         $consulta->execute();
 
-        // return $consulta->fetchObject('Producto');
-        // return $consulta->fetch(PDO::FETCH_OBJ);
         $prototipeObject = $consulta->fetch(PDO::FETCH_OBJ);
-        if($prototipeObject != false)
-        {
+        if ($prototipeObject != false) {
             $rtn = Producto::transformarPrototipo($prototipeObject);
         }
 
@@ -77,11 +74,8 @@ class Producto{
         $consulta->bindParam(1, $nombreProducto);
         $consulta->execute();
 
-        // return $consulta->fetchObject('Producto');
-        // return $consulta->fetch(PDO::FETCH_OBJ);
         $prototipeObject = $consulta->fetch(PDO::FETCH_OBJ);
-        if($prototipeObject != false)
-        {
+        if ($prototipeObject != false) {
             $rtn = Producto::transformarPrototipo($prototipeObject);
         }
 
@@ -89,12 +83,12 @@ class Producto{
     }
 
     private static function transformarPrototipo($prototipo)
-    {   
+    {
         $producto = new Producto();
         $producto->idProducto = $prototipo->id_producto;
         $producto->titulo = $prototipo->titulo;
         $producto->tiempoPreparacion = $prototipo->tiempo_preparacion;
-        $producto->fechaCreacion = DateTime::createFromFormat('Y-m-d H:i:s',$prototipo->fecha_creacion,new DateTimeZone("America/Argentina/Buenos_Aires"));
+        $producto->fechaCreacion = DateTime::createFromFormat('Y-m-d H:i:s', $prototipo->fecha_creacion, new DateTimeZone("America/Argentina/Buenos_Aires"));
         $producto->precio = $prototipo->precio;
         $producto->estado = $prototipo->estado;
         $producto->sector = $prototipo->sector;
