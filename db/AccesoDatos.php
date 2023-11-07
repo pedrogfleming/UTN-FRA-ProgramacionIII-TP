@@ -41,7 +41,19 @@ class AccesoDatos
 
         $this->objetoPDO->exec($crear_tabla_usuarios);
 
+        $crear_tabla_productos = <<<SQL
+        CREATE TABLE IF NOT EXISTS Productos (
+            id_producto INT AUTO_INCREMENT PRIMARY KEY,
+            titulo VARCHAR(255) NOT NULL,
+            tiempo_preparacion INT NOT NULL,
+            precio DECIMAL(10, 2) NOT NULL,
+            estado ENUM('Activo', 'Inactivo') NOT NULL,
+            sector VARCHAR(255) NOT NULL,
+            fecha_creacion DATETIME NOT NULL
+        )
+        SQL;
 
+        $this->objetoPDO->exec($crear_tabla_productos);
     }
 
     public static function obtenerInstancia()

@@ -10,8 +10,8 @@ use Slim\Routing\RouteCollectorProxy;
 
 require_once "../globals.php";
 require __DIR__ . '/../vendor/autoload.php';
-require_once CONTROLLERS .'/UsuarioControllers.php';
-
+require_once CONTROLLERS . '/UsuarioControllers.php';
+require_once CONTROLLERS . '/ProductoController.php';
 // Instantiate App
 $app = AppFactory::create();
 $app->setBasePath('/app');
@@ -53,6 +53,14 @@ $app->group('/usuarios', function (RouteCollectorProxy $group) {
     $group->post('[/]', \UsuarioController::class . ':CargarUno');
     $group->put('/{usuario}', \UsuarioController::class . ':ModificarUno');
     $group->delete('/{usuario}', \UsuarioController::class . ':BorrarUno');
-  });
+});
+
+$app->group('/productos', function (RouteCollectorProxy $group) {
+    $group->get('[/]', \ProductoController::class . ':TraerTodos');
+    $group->get('/{producto}', \ProductoController::class . ':TraerUno');
+    $group->post('[/]', \ProductoController::class . ':CargarUno');
+    $group->put('/{producto}', \ProductoController::class . ':ModificarUno');
+    $group->delete('/{producto}', \ProductoController::class . ':BorrarUno');
+});
 
 $app->run();
