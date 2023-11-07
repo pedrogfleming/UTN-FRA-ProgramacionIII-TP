@@ -13,6 +13,7 @@ require __DIR__ . '/../vendor/autoload.php';
 require_once CONTROLLERS . '/UsuarioControllers.php';
 require_once CONTROLLERS . '/ProductoController.php';
 require_once CONTROLLERS . '/MesaController.php';
+require_once CONTROLLERS . '/PedidoController.php';
 // Instantiate App
 $app = AppFactory::create();
 $app->setBasePath('/app');
@@ -47,6 +48,22 @@ $app->group('/mesas', function (RouteCollectorProxy $group) {
     $group->post('[/]', \MesaController::class . ':CargarUno');
     $group->put('/{mesa}', \MesaController::class . ':ModificarUno');
     $group->delete('/{mesa}', \MesaController::class . ':BorrarUno');
+});
+
+$app->group('/pedidos', function (RouteCollectorProxy $group) {
+    $group->get('[/]', \PedidoController::class . ':TraerTodos');
+    $group->get('/{pedido}', \PedidoController::class . ':TraerUno');
+    $group->post('[/]', \PedidoController::class . ':CargarUno');
+    $group->put('/{pedido}', \PedidoController::class . ':ModificarUno');
+    $group->delete('/{pedido}', \PedidoController::class . ':BorrarUno');
+});
+
+$app->group('/comandas', function (RouteCollectorProxy $group) {
+    $group->get('[/]', \PedidoController::class . ':TraerTodos');
+    $group->get('/{comanda}', \PedidoController::class . ':TraerUno');
+    $group->post('[/]', \PedidoController::class . ':CargarUno');
+    $group->put('/{pedido}', \PedidoController::class . ':ModificarUno');
+    $group->delete('/{comanda}', \PedidoController::class . ':BorrarUno');
 });
 
 $app->run();

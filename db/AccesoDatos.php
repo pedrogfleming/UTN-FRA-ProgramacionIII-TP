@@ -70,6 +70,38 @@ class AccesoDatos
         SQL;
 
         $this->objetoPDO->exec($crear_tabla_mesas);
+
+
+        $crear_tabla_comandas = <<<SQL
+        CREATE TABLE IF NOT EXISTS comandas (
+            id_comanda INT AUTO_INCREMENT PRIMARY KEY,
+            id_mesa INT NOT NULL,
+            id_mozo INT NOT NULL,
+            fecha_comanda DATETIME NOT NULL,
+            FOREIGN KEY (id_mesa) REFERENCES mesas (id_mesa),
+            FOREIGN KEY (id_mozo) REFERENCES usuarios (ID_USUARIO)
+        )
+        SQL;
+        $this->objetoPDO->exec($crear_tabla_comandas);
+
+        $crear_tabla_pedidos = <<<SQL
+        CREATE TABLE IF NOT EXISTS pedidos (
+            id_pedido INT AUTO_INCREMENT PRIMARY KEY,
+            id_comanda INT NOT NULL,
+            id_usuario INT NOT NULL,
+            id_producto INT NOT NULL,
+            cantidad INT NOT NULL,
+            fecha_estimada_finalizacion DATETIME NOT NULL,
+            fecha_finalizacion DATETIME,
+            sector VARCHAR(255) NOT NULL,
+            estado ENUM('pendiente', 'en preparación', 'listo para servir', 'cancelado') NOT NULL,
+            FOREIGN KEY (id_comanda) REFERENCES comandas (id_comanda),
+            FOREIGN KEY (id_usuario) REFERENCES usuarios (id_usuario),
+            FOREIGN KEY (id_producto) REFERENCES productos (id_producto)
+        )
+        SQL;
+
+        $this->objetoPDO->exec($crear_tabla_pedidos);
     }
 
     public static function obtenerInstancia()
