@@ -30,13 +30,14 @@ class AccesoDatos
         $crear_tabla_usuarios = <<<SQL
         CREATE TABLE IF NOT EXISTS Usuarios (
             idUsuario INT AUTO_INCREMENT PRIMARY KEY,
-            nombre VARCHAR(255),
-            fechaCreacion DATETIME,
+            nombre VARCHAR(255) NOT NULL,
+            fechaCreacion DATETIME NOT NULL,
             fechaFinalizacion DATETIME,
-            user VARCHAR(255),
-            password VARCHAR(255),
-            sector VARCHAR(255),
-            tipo VARCHAR(255)
+            user VARCHAR(255) NOT NULL,
+            password VARCHAR(255) NOT NULL,
+            sector VARCHAR(255) NOT NULL,
+            tipo VARCHAR(255) NOT NULL,
+            UNIQUE (nombre, user)
         )
         SQL;
 
@@ -50,7 +51,8 @@ class AccesoDatos
             precio DECIMAL(10, 2) NOT NULL,
             estado ENUM('Activo', 'Inactivo') NOT NULL,
             sector VARCHAR(255) NOT NULL,
-            fecha_creacion DATETIME NOT NULL
+            fecha_creacion DATETIME NOT NULL,
+            UNIQUE (titulo)
         )
         SQL;
 
@@ -59,13 +61,10 @@ class AccesoDatos
         $crear_tabla_mesas = <<<SQL
         CREATE TABLE IF NOT EXISTS Mesas (
             idMesa INT AUTO_INCREMENT PRIMARY KEY,
-            mozo VARCHAR(255) NOT NULL,
-            importeTotal DECIMAL(10, 2) NOT NULL,
-            nombreCliente VARCHAR(255) NOT NULL,
-            estado ENUM('pendiente', 'en preparación', 'listo para servir', 'cancelado') NOT NULL,
+            estado ENUM('con_cliente_esperando_pedido', 'con_cliente_comiendo', 'con_cliente_pagando', 'cerrada') NOT NULL,
             fechaApertura DATETIME NOT NULL,
             fechaCierre DATETIME
-        )
+            ) AUTO_INCREMENT=1000;
         SQL;
 
         $this->objetoPDO->exec($crear_tabla_mesas);
@@ -75,14 +74,16 @@ class AccesoDatos
             id_pedido INT AUTO_INCREMENT PRIMARY KEY,
             id_usuario INT NOT NULL,
             id_producto INT NOT NULL,
+            id_mesa INT NOT NULL,
             cantidad INT NOT NULL,
             fecha_estimada_finalizacion DATETIME NOT NULL,
             fecha_finalizacion DATETIME,
             sector VARCHAR(255) NOT NULL,
             estado ENUM('pendiente', 'en preparación', 'listo para servir', 'cancelado') NOT NULL,
+            FOREIGN KEY (id_mesa) REFERENCES Mesas (idMesa) ON DELETE CASCADE ON UPDATE CASCADE,
             FOREIGN KEY (id_usuario) REFERENCES Usuarios (idUsuario) ON DELETE CASCADE ON UPDATE CASCADE,
             FOREIGN KEY (id_producto) REFERENCES Productos (id_producto) ON DELETE CASCADE ON UPDATE CASCADE
-        )
+        ) AUTO_INCREMENT=1000;
         SQL;
 
         $this->objetoPDO->exec($crear_tabla_pedidos);

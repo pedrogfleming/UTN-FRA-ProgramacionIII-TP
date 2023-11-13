@@ -4,31 +4,25 @@ require_once DB . "/AccesoDatos.php";
 class Mesa
 {
     public $idMesa;
-    public $mozo;
-    public $importeTotal;
-    public $nombreCliente;
     public $estado;
     public $fechaApertura;
     public $fechaCierre;
 
-    const ESTADO_PENDIENTE = "pendiente";
-    const ESTADO_PREPARACION = "en preparación";
-    const ESTADO_LISTO = "listo para servir";
-    const ESTADO_CANCELADO = "cancelado";
+    const ESTADO_PENDIENTE = "con_cliente_esperando_pedido";
+    const ESTADO_CLIENTE_COMIENDO = "con_cliente_comiendo";
+    const ESTADO_CLIENTE_PAGANDO = "con_cliente_pagando";
+    const ESTADO_CERRADA = "cerrada"; // se toma como vacia la mesa
 
     public function crearMesa()
     {
         $objAccesoDatos = AccesoDatos::obtenerInstancia();
-        $consulta = $objAccesoDatos->prepararConsulta("INSERT INTO Mesas (mozo,  importeTotal, nombreCliente, estado, fechaApertura, fechaCierre) VALUES (?, ?, ?, ?, ?, ?)");
+        $consulta = $objAccesoDatos->prepararConsulta("INSERT INTO Mesas (estado, fechaApertura, fechaCierre) VALUES ( ?, ?, ?)");
         $fechaApertura = new DateTime("now", new DateTimeZone("America/Argentina/Buenos_Aires"));
         $fechaCierre = null;
         $fechaString = date_format($fechaApertura, 'Y-m-d H:i:s');
-        $consulta->bindParam(1, $this->mozo);
-        $consulta->bindParam(2, $this->importeTotal);
-        $consulta->bindParam(3, $this->nombreCliente);
-        $consulta->bindParam(4, $this->estado);
-        $consulta->bindParam(5, $fechaString);
-        $consulta->bindParam(6, $fechaCierre);
+        $consulta->bindParam(1, $this->estado);
+        $consulta->bindParam(2, $fechaString);
+        $consulta->bindParam(3, $fechaCierre);
         $consulta->execute();
 
         return $objAccesoDatos->obtenerUltimoId();
@@ -66,9 +60,6 @@ class Mesa
     {
         $mesa = new Mesa();
         $mesa->idMesa = $registro->idMesa;
-        $mesa->mozo = $registro->mozo;
-        $mesa->importeTotal = $registro->importeTotal;
-        $mesa->nombreCliente = $registro->nombreCliente;
         $mesa->estado = $registro->estado;
 
         if ($registro->fechaApertura) {
@@ -89,14 +80,11 @@ class Mesa
     public function actualizarMesa()
     {
         $objAccesoDatos = AccesoDatos::obtenerInstancia();
-        $consulta = $objAccesoDatos->prepararConsulta("UPDATE Mesas SET mozo = ?, importeTotal = ?, nombreCliente = ?, estado = ?, fechaCierre = ? WHERE idMesa = ?");
+        $consulta = $objAccesoDatos->prepararConsulta("UPDATE Mesas SET estado = ?, fechaCierre = ? WHERE idMesa = ?");
         $fechaCierre = new DateTime("now", new DateTimeZone("America/Argentina/Buenos_Aires"));
-        $consulta->bindParam(1, $this->mozo);
-        $consulta->bindParam(2, $this->importeTotal);
-        $consulta->bindParam(3, $this->nombreCliente);
-        $consulta->bindParam(4, $this->estado);
-        $consulta->bindParam(5, $fechaCierre);
-        $consulta->bindParam(6, $this->idMesa);
+        $consulta->bindParam(1, $this->estado);
+        $consulta->bindParam(2, $fechaCierre);
+        $consulta->bindParam(3, $this->idMesa);
         $consulta->execute();
     }
 

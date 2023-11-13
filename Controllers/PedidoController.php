@@ -13,13 +13,17 @@ class PedidoController implements IApiUsable
     {
         $parametros = $request->getParsedBody();
 
+        $idEmpleado = $parametros['idEmpleado'];
         $nombreEmpleado = $parametros['nombreEmpleado'];
         $nombreProducto = $parametros['nombreProducto'];
         $cantidad = $parametros['cantidad'];
+        $nombreCliente = $parametros['nombreCliente'];
 
         // Creamos el pedido
         $pedido = new Pedido();
         $pedido->usuarioAsignado = Usuario::obtenerUsuarioByName($nombreEmpleado);
+
+        
         
         $pedido->producto = Producto::obtenerProductoByName($nombreProducto);
         

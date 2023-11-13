@@ -17,6 +17,9 @@ class Pedido
     public $sector;
     public $estado;
 
+    public $importeTotal;
+    public $nombreCliente;
+    
     const ESTADO_PENDIENTE = "pendiente";
     const ESTADO_PREPARACION = "en preparación";
     const ESTADO_LISTO = "listo para servir";

@@ -8,18 +8,10 @@ class MesaController implements IApiUsable
     {
         $parametros = $request->getParsedBody();
 
-        $mozo = $parametros['mozo'];
-        $importeTotal = $parametros['importeTotal'];
-        $nombreCliente = $parametros['nombreCliente'];
-        $estado = $parametros['estado'];
-
         // Crear una mesa
         $mesa = new Mesa();
-        $mesa->mozo = $mozo;
-        $mesa->importeTotal = (float)$importeTotal;
-        $mesa->nombreCliente = $nombreCliente;
-        $mesa->estado = $estado;
 
+        $mesa->estado = Mesa::ESTADO_CERRADA;
         $mesa->crearMesa();
 
         $payload = json_encode(array("mensaje" => "Mesa creada con éxito"));
@@ -58,7 +50,7 @@ class MesaController implements IApiUsable
     {
         $parametros = $request->getParsedBody();
 
-        $id = $args['mesa'];
+        $id = $args['idMesa'];
         $mozo = $parametros['mozo'];
         $importeTotal = $parametros['importeTotal'];
         $nombreCliente = $parametros['nombreCliente'];
@@ -66,9 +58,6 @@ class MesaController implements IApiUsable
 
         $mesa = Mesa::obtenerMesa($id);
 
-        $mesa->mozo = $mozo;
-        $mesa->importeTotal = $importeTotal;
-        $mesa->nombreCliente = $nombreCliente;
         $mesa->estado = $estado;
 
         $mesa->actualizarMesa();
