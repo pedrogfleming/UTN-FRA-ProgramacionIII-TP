@@ -3,7 +3,6 @@
 use Illuminate\Support\Facades\Process;
 
 include_once MODELS . '/Pedido.php';
-include_once MODELS . "/Comanda.php";
 include_once MODELS . "/Producto.php";
 include_once MODELS . "/Usuario.php";
 require_once INTERFACES . '/IApiUsable.php';
@@ -14,7 +13,6 @@ class PedidoController implements IApiUsable
     {
         $parametros = $request->getParsedBody();
 
-        $idComanda = $parametros['idComanda'];
         $nombreEmpleado = $parametros['nombreEmpleado'];
         $nombreProducto = $parametros['nombreProducto'];
         $cantidad = $parametros['cantidad'];
@@ -24,8 +22,6 @@ class PedidoController implements IApiUsable
         $pedido->usuarioAsignado = Usuario::obtenerUsuarioByName($nombreEmpleado);
         
         $pedido->producto = Producto::obtenerProductoByName($nombreProducto);
-        
-        $pedido->comanda = Comanda::obtenerComanda($idComanda);
         
         $pedido->cantidad = (int)$cantidad;
         $pedido->crearPedido();

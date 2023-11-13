@@ -60,7 +60,6 @@ class AccesoDatos
         CREATE TABLE IF NOT EXISTS Mesas (
             idMesa INT AUTO_INCREMENT PRIMARY KEY,
             mozo VARCHAR(255) NOT NULL,
-            comanda INT NOT NULL,
             importeTotal DECIMAL(10, 2) NOT NULL,
             nombreCliente VARCHAR(255) NOT NULL,
             estado ENUM('pendiente', 'en preparación', 'listo para servir', 'cancelado') NOT NULL,
@@ -71,23 +70,9 @@ class AccesoDatos
 
         $this->objetoPDO->exec($crear_tabla_mesas);
 
-
-        $crear_tabla_comandas = <<<SQL
-        CREATE TABLE IF NOT EXISTS Comandas (
-            id_comanda INT AUTO_INCREMENT PRIMARY KEY,
-            id_mesa INT NOT NULL,
-            id_mozo INT NOT NULL,
-            fecha_comanda DATETIME NOT NULL,
-            FOREIGN KEY (id_mesa) REFERENCES Mesas (idMesa),
-            FOREIGN KEY (id_mozo) REFERENCES Usuarios (idUsuario)
-        )
-        SQL;
-        $this->objetoPDO->exec($crear_tabla_comandas);
-
         $crear_tabla_pedidos = <<<SQL
         CREATE TABLE IF NOT EXISTS Pedidos (
             id_pedido INT AUTO_INCREMENT PRIMARY KEY,
-            id_comanda INT NOT NULL,
             id_usuario INT NOT NULL,
             id_producto INT NOT NULL,
             cantidad INT NOT NULL,
@@ -95,7 +80,6 @@ class AccesoDatos
             fecha_finalizacion DATETIME,
             sector VARCHAR(255) NOT NULL,
             estado ENUM('pendiente', 'en preparación', 'listo para servir', 'cancelado') NOT NULL,
-            FOREIGN KEY (id_comanda) REFERENCES Comandas (id_comanda) ON DELETE CASCADE ON UPDATE CASCADE,
             FOREIGN KEY (id_usuario) REFERENCES Usuarios (idUsuario) ON DELETE CASCADE ON UPDATE CASCADE,
             FOREIGN KEY (id_producto) REFERENCES Productos (id_producto) ON DELETE CASCADE ON UPDATE CASCADE
         )

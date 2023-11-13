@@ -58,12 +58,4 @@ $app->group('/pedidos', function (RouteCollectorProxy $group) {
     $group->delete('/{pedido}', \PedidoController::class . ':BorrarUno');
 });
 
-$app->group('/comandas', function (RouteCollectorProxy $group) {
-    $group->get('[/]', \PedidoController::class . ':TraerTodos');
-    $group->get('/{comanda}', \PedidoController::class . ':TraerUno');
-    $group->post('[/]', \PedidoController::class . ':CargarUno');
-    $group->put('/{pedido}', \PedidoController::class . ':ModificarUno');
-    $group->delete('/{comanda}', \PedidoController::class . ':BorrarUno');
-});
-
 $app->run();

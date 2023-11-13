@@ -1,22 +1,22 @@
 <?php
-include_once "Comanda.php";
 include_once "Producto.php";
 include_once "Usuario.php";
 
 require_once DB . "/AccesoDatos.php";
 
-class Pedido{
+class Pedido
+{
 
     public $idPedido;
-    public $comanda;
     public $usuarioAsignado;
     public $producto;
     public $cantidad;
+    public $fechaCreacion;
     public $fechaEstimadaDeFinalizacion;
     public $fechaFinalizacion;
     public $sector;
     public $estado;
-    
+
     const ESTADO_PENDIENTE = "pendiente";
     const ESTADO_PREPARACION = "en preparación";
     const ESTADO_LISTO = "listo para servir";
@@ -29,12 +29,13 @@ class Pedido{
     public function crearPedido()
     {
         $objAccesoDatos = AccesoDatos::obtenerInstancia();
-        $consulta = $objAccesoDatos->prepararConsulta("INSERT INTO pedidos (id_comanda,id_usuario,id_producto,cantidad,fecha_estimada_finalizacion,sector,estado) VALUES (?,?,?,?,?,?,?)");
-            
+        $consulta = $objAccesoDatos->prepararConsulta("INSERT INTO pedidos (id_usuario,id_producto,cantidad,fecha_estimada_finalizacion,sector,estado) VALUES (?,?,?,?,?,?)");
+
+        $fechaCreacion = new Datetime('now');
         // Calulo la fecha de finalizacion estimada del pedido
-        $tiempoEnMinutosDeProducto = $this->cantidad*$this->producto->tiempoPreparacion;
-        $interval = DateInterval::createFromDateString($tiempoEnMinutosDeProducto.'minutes');
-        $fechaEstimadaFinalizacion = $this->comanda->fechaComanda->add($interval);
+        $tiempoEnMinutosDeProducto = $this->cantidad * $this->producto->tiempoPreparacion;
+        $interval = DateInterval::createFromDateString($tiempoEnMinutosDeProducto . 'minutes');
+        $fechaEstimadaFinalizacion = $fechaCreacion->add($interval);
 
         // Se cargan los datos faltantes en el pedido
         $this->fechaEstimadaDeFinalizacion = $fechaEstimadaFinalizacion;
@@ -43,40 +44,36 @@ class Pedido{
 
         $fechaEstimadaFinalizacionString = date_format($this->fechaEstimadaDeFinalizacion, 'Y-m-d H:i:s');
 
-        
-        $consulta->bindParam(1, $this->comanda->id_comanda);
-        $consulta->bindParam(2, $this->usuarioAsignado->idUsuario);
-        $consulta->bindParam(3, $this->producto->idProducto);
-        $consulta->bindParam(4, $this->cantidad);
-        $consulta->bindParam(5, $fechaEstimadaFinalizacionString);
-        $consulta->bindParam(6, $this->sector);
-        $consulta->bindParam(7, $this->estado);
+
+        $consulta->bindParam(1, $this->usuarioAsignado->idUsuario);
+        $consulta->bindParam(2, $this->producto->idProducto);
+        $consulta->bindParam(3, $this->cantidad);
+        $consulta->bindParam(4, $fechaEstimadaFinalizacionString);
+        $consulta->bindParam(5, $this->sector);
+        $consulta->bindParam(6, $this->estado);
         $consulta->execute();
 
         return $objAccesoDatos->obtenerUltimoId();
     }
 
-    public static function obtenerTodos($idComanda = NULL)
+    public static function obtenerTodos($idPedido = NULL)
     {
         $objAccesoDatos = AccesoDatos::obtenerInstancia();
-        if($idComanda == null)
-        {
+        if ($idPedido == null) {
             $consulta = $objAccesoDatos->prepararConsulta("SELECT * FROM pedidos");
-        }
-        else{
+        } else {
 
-            $consulta = $objAccesoDatos->prepararConsulta("SELECT * FROM pedidos WHERE id_comanda = ?");
-            $consulta->bindParam(1, $idComanda);
+            $consulta = $objAccesoDatos->prepararConsulta("SELECT * FROM pedidos WHERE idPedido = ?");
+            $consulta->bindParam(1, $idPedido);
         }
-        
+
         $consulta->execute();
 
         $arrayPedidos = array();
-        foreach($consulta->fetchAll(PDO::FETCH_OBJ) as $prototipo)
-        {
-            array_push($arrayPedidos,Pedido::transformarPrototipo($prototipo));
+        foreach ($consulta->fetchAll(PDO::FETCH_OBJ) as $prototipo) {
+            array_push($arrayPedidos, Pedido::transformarPrototipo($prototipo));
         }
-        
+
 
         return $arrayPedidos;
     }
@@ -90,8 +87,7 @@ class Pedido{
         $consulta->execute();
 
         $prototipeObject = $consulta->fetch(PDO::FETCH_OBJ);
-        if($prototipeObject != false)
-        {
+        if ($prototipeObject != false) {
             $rtn = Pedido::transformarPrototipo($prototipeObject);
         }
 
@@ -99,26 +95,21 @@ class Pedido{
     }
 
     private static function transformarPrototipo($prototipo)
-    {   
+    {
         $pedido = new Pedido();
         $pedido->idPedido = $prototipo->id_pedido;
-        $pedido->comanda = $prototipo->id_comanda;
         $pedido->usuarioAsignado = $prototipo->id_usuario;
         $pedido->producto = $prototipo->id_producto;
         $pedido->cantidad = $prototipo->cantidad;
-        $pedido->fechaEstimadaDeFinalizacion = DateTime::createFromFormat('Y-m-d H:i:s',$prototipo->fecha_estimada_finalizacion,new DateTimeZone("America/Argentina/Buenos_Aires"));
-        if($prototipo->fecha_finalizacion != NULL)
-        {
-            $pedido->fechaFinalizacion = DateTime::createFromFormat('Y-m-d H:i:s',$prototipo->fecha_finalizacion,new DateTimeZone("America/Argentina/Buenos_Aires"));
-
-        }
-        else{
+        $pedido->fechaEstimadaDeFinalizacion = DateTime::createFromFormat('Y-m-d H:i:s', $prototipo->fecha_estimada_finalizacion, new DateTimeZone("America/Argentina/Buenos_Aires"));
+        if ($prototipo->fecha_finalizacion != NULL) {
+            $pedido->fechaFinalizacion = DateTime::createFromFormat('Y-m-d H:i:s', $prototipo->fecha_finalizacion, new DateTimeZone("America/Argentina/Buenos_Aires"));
+        } else {
             $pedido->fechaFinalizacion = $prototipo->fecha_finalizacion;
         }
         $pedido->sector = $prototipo->sector;
         $pedido->estado = $prototipo->estado;
         return $pedido;
-
     }
 
     public static function modificarPedido($pedido)
@@ -126,11 +117,11 @@ class Pedido{
         $objAccesoDato = AccesoDatos::obtenerInstancia();
         $consulta = $objAccesoDato->prepararConsulta("UPDATE pedidos SET id_usuario = ?, id_producto = ?, cantidad = ?, fecha_estimada_finalizacion = ?, sector = ?, estado = ? WHERE id_pedido = ?");
         // Calulo la fecha de finalizacion estimada del pedido
-        $tiempoEnMinutosDeProducto = $pedido->cantidad*$pedido->producto->tiempoPreparacion;
-        $interval = DateInterval::createFromDateString($tiempoEnMinutosDeProducto.'minutes');
+        $tiempoEnMinutosDeProducto = $pedido->cantidad * $pedido->producto->tiempoPreparacion;
+        $interval = DateInterval::createFromDateString($tiempoEnMinutosDeProducto . 'minutes');
         $fechaEstimadaFinalizacion = $pedido->comanda->fechaComanda->add($interval);
         $fechaEstimadaFinalizacionString = date_format($fechaEstimadaFinalizacion, 'Y-m-d H:i:s');
-        
+
         $consulta->bindParam(1, $pedido->usuarioAsignado->idUsuario);
         $consulta->bindParam(2, $pedido->producto->idProducto);
         $consulta->bindParam(3, $pedido->cantidad);
@@ -149,10 +140,4 @@ class Pedido{
         $consulta->bindParam(2, $pedido->idPedido);
         $consulta->execute();
     }
-
-
-
-
 }
-
-?>
