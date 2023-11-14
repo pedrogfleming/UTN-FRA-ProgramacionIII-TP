@@ -126,19 +126,29 @@ class Pedido
     public static function modificarPedido($pedido)
     {
         $objAccesoDato = AccesoDatos::obtenerInstancia();
-        $consulta = $objAccesoDato->prepararConsulta("UPDATE pedidos SET id_usuario = ?, id_producto = ?, cantidad = ?, fecha_estimada_finalizacion = ?, sector = ?, estado = ? WHERE id_pedido = ?");
+        // id_usuario, id_producto, id_mesa, cantidad,fecha_creacion, fecha_estimada_finalizacion, sector, importe_total, nombre_cliente,estado
+        $consulta = $objAccesoDato->prepararConsulta("UPDATE pedidos SET id_usuario = ?, id_producto = ?, id_mesa = ?, cantidad = ?, fecha_creacion = ? ,fecha_estimada_finalizacion = ?, sector = ?, importe_total = ?, nombre_cliente = ?, estado = ? WHERE id_pedido = ?");
         // Calulo la fecha de finalizacion estimada del pedido
         $tiempoEnMinutosDeProducto = $pedido->cantidad * $pedido->producto->tiempoPreparacion;
+
+        $dtFechaCreacion = DateTime::createFromFormat("Y-m-d H:i:s",$pedido->fechaCreacion, new DateTimeZone("America/Argentina/Buenos_Aires"));
+        
         $interval = DateInterval::createFromDateString($tiempoEnMinutosDeProducto . 'minutes');
-        $fechaEstimadaFinalizacion = $pedido->comanda->fechaComanda->add($interval);
+        $fechaEstimadaFinalizacion = $dtFechaCreacion->add($interval);
         $fechaEstimadaFinalizacionString = date_format($fechaEstimadaFinalizacion, 'Y-m-d H:i:s');
+
 
         $consulta->bindParam(1, $pedido->usuarioAsignado->idUsuario);
         $consulta->bindParam(2, $pedido->producto->idProducto);
-        $consulta->bindParam(3, $pedido->cantidad);
-        $consulta->bindParam(4, $fechaEstimadaFinalizacionString);
-        $consulta->bindParam(5, $pedido->producto->sector);
-        $consulta->bindParam(6, $pedido->estado);
+        $consulta->bindParam(3, $pedido->idMesa);
+        $consulta->bindParam(4, $pedido->cantidad);
+        $consulta->bindParam(5, $pedido->fechaCreacion);
+        $consulta->bindParam(6, $fechaEstimadaFinalizacionString);
+        $consulta->bindParam(7, $pedido->producto->sector);
+        $consulta->bindParam(8, $pedido->importeTotal);
+        $consulta->bindParam(9, $pedido->nombreCliente);
+        $consulta->bindParam(10, $pedido->estado);
+        $consulta->bindParam(11, $pedido->idPedido); 
 
         $consulta->execute();
     }

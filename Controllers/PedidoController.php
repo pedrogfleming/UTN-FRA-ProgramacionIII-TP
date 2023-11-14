@@ -76,18 +76,33 @@ class PedidoController implements IApiUsable
         $parametros = $request->getParsedBody();
 
         $id = $args['pedido'];
+        $idMesa = $parametros['idMesa'];
+        $nombreUsuario = $parametros['nombreUsuario'];
         $nombreProducto = $parametros['nombreProducto'];
-        $nombreEmpleado = $parametros['nombreEmpleado'];
         $cantidad = $parametros['cantidad'];
+        $nombreCliente = $parametros['nombreCliente'];
         $estado = $parametros["estado"];
 
+        $usuarioAsignado = Usuario::obtenerUsuarioByName($nombreUsuario);
+        if($usuarioAsignado === false){
+            throw new Exception("No existe el usuario con el nombre suministrado");
+        }
+
         $producto = Producto::obtenerProductoByName($nombreProducto);
-        $empleado = Usuario::obtenerUsuarioByName($nombreEmpleado);
+        
+        if($producto === false){
+            throw new Exception("No existe el producto con el nombre suministrado");
+        }
+
         $pedido = Pedido::obtenerPedido($id);
         
         $pedido->producto = $producto;
-        $pedido->usuarioAsignado = $empleado;
+        $pedido->idMesa = $idMesa;
+        $pedido->usuarioAsignado = $usuarioAsignado;
+        $pedido->producto = $producto;
         $pedido->cantidad = $cantidad;
+        $pedido->importeTotal = $pedido->producto->precio * $pedido->cantidad;
+        $pedido->nombreCliente = $nombreCliente;
         $pedido->estado = $estado;
 
         Pedido::modificarPedido($pedido);
