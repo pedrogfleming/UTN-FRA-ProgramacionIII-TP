@@ -18,33 +18,48 @@ class AuthMiddleware
 
     public function __invoke(Request $request, RequestHandler $handler): Response
     {
-        $route = $request->getAttribute('route');
-        $sector = $route ? $route->getArgument('sector') : null;
-        $rol = $route ? $route->getArgument('rol') : null;
-        $contraseña = $route ? $route->getArgument('contraseña') : null;
-        $nombreUsuario = $route ? $route->getArgument('nombreUsuario') : null;
+        $headerValueArray = $request->getHeader('Accept');
 
-        if ($this->isAuthorized($sector, $rol, $contraseña, $nombreUsuario)) {
-            return $handler->handle($request);
-        } else {
-            $response = new Response();
-            $payload = json_encode(['mensaje' => 'No estás autorizado']);
-            $response->getBody()->write($payload);
-            return $response->withHeader('Content-Type', 'application/json');
+        $headerParams = $request->getServerParams();
+
+        // $route = $request->getHeader('route');
+        // $sector = $route ? $route->getHeader('sector') : null;
+        // $rol = $route ? $route->getHeader('rol') : null;
+        if (isset($headerParams['PHP_AUTH_USER']) && isset($headerParams['PHP_AUTH_PW'])) {
+            $nombreUsuario = $headerParams['PHP_AUTH_USER'];
+            $contraseña = $headerParams['PHP_AUTH_PW'];
+            $autorizacion = $this->isAuthorized($nombreUsuario, $contraseña);
+            if ($autorizacion->estaAutorizado) {
+                return $handler->handle($request);
+            } else {
+                $response = new Response();
+                $payload = json_encode(['mensaje' => $autorizacion->msj]);
+                $response->getBody()->write($payload);
+                return $response->withHeader('Content-Type', 'application/json');
+            }
         }
     }
 
-    private function isAuthorized($sector, $rol, $contraseña, $nombreUsuario): bool
+    private function isAuthorized($nombreUsuario, $contraseña)
     {
-        $ret = false;
-        $rolAutorizado = in_array($rol, $this->rolesAutorizados);
-        if ($rolAutorizado) {
-            $usuarioExiste = Usuario::obtenerUsuarioByName($nombreUsuario);
-            if($usuarioExiste){
+        $ret = new stdClass();
+        $ret->estaAutorizado = false;
+        $ret->msj = "Usuario y/o contraseña incorrectos";
+
+        $usuarioExiste = Usuario::obtenerUsuarioByUsername($nombreUsuario);
+
+        if($usuarioExiste){
+            $rolAutorizado = in_array($usuarioExiste->tipo, $this->rolesAutorizados);
+            if ($rolAutorizado) {                                
                 $contraseñaCorrecta = $usuarioExiste->password === $contraseña;
-                if($contraseñaCorrecta){
-                    $ret = true;
-                }
+                if ($contraseñaCorrecta) {
+                    $ret->estaAutorizado = true;
+                    $ret->msj = "Usuario autenticado con exito";
+                }                
+            }
+            else{
+                $ret->estaAutorizado = false;
+                $ret->msj = "Usuario no posee permisos suficientes";
             }
         }
         return $ret;

@@ -240,42 +240,47 @@
 							]
 						}
 					},
+					"response": []
+				},
+				{
+					"name": "ObtenerUsuarios No autorizado",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "*7924A6822A50269BE36F22130A83D7ED07E32700",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "oscar_mozo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{protocolo}}://{{server}}:{{puerto}}/{{app}}/{{usuarios}}",
+							"protocol": "{{protocolo}}",
+							"host": [
+								"{{server}}"
+							],
+							"port": "{{puerto}}",
+							"path": [
+								"{{app}}",
+								"{{usuarios}}"
+							]
+						}
+					},
 					"response": [
 						{
-							"name": "CargarUsuario Ok",
+							"name": "ObtenerUsuarios Ok",
 							"originalRequest": {
-								"method": "POST",
+								"method": "GET",
 								"header": [],
-								"body": {
-									"mode": "formdata",
-									"formdata": [
-										{
-											"key": "nombre",
-											"value": "Oscar",
-											"type": "text"
-										},
-										{
-											"key": "user",
-											"value": "Dominguez",
-											"type": "text"
-										},
-										{
-											"key": "sector",
-											"value": "barra",
-											"type": "text"
-										},
-										{
-											"key": "tipo",
-											"value": "mozo",
-											"type": "text"
-										},
-										{
-											"key": "password",
-											"value": "oscar123",
-											"type": "text"
-										}
-									]
-								},
 								"url": {
 									"raw": "{{protocolo}}://{{server}}:{{puerto}}/{{app}}/{{usuarios}}",
 									"protocol": "{{protocolo}}",
@@ -299,7 +304,7 @@
 								},
 								{
 									"key": "Date",
-									"value": "Tue, 07 Nov 2023 04:23:31 GMT"
+									"value": "Tue, 07 Nov 2023 03:28:56 GMT"
 								},
 								{
 									"key": "Connection",
@@ -315,9 +320,191 @@
 								}
 							],
 							"cookie": [],
-							"body": "{\n    \"mensaje\": \"Usuario creado con exito\"\n}"
+							"body": "{\n    \"listaUsuario\": [\n        {\n            \"idUsuario\": 1,\n            \"nombre\": \"Usuario1\",\n            \"fechaCreacion\": {\n                \"date\": \"2023-11-06 00:00:00.000000\",\n                \"timezone_type\": 3,\n                \"timezone\": \"America/Argentina/Buenos_Aires\"\n            },\n            \"fechaFinalizacion\": {\n                \"date\": \"2023-11-12 00:00:00.000000\",\n                \"timezone_type\": 3,\n                \"timezone\": \"America/Argentina/Buenos_Aires\"\n            },\n            \"user\": \"user1\",\n            \"password\": \"password1\",\n            \"sector\": \"Sector1\",\n            \"tipo\": \"Tipo1\"\n        },\n        {\n            \"idUsuario\": 2,\n            \"nombre\": \"Usuario2\",\n            \"fechaCreacion\": {\n                \"date\": \"2023-11-07 00:00:00.000000\",\n                \"timezone_type\": 3,\n                \"timezone\": \"America/Argentina/Buenos_Aires\"\n            },\n            \"fechaFinalizacion\": {\n                \"date\": \"2023-11-13 00:00:00.000000\",\n                \"timezone_type\": 3,\n                \"timezone\": \"America/Argentina/Buenos_Aires\"\n            },\n            \"user\": \"user2\",\n            \"password\": \"password2\",\n            \"sector\": \"Sector2\",\n            \"tipo\": \"Tipo2\"\n        },\n        {\n            \"idUsuario\": 3,\n            \"nombre\": \"Usuario3\",\n            \"fechaCreacion\": {\n                \"date\": \"2023-11-08 00:00:00.000000\",\n                \"timezone_type\": 3,\n                \"timezone\": \"America/Argentina/Buenos_Aires\"\n            },\n            \"fechaFinalizacion\": {\n                \"date\": \"2023-11-14 00:00:00.000000\",\n                \"timezone_type\": 3,\n                \"timezone\": \"America/Argentina/Buenos_Aires\"\n            },\n            \"user\": \"user3\",\n            \"password\": \"password3\",\n            \"sector\": \"Sector3\",\n            \"tipo\": \"Tipo3\"\n        }\n    ]\n}"
 						}
 					]
+				},
+				{
+					"name": "ObtenerUsuarios Autorizado",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "*4D78C66DBC6FA11E7084240C135637D650FECAB7",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "cristobal_socio",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{protocolo}}://{{server}}:{{puerto}}/{{app}}/{{usuarios}}",
+							"protocol": "{{protocolo}}",
+							"host": [
+								"{{server}}"
+							],
+							"port": "{{puerto}}",
+							"path": [
+								"{{app}}",
+								"{{usuarios}}"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "ObtenerUsuarios Ok",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{protocolo}}://{{server}}:{{puerto}}/{{app}}/{{usuarios}}",
+									"protocol": "{{protocolo}}",
+									"host": [
+										"{{server}}"
+									],
+									"port": "{{puerto}}",
+									"path": [
+										"{{app}}",
+										"{{usuarios}}"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:666"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 07 Nov 2023 03:28:56 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.4"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"listaUsuario\": [\n        {\n            \"idUsuario\": 1,\n            \"nombre\": \"Usuario1\",\n            \"fechaCreacion\": {\n                \"date\": \"2023-11-06 00:00:00.000000\",\n                \"timezone_type\": 3,\n                \"timezone\": \"America/Argentina/Buenos_Aires\"\n            },\n            \"fechaFinalizacion\": {\n                \"date\": \"2023-11-12 00:00:00.000000\",\n                \"timezone_type\": 3,\n                \"timezone\": \"America/Argentina/Buenos_Aires\"\n            },\n            \"user\": \"user1\",\n            \"password\": \"password1\",\n            \"sector\": \"Sector1\",\n            \"tipo\": \"Tipo1\"\n        },\n        {\n            \"idUsuario\": 2,\n            \"nombre\": \"Usuario2\",\n            \"fechaCreacion\": {\n                \"date\": \"2023-11-07 00:00:00.000000\",\n                \"timezone_type\": 3,\n                \"timezone\": \"America/Argentina/Buenos_Aires\"\n            },\n            \"fechaFinalizacion\": {\n                \"date\": \"2023-11-13 00:00:00.000000\",\n                \"timezone_type\": 3,\n                \"timezone\": \"America/Argentina/Buenos_Aires\"\n            },\n            \"user\": \"user2\",\n            \"password\": \"password2\",\n            \"sector\": \"Sector2\",\n            \"tipo\": \"Tipo2\"\n        },\n        {\n            \"idUsuario\": 3,\n            \"nombre\": \"Usuario3\",\n            \"fechaCreacion\": {\n                \"date\": \"2023-11-08 00:00:00.000000\",\n                \"timezone_type\": 3,\n                \"timezone\": \"America/Argentina/Buenos_Aires\"\n            },\n            \"fechaFinalizacion\": {\n                \"date\": \"2023-11-14 00:00:00.000000\",\n                \"timezone_type\": 3,\n                \"timezone\": \"America/Argentina/Buenos_Aires\"\n            },\n            \"user\": \"user3\",\n            \"password\": \"password3\",\n            \"sector\": \"Sector3\",\n            \"tipo\": \"Tipo3\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "CargarUsuario No autorizado",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "*7924A6822A50269BE36F22130A83D7ED07E32700",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "oscar_mozo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "nombre",
+									"value": "Malena",
+									"type": "text"
+								},
+								{
+									"key": "user",
+									"value": "Fernandez",
+									"type": "text"
+								},
+								{
+									"key": "sector",
+									"value": "cocina",
+									"type": "text"
+								},
+								{
+									"key": "tipo",
+									"value": "cocinero",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "malena123",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{protocolo}}://{{server}}:{{puerto}}/{{app}}/{{usuarios}}",
+							"protocol": "{{protocolo}}",
+							"host": [
+								"{{server}}"
+							],
+							"port": "{{puerto}}",
+							"path": [
+								"{{app}}",
+								"{{usuarios}}"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "basic",
+				"basic": [
+					{
+						"key": "password",
+						"value": "",
+						"type": "string"
+					},
+					{
+						"key": "username",
+						"value": "",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
 				}
 			]
 		},
@@ -417,7 +604,7 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{protocolo}}://{{server}}:{{puerto}}/{{app}}/{{productos}}/2",
+									"raw": "{{protocolo}}://{{server}}:{{puerto}}/{{app}}/{{productos}}/1",
 									"protocol": "{{protocolo}}",
 									"host": [
 										"{{server}}"
@@ -426,7 +613,7 @@
 									"path": [
 										"{{app}}",
 										"{{productos}}",
-										"2"
+										"1"
 									]
 								}
 							},
@@ -732,7 +919,7 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{protocolo}}://{{server}}:{{puerto}}/{{app}}/{{mesas}}/2",
+									"raw": "{{protocolo}}://{{server}}:{{puerto}}/{{app}}/{{mesas}}",
 									"protocol": "{{protocolo}}",
 									"host": [
 										"{{server}}"
@@ -740,8 +927,7 @@
 									"port": "{{puerto}}",
 									"path": [
 										"{{app}}",
-										"{{mesas}}",
-										"2"
+										"{{mesas}}"
 									]
 								}
 							},
@@ -827,36 +1013,6 @@
 					"request": {
 						"method": "POST",
 						"header": [],
-						"body": {
-							"mode": "formdata",
-							"formdata": [
-								{
-									"key": "mozo",
-									"value": "Mozo1",
-									"type": "text"
-								},
-								{
-									"key": "comanda",
-									"value": "9",
-									"type": "text"
-								},
-								{
-									"key": "importeTotal",
-									"value": "700",
-									"type": "text"
-								},
-								{
-									"key": "nombreCliente",
-									"value": "Pepe Alvarez",
-									"type": "text"
-								},
-								{
-									"key": "estado",
-									"value": "pendiente",
-									"type": "text"
-								}
-							]
-						},
 						"url": {
 							"raw": "{{protocolo}}://{{server}}:{{puerto}}/{{app}}/{{mesas}}",
 							"protocol": "{{protocolo}}",
@@ -870,102 +1026,7 @@
 							]
 						}
 					},
-					"response": [
-						{
-							"name": "ObtenerMesas Ok",
-							"originalRequest": {
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": "{{protocolo}}://{{server}}:{{puerto}}/{{app}}/{{mesas}}/2",
-									"protocol": "{{protocolo}}",
-									"host": [
-										"{{server}}"
-									],
-									"port": "{{puerto}}",
-									"path": [
-										"{{app}}",
-										"{{mesas}}",
-										"2"
-									]
-								}
-							},
-							"status": "OK",
-							"code": 200,
-							"_postman_previewlanguage": "json",
-							"header": [
-								{
-									"key": "Host",
-									"value": "localhost:666"
-								},
-								{
-									"key": "Date",
-									"value": "Tue, 07 Nov 2023 05:25:07 GMT"
-								},
-								{
-									"key": "Connection",
-									"value": "close"
-								},
-								{
-									"key": "X-Powered-By",
-									"value": "PHP/8.2.4"
-								},
-								{
-									"key": "Content-Type",
-									"value": "application/json"
-								}
-							],
-							"cookie": [],
-							"body": "{\n    \"idMesa\": 2,\n    \"mozo\": \"Mozo2\",\n    \"comanda\": 2,\n    \"importeTotal\": \"75.50\",\n    \"nombreCliente\": \"Cliente2\",\n    \"estado\": \"en preparación\",\n    \"fechaApertura\": {\n        \"date\": \"2023-11-07 02:16:50.000000\",\n        \"timezone_type\": 3,\n        \"timezone\": \"America/Argentina/Buenos_Aires\"\n    },\n    \"fechaCierre\": null\n}"
-						},
-						{
-							"name": "ObtenerMesas Error: No encontrada",
-							"originalRequest": {
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": "{{protocolo}}://{{server}}:{{puerto}}/{{app}}/{{mesas}}/999",
-									"protocol": "{{protocolo}}",
-									"host": [
-										"{{server}}"
-									],
-									"port": "{{puerto}}",
-									"path": [
-										"{{app}}",
-										"{{mesas}}",
-										"999"
-									]
-								}
-							},
-							"status": "OK",
-							"code": 200,
-							"_postman_previewlanguage": "json",
-							"header": [
-								{
-									"key": "Host",
-									"value": "localhost:666"
-								},
-								{
-									"key": "Date",
-									"value": "Tue, 07 Nov 2023 05:28:04 GMT"
-								},
-								{
-									"key": "Connection",
-									"value": "close"
-								},
-								{
-									"key": "X-Powered-By",
-									"value": "PHP/8.2.4"
-								},
-								{
-									"key": "Content-Type",
-									"value": "application/json"
-								}
-							],
-							"cookie": [],
-							"body": "{\n    \"err\": \"No se encontró la mesa con el ID solicitado\"\n}"
-						}
-					]
+					"response": []
 				}
 			]
 		},
@@ -1109,7 +1170,7 @@
 					]
 				},
 				{
-					"name": "CargarrPedido",
+					"name": "CargarPedido",
 					"request": {
 						"method": "POST",
 						"header": [],
@@ -1117,13 +1178,13 @@
 							"mode": "formdata",
 							"formdata": [
 								{
-									"key": "idComanda",
-									"value": "1",
+									"key": "idMesa",
+									"value": "1000",
 									"type": "text"
 								},
 								{
-									"key": "nombreEmpleado",
-									"value": "Juan",
+									"key": "nombreUsuario",
+									"value": "Pedro",
 									"type": "text"
 								},
 								{
@@ -1133,7 +1194,12 @@
 								},
 								{
 									"key": "cantidad",
-									"value": "1",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "nombreCliente",
+									"value": "Oscar",
 									"type": "text"
 								}
 							]
@@ -1153,7 +1219,7 @@
 					},
 					"response": [
 						{
-							"name": "ObtenerPedido Ok",
+							"name": "CargarrPedido Ok",
 							"originalRequest": {
 								"method": "POST",
 								"header": [],
@@ -1161,13 +1227,13 @@
 									"mode": "formdata",
 									"formdata": [
 										{
-											"key": "idComanda",
-											"value": "1",
+											"key": "idMesa",
+											"value": "1000",
 											"type": "text"
 										},
 										{
-											"key": "nombreEmpleado",
-											"value": "Juan",
+											"key": "nombreUsuario",
+											"value": "Pedro",
 											"type": "text"
 										},
 										{
@@ -1177,7 +1243,12 @@
 										},
 										{
 											"key": "cantidad",
-											"value": "1",
+											"value": "2",
+											"type": "text"
+										},
+										{
+											"key": "nombreCliente",
+											"value": "Oscar",
 											"type": "text"
 										}
 									]
@@ -1205,7 +1276,7 @@
 								},
 								{
 									"key": "Date",
-									"value": "Tue, 07 Nov 2023 23:22:55 GMT"
+									"value": "Tue, 14 Nov 2023 15:20:04 GMT"
 								},
 								{
 									"key": "Connection",
@@ -1224,6 +1295,64 @@
 							"body": "{\n    \"mensaje\": \"Pedido creado con exito\"\n}"
 						}
 					]
+				},
+				{
+					"name": "CambiarEstado Pedido",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "idMesa",
+									"value": "1000",
+									"description": "\n",
+									"type": "text"
+								},
+								{
+									"key": "nombreUsuario",
+									"value": "Pedro",
+									"type": "text"
+								},
+								{
+									"key": "nombreProducto",
+									"value": "Gancia",
+									"type": "text"
+								},
+								{
+									"key": "cantidad",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "nombreCliente",
+									"value": "Oscar",
+									"type": "text"
+								},
+								{
+									"key": "estado",
+									"value": "listo para servir",
+									"description": "pendiente, en preparación, listo para servir, cancelado",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{protocolo}}://{{server}}:{{puerto}}/{{app}}/{{pedidos}}/1000",
+							"protocol": "{{protocolo}}",
+							"host": [
+								"{{server}}"
+							],
+							"port": "{{puerto}}",
+							"path": [
+								"{{app}}",
+								"{{pedidos}}",
+								"1000"
+							]
+						}
+					},
+					"response": []
 				}
 			]
 		}
