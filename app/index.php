@@ -14,9 +14,18 @@ require_once CONTROLLERS . '/UsuarioControllers.php';
 require_once CONTROLLERS . '/ProductoController.php';
 require_once CONTROLLERS . '/MesaController.php';
 require_once CONTROLLERS . '/PedidoController.php';
+
+require_once '../Middlewares/AuthMiddleware.php';
+
 // Instantiate App
 $app = AppFactory::create();
 $app->setBasePath('/app');
+
+
+$usuariosAuthMiddleware = new AuthMiddleware([ROL_ADMIN, ROL_SOCIO]);
+$productosAuthMiddleware = new AuthMiddleware([ROL_ADMIN, ROL_SOCIO, ROL_BARTENDER, ROL_CERVEZERO, ROL_CERVEZERO, ROL_COCINERO]);
+$mesasAuthMiddleware = new AuthMiddleware([ROL_ADMIN, ROL_SOCIO, ROL_BARTENDER ,ROL_MOZO]);
+$pedidosAuthMiddleware = new AuthMiddleware([ROL_ADMIN, ROL_SOCIO, ROL_BARTENDER, ROL_CERVEZERO, ROL_MOZO, ROL_COCINERO]);
 
 // Add error middleware
 $app->addErrorMiddleware(true, true, true);
@@ -32,7 +41,7 @@ $app->group('/usuarios', function (RouteCollectorProxy $group) {
     $group->post('[/]', \UsuarioController::class . ':CargarUno');
     $group->put('/{usuario}', \UsuarioController::class . ':ModificarUno');
     $group->delete('/{usuario}', \UsuarioController::class . ':BorrarUno');
-});
+})->add($usuariosAuthMiddleware);
 
 $app->group('/productos', function (RouteCollectorProxy $group) {
     $group->get('[/]', \ProductoController::class . ':TraerTodos');
@@ -40,7 +49,7 @@ $app->group('/productos', function (RouteCollectorProxy $group) {
     $group->post('[/]', \ProductoController::class . ':CargarUno');
     $group->put('/{producto}', \ProductoController::class . ':ModificarUno');
     $group->delete('/{producto}', \ProductoController::class . ':BorrarUno');
-});
+})->add($productosAuthMiddleware);
 
 $app->group('/mesas', function (RouteCollectorProxy $group) {
     $group->get('[/]', \MesaController::class . ':TraerTodos');
@@ -48,7 +57,7 @@ $app->group('/mesas', function (RouteCollectorProxy $group) {
     $group->post('[/]', \MesaController::class . ':CargarUno');
     $group->put('/{mesa}', \MesaController::class . ':ModificarUno');
     $group->delete('/{mesa}', \MesaController::class . ':BorrarUno');
-});
+})->add($mesasAuthMiddleware);
 
 $app->group('/pedidos', function (RouteCollectorProxy $group) {
     $group->get('[/]', \PedidoController::class . ':TraerTodos');
@@ -56,6 +65,6 @@ $app->group('/pedidos', function (RouteCollectorProxy $group) {
     $group->post('[/]', \PedidoController::class . ':CargarUno');
     $group->put('/{pedido}', \PedidoController::class . ':ModificarUno');
     $group->delete('/{pedido}', \PedidoController::class . ':BorrarUno');
-});
+})->add($pedidosAuthMiddleware);
 
 $app->run();
