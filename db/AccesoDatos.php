@@ -76,13 +76,16 @@ class AccesoDatos
             id_producto INT NOT NULL,
             id_mesa INT NOT NULL,
             cantidad INT NOT NULL,
+            fecha_creacion DATETIME NOT NULL,
             fecha_estimada_finalizacion DATETIME NOT NULL,
             fecha_finalizacion DATETIME,
             sector VARCHAR(255) NOT NULL,
+            importe_total DECIMAL NOT NULL,
+            nombre_cliente VARCHAR(255) NOT NULL,
             estado ENUM('pendiente', 'en preparación', 'listo para servir', 'cancelado') NOT NULL,
-            FOREIGN KEY (id_mesa) REFERENCES Mesas (idMesa) ON DELETE CASCADE ON UPDATE CASCADE,
-            FOREIGN KEY (id_usuario) REFERENCES Usuarios (idUsuario) ON DELETE CASCADE ON UPDATE CASCADE,
-            FOREIGN KEY (id_producto) REFERENCES Productos (id_producto) ON DELETE CASCADE ON UPDATE CASCADE
+            FOREIGN KEY (id_mesa) REFERENCES Mesas (idMesa) ON DELETE CASCADE,
+            FOREIGN KEY (id_usuario) REFERENCES Usuarios (idUsuario) ON DELETE CASCADE,
+            FOREIGN KEY (id_producto) REFERENCES Productos (id_producto) ON DELETE CASCADE
         ) AUTO_INCREMENT=1000;
         SQL;
 

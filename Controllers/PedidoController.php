@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Process;
+use Slim\Exception\HttpBadRequestException;
 
 include_once MODELS . '/Pedido.php';
 include_once MODELS . "/Producto.php";
@@ -13,21 +14,29 @@ class PedidoController implements IApiUsable
     {
         $parametros = $request->getParsedBody();
 
-        $idEmpleado = $parametros['idEmpleado'];
-        $nombreEmpleado = $parametros['nombreEmpleado'];
+
+        $nombreUsuario = $parametros['nombreUsuario'];
         $nombreProducto = $parametros['nombreProducto'];
         $cantidad = $parametros['cantidad'];
+        $idMesa = $parametros['idMesa'];
         $nombreCliente = $parametros['nombreCliente'];
 
         // Creamos el pedido
         $pedido = new Pedido();
-        $pedido->usuarioAsignado = Usuario::obtenerUsuarioByName($nombreEmpleado);
+        $pedido->usuarioAsignado = Usuario::obtenerUsuarioByName($nombreUsuario);
+        if($pedido->usuarioAsignado === false){
+            throw new Exception("No existe el usuario con el nombre suministrado");
+        }
 
-        
-        
         $pedido->producto = Producto::obtenerProductoByName($nombreProducto);
         
+        if($pedido->producto === false){
+            throw new Exception("No existe el producto con el nombre suministrado");
+        }
         $pedido->cantidad = (int)$cantidad;
+        $pedido->idMesa = (int)$idMesa;
+        $pedido->nombreCliente = $nombreCliente;
+        $pedido->importeTotal = $pedido->cantidad * $pedido->producto->precio;
         $pedido->crearPedido();
 
         $payload = json_encode(array("mensaje" => "Pedido creado con exito"));
@@ -101,5 +110,4 @@ class PedidoController implements IApiUsable
         return $response->withHeader('Content-Type', 'application/json');
     }
 }
-
 ?>

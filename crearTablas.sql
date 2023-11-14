@@ -27,7 +27,7 @@ CREATE TABLE IF NOT EXISTS Mesas (
     fechaApertura DATETIME NOT NULL,
     fechaCierre DATETIME,
     UNIQUE (codigo_identificacion)
-)
+)AUTO_INCREMENT=1000;
 
 CREATE TABLE IF NOT EXISTS Pedidos (
     id_pedido INT AUTO_INCREMENT PRIMARY KEY,
@@ -44,4 +44,4 @@ CREATE TABLE IF NOT EXISTS Pedidos (
     FOREIGN KEY (id_usuario) REFERENCES Usuarios (idUsuario) ON DELETE CASCADE ON UPDATE CASCADE,
     FOREIGN KEY (id_producto) REFERENCES Productos (id_producto) ON DELETE CASCADE ON UPDATE CASCADE,
     UNIQUE (codigo_identificacion)
-)
+) AUTO_INCREMENT=1000;
