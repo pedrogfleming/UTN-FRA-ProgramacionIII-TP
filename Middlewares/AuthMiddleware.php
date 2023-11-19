@@ -4,6 +4,7 @@ require_once MODELS . '/Usuario.php';
 
 use Psr\Http\Message\ServerRequestInterface as Request;
 use Psr\Http\Server\RequestHandlerInterface as RequestHandler;
+use Slim\Routing\RouteContext;
 use Slim\Psr7\Response;
 
 
@@ -19,9 +20,11 @@ class AuthMiddleware
     public function __invoke(Request $request, RequestHandler $handler): Response
     {
         $headerValueArray = $request->getHeader('Accept');
-
+        
         $headerParams = $request->getServerParams();
-
+        $routeContext = RouteContext::fromRequest($request);
+        $args = $routeContext->getRoute()->getArguments();
+        
         // $route = $request->getHeader('route');
         // $sector = $route ? $route->getHeader('sector') : null;
         // $rol = $route ? $route->getHeader('rol') : null;

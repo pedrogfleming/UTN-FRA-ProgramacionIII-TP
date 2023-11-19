@@ -23,9 +23,9 @@ $app->setBasePath('/app');
 
 
 $usuariosAuthMiddleware = new AuthMiddleware([ROL_ADMIN, ROL_SOCIO]);
-$productosAuthMiddleware = new AuthMiddleware([ROL_ADMIN, ROL_SOCIO, ROL_BARTENDER, ROL_CERVEZERO, ROL_MOZO, ROL_COCINERO]);
-$mesasAuthMiddleware = new AuthMiddleware([ROL_ADMIN, ROL_SOCIO, ROL_BARTENDER ,ROL_MOZO]);
-$pedidosAuthMiddleware = new AuthMiddleware([ROL_ADMIN, ROL_SOCIO, ROL_BARTENDER, ROL_CERVEZERO, ROL_MOZO, ROL_COCINERO]);
+$productosAuthMiddleware = new AuthMiddleware([ROL_ADMIN, ROL_SOCIO,  ROL_CERVEZERO, ROL_MOZO, ROL_COCINERO]);
+$mesasAuthMiddleware = new AuthMiddleware([ROL_ADMIN, ROL_SOCIO, ROL_MOZO]);
+$pedidosAuthMiddleware = new AuthMiddleware([ROL_ADMIN, ROL_SOCIO,  ROL_CERVEZERO, ROL_MOZO, ROL_COCINERO]);
 
 // Add error middleware
 $app->addErrorMiddleware(true, true, true);
