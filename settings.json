@@ -1,0 +1,16 @@
+{
+    "validation_config": {
+        "required_keys": [
+            "idMesa",
+            "nombreUsuario",
+            "nombreCliente",
+            "items"
+        ],
+        "nested_keys": {
+            "items": [
+                "nombreProducto",
+                "cantidad"
+            ]
+        }
+    }
+}

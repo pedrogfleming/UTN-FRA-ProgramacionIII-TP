@@ -1,10 +1,12 @@
 <?php
-// Desde adentro de src
+// Desde adentro de ./app
 
 define("CONTROLLERS","../Controllers");
 define("DB","../db");
 define("INTERFACES","../Interfaces");
 define("MODELS","../Models");
+define("MIDDLEWARES", "../Middlewares");
+define("SETTINGS", "../settings.json");
 
 // Roles
 define("ROL_ADMIN", "admin");

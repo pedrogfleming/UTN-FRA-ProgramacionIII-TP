@@ -15,7 +15,8 @@ require_once CONTROLLERS . '/ProductoController.php';
 require_once CONTROLLERS . '/MesaController.php';
 require_once CONTROLLERS . '/PedidoController.php';
 
-require_once '../Middlewares/AuthMiddleware.php';
+require_once MIDDLEWARES . '/AuthMiddleware.php';
+require_once MIDDLEWARES . '/RequestValidatorMiddleware.php';
 
 // Instantiate App
 $app = AppFactory::create();
@@ -26,6 +27,8 @@ $usuariosAuthMiddleware = new AuthMiddleware([ROL_ADMIN, ROL_SOCIO]);
 $productosAuthMiddleware = new AuthMiddleware([ROL_ADMIN, ROL_SOCIO,  ROL_CERVEZERO, ROL_MOZO, ROL_COCINERO]);
 $mesasAuthMiddleware = new AuthMiddleware([ROL_ADMIN, ROL_SOCIO, ROL_MOZO]);
 $pedidosAuthMiddleware = new AuthMiddleware([ROL_ADMIN, ROL_SOCIO,  ROL_CERVEZERO, ROL_MOZO, ROL_COCINERO]);
+
+
 
 // Add error middleware
 $app->addErrorMiddleware(true, true, true);
@@ -60,9 +63,13 @@ $app->group('/mesas', function (RouteCollectorProxy $group) {
 })->add($mesasAuthMiddleware);
 
 $app->group('/pedidos', function (RouteCollectorProxy $group) {
+    $settings = json_decode(file_get_contents(SETTINGS), true);
+    $validationConfig = $settings['validation_config'];
+    $requestValidatorMiddleware = new RequestValidatorMiddleware($validationConfig);
+
     $group->get('[/]', \PedidoController::class . ':TraerTodos');
     $group->get('/{pedido}', \PedidoController::class . ':TraerUno');
-    $group->post('[/]', \PedidoController::class . ':CargarUno');
+    $group->post('[/]', \PedidoController::class . ':CargarUno')->add($requestValidatorMiddleware);
     $group->put('/{pedido}', \PedidoController::class . ':ModificarUno');
     $group->delete('/{pedido}', \PedidoController::class . ':BorrarUno');
 })->add($pedidosAuthMiddleware);
