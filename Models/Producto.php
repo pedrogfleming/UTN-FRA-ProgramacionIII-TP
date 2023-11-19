@@ -2,7 +2,6 @@
 require_once DB . "/AccesoDatos.php";
 class Producto
 {
-
     public $idProducto;
     public $titulo;
     public $tiempoPreparacion;
