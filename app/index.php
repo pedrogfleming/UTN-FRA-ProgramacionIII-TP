@@ -36,6 +36,11 @@ $app->addErrorMiddleware(true, true, true);
 // Add parse body
 $app->addBodyParsingMiddleware();
 
+if (!file_exists(SETTINGS)) {
+    echo 'Archivo settings no existe';
+    exit;
+}
+
 // Routes
 
 $app->group('/usuarios', function (RouteCollectorProxy $group) {
@@ -62,14 +67,19 @@ $app->group('/mesas', function (RouteCollectorProxy $group) {
     $group->delete('/{mesa}', \MesaController::class . ':BorrarUno');
 })->add($mesasAuthMiddleware);
 
-$app->group('/pedidos', function (RouteCollectorProxy $group) {
-    $settings = json_decode(file_get_contents(SETTINGS), true);
-    $validationConfig = $settings['validation_config'];
-    $requestValidatorMiddleware = new RequestValidatorMiddleware($validationConfig);
+$app->group('/pedidos', function (RouteCollectorProxy $group) {   
+        $contenidos = file_get_contents(SETTINGS);
+        $settings = json_decode($contenidos, true);        
+        if ($settings === null) {
+            echo 'Error al decodificar el archivo settings.';
+            exit;
+        }
+    $cargarUnoReqValidatorKeys= $settings['pedidos']['CargarUno']['validation_config'];
+
 
     $group->get('[/]', \PedidoController::class . ':TraerTodos');
     $group->get('/{pedido}', \PedidoController::class . ':TraerUno');
-    $group->post('[/]', \PedidoController::class . ':CargarUno')->add($requestValidatorMiddleware);
+    $group->post('[/]', \PedidoController::class . ':CargarUno')->add(new RequestValidatorMiddleware($cargarUnoReqValidatorKeys));
     $group->put('/{pedido}', \PedidoController::class . ':ModificarUno');
     $group->delete('/{pedido}', \PedidoController::class . ':BorrarUno');
 })->add($pedidosAuthMiddleware);
