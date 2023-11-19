@@ -108,7 +108,7 @@ class Pedido
             $pedido->fechaFinalizacion = $prototipo->fecha_finalizacion;
         }
     
-        $pedido->importeTotal = $prototipo->importe_total;
+        $pedido->importeTotal = (float) $prototipo->importe_total;
         $pedido->nombreCliente = $prototipo->nombre_cliente;
         $pedido->estado = $prototipo->estado;
     

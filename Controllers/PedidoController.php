@@ -50,7 +50,7 @@ class PedidoController implements IApiUsable
             $item->fechaEstimadaFinalizacion = $item->fechaCreacion->add($interval);
             $item->estado = Item::ESTADO_PENDIENTE;
             array_push($pedido->itemsPedidos, $item);
-            $pedido->importeTotal += $productoObtenido->precio;
+            $pedido->importeTotal += $productoObtenido->precio * $item->cantidad;
         }
         // La suma de todos los minutos de cada uno de los items del pedido
         $aux = DateInterval::createFromDateString($minutosAcc . 'minutes');

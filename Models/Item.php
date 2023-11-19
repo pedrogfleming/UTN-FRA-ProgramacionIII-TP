@@ -85,7 +85,7 @@ class Item
         $item = new Item();
         $item->idPedido = $prototipo->id_pedido;
         $item->idProducto = $prototipo->id_producto;
-        $item->cantidad = $prototipo->cantidad;
+        $item->cantidad = (int)$prototipo->cantidad;
         $item->fechaCreacion = $prototipo->fecha_creacion;
         $item->fechaEstimadaFinalizacion = $prototipo->fecha_estimada_finalizacion;
         $item->fechaFinalizacion = $prototipo->fecha_finalizacion;
