@@ -129,10 +129,7 @@
                     "items"
                 ],
                 "nested_keys": {
-                    "items": [
-                        "nombreProducto",
-                        "cantidad"
-                    ]
+                    "items": []
                 }
             }
         },

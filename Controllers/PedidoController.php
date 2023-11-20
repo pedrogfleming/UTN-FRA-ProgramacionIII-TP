@@ -26,7 +26,7 @@ class PedidoController implements IApiUsable
         }
         $idMesa = $parametros['idMesa'];
         $mesaObtenida = Mesa::obtenerMesa($idMesa);
-        if($mesaObtenida === false) {
+        if ($mesaObtenida === false) {
             throw new Exception("No existe la mesa con el id suministrado");
         }
         $pedido->idMesa = $mesaObtenida->idMesa;
@@ -56,9 +56,16 @@ class PedidoController implements IApiUsable
         $aux = DateInterval::createFromDateString($minutosAcc . 'minutes');
         $pedido->fechaEstimadaDeFinalizacion = $pedido->fechaCreacion->add($aux);
 
-        $pedido->crearPedido();
-        $payload = json_encode(array("mensaje" => "Items creados con éxito"));
+        $idCreado = $pedido->crearPedido();
+        $mensaje = "Items creados con éxito";
+        $nombreFoto = $idCreado . "-pedido.jpg";
+        $fotoGuardadaConExito = $this->GuardarFoto($nombreFoto);
 
+        if(!$fotoGuardadaConExito->success){
+            $mensaje =  $mensaje . ". No se pudo guardar la foto del pedido. Error: " . $fotoGuardadaConExito->err;
+        }
+        
+        $payload = json_encode(array("mensaje" => $mensaje));
         $response->getBody()->write($payload);
         return $response->withHeader('Content-Type', 'application/json');
     }
@@ -146,5 +153,31 @@ class PedidoController implements IApiUsable
         $response->getBody()->write($payload);
         return $response->withHeader('Content-Type', 'application/json');
     }
+    private function GuardarFoto($nombreArchivo){
+        
+        $ret = new stdClass;
+        // La carpeta debe crearse previamente
+        $carpeta_archivo = '../ImagenesPedidos/';
+        
+        // Datos del archivo enviado por POST
+        $tipo_archivo =  $_FILES['fotoPedido']['type'];
+        $tamano_archivo =  $_FILES['fotoPedido']['size'];
+    
+        // Ruta de destino, carpeta + nombre del archivo que quiero guardar
+        $ruta_destino = $carpeta_archivo . $nombreArchivo;
+        // Realizamos las validaciones del archivo
+        if (!((strpos($tipo_archivo, "png") || strpos($tipo_archivo, "jpeg") || strpos($tipo_archivo, "jpg")) && ($tamano_archivo < 300000))) {
+            $ret->success = false;
+            $ret->err = "La extensión o el tamaño de los archivos no es correcto. <br><br><table><tr><td><li>Solo se permiten archivos .png o .jpg<br><li>Se permiten archivos de un máximo de 300 Kb.</td></tr></table>";
+        } else {
+            $aux = $_FILES['fotoPedido']['tmp_name'];
+            if (move_uploaded_file($_FILES['fotoPedido']['tmp_name'],  $ruta_destino)) {
+                $ret->success = true;
+            } else {
+                $ret->success = false;
+                $ret->err = "Se produjo un error al cargar el archivo. No se pudo guardar.";
+            }
+        }
+        return $ret;
+    }
 }
-?>
