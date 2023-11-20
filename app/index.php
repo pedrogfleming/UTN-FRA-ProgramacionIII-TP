@@ -44,17 +44,33 @@ if (!file_exists(SETTINGS)) {
 // Routes
 
 $app->group('/usuarios', function (RouteCollectorProxy $group) {
+    $contenidos = file_get_contents(SETTINGS);
+    $settings = json_decode($contenidos, true);
+    if ($settings === null) {
+        echo 'Error al decodificar el archivo settings.';
+        exit;
+    }
+    $cargarUnoReqValidatorKeys = $settings['usuarios']['CargarUno']['validation_config'];
+
     $group->get('[/]', \UsuarioController::class . ':TraerTodos');
     $group->get('/{usuario}', \UsuarioController::class . ':TraerUno');
-    $group->post('[/]', \UsuarioController::class . ':CargarUno');
+    $group->post('[/]', \UsuarioController::class . ':CargarUno')->add(new RequestValidatorMiddleware($cargarUnoReqValidatorKeys));
     $group->put('/{usuario}', \UsuarioController::class . ':ModificarUno');
     $group->delete('/{usuario}', \UsuarioController::class . ':BorrarUno');
 })->add($usuariosAuthMiddleware);
 
 $app->group('/productos', function (RouteCollectorProxy $group) {
+    $contenidos = file_get_contents(SETTINGS);
+    $settings = json_decode($contenidos, true);
+    if ($settings === null) {
+        echo 'Error al decodificar el archivo settings.';
+        exit;
+    }
+    $cargarUnoReqValidatorKeys = $settings['productos']['CargarUno']['validation_config'];
+
     $group->get('[/]', \ProductoController::class . ':TraerTodos');
     $group->get('/{producto}', \ProductoController::class . ':TraerUno');
-    $group->post('[/]', \ProductoController::class . ':CargarUno');
+    $group->post('[/]', \ProductoController::class . ':CargarUno')->add(new RequestValidatorMiddleware($cargarUnoReqValidatorKeys));
     $group->put('/{producto}', \ProductoController::class . ':ModificarUno');
     $group->delete('/{producto}', \ProductoController::class . ':BorrarUno');
 })->add($productosAuthMiddleware);
@@ -67,14 +83,14 @@ $app->group('/mesas', function (RouteCollectorProxy $group) {
     $group->delete('/{mesa}', \MesaController::class . ':BorrarUno');
 })->add($mesasAuthMiddleware);
 
-$app->group('/pedidos', function (RouteCollectorProxy $group) {   
-        $contenidos = file_get_contents(SETTINGS);
-        $settings = json_decode($contenidos, true);        
-        if ($settings === null) {
-            echo 'Error al decodificar el archivo settings.';
-            exit;
-        }
-    $cargarUnoReqValidatorKeys= $settings['pedidos']['CargarUno']['validation_config'];
+$app->group('/pedidos', function (RouteCollectorProxy $group) {
+    $contenidos = file_get_contents(SETTINGS);
+    $settings = json_decode($contenidos, true);
+    if ($settings === null) {
+        echo 'Error al decodificar el archivo settings.';
+        exit;
+    }
+    $cargarUnoReqValidatorKeys = $settings['pedidos']['CargarUno']['validation_config'];
 
 
     $group->get('[/]', \PedidoController::class . ':TraerTodos');

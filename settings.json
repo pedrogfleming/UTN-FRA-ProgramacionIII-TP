@@ -14,7 +14,13 @@
         },
         "CargarUno": {
             "validation_config": {
-                "required_keys": [],
+                "required_keys": [
+                    "nombre",
+                    "user",
+                    "sector",
+                    "tipo",
+                    "password"
+                ],
                 "nested_keys": {}
             }
         },
@@ -46,7 +52,13 @@
         },
         "CargarUno": {
             "validation_config": {
-                "required_keys": [],
+                "required_keys": [
+                    "titulo",
+                    "tiempoPreparacion",
+                    "sector",
+                    "estado",
+                    "precio"
+                ],
                 "nested_keys": {}
             }
         },
@@ -120,8 +132,7 @@
                     "items": [
                         "nombreProducto",
                         "cantidad"
-                    ],
-                    "no_existe": []
+                    ]
                 }
             }
         },
