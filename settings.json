@@ -26,7 +26,14 @@
         },
         "ModificarUno": {
             "validation_config": {
-                "required_keys": [],
+                "required_keys": [
+                    "id",
+                    "nombre",
+                    "user",
+                    "sector",
+                    "tipo",
+                    "password"
+                ],
                 "nested_keys": {}
             }
         },
@@ -64,7 +71,14 @@
         },
         "ModificarUno": {
             "validation_config": {
-                "required_keys": [],
+                "required_keys": [
+                    "id",
+                    "titulo",
+                    "tiempoPreparacion",
+                    "precio",
+                    "estado",
+                    "sector"
+                ],
                 "nested_keys": {}
             }
         },
@@ -190,7 +204,17 @@
         },
         "ModificarUno": {
             "validation_config": {
-                "required_keys": [],
+                "required_keys": [
+                    "idPedido",
+                    "idMesa",
+                    "idMozo",
+                    "idCocinero",
+                    "puntuacionMesa",
+                    "puntuacionRestaurante",
+                    "puntuacionMozo",
+                    "puntuacionCocinero",
+                    "experienciaTexto"
+                ],
                 "nested_keys": {}
             }
         },
