@@ -18,7 +18,8 @@ require_once CONTROLLERS . '/MesaController.php';
 require_once CONTROLLERS . '/PedidoController.php';
 require_once CONTROLLERS . '/AuthController.php';
 
-require_once MIDDLEWARES . '/AuthMiddleware.php';
+require_once MIDDLEWARES . '/AuthenticationMiddleware.php';
+require_once MIDDLEWARES . '/AuthorizationMiddleware.php';
 require_once MIDDLEWARES . '/RequestValidatorMiddleware.php';
 require_once UTILS . '/AutentificadorJWT.php';
 
@@ -30,12 +31,11 @@ require_once UTILS . '/AutentificadorJWT.php';
 $app = AppFactory::create();
 $app->setBasePath('/app');
 
-
-$usuariosAuthMiddleware = new AuthMiddleware([ROL_ADMIN, ROL_SOCIO]);
-$productosAuthMiddleware = new AuthMiddleware([ROL_ADMIN, ROL_SOCIO,  ROL_CERVEZERO, ROL_MOZO, ROL_COCINERO]);
-$mesasAuthMiddleware = new AuthMiddleware([ROL_ADMIN, ROL_SOCIO, ROL_MOZO]);
-$pedidosAuthMiddleware = new AuthMiddleware([ROL_ADMIN, ROL_SOCIO,  ROL_CERVEZERO, ROL_MOZO, ROL_COCINERO]);
-
+// PERMISOS
+$usuariosAuthorizationMiddleware = new AuthorizationMiddleware([ROL_ADMIN, ROL_SOCIO]);
+$productosAuthorizationMiddleware = new AuthorizationMiddleware([ROL_ADMIN, ROL_SOCIO,  ROL_CERVECERO, ROL_MOZO, ROL_COCINERO]);
+$mesasAuthorizationMiddleware = new AuthorizationMiddleware([ROL_ADMIN, ROL_SOCIO, ROL_MOZO]);
+$pedidosAuthorizationMiddleware = new AuthorizationMiddleware([ROL_ADMIN, ROL_SOCIO,  ROL_CERVECERO, ROL_MOZO, ROL_COCINERO]);
 
 
 // Add error middleware
@@ -67,15 +67,18 @@ $app->group('/usuarios', function (RouteCollectorProxy $group) {
         exit;
     }
     $cargarUnoReqValidatorKeys = $settings['usuarios']['CargarUno']['validation_config'];
-
     $group->get('[/]', \UsuarioController::class . ':TraerTodos')->add(\AuthMiddleware::class . ':verificarToken');
     $group->get('/{usuario}', \UsuarioController::class . ':TraerUno');
     $group->post('[/]', \UsuarioController::class . ':CargarUno')->add(new RequestValidatorMiddleware($cargarUnoReqValidatorKeys));
     $group->put('/{usuario}', \UsuarioController::class . ':ModificarUno');
     $group->delete('/{usuario}', \UsuarioController::class . ':BorrarUno');
-})->add($usuariosAuthMiddleware);
+})->add($usuariosAuthorizationMiddleware);
 
 $app->group('/productos', function (RouteCollectorProxy $group) {
+    $cargarUnoProducto = new AuthorizationMiddleware([ROL_ADMIN, ROL_SOCIO]);
+    $modificarUnoProducto = new AuthorizationMiddleware([ROL_ADMIN, ROL_SOCIO]);
+    $traerTodosProducto = new AuthorizationMiddleware([ROL_ADMIN, ROL_SOCIO,  ROL_CERVECERO, ROL_MOZO, ROL_COCINERO]);
+    $borrarUnoProducto = new AuthorizationMiddleware([ROL_ADMIN, ROL_SOCIO]);
     $contenidos = file_get_contents(SETTINGS);
     $settings = json_decode($contenidos, true);
     if ($settings === null) {
@@ -84,20 +87,25 @@ $app->group('/productos', function (RouteCollectorProxy $group) {
     }
     $cargarUnoReqValidatorKeys = $settings['productos']['CargarUno']['validation_config'];
 
-    $group->get('[/]', \ProductoController::class . ':TraerTodos');
-    $group->get('/{producto}', \ProductoController::class . ':TraerUno');
-    $group->post('[/]', \ProductoController::class . ':CargarUno')->add(new RequestValidatorMiddleware($cargarUnoReqValidatorKeys));
-    $group->put('/{producto}', \ProductoController::class . ':ModificarUno');
-    $group->delete('/{producto}', \ProductoController::class . ':BorrarUno');
-})->add($productosAuthMiddleware);
+    $group->get('[/]', \ProductoController::class . ':TraerTodos')->add($traerTodosProducto);
+    $group->get('/{producto}', \ProductoController::class . ':TraerUno')->add($traerTodosProducto);
+    $group->post('[/]', \ProductoController::class . ':CargarUno')->add($cargarUnoProducto)->add(new RequestValidatorMiddleware($cargarUnoReqValidatorKeys));
+    $group->put('/{producto}', \ProductoController::class . ':ModificarUno')->add($modificarUnoProducto);
+    $group->delete('/{producto}', \ProductoController::class . ':BorrarUno')->add($borrarUnoProducto);
+});
 
 $app->group('/mesas', function (RouteCollectorProxy $group) {
-    $group->get('[/]', \MesaController::class . ':TraerTodos');
-    $group->get('/{mesa}', \MesaController::class . ':TraerUno');
-    $group->post('[/]', \MesaController::class . ':CargarUno');
-    $group->put('/{mesa}', \MesaController::class . ':ModificarUno');
-    $group->delete('/{mesa}', \MesaController::class . ':BorrarUno');
-})->add($mesasAuthMiddleware);
+    $cargarUnoMesa = new AuthorizationMiddleware([ROL_ADMIN, ROL_SOCIO, ROL_MOZO]);
+    $traerTodosMesa = new AuthorizationMiddleware([ROL_ADMIN, ROL_SOCIO, ROL_MOZO]);
+    $modificarUnoMesa = new AuthorizationMiddleware([ROL_ADMIN, ROL_SOCIO, ROL_MOZO]);
+    $borrarUnoMesa = new AuthorizationMiddleware([ROL_ADMIN, ROL_SOCIO, ROL_MOZO]);
+
+    $group->get('[/]', \MesaController::class . ':TraerTodos')->add($traerTodosMesa);
+    $group->get('/{mesa}', \MesaController::class . ':TraerUno')->add($traerTodosMesa);
+    $group->post('[/]', \MesaController::class . ':CargarUno')->add($cargarUnoMesa);
+    $group->put('/{mesa}', \MesaController::class . ':ModificarUno')->add($modificarUnoMesa);
+    $group->delete('/{mesa}', \MesaController::class . ':BorrarUno')->add($borrarUnoMesa);
+});
 
 $app->group('/pedidos', function (RouteCollectorProxy $group) {
     $contenidos = file_get_contents(SETTINGS);
@@ -108,12 +116,16 @@ $app->group('/pedidos', function (RouteCollectorProxy $group) {
     }
     $cargarUnoReqValidatorKeys = $settings['pedidos']['CargarUno']['validation_config'];
 
+    $cargarUnoPedido = new AuthorizationMiddleware([ROL_ADMIN, ROL_SOCIO, ROL_MOZO]);
+    $traerTodosPedido = new AuthorizationMiddleware([ROL_ADMIN, ROL_SOCIO,  ROL_CERVECERO, ROL_MOZO, ROL_COCINERO]);
+    $modificarUnoPedido = new AuthorizationMiddleware([ROL_ADMIN, ROL_SOCIO, ROL_MOZO]);
+    $borrarUnoPedido = new AuthorizationMiddleware([ROL_ADMIN, ROL_SOCIO, ROL_MOZO]);
 
-    $group->get('[/]', \PedidoController::class . ':TraerTodos');
-    $group->get('/{pedido}', \PedidoController::class . ':TraerUno');
-    $group->post('[/]', \PedidoController::class . ':CargarUno')->add(new RequestValidatorMiddleware($cargarUnoReqValidatorKeys));
-    $group->put('/{pedido}', \PedidoController::class . ':ModificarUno');
-    $group->delete('/{pedido}', \PedidoController::class . ':BorrarUno');
-})->add($pedidosAuthMiddleware);
+    $group->get('[/]', \PedidoController::class . ':TraerTodos')->add($traerTodosPedido);
+    $group->get('/{pedido}', \PedidoController::class . ':TraerUno')->add($traerTodosPedido);
+    $group->post('[/]', \PedidoController::class . ':CargarUno')->add($cargarUnoPedido)->add(new RequestValidatorMiddleware($cargarUnoReqValidatorKeys));
+    $group->put('/{pedido}', \PedidoController::class . ':ModificarUno')->add($modificarUnoPedido);
+    $group->delete('/{pedido}', \PedidoController::class . ':BorrarUno')->add($borrarUnoPedido);
+});
 
 $app->run();

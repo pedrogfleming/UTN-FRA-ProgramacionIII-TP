@@ -7,7 +7,7 @@ use Firebase\JWT\ExpiredException;
 
 class AutentificadorJWT
 {
-    private static $claveSecreta = 'ClaveSuperSecretaPGF@';
+    private static $claveSecreta = 'PrograIIItpComandaPGF@';
     private static $tipoEncriptacion = ['HS256'];
     private static $aud = null;
 

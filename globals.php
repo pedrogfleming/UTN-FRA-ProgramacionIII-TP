@@ -13,7 +13,7 @@ define("SETTINGS", "../settings.json");
 define("ROL_ADMIN", "admin");
 define("ROL_SOCIO", "socio");
 define("ROL_BARTENDER", "bartender");
-define("ROL_CERVEZERO", "cervecero");
+define("ROL_CERVECERO", "cervecero");
 define("ROL_MOZO", "mozo");
 define("ROL_COCINERO", "cocinero");
 
