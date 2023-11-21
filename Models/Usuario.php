@@ -91,6 +91,23 @@ class Usuario{
         return $rtn;
     }
 
+    public static function obtenerUsuarioByUsername($userUsuario)
+    {
+        $rtn = false;
+        $objAccesoDatos = AccesoDatos::obtenerInstancia();
+        $consulta = $objAccesoDatos->prepararConsulta("SELECT * FROM usuarios WHERE user = ?");
+        $consulta->bindParam(1, $userUsuario);
+        $consulta->execute();
+
+        $prototipeObject = $consulta->fetch(PDO::FETCH_OBJ);
+        if($prototipeObject != false)
+        {
+            $rtn = Usuario::transformarPrototipo($prototipeObject);
+        }
+
+        return $rtn;
+    }
+
     private static function transformarPrototipo($prototipo)
     {   
         $usuario = new Usuario();

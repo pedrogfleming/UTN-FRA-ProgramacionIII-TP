@@ -1,0 +1,161 @@
+{
+    "usuarios": {
+        "TraerTodos": {
+            "validation_config": {
+                "required_keys": [],
+                "nested_keys": {}
+            }
+        },
+        "TraerUno": {
+            "validation_config": {
+                "required_keys": [],
+                "nested_keys": {}
+            }
+        },
+        "CargarUno": {
+            "validation_config": {
+                "required_keys": [
+                    "nombre",
+                    "user",
+                    "sector",
+                    "tipo",
+                    "password"
+                ],
+                "nested_keys": {}
+            }
+        },
+        "ModificarUno": {
+            "validation_config": {
+                "required_keys": [],
+                "nested_keys": {}
+            }
+        },
+        "BorrarUno": {
+            "validation_config": {
+                "required_keys": [],
+                "nested_keys": {}
+            }
+        }
+    },
+    "productos": {
+        "TraerTodos": {
+            "validation_config": {
+                "required_keys": [],
+                "nested_keys": {}
+            }
+        },
+        "TraerUno": {
+            "validation_config": {
+                "required_keys": [],
+                "nested_keys": {}
+            }
+        },
+        "CargarUno": {
+            "validation_config": {
+                "required_keys": [
+                    "titulo",
+                    "tiempoPreparacion",
+                    "sector",
+                    "estado",
+                    "precio"
+                ],
+                "nested_keys": {}
+            }
+        },
+        "ModificarUno": {
+            "validation_config": {
+                "required_keys": [],
+                "nested_keys": {}
+            }
+        },
+        "BorrarUno": {
+            "validation_config": {
+                "required_keys": [],
+                "nested_keys": {}
+            }
+        }
+    },
+    "mesas": {
+        "TraerTodos": {
+            "validation_config": {
+                "required_keys": [],
+                "nested_keys": {}
+            }
+        },
+        "TraerUno": {
+            "validation_config": {
+                "required_keys": [],
+                "nested_keys": {}
+            }
+        },
+        "CargarUno": {
+            "validation_config": {
+                "required_keys": [],
+                "nested_keys": {}
+            }
+        },
+        "ModificarUno": {
+            "validation_config": {
+                "required_keys": [],
+                "nested_keys": {}
+            }
+        },
+        "BorrarUno": {
+            "validation_config": {
+                "required_keys": [],
+                "nested_keys": {}
+            }
+        }
+    },
+    "pedidos": {
+        "TraerTodos": {
+            "validation_config": {
+                "required_keys": [],
+                "nested_keys": {}
+            }
+        },
+        "TraerUno": {
+            "validation_config": {
+                "required_keys": [],
+                "nested_keys": {}
+            }
+        },
+        "CargarUno": {
+            "validation_config": {
+                "required_keys": [
+                    "idMesa",
+                    "nombreUsuario",
+                    "nombreCliente",
+                    "items"
+                ],
+                "nested_keys": {
+                    "items": []
+                }
+            }
+        },
+        "ModificarUno": {
+            "validation_config": {
+                "required_keys": [
+                    "idMesa",
+                    "nombreUsuario",
+                    "nombreCliente",
+                    "estado",
+                    "items"
+                ],
+                "nested_keys": {
+                    "items": [
+                        "nombreProducto",
+                        "cantidad",
+                        "estado"
+                    ]
+                }
+            }
+        },
+        "BorrarUno": {
+            "validation_config": {
+                "required_keys": [],
+                "nested_keys": {}
+            }
+        }
+    }
+}
