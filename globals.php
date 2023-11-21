@@ -30,3 +30,6 @@ define("SECTOR_BAR", "bar");
 define("ACTIVO", 0);
 define("INACTIVO", 1);
 define("LOGGIN_FILE", "../logger.json");
+
+// Autenticacion
+define("HEADER_USUARIO","HTTP_PHP_AUTH_USER");

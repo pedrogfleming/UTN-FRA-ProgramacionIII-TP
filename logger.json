@@ -1263,4 +1263,229 @@
         },
         "timestamp": "2023-11-22 00:03:28"
     }
+],
+[
+    {
+        "request": {
+            "method": "GET",
+            "uri": "http:\/\/localhost:666\/app\/pedidos",
+            "headers": {
+                "PHP-AUTH-USER": [
+                    "cristobal_socio"
+                ],
+                "Authorization": [
+                    "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MDA2MDU1MzUsImV4cCI6MTcwMDYwOTEzNSwiYXVkIjoiMzRjNWQ0YWJlYmY2YjU0YzQxNzJkYzRkNjhiODI5NWYwMWM5ZDUyYSIsImRhdGEiOnsidXN1YXJpbyI6ImNyaXN0b2JhbF9zb2NpbyJ9LCJhcHAiOiJBUEkgUkVTVCBDRCAyMDIzIn0.d2HS_Q2pwqeveIN5RscPxkGDfErY6kXlgN8txi1VK04"
+                ],
+                "User-Agent": [
+                    "PostmanRuntime\/7.35.0"
+                ],
+                "Accept": [
+                    "*\/*"
+                ],
+                "Postman-Token": [
+                    "5886230b-ce93-4935-b6cc-b8364ebfae88"
+                ],
+                "Host": [
+                    "localhost"
+                ],
+                "Accept-Encoding": [
+                    "gzip, deflate, br"
+                ],
+                "Connection": [
+                    "keep-alive"
+                ]
+            },
+            "body": ""
+        },
+        "response": {
+            "statusCode": 500,
+            "headers": {
+                "Content-type": [
+                    "text\/html"
+                ]
+            },
+            "body": "<!doctype html><html lang=\"en\">    <head>        <meta charset=\"utf-8\">        <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">        <title>Slim Application Error<\/title>        <style>            body{margin:0;padding:30px;font:12px\/1.5 Helvetica,Arial,Verdana,sans-serif}            h1{margin:0;font-size:48px;font-weight:normal;line-height:48px}            strong{display:inline-block;width:65px}        <\/style>    <\/head>    <body>        <h1>Slim Application Error<\/h1>        <div><p>The application could not run because of the following error:<\/p><h2>Details<\/h2><div><strong>Type:<\/strong> TypeError<\/div><div><strong>Code:<\/strong> 0<\/div><div><strong>Message:<\/strong> Cannot access offset of type string on string<\/div><div><strong>File:<\/strong> D:\\Environments\\XAMP\\htdocs\\UTN-ProgramacionIII-TP\\app-comanda\\Controllers\\PedidoController.php<\/div><div><strong>Line:<\/strong> 109<\/div><h2>Trace<\/h2><pre>#0 [internal function]: PedidoController-&gt;{closure}(Object(Pedido))\n#1 D:\\Environments\\XAMP\\htdocs\\UTN-ProgramacionIII-TP\\app-comanda\\Controllers\\PedidoController.php(108): array_filter(Array, Object(Closure))\n#2 D:\\Environments\\XAMP\\htdocs\\UTN-ProgramacionIII-TP\\app-comanda\\vendor\\slim\\slim\\Slim\\Handlers\\Strategies\\RequestResponse.php(38): PedidoController-&gt;TraerTodos(Object(Slim\\Psr7\\Request), Object(Slim\\Psr7\\Response), Array)\n#3 D:\\Environments\\XAMP\\htdocs\\UTN-ProgramacionIII-TP\\app-comanda\\vendor\\slim\\slim\\Slim\\Routing\\Route.php(358): Slim\\Handlers\\Strategies\\RequestResponse-&gt;__invoke(Array, Object(Slim\\Psr7\\Request), Object(Slim\\Psr7\\Response), Array)\n#4 D:\\Environments\\XAMP\\htdocs\\UTN-ProgramacionIII-TP\\app-comanda\\Middlewares\\AuthorizationMiddleware.php(30): Slim\\Routing\\Route-&gt;handle(Object(Slim\\Psr7\\Request))\n#5 D:\\Environments\\XAMP\\htdocs\\UTN-ProgramacionIII-TP\\app-comanda\\vendor\\slim\\slim\\Slim\\MiddlewareDispatcher.php(269): AuthorizationMiddleware-&gt;__invoke(Object(Slim\\Psr7\\Request), Object(Slim\\Routing\\Route))\n#6 D:\\Environments\\XAMP\\htdocs\\UTN-ProgramacionIII-TP\\app-comanda\\vendor\\slim\\slim\\Slim\\MiddlewareDispatcher.php(65): Psr\\Http\\Server\\RequestHandlerInterface@anonymous-&gt;handle(Object(Slim\\Psr7\\Request))\n#7 D:\\Environments\\XAMP\\htdocs\\UTN-ProgramacionIII-TP\\app-comanda\\Middlewares\\AuthenticationMiddleware.php(16): Slim\\MiddlewareDispatcher-&gt;handle(Object(Slim\\Psr7\\Request))\n#8 D:\\Environments\\XAMP\\htdocs\\UTN-ProgramacionIII-TP\\app-comanda\\vendor\\slim\\slim\\Slim\\MiddlewareDispatcher.php(269): AuthenticationMiddleware-&gt;__invoke(Object(Slim\\Psr7\\Request), Object(Slim\\MiddlewareDispatcher))\n#9 D:\\Environments\\XAMP\\htdocs\\UTN-ProgramacionIII-TP\\app-comanda\\vendor\\slim\\slim\\Slim\\MiddlewareDispatcher.php(65): Psr\\Http\\Server\\RequestHandlerInterface@anonymous-&gt;handle(Object(Slim\\Psr7\\Request))\n#10 D:\\Environments\\XAMP\\htdocs\\UTN-ProgramacionIII-TP\\app-comanda\\vendor\\slim\\slim\\Slim\\Routing\\Route.php(315): Slim\\MiddlewareDispatcher-&gt;handle(Object(Slim\\Psr7\\Request))\n#11 D:\\Environments\\XAMP\\htdocs\\UTN-ProgramacionIII-TP\\app-comanda\\vendor\\slim\\slim\\Slim\\Routing\\RouteRunner.php(68): Slim\\Routing\\Route-&gt;run(Object(Slim\\Psr7\\Request))\n#12 D:\\Environments\\XAMP\\htdocs\\UTN-ProgramacionIII-TP\\app-comanda\\vendor\\slim\\slim\\Slim\\Middleware\\ErrorMiddleware.php(76): Slim\\Routing\\RouteRunner-&gt;handle(Object(Slim\\Psr7\\Request))\n#13 D:\\Environments\\XAMP\\htdocs\\UTN-ProgramacionIII-TP\\app-comanda\\vendor\\slim\\slim\\Slim\\MiddlewareDispatcher.php(121): Slim\\Middleware\\ErrorMiddleware-&gt;process(Object(Slim\\Psr7\\Request), Object(Slim\\Routing\\RouteRunner))\n#14 D:\\Environments\\XAMP\\htdocs\\UTN-ProgramacionIII-TP\\app-comanda\\vendor\\slim\\slim\\Slim\\Middleware\\BodyParsingMiddleware.php(64): Psr\\Http\\Server\\RequestHandlerInterface@anonymous-&gt;handle(Object(Slim\\Psr7\\Request))\n#15 D:\\Environments\\XAMP\\htdocs\\UTN-ProgramacionIII-TP\\app-comanda\\vendor\\slim\\slim\\Slim\\MiddlewareDispatcher.php(121): Slim\\Middleware\\BodyParsingMiddleware-&gt;process(Object(Slim\\Psr7\\Request), Object(Psr\\Http\\Server\\RequestHandlerInterface@anonymous))\n#16 D:\\Environments\\XAMP\\htdocs\\UTN-ProgramacionIII-TP\\app-comanda\\Middlewares\\LoggerMiddleware.php(13): Psr\\Http\\Server\\RequestHandlerInterface@anonymous-&gt;handle(Object(Slim\\Psr7\\Request))\n#17 D:\\Environments\\XAMP\\htdocs\\UTN-ProgramacionIII-TP\\app-comanda\\vendor\\slim\\slim\\Slim\\MiddlewareDispatcher.php(269): LoggerMiddleware-&gt;__invoke(Object(Slim\\Psr7\\Request), Object(Psr\\Http\\Server\\RequestHandlerInterface@anonymous))\n#18 D:\\Environments\\XAMP\\htdocs\\UTN-ProgramacionIII-TP\\app-comanda\\vendor\\slim\\slim\\Slim\\MiddlewareDispatcher.php(65): Psr\\Http\\Server\\RequestHandlerInterface@anonymous-&gt;handle(Object(Slim\\Psr7\\Request))\n#19 D:\\Environments\\XAMP\\htdocs\\UTN-ProgramacionIII-TP\\app-comanda\\vendor\\slim\\slim\\Slim\\App.php(199): Slim\\MiddlewareDispatcher-&gt;handle(Object(Slim\\Psr7\\Request))\n#20 D:\\Environments\\XAMP\\htdocs\\UTN-ProgramacionIII-TP\\app-comanda\\vendor\\slim\\slim\\Slim\\App.php(183): Slim\\App-&gt;handle(Object(Slim\\Psr7\\Request))\n#21 D:\\Environments\\XAMP\\htdocs\\UTN-ProgramacionIII-TP\\app-comanda\\app\\index.php(157): Slim\\App-&gt;run()\n#22 {main}<\/pre><\/div>        <a href=\"#\" onclick=\"window.history.go(-1)\">Go Back<\/a>    <\/body><\/html>"
+        },
+        "timestamp": "2023-11-22 00:19:26"
+    }
+],
+[
+    {
+        "request": {
+            "method": "GET",
+            "uri": "http:\/\/localhost:666\/app\/pedidos",
+            "headers": {
+                "PHP-AUTH-USER": [
+                    "cristobal_socio"
+                ],
+                "Authorization": [
+                    "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MDA2MDU1MzUsImV4cCI6MTcwMDYwOTEzNSwiYXVkIjoiMzRjNWQ0YWJlYmY2YjU0YzQxNzJkYzRkNjhiODI5NWYwMWM5ZDUyYSIsImRhdGEiOnsidXN1YXJpbyI6ImNyaXN0b2JhbF9zb2NpbyJ9LCJhcHAiOiJBUEkgUkVTVCBDRCAyMDIzIn0.d2HS_Q2pwqeveIN5RscPxkGDfErY6kXlgN8txi1VK04"
+                ],
+                "User-Agent": [
+                    "PostmanRuntime\/7.35.0"
+                ],
+                "Accept": [
+                    "*\/*"
+                ],
+                "Postman-Token": [
+                    "f56d87b7-b843-4005-a997-a1c82dffc6ec"
+                ],
+                "Host": [
+                    "localhost"
+                ],
+                "Accept-Encoding": [
+                    "gzip, deflate, br"
+                ],
+                "Connection": [
+                    "keep-alive"
+                ]
+            },
+            "body": ""
+        },
+        "response": {
+            "statusCode": 200,
+            "headers": {
+                "Content-Type": [
+                    "application\/json"
+                ]
+            },
+            "body": "{\"listaPedido\":[]}"
+        },
+        "timestamp": "2023-11-22 00:20:12"
+    }
+],
+[
+    {
+        "request": {
+            "method": "GET",
+            "uri": "http:\/\/localhost:666\/app\/pedidos",
+            "headers": {
+                "PHP-AUTH-USER": [
+                    "cristobal_socio"
+                ],
+                "Authorization": [
+                    "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MDA2MDU1MzUsImV4cCI6MTcwMDYwOTEzNSwiYXVkIjoiMzRjNWQ0YWJlYmY2YjU0YzQxNzJkYzRkNjhiODI5NWYwMWM5ZDUyYSIsImRhdGEiOnsidXN1YXJpbyI6ImNyaXN0b2JhbF9zb2NpbyJ9LCJhcHAiOiJBUEkgUkVTVCBDRCAyMDIzIn0.d2HS_Q2pwqeveIN5RscPxkGDfErY6kXlgN8txi1VK04"
+                ],
+                "User-Agent": [
+                    "PostmanRuntime\/7.35.0"
+                ],
+                "Accept": [
+                    "*\/*"
+                ],
+                "Postman-Token": [
+                    "caab6a01-1290-4710-b69b-60bb261aeabb"
+                ],
+                "Host": [
+                    "localhost"
+                ],
+                "Accept-Encoding": [
+                    "gzip, deflate, br"
+                ],
+                "Connection": [
+                    "keep-alive"
+                ]
+            },
+            "body": ""
+        },
+        "response": {
+            "statusCode": 200,
+            "headers": {
+                "Content-Type": [
+                    "application\/json"
+                ]
+            },
+            "body": "{\"listaPedido\":[{\"idPedido\":1000,\"idMesa\":1001,\"usuarioAsignado\":5,\"itemsPedidos\":[{\"idPedido\":1000,\"idProducto\":1,\"cantidad\":2,\"fechaCreacion\":{\"date\":\"2023-11-21 14:15:09.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaEstimadaFinalizacion\":{\"date\":\"2023-11-21 14:27:09.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaFinalizacion\":null,\"estado\":\"pendiente\",\"minutosEstimados\":12},{\"idPedido\":1000,\"idProducto\":2,\"cantidad\":3,\"fechaCreacion\":{\"date\":\"2023-11-21 14:15:09.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaEstimadaFinalizacion\":{\"date\":\"2023-11-21 14:36:09.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaFinalizacion\":null,\"estado\":\"pendiente\",\"minutosEstimados\":21}],\"fechaCreacion\":{\"date\":\"2023-11-21 14:15:09.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaEstimadaDeFinalizacion\":{\"date\":\"2023-11-21 14:48:09.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaFinalizacion\":null,\"estado\":\"pendiente\",\"importeTotal\":960,\"nombreCliente\":\"Federico\",\"minutosEstimados\":33},{\"idPedido\":1003,\"idMesa\":1002,\"usuarioAsignado\":2,\"itemsPedidos\":[{\"idPedido\":1003,\"idProducto\":26,\"cantidad\":1,\"fechaCreacion\":{\"date\":\"2023-11-21 20:03:28.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaEstimadaFinalizacion\":{\"date\":\"2023-11-21 20:18:28.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaFinalizacion\":null,\"estado\":\"pendiente\",\"minutosEstimados\":15},{\"idPedido\":1003,\"idProducto\":27,\"cantidad\":2,\"fechaCreacion\":{\"date\":\"2023-11-21 20:03:28.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaEstimadaFinalizacion\":{\"date\":\"2023-11-21 20:23:28.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaFinalizacion\":null,\"estado\":\"pendiente\",\"minutosEstimados\":20},{\"idPedido\":1003,\"idProducto\":28,\"cantidad\":1,\"fechaCreacion\":{\"date\":\"2023-11-21 20:03:28.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaEstimadaFinalizacion\":{\"date\":\"2023-11-21 20:08:28.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaFinalizacion\":null,\"estado\":\"pendiente\",\"minutosEstimados\":5},{\"idPedido\":1003,\"idProducto\":29,\"cantidad\":1,\"fechaCreacion\":{\"date\":\"2023-11-21 20:03:28.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaEstimadaFinalizacion\":{\"date\":\"2023-11-21 20:11:28.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaFinalizacion\":null,\"estado\":\"pendiente\",\"minutosEstimados\":8}],\"fechaCreacion\":{\"date\":\"2023-11-21 20:03:28.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaEstimadaDeFinalizacion\":{\"date\":\"2023-11-21 20:51:28.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaFinalizacion\":null,\"estado\":\"pendiente\",\"importeTotal\":730,\"nombreCliente\":\"Franco\",\"minutosEstimados\":48}]}"
+        },
+        "timestamp": "2023-11-22 00:21:24"
+    }
+],
+[
+    {
+        "request": {
+            "method": "GET",
+            "uri": "http:\/\/localhost:666\/app\/pedidos",
+            "headers": {
+                "PHP-AUTH-USER": [
+                    "oscar_mozo"
+                ],
+                "Authorization": [
+                    "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MDA2MDU1MzUsImV4cCI6MTcwMDYwOTEzNSwiYXVkIjoiMzRjNWQ0YWJlYmY2YjU0YzQxNzJkYzRkNjhiODI5NWYwMWM5ZDUyYSIsImRhdGEiOnsidXN1YXJpbyI6ImNyaXN0b2JhbF9zb2NpbyJ9LCJhcHAiOiJBUEkgUkVTVCBDRCAyMDIzIn0.d2HS_Q2pwqeveIN5RscPxkGDfErY6kXlgN8txi1VK04"
+                ],
+                "User-Agent": [
+                    "PostmanRuntime\/7.35.0"
+                ],
+                "Accept": [
+                    "*\/*"
+                ],
+                "Postman-Token": [
+                    "f0f79191-269b-493f-bac6-e84c91979ea0"
+                ],
+                "Host": [
+                    "localhost"
+                ],
+                "Accept-Encoding": [
+                    "gzip, deflate, br"
+                ],
+                "Connection": [
+                    "keep-alive"
+                ]
+            },
+            "body": ""
+        },
+        "response": {
+            "statusCode": 200,
+            "headers": {
+                "Content-Type": [
+                    "application\/json"
+                ]
+            },
+            "body": "{\"listaPedido\":[]}"
+        },
+        "timestamp": "2023-11-22 00:21:57"
+    }
+],
+[
+    {
+        "request": {
+            "method": "GET",
+            "uri": "http:\/\/localhost:666\/app\/pedidos",
+            "headers": {
+                "PHP-AUTH-USER": [
+                    "cristobal_socio"
+                ],
+                "Authorization": [
+                    "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MDA2MDU1MzUsImV4cCI6MTcwMDYwOTEzNSwiYXVkIjoiMzRjNWQ0YWJlYmY2YjU0YzQxNzJkYzRkNjhiODI5NWYwMWM5ZDUyYSIsImRhdGEiOnsidXN1YXJpbyI6ImNyaXN0b2JhbF9zb2NpbyJ9LCJhcHAiOiJBUEkgUkVTVCBDRCAyMDIzIn0.d2HS_Q2pwqeveIN5RscPxkGDfErY6kXlgN8txi1VK04"
+                ],
+                "User-Agent": [
+                    "PostmanRuntime\/7.35.0"
+                ],
+                "Accept": [
+                    "*\/*"
+                ],
+                "Postman-Token": [
+                    "678391be-4464-4933-98b0-000b27c1366f"
+                ],
+                "Host": [
+                    "localhost"
+                ],
+                "Accept-Encoding": [
+                    "gzip, deflate, br"
+                ],
+                "Connection": [
+                    "keep-alive"
+                ]
+            },
+            "body": ""
+        },
+        "response": {
+            "statusCode": 200,
+            "headers": {
+                "Content-Type": [
+                    "application\/json"
+                ]
+            },
+            "body": "{\"listaPedido\":[{\"idPedido\":1000,\"idMesa\":1001,\"usuarioAsignado\":5,\"itemsPedidos\":[{\"idPedido\":1000,\"idProducto\":1,\"cantidad\":2,\"fechaCreacion\":{\"date\":\"2023-11-21 14:15:09.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaEstimadaFinalizacion\":{\"date\":\"2023-11-21 14:27:09.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaFinalizacion\":null,\"estado\":\"pendiente\",\"minutosEstimados\":12},{\"idPedido\":1000,\"idProducto\":2,\"cantidad\":3,\"fechaCreacion\":{\"date\":\"2023-11-21 14:15:09.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaEstimadaFinalizacion\":{\"date\":\"2023-11-21 14:36:09.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaFinalizacion\":null,\"estado\":\"pendiente\",\"minutosEstimados\":21}],\"fechaCreacion\":{\"date\":\"2023-11-21 14:15:09.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaEstimadaDeFinalizacion\":{\"date\":\"2023-11-21 14:48:09.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaFinalizacion\":null,\"estado\":\"pendiente\",\"importeTotal\":960,\"nombreCliente\":\"Federico\",\"minutosEstimados\":33},{\"idPedido\":1003,\"idMesa\":1002,\"usuarioAsignado\":2,\"itemsPedidos\":[{\"idPedido\":1003,\"idProducto\":26,\"cantidad\":1,\"fechaCreacion\":{\"date\":\"2023-11-21 20:03:28.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaEstimadaFinalizacion\":{\"date\":\"2023-11-21 20:18:28.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaFinalizacion\":null,\"estado\":\"pendiente\",\"minutosEstimados\":15},{\"idPedido\":1003,\"idProducto\":27,\"cantidad\":2,\"fechaCreacion\":{\"date\":\"2023-11-21 20:03:28.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaEstimadaFinalizacion\":{\"date\":\"2023-11-21 20:23:28.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaFinalizacion\":null,\"estado\":\"pendiente\",\"minutosEstimados\":20},{\"idPedido\":1003,\"idProducto\":28,\"cantidad\":1,\"fechaCreacion\":{\"date\":\"2023-11-21 20:03:28.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaEstimadaFinalizacion\":{\"date\":\"2023-11-21 20:08:28.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaFinalizacion\":null,\"estado\":\"pendiente\",\"minutosEstimados\":5},{\"idPedido\":1003,\"idProducto\":29,\"cantidad\":1,\"fechaCreacion\":{\"date\":\"2023-11-21 20:03:28.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaEstimadaFinalizacion\":{\"date\":\"2023-11-21 20:11:28.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaFinalizacion\":null,\"estado\":\"pendiente\",\"minutosEstimados\":8}],\"fechaCreacion\":{\"date\":\"2023-11-21 20:03:28.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaEstimadaDeFinalizacion\":{\"date\":\"2023-11-21 20:51:28.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaFinalizacion\":null,\"estado\":\"pendiente\",\"importeTotal\":730,\"nombreCliente\":\"Franco\",\"minutosEstimados\":48}]}"
+        },
+        "timestamp": "2023-11-22 00:22:05"
+    }
 ]

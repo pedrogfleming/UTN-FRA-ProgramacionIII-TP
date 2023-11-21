@@ -17,6 +17,7 @@ class Usuario{
     const TIPO_MOZO = "mozo";
     const TIPO_COCINERO = "cocinero";
     const TIPO_SOCIO = "socio";
+    const TIPO_ADMIN = "admin";
 
     const SECTOR_COCINA = "cocina";
     const SECTOR_CERVECERIA = "cerveza";

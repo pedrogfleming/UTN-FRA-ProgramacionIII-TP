@@ -72,7 +72,7 @@ class PedidoController implements IApiUsable
         $mesaOcupada = Mesa::obtenerMesa($pedido->idMesa);
         $mesaOcupada->estado = Mesa::ESTADO_PENDIENTE;
         Mesa::actualizarMesa($mesaOcupada);
-        
+
         $payload = json_encode(array("mensaje" => $mensaje));
         $response->getBody()->write($payload);
         return $response->withHeader('Content-Type', 'application/json');
@@ -97,8 +97,20 @@ class PedidoController implements IApiUsable
 
     public function TraerTodos($request, $response, $args)
     {
+        $username = $request->getServerParams()[HEADER_USUARIO];
+
         $lista = Pedido::obtenerTodos();
-        $payload = json_encode(array("listaPedido" => $lista));
+        $pedidosFiltrados = $lista;
+        if(isset($username)){
+            $usuario = Usuario::obtenerUsuarioByUsername($username);
+            // El socio puede ver todos los pedidos
+            if($usuario->tipo != Usuario::TIPO_SOCIO && $usuario->tipo != Usuario::TIPO_ADMIN){
+                $pedidosFiltrados = array_filter($lista, function ($pedido) use ($username) {
+                    return $pedido->usuarioAsignado == $username;
+                });
+            }
+        }
+        $payload = json_encode(array("listaPedido" => $pedidosFiltrados));
         $response->getBody()->write($payload);
         return $response->withHeader('Content-Type', 'application/json');
     }
