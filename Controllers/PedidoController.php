@@ -31,7 +31,7 @@ class PedidoController implements IApiUsable
         }
         $pedido->idMesa = $mesaObtenida->idMesa;
         $pedido->itemsPedidos = array();
-        $pedido->fechaCreacion = new Datetime('now');
+        $pedido->fechaCreacion = new DateTime("now", new DateTimeZone("America/Argentina/Buenos_Aires"));
         $minutosAcc = 0;
         foreach ($items as $itemData) {
             $nombreProducto = $itemData['nombreProducto'];
@@ -43,18 +43,21 @@ class PedidoController implements IApiUsable
                 throw new Exception("No existe el producto con el nombre suministrado");
             }
             $item->idProducto = $productoObtenido->idProducto;
-            $item->fechaCreacion = new Datetime('now');
-            $tiempoEnMinutosTotalDelPedido = $productoObtenido->tiempoPreparacion * $cantidad;
-            $minutosAcc += $tiempoEnMinutosTotalDelPedido;
-            $interval = DateInterval::createFromDateString($tiempoEnMinutosTotalDelPedido . 'minutes');
-            $item->fechaEstimadaFinalizacion = $item->fechaCreacion->add($interval);
+            $item->fechaCreacion = new DateTime("now", new DateTimeZone("America/Argentina/Buenos_Aires"));
+            $minutosDelItem = $productoObtenido->tiempoPreparacion * $item->cantidad;
+            $minutosAcc += $minutosDelItem;
+            $interval = DateInterval::createFromDateString($minutosDelItem . 'minutes');
+            $fechaEstimadaFinalizacion = clone $item->fechaCreacion;
+            $item->fechaEstimadaFinalizacion = $fechaEstimadaFinalizacion->add($interval);
+            // $item->fechaEstimadaFinalizacion = $item->fechaCreacion->add($interval);
             $item->estado = Item::ESTADO_PENDIENTE;
             array_push($pedido->itemsPedidos, $item);
             $pedido->importeTotal += $productoObtenido->precio * $item->cantidad;
         }
         // La suma de todos los minutos de cada uno de los items del pedido
         $aux = DateInterval::createFromDateString($minutosAcc . 'minutes');
-        $pedido->fechaEstimadaDeFinalizacion = $pedido->fechaCreacion->add($aux);
+        $pedido->fechaEstimadaDeFinalizacion = clone $pedido->fechaCreacion;
+        $pedido->fechaEstimadaDeFinalizacion = $pedido->fechaEstimadaDeFinalizacion->add($aux);
 
         $idCreado = $pedido->crearPedido();
         $mensaje = "Items creados con éxito";
@@ -134,7 +137,8 @@ class PedidoController implements IApiUsable
             $tiempoEnMinutosTotalDelPedido = $producto->tiempoPreparacion * $i->cantidad;
             $minutosAcc += $tiempoEnMinutosTotalDelPedido;
             $interval = DateInterval::createFromDateString($tiempoEnMinutosTotalDelPedido . 'minutes');
-            $i->fechaEstimadaFinalizacion = $i->fechaCreacion->add($interval);
+            $fechaEstimadaFinalizacion = clone $i->fechaCreacion;
+            $item->fechaEstimadaFinalizacion = $fechaEstimadaFinalizacion->add($interval);
             if ($i->crearItem() !== true) {
                 throw new Exception("No se pudo modificar el item " . $item["nombreProducto"] . " del pedido " . $idPedido);
             }

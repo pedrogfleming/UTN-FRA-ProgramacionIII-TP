@@ -10,6 +10,7 @@ class Item
     public $fechaEstimadaFinalizacion;
     public $fechaFinalizacion;
     public $estado;
+    public $minutosEstimados;
 
     const ESTADO_PENDIENTE = "pendiente";
     const ESTADO_EN_PREPARACION = "en preparación";
@@ -86,10 +87,20 @@ class Item
         $item->idPedido = $prototipo->id_pedido;
         $item->idProducto = $prototipo->id_producto;
         $item->cantidad = (int)$prototipo->cantidad;
-        $item->fechaCreacion = $prototipo->fecha_creacion;
-        $item->fechaEstimadaFinalizacion = $prototipo->fecha_estimada_finalizacion;
+    
+        $item->fechaCreacion = DateTime::createFromFormat('Y-m-d H:i:s', $prototipo->fecha_creacion, new DateTimeZone("America/Argentina/Buenos_Aires"));
+        $item->fechaEstimadaFinalizacion = DateTime::createFromFormat('Y-m-d H:i:s', $prototipo->fecha_estimada_finalizacion, new DateTimeZone("America/Argentina/Buenos_Aires"));
+    
         $item->fechaFinalizacion = $prototipo->fecha_finalizacion;
         $item->estado = $prototipo->estado;
+    
+        if (is_string($item->fechaFinalizacion)) {
+            $item->fechaFinalizacion = DateTime::createFromFormat('Y-m-d H:i:s', $item->fechaFinalizacion, new DateTimeZone("America/Argentina/Buenos_Aires"));
+        }
+    
+        $diferencia = $item->fechaCreacion->diff($item->fechaEstimadaFinalizacion);
+        $item->minutosEstimados = $diferencia->days * 24 * 60 + $diferencia->h * 60 + $diferencia->i;
+    
         return $item;
     }
 

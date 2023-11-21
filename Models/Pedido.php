@@ -17,6 +17,7 @@ class Pedido
     public $estado;
     public $importeTotal;
     public $nombreCliente;
+    public $minutosEstimados;
 
     const ESTADO_PENDIENTE = "pendiente";
     const ESTADO_PREPARACION = "en preparación";
@@ -114,7 +115,9 @@ class Pedido
     
         // Puedes agregar la lógica para obtener los items relacionados con el pedido
         $pedido->itemsPedidos = Item::obtenerItemsPorPedido($pedido->idPedido);
-    
+        // Calcular la diferencia en minutos entre la fecha de creación y la fecha estimada de finalización
+        $diferencia = $pedido->fechaCreacion->diff($pedido->fechaEstimadaDeFinalizacion);
+        $pedido->minutosEstimados = $diferencia->days * 24 * 60 + $diferencia->h * 60 + $diferencia->i;
         return $pedido;
     }
 
