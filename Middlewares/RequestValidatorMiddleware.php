@@ -20,7 +20,6 @@ class RequestValidatorMiddleware
         $response = new Response();
         $images = $request->getUploadedFiles();
         $uploadedFiles = $request->getUploadedFiles();
-        $uploadedFile = $uploadedFiles['fotoPedido'];
         // Verifica si se proporcionan las claves requeridas
         foreach ($this->validationConfig['required_keys'] as $key) {
             if (!isset($body[$key])) {

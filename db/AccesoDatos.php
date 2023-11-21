@@ -100,6 +100,27 @@ class AccesoDatos
         )
         SQL;
         $this->objetoPDO->exec($crear_tabla_items_pedidos);
+
+        $crear_tabla_encuestas = <<<SQL
+            CREATE TABLE IF NOT EXISTS Encuestas (
+            id_pedido INT NOT NULL,
+            id_encuesta INT AUTO_INCREMENT PRIMARY KEY,
+            id_mesa INT NOT NULL,
+            id_mozo INT NOT NULL,
+            id_cocinero INT NOT NULL,
+            puntuacion_mesa INT NOT NULL,
+            puntuacion_restaurante INT NOT NULL,
+            puntuacion_mozo INT NOT NULL,
+            puntuacion_cocinero INT NOT NULL,
+            experiencia_texto VARCHAR(66) NOT NULL,
+            fecha_creacion DATETIME NOT NULL,
+            FOREIGN KEY (id_pedido) REFERENCES Pedidos (id_pedido) ON DELETE CASCADE,
+            FOREIGN KEY (id_mesa) REFERENCES Mesas (idMesa) ON DELETE CASCADE,
+            FOREIGN KEY (id_mozo) REFERENCES Usuarios (idUsuario) ON DELETE CASCADE,
+            FOREIGN KEY (id_cocinero) REFERENCES Usuarios (idUsuario) ON DELETE CASCADE
+        ) AUTO_INCREMENT=1000;
+        SQL;
+        $this->objetoPDO->exec($crear_tabla_encuestas);
     }
 
     public static function obtenerInstancia()

@@ -17,6 +17,7 @@ require_once CONTROLLERS . '/ProductoController.php';
 require_once CONTROLLERS . '/MesaController.php';
 require_once CONTROLLERS . '/PedidoController.php';
 require_once CONTROLLERS . '/AuthController.php';
+require_once CONTROLLERS . '/EncuestaController.php';
 
 require_once MIDDLEWARES . '/AuthenticationMiddleware.php';
 require_once MIDDLEWARES . '/AuthorizationMiddleware.php';
@@ -128,6 +129,27 @@ $app->group('/pedidos', function (RouteCollectorProxy $group) {
     $group->post('[/]', \PedidoController::class . ':CargarUno')->add($cargarUnoPedido)->add(new RequestValidatorMiddleware($cargarUnoReqValidatorKeys));
     $group->put('/{pedido}', \PedidoController::class . ':ModificarUno')->add($modificarUnoPedido);
     $group->delete('/{pedido}', \PedidoController::class . ':BorrarUno')->add($borrarUnoPedido);
+});
+
+$app->group('/encuestas', function (RouteCollectorProxy $group) {
+    $contenidos = file_get_contents(SETTINGS);
+    $settings = json_decode($contenidos, true);
+    if ($settings === null) {
+        echo 'Error al decodificar el archivo settings.';
+        exit;
+    }
+    $cargarUnoReqValidatorKeys = $settings['encuestas']['CargarUno']['validation_config'];
+
+    $cargarUnoEncuesta = new AuthorizationMiddleware([ROL_ADMIN, ROL_SOCIO, ROL_MOZO]);
+    $traerTodosEncuesta = new AuthorizationMiddleware([ROL_ADMIN, ROL_SOCIO,  ROL_CERVECERO, ROL_MOZO, ROL_COCINERO]);
+    $modificarUnoEncuesta = new AuthorizationMiddleware([ROL_ADMIN, ROL_SOCIO, ROL_MOZO]);
+    $borrarUnoEncuesta = new AuthorizationMiddleware([ROL_ADMIN, ROL_SOCIO, ROL_MOZO]);
+
+    $group->get('[/]', \EncuestaController::class . ':TraerTodos')->add($traerTodosEncuesta);
+    $group->get('/{pedido}', \EncuestaController::class . ':TraerUno')->add($traerTodosEncuesta);
+    $group->post('[/]', \EncuestaController::class . ':CargarUno')->add($cargarUnoEncuesta)->add(new RequestValidatorMiddleware($cargarUnoReqValidatorKeys));
+    $group->put('/{pedido}', \EncuestaController::class . ':ModificarUno')->add($modificarUnoEncuesta);
+    $group->delete('/{pedido}', \EncuestaController::class . ':BorrarUno')->add($borrarUnoEncuesta);
 });
 
 $app->run();

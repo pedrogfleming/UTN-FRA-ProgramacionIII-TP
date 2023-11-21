@@ -157,5 +157,48 @@
                 "nested_keys": {}
             }
         }
+    },
+    "encuestas": {
+        "TraerTodos": {
+            "validation_config": {
+                "required_keys": [],
+                "nested_keys": {}
+            }
+        },
+        "TraerUno": {
+            "validation_config": {
+                "required_keys": [],
+                "nested_keys": {}
+            }
+        },
+        "CargarUno": {
+            "validation_config": {
+                "required_keys": [
+                    "idPedido",
+                    "idMesa",
+                    "idMozo",
+                    "idCocinero",
+                    "puntuacionMesa",
+                    "puntuacionRestaurante",
+                    "puntuacionMozo",
+                    "puntuacionCocinero",
+                    "experienciaTexto"
+                ],
+                "nested_keys": {
+                }
+            }
+        },
+        "ModificarUno": {
+            "validation_config": {
+                "required_keys": [],
+                "nested_keys": {}
+            }
+        },
+        "BorrarUno": {
+            "validation_config": {
+                "required_keys": [],
+                "nested_keys": {}
+            }
+        }
     }
 }
