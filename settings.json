@@ -135,8 +135,20 @@
         },
         "ModificarUno": {
             "validation_config": {
-                "required_keys": [],
-                "nested_keys": {}
+                "required_keys": [
+                    "idMesa",
+                    "nombreUsuario",
+                    "nombreCliente",
+                    "estado",
+                    "items"
+                ],
+                "nested_keys": {
+                    "items": [
+                        "nombreProducto",
+                        "cantidad",
+                        "estado"
+                    ]
+                }
             }
         },
         "BorrarUno": {

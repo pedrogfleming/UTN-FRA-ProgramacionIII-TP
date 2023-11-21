@@ -107,12 +107,12 @@ class Item
         $consulta->execute();
     }
 
-    public static function borrarItem($item)
+    public static function borrarItem($idPedido, $idProducto = null)
     {
-        $objAccesoDato = AccesoDatos::obtenerInstancia();
-        $consulta = $objAccesoDato->prepararConsulta("DELETE FROM ItemPedidos WHERE id_pedido = ? AND id_producto = ?");
-        $consulta->bindParam(1, $item->idPedido);
-        $consulta->bindParam(2, $item->idProducto);
+        $objAccesoDato = AccesoDatos::obtenerInstancia();        
+        $consulta = $objAccesoDato->prepararConsulta("DELETE FROM itempedidos WHERE id_pedido = ? and ISNULL(id_producto = ?)");
+        $consulta->bindParam(1, $idPedido);
+        $consulta->bindParam(2, $idProducto);
         $consulta->execute();
     }
 }

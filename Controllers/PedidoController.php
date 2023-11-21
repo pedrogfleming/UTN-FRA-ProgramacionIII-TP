@@ -61,10 +61,10 @@ class PedidoController implements IApiUsable
         $nombreFoto = $idCreado . "-pedido.jpg";
         $fotoGuardadaConExito = $this->GuardarFoto($nombreFoto);
 
-        if(!$fotoGuardadaConExito->success){
+        if (!$fotoGuardadaConExito->success) {
             $mensaje =  $mensaje . ". No se pudo guardar la foto del pedido. Error: " . $fotoGuardadaConExito->err;
         }
-        
+
         $payload = json_encode(array("mensaje" => $mensaje));
         $response->getBody()->write($payload);
         return $response->withHeader('Content-Type', 'application/json');
@@ -99,40 +99,54 @@ class PedidoController implements IApiUsable
     {
         $parametros = $request->getParsedBody();
 
-        $id = $args['pedido'];
+        $idPedido = $args['pedido'];
         $idMesa = $parametros['idMesa'];
         $nombreUsuario = $parametros['nombreUsuario'];
-        $nombreProducto = $parametros['nombreProducto'];
-        $cantidad = $parametros['cantidad'];
         $nombreCliente = $parametros['nombreCliente'];
-        $estado = $parametros["estado"];
+        $estadoPedido = $parametros['estado'];
+        $items = $parametros['items'];
 
         $usuarioAsignado = Usuario::obtenerUsuarioByName($nombreUsuario);
         if ($usuarioAsignado === false) {
             throw new Exception("No existe el usuario con el nombre suministrado");
         }
 
-        $producto = Producto::obtenerProductoByName($nombreProducto);
-
-        if ($producto === false) {
-            throw new Exception("No existe el producto con el nombre suministrado");
+        $pedido = Pedido::obtenerPedido($idPedido);
+        if ($pedido === false) {
+            throw new Exception("No existe el pedido con el id suministrado: ");
         }
 
-        $pedido = Pedido::obtenerPedido($id);
+        Item::borrarItem($idPedido);
+        $accImportTotal = 0;
+        $minutosAcc = 0;
+        $pedido->itemsPedidos = [];
+        foreach ($items as $item) {
+            $producto = Producto::obtenerProductoByName($item["nombreProducto"]);
+            if ($producto === false) {
+                throw new Exception("No existe el producto con el nombre suministrado: " . $item["nombreProducto"]);
+            }
+            $i = new Item();
+            $i->idPedido = $idPedido;
+            $i->idProducto = $producto->idProducto;
+            $i->cantidad = (int)$item["cantidad"];
+            $i->estado = $item["estado"];
+            $i->fechaCreacion =  new DateTime("now", new DateTimeZone("America/Argentina/Buenos_Aires"));
+            $tiempoEnMinutosTotalDelPedido = $producto->tiempoPreparacion * $i->cantidad;
+            $minutosAcc += $tiempoEnMinutosTotalDelPedido;
+            $interval = DateInterval::createFromDateString($tiempoEnMinutosTotalDelPedido . 'minutes');
+            $i->fechaEstimadaFinalizacion = $i->fechaCreacion->add($interval);
+            if ($i->crearItem() !== true) {
+                throw new Exception("No se pudo modificar el item " . $item["nombreProducto"] . " del pedido " . $idPedido);
+            }
+            $accImportTotal += $item["cantidad"] * $producto->precio;
+            array_push($pedido->itemsPedidos, $i);
+        }
 
-        $pedido->items = array(); // Limpiamos los items existentes
-
-        // Creamos los nuevos items
-        $item = new Item();
-        $item->usuarioAsignado = $usuarioAsignado;
-        $item->producto = $producto;
-        $item->cantidad = (int)$cantidad;
-        $item->idMesa = (int)$idMesa;
-        $item->nombreCliente = $nombreCliente;
-        $item->importeTotal = $item->cantidad * $item->producto->precio;
-        $pedido->items[] = $item;
-
-        $pedido->estado = $estado;
+        $pedido->importeTotal = $accImportTotal;
+        $pedido->usuarioAsignado = $usuarioAsignado;
+        $pedido->idMesa = (int)$idMesa;
+        $pedido->nombreCliente = $nombreCliente;
+        $pedido->estado = $estadoPedido;
 
         Pedido::modificarPedido($pedido);
 
@@ -153,16 +167,17 @@ class PedidoController implements IApiUsable
         $response->getBody()->write($payload);
         return $response->withHeader('Content-Type', 'application/json');
     }
-    private function GuardarFoto($nombreArchivo){
-        
+    private function GuardarFoto($nombreArchivo)
+    {
+
         $ret = new stdClass;
         // La carpeta debe crearse previamente
         $carpeta_archivo = '../ImagenesPedidos/';
-        
+
         // Datos del archivo enviado por POST
         $tipo_archivo =  $_FILES['fotoPedido']['type'];
         $tamano_archivo =  $_FILES['fotoPedido']['size'];
-    
+
         // Ruta de destino, carpeta + nombre del archivo que quiero guardar
         $ruta_destino = $carpeta_archivo . $nombreArchivo;
         // Realizamos las validaciones del archivo

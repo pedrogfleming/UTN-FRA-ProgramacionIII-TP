@@ -41,6 +41,12 @@ class AuthMiddleware
                 return $response->withHeader('Content-Type', 'application/json');
             }
         }
+        else{
+            $response = new Response();
+            $payload = json_encode(['mensaje' => "Credenciales faltantes"]);
+            $response->getBody()->write($payload);
+            return $response->withHeader('Content-Type', 'application/json');
+        }
     }
 
     private function isAuthorized($nombreUsuario, $contraseña)
