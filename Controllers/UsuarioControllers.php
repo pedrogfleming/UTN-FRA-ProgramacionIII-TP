@@ -2,7 +2,7 @@
 require_once MODELS . "/Usuario.php";
 require_once INTERFACES . '/IApiUsable.php';
 
-class UsuarioController implements IApiUsable
+class UsuarioController
 {
     public function CargarUno($request, $response, $args)
     {
@@ -91,5 +91,14 @@ class UsuarioController implements IApiUsable
 
         $response->getBody()->write($payload);
         return $response->withHeader('Content-Type', 'application/json');
+    }
+
+    public function Login($request, $response, $args){
+        $parametros = $request->getParsedBody();
+        $usuario = $parametros['usuario'];
+        $contraseña = $parametros['contraseña'];
+
+        $datos = array('usuario' => 'rogelio@agua.com','perfil' => 'Administrador', 'alias' => "PinkBoy");			
+        $token= AutentificadorJWT::CrearToken($datos);
     }
 }

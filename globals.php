@@ -6,6 +6,7 @@ define("DB","../db");
 define("INTERFACES","../Interfaces");
 define("MODELS","../Models");
 define("MIDDLEWARES", "../Middlewares");
+define("UTILS", "../Utils");
 define("SETTINGS", "../settings.json");
 
 // Roles

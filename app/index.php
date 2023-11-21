@@ -5,8 +5,10 @@ ini_set('display_errors', 1);
 
 use Psr\Http\Message\ResponseInterface as Response;
 use Psr\Http\Message\ServerRequestInterface as Request;
+use Psr\Http\Server\RequestHandlerInterface;
 use Slim\Factory\AppFactory;
 use Slim\Routing\RouteCollectorProxy;
+use Slim\Routing\RouteContext;
 
 require_once "../globals.php";
 require __DIR__ . '/../vendor/autoload.php';
@@ -14,9 +16,15 @@ require_once CONTROLLERS . '/UsuarioControllers.php';
 require_once CONTROLLERS . '/ProductoController.php';
 require_once CONTROLLERS . '/MesaController.php';
 require_once CONTROLLERS . '/PedidoController.php';
+require_once CONTROLLERS . '/AuthController.php';
 
 require_once MIDDLEWARES . '/AuthMiddleware.php';
 require_once MIDDLEWARES . '/RequestValidatorMiddleware.php';
+require_once UTILS . '/AutentificadorJWT.php';
+
+// Load ENV
+// $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+// $dotenv->safeLoad();
 
 // Instantiate App
 $app = AppFactory::create();
@@ -43,6 +51,14 @@ if (!file_exists(SETTINGS)) {
 
 // Routes
 
+// JWT en login
+$app->group('/auth', function (RouteCollectorProxy $group) {
+    $group->post('/login', \AuthController::class . ':GenerarToken');
+    $group->get('/verificarToken', \AuthController::class . ':VerificarToken');
+});
+
+
+
 $app->group('/usuarios', function (RouteCollectorProxy $group) {
     $contenidos = file_get_contents(SETTINGS);
     $settings = json_decode($contenidos, true);
@@ -52,7 +68,7 @@ $app->group('/usuarios', function (RouteCollectorProxy $group) {
     }
     $cargarUnoReqValidatorKeys = $settings['usuarios']['CargarUno']['validation_config'];
 
-    $group->get('[/]', \UsuarioController::class . ':TraerTodos');
+    $group->get('[/]', \UsuarioController::class . ':TraerTodos')->add(\AuthMiddleware::class . ':verificarToken');
     $group->get('/{usuario}', \UsuarioController::class . ':TraerUno');
     $group->post('[/]', \UsuarioController::class . ':CargarUno')->add(new RequestValidatorMiddleware($cargarUnoReqValidatorKeys));
     $group->put('/{usuario}', \UsuarioController::class . ':ModificarUno');
