@@ -60,7 +60,7 @@ class PedidoController implements IApiUsable
         $pedido->fechaEstimadaDeFinalizacion = $pedido->fechaEstimadaDeFinalizacion->add($aux);
 
         $idCreado = $pedido->crearPedido();
-        $mensaje = "Items creados con éxito";
+        $mensaje = "Pedido creado con exito. Id pedido: " . $idCreado;
         $nombreFoto = $idCreado . "-pedido.jpg";
         $fotoGuardadaConExito = $this->GuardarFoto($nombreFoto);
 
@@ -68,6 +68,11 @@ class PedidoController implements IApiUsable
             $mensaje =  $mensaje . ". No se pudo guardar la foto del pedido. Error: " . $fotoGuardadaConExito->err;
         }
 
+        require_once MODELS . '/Mesa.php';
+        $mesaOcupada = Mesa::obtenerMesa($pedido->idMesa);
+        $mesaOcupada->estado = Mesa::ESTADO_PENDIENTE;
+        Mesa::actualizarMesa($mesaOcupada);
+        
         $payload = json_encode(array("mensaje" => $mensaje));
         $response->getBody()->write($payload);
         return $response->withHeader('Content-Type', 'application/json');

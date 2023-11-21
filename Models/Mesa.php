@@ -77,22 +77,23 @@ class Mesa
         return $mesa;
     }
 
-    public function actualizarMesa()
+    public static function actualizarMesa($mesa)
     {
         $objAccesoDatos = AccesoDatos::obtenerInstancia();
         $consulta = $objAccesoDatos->prepararConsulta("UPDATE Mesas SET estado = ?, fechaCierre = ? WHERE idMesa = ? AND eliminado = " . ACTIVO);
         $fechaCierre = new DateTime("now", new DateTimeZone("America/Argentina/Buenos_Aires"));
-        $consulta->bindParam(1, $this->estado);
-        $consulta->bindParam(2, $fechaCierre);
-        $consulta->bindParam(3, $this->idMesa);
+        $fechaCierreString = date_format($fechaCierre, 'Y-m-d H:i:s');
+        $consulta->bindParam(1, $mesa->estado);
+        $consulta->bindParam(2, $fechaCierreString);
+        $consulta->bindParam(3, $mesa->idMesa);
         $consulta->execute();
     }
 
-    public function eliminarMesa()
+    public static function eliminarMesa($mesa)
     {
         $objAccesoDatos = AccesoDatos::obtenerInstancia();
         $consulta = $objAccesoDatos->prepararConsulta("UPDATE Mesas WHERE idMesa = ? SET eliminado = " . INACTIVO);
-        $consulta->bindParam(1, $this->idMesa);
+        $consulta->bindParam(1, $mesa->idMesa);
         $consulta->execute();
     }
 }
