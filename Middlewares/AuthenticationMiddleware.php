@@ -14,13 +14,13 @@ class AuthenticationMiddleware
         $esValido = false;
 
         try {
-            AutentificadorJWT::verificarToken($token);            
+            AutentificadorJWT::verificarToken($token);
+            return $handler->handle($request);
         } catch (Exception $e) {
             $response = new Response();
             $payload = json_encode(['mensaje' => "No se pudo autenticar la request: " . $e->getMessage()]);
             $response->getBody()->write($payload);
             return $response->withHeader('Content-Type', 'application/json');
         }
-        return $handler->handle($request);
     }
 }
