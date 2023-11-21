@@ -9,3 +9,7 @@ id_producto,titulo,tiempo_preparacion,precio,estado,sector,fecha_creacion
 1021,Cuba Libre,6,150.00,Activo,bar,2023-11-21 14:30:40
 1022,Whiskey Sour,7,200.00,Activo,bar,2023-11-22 09:55:25
 1023,Gin Tonic,6,170.00,Activo,bar,2023-11-22 16:10:12
+1024,Milanesa a Caballo,15,180.00,Activo,restaurante,2023-11-22 16:30:00
+1025,Hamburguesa de Garbanzo,10,150.00,Activo,restaurante,2023-11-22 17:00:00
+1026,Una Corona,5,40.00,Activo,bar,2023-11-22 17:30:00
+1027,Un Daikiri,8,210.00,Activo,bar,2023-11-22 18:00:00

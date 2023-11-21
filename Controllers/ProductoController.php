@@ -96,8 +96,11 @@ class ProductoController implements IApiUsable
 
     public function CargaMasiva($request, $response, $args)
     {
+        $huboErroresDuplicados = false;
         $uploadedFile = $request->getUploadedFiles()["productos"];
-
+        $parametros = $request->getParsedBody();
+        $omitirRepetidos = $parametros['omitirRepetidos'];
+        $omitirRepetidos = isset($omitirRepetidos) ? $omitirRepetidos : false;
         // Verificar si se cargo correctamente el archivo
         if ($uploadedFile->getError() === UPLOAD_ERR_OK) {
             $csvContent = $uploadedFile->getStream()->getContents();
@@ -123,15 +126,35 @@ class ProductoController implements IApiUsable
                     'sector' => $datos[5],
                     'fecha_creacion' => $datos[6]
                 ];
-
-                $producto = Producto::transformarPrototipo($obj);
-                $producto->crearProducto();
+                try {
+                    $producto = Producto::transformarPrototipo($obj);
+                    $producto->crearProducto();
+                } catch (\PDOException $th) {
+                    // SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry
+                    if($th->getCode() == 23000 && $omitirRepetidos){
+                        $huboErroresDuplicados = true;
+                        continue;
+                    }
+                    else{
+                        $payload = json_encode(array("mensaje" => "Error al procesar CSV: Regitros duplicados en destino"));
+                        $response->getBody()->write($payload);
+                        return $response->withHeader('Content-Type', 'application/json');
+                    }
+                }
+                
             }
-            $payload = json_encode(array("mensaje" => "CSV procesado correctamente"));
+            $mensaje = "CSV procesado ";
+            if($huboErroresDuplicados){
+                $mensaje = $mensaje . "incompleto con errores por registros duplicados en destino";
+            }
+            else{
+                $mensaje = $mensaje . " correctamente";
+            }
+            $payload = json_encode(array("mensaje" => $mensaje));
             $response->getBody()->write($payload);
             return $response->withHeader('Content-Type', 'application/json');
         } else {
-            $payload = json_encode(array("mensaje" => "CSV procesado correctamente"));
+            $payload = json_encode(array("mensaje" => "CSV procesado incorrectamete"));
             $response->getBody()->write($payload);
             return $response->withHeader('Content-Type', 'application/json');
         }
