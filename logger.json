@@ -1,0 +1,90 @@
+[
+    {
+        "request": {
+            "method": "GET",
+            "uri": "http:\/\/localhost:666\/app\/productos",
+            "headers": {
+                "PHP-AUTH-USER": [
+                    "cristobal_socio"
+                ],
+                "Authorization": [
+                    "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MDA1ODU4ODksImV4cCI6MTcwMDU4OTQ4OSwiYXVkIjoiMzRjNWQ0YWJlYmY2YjU0YzQxNzJkYzRkNjhiODI5NWYwMWM5ZDUyYSIsImRhdGEiOnsidXN1YXJpbyI6ImNyaXN0b2JhbF9zb2NpbyJ9LCJhcHAiOiJBUEkgUkVTVCBDRCAyMDIzIn0.5PZDcloqpnDWvx3eDXuBnfTp_5jQo8A7JrwCzyGcX50"
+                ],
+                "User-Agent": [
+                    "PostmanRuntime\/7.35.0"
+                ],
+                "Accept": [
+                    "*\/*"
+                ],
+                "Postman-Token": [
+                    "4a53a14c-53fe-4331-ae33-a0c442651d6d"
+                ],
+                "Host": [
+                    "localhost"
+                ],
+                "Accept-Encoding": [
+                    "gzip, deflate, br"
+                ],
+                "Connection": [
+                    "keep-alive"
+                ]
+            },
+            "body": ""
+        },
+        "response": {
+            "statusCode": 200,
+            "headers": {
+                "Content-Type": [
+                    "application\/json"
+                ]
+            },
+            "body": "{\"listaProducto\":[{\"idProducto\":1,\"titulo\":\"Vodka\",\"tiempoPreparacion\":6,\"precio\":\"180.00\",\"estado\":\"Activo\",\"sector\":\"bar\",\"fechaCreacion\":{\"date\":\"2023-11-21 14:11:17.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"}},{\"idProducto\":2,\"titulo\":\"Daiquiri\",\"tiempoPreparacion\":7,\"precio\":\"200.00\",\"estado\":\"Activo\",\"sector\":\"bar\",\"fechaCreacion\":{\"date\":\"2023-11-21 14:11:17.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"}},{\"idProducto\":3,\"titulo\":\"Mai Tai\",\"tiempoPreparacion\":8,\"precio\":\"220.00\",\"estado\":\"Activo\",\"sector\":\"bar\",\"fechaCreacion\":{\"date\":\"2023-11-21 14:11:17.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"}},{\"idProducto\":4,\"titulo\":\"Tequila Sunrise\",\"tiempoPreparacion\":6,\"precio\":\"160.00\",\"estado\":\"Activo\",\"sector\":\"bar\",\"fechaCreacion\":{\"date\":\"2023-11-21 14:11:17.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"}},{\"idProducto\":5,\"titulo\":\"Pi\\u00f1a Colada\",\"tiempoPreparacion\":7,\"precio\":\"190.00\",\"estado\":\"Activo\",\"sector\":\"bar\",\"fechaCreacion\":{\"date\":\"2023-11-21 14:11:17.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"}},{\"idProducto\":6,\"titulo\":\"Manhattan\",\"tiempoPreparacion\":8,\"precio\":\"250.00\",\"estado\":\"Activo\",\"sector\":\"bar\",\"fechaCreacion\":{\"date\":\"2023-11-21 14:11:17.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"}},{\"idProducto\":7,\"titulo\":\"Old Fashioned\",\"tiempoPreparacion\":7,\"precio\":\"230.00\",\"estado\":\"Activo\",\"sector\":\"bar\",\"fechaCreacion\":{\"date\":\"2023-11-21 14:11:17.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"}},{\"idProducto\":8,\"titulo\":\"Cuba Libre\",\"tiempoPreparacion\":6,\"precio\":\"150.00\",\"estado\":\"Activo\",\"sector\":\"bar\",\"fechaCreacion\":{\"date\":\"2023-11-21 14:11:17.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"}},{\"idProducto\":9,\"titulo\":\"Whiskey Sour\",\"tiempoPreparacion\":7,\"precio\":\"200.00\",\"estado\":\"Activo\",\"sector\":\"bar\",\"fechaCreacion\":{\"date\":\"2023-11-21 14:11:17.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"}},{\"idProducto\":10,\"titulo\":\"Gin Tonic\",\"tiempoPreparacion\":6,\"precio\":\"170.00\",\"estado\":\"Activo\",\"sector\":\"bar\",\"fechaCreacion\":{\"date\":\"2023-11-21 14:11:17.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"}}]}"
+        },
+        "timestamp": "2023-11-21 18:47:40"
+    }
+],
+[
+    {
+        "request": {
+            "method": "GET",
+            "uri": "http:\/\/localhost:666\/app\/productos",
+            "headers": {
+                "PHP-AUTH-USER": [
+                    "cristobal_socio"
+                ],
+                "Authorization": [
+                    "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MDA1ODU4ODksImV4cCI6MTcwMDU4OTQ4OSwiYXVkIjoiMzRjNWQ0YWJlYmY2YjU0YzQxNzJkYzRkNjhiODI5NWYwMWM5ZDUyYSIsImRhdGEiOnsidXN1YXJpbyI6ImNyaXN0b2JhbF9zb2NpbyJ9LCJhcHAiOiJBUEkgUkVTVCBDRCAyMDIzIn0.5PZDcloqpnDWvx3eDXuBnfTp_5jQo8A7JrwCzyGcX50"
+                ],
+                "User-Agent": [
+                    "PostmanRuntime\/7.35.0"
+                ],
+                "Accept": [
+                    "*\/*"
+                ],
+                "Postman-Token": [
+                    "2f0a058b-7dea-431b-9b6a-eb6919555ac0"
+                ],
+                "Host": [
+                    "localhost"
+                ],
+                "Accept-Encoding": [
+                    "gzip, deflate, br"
+                ],
+                "Connection": [
+                    "keep-alive"
+                ]
+            },
+            "body": ""
+        },
+        "response": {
+            "statusCode": 200,
+            "headers": {
+                "Content-Type": [
+                    "application\/json"
+                ]
+            },
+            "body": "{\"listaProducto\":[{\"idProducto\":1,\"titulo\":\"Vodka\",\"tiempoPreparacion\":6,\"precio\":\"180.00\",\"estado\":\"Activo\",\"sector\":\"bar\",\"fechaCreacion\":{\"date\":\"2023-11-21 14:11:17.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"}},{\"idProducto\":2,\"titulo\":\"Daiquiri\",\"tiempoPreparacion\":7,\"precio\":\"200.00\",\"estado\":\"Activo\",\"sector\":\"bar\",\"fechaCreacion\":{\"date\":\"2023-11-21 14:11:17.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"}},{\"idProducto\":3,\"titulo\":\"Mai Tai\",\"tiempoPreparacion\":8,\"precio\":\"220.00\",\"estado\":\"Activo\",\"sector\":\"bar\",\"fechaCreacion\":{\"date\":\"2023-11-21 14:11:17.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"}},{\"idProducto\":4,\"titulo\":\"Tequila Sunrise\",\"tiempoPreparacion\":6,\"precio\":\"160.00\",\"estado\":\"Activo\",\"sector\":\"bar\",\"fechaCreacion\":{\"date\":\"2023-11-21 14:11:17.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"}},{\"idProducto\":5,\"titulo\":\"Pi\\u00f1a Colada\",\"tiempoPreparacion\":7,\"precio\":\"190.00\",\"estado\":\"Activo\",\"sector\":\"bar\",\"fechaCreacion\":{\"date\":\"2023-11-21 14:11:17.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"}},{\"idProducto\":6,\"titulo\":\"Manhattan\",\"tiempoPreparacion\":8,\"precio\":\"250.00\",\"estado\":\"Activo\",\"sector\":\"bar\",\"fechaCreacion\":{\"date\":\"2023-11-21 14:11:17.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"}},{\"idProducto\":7,\"titulo\":\"Old Fashioned\",\"tiempoPreparacion\":7,\"precio\":\"230.00\",\"estado\":\"Activo\",\"sector\":\"bar\",\"fechaCreacion\":{\"date\":\"2023-11-21 14:11:17.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"}},{\"idProducto\":8,\"titulo\":\"Cuba Libre\",\"tiempoPreparacion\":6,\"precio\":\"150.00\",\"estado\":\"Activo\",\"sector\":\"bar\",\"fechaCreacion\":{\"date\":\"2023-11-21 14:11:17.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"}},{\"idProducto\":9,\"titulo\":\"Whiskey Sour\",\"tiempoPreparacion\":7,\"precio\":\"200.00\",\"estado\":\"Activo\",\"sector\":\"bar\",\"fechaCreacion\":{\"date\":\"2023-11-21 14:11:17.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"}},{\"idProducto\":10,\"titulo\":\"Gin Tonic\",\"tiempoPreparacion\":6,\"precio\":\"170.00\",\"estado\":\"Activo\",\"sector\":\"bar\",\"fechaCreacion\":{\"date\":\"2023-11-21 14:11:17.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"}}]}"
+        },
+        "timestamp": "2023-11-21 18:47:45"
+    }
+]

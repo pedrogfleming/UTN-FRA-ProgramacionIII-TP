@@ -22,6 +22,7 @@ require_once CONTROLLERS . '/EncuestaController.php';
 require_once MIDDLEWARES . '/AuthenticationMiddleware.php';
 require_once MIDDLEWARES . '/AuthorizationMiddleware.php';
 require_once MIDDLEWARES . '/RequestValidatorMiddleware.php';
+require_once MIDDLEWARES . '/LoggerMiddleware.php';
 require_once UTILS . '/AutentificadorJWT.php';
 
 // Load ENV
@@ -45,6 +46,7 @@ $app->addErrorMiddleware(true, true, true);
 // Add parse body
 $app->addBodyParsingMiddleware();
 
+$app->add(new LoggerMiddleware());
 if (!file_exists(SETTINGS)) {
     echo 'Archivo settings no existe';
     exit;

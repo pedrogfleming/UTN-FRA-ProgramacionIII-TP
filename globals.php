@@ -29,3 +29,4 @@ define("SECTOR_BAR", "bar");
 
 define("ACTIVO", 0);
 define("INACTIVO", 1);
+define("LOGGIN_FILE", "../logger.json");
