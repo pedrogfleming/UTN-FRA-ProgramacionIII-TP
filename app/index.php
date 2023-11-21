@@ -146,10 +146,10 @@ $app->group('/encuestas', function (RouteCollectorProxy $group) {
     $borrarUnoEncuesta = new AuthorizationMiddleware([ROL_ADMIN, ROL_SOCIO, ROL_MOZO]);
 
     $group->get('[/]', \EncuestaController::class . ':TraerTodos')->add($traerTodosEncuesta);
-    $group->get('/{pedido}', \EncuestaController::class . ':TraerUno')->add($traerTodosEncuesta);
+    $group->get('/{encuesta}', \EncuestaController::class . ':TraerUno')->add($traerTodosEncuesta);
     $group->post('[/]', \EncuestaController::class . ':CargarUno')->add($cargarUnoEncuesta)->add(new RequestValidatorMiddleware($cargarUnoReqValidatorKeys));
-    $group->put('/{pedido}', \EncuestaController::class . ':ModificarUno')->add($modificarUnoEncuesta);
-    $group->delete('/{pedido}', \EncuestaController::class . ':BorrarUno')->add($borrarUnoEncuesta);
+    $group->put('/{encuesta}', \EncuestaController::class . ':ModificarUno')->add($modificarUnoEncuesta);
+    $group->delete('/{encuesta}', \EncuestaController::class . ':BorrarUno')->add($borrarUnoEncuesta);
 });
 
 $app->run();
