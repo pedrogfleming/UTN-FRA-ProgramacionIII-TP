@@ -92,6 +92,7 @@ $app->group('/productos', function (RouteCollectorProxy $group) {
     $group->post('[/]', \ProductoController::class . ':CargarUno')->add($cargarUnoProducto)->add(new RequestValidatorMiddleware($cargarUnoReqValidatorKeys));
     $group->put('/{producto}', \ProductoController::class . ':ModificarUno')->add($modificarUnoProducto);
     $group->delete('/{producto}', \ProductoController::class . ':BorrarUno')->add($borrarUnoProducto);
+    $group->post('/cargaMasiva', \ProductoController::class . ':CargaMasiva');
 });
 
 $app->group('/mesas', function (RouteCollectorProxy $group) {

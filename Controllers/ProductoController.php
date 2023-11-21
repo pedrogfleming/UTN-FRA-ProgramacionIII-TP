@@ -34,13 +34,12 @@ class ProductoController implements IApiUsable
     {
         $id = $args["producto"];
         $producto = Producto::obtenerProducto($id);
-        if(!$producto){
+        if (!$producto) {
             $ret = new stdClass();
             $ret->err = "no se encontro el producto con el id solicitado";
             $err_payload = json_encode($ret);
             $response->getBody()->write($err_payload);
-        }
-        else{
+        } else {
             $payload = json_encode($producto);
             $response->getBody()->write($payload);
         }
@@ -55,7 +54,7 @@ class ProductoController implements IApiUsable
         $response->getBody()->write($payload);
         return $response->withHeader('Content-Type', 'application/json');
     }
-    
+
     public function ModificarUno($request, $response, $args)
     {
         $parametros = $request->getParsedBody();
@@ -68,7 +67,7 @@ class ProductoController implements IApiUsable
         $sector = $parametros['sector'];
 
         $producto = Producto::obtenerProducto($id);
-        
+
         $producto->titulo = $titulo;
         $producto->tiempoPreparacion = $tiempoPreparacion;
         $producto->precio = $precio;
@@ -94,6 +93,47 @@ class ProductoController implements IApiUsable
         $response->getBody()->write($payload);
         return $response->withHeader('Content-Type', 'application/json');
     }
-}
 
-?>
+    public function CargaMasiva($request, $response, $args)
+    {
+        $uploadedFile = $request->getUploadedFiles()["productos"];
+    
+        // Verificar si se cargo correctamente el archivo
+        if ($uploadedFile->getError() === UPLOAD_ERR_OK) {
+            $csvContent = $uploadedFile->getStream()->getContents();
+    
+            // Convertir el contenido del CSV en un array de filas
+            $filas = explode(PHP_EOL, $csvContent);
+            $primerFila = true;
+            foreach ($filas as $fila) {
+                // Omitir la primera fila (encabezado)
+                if ($primerFila) {
+                    $primerFila = false;
+                    continue;
+                }
+                $datos = str_getcsv($fila);
+    
+                // Formato igual al de la tabla de la base de datos
+                $obj = (object)[
+                    'id_producto' => $datos[0],
+                    'titulo' => $datos[1],
+                    'tiempo_preparacion' => $datos[2],
+                    'precio' => $datos[3],
+                    'estado' => $datos[4],
+                    'sector' => $datos[5],
+                    'fecha_creacion' => $datos[6]
+                ];
+    
+                $producto = Producto::transformarPrototipo($obj);
+                $producto->crearProducto();
+            }
+            $payload = json_encode(array("mensaje" => "CSV procesado correctamente"));
+            $response->getBody()->write($payload);
+            return $response->withHeader('Content-Type', 'application/json');
+        } else {
+            $payload = json_encode(array("mensaje" => "CSV procesado correctamente"));
+            $response->getBody()->write($payload);
+            return $response->withHeader('Content-Type', 'application/json');
+        }
+    }
+}
