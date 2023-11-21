@@ -97,11 +97,11 @@ class ProductoController implements IApiUsable
     public function CargaMasiva($request, $response, $args)
     {
         $uploadedFile = $request->getUploadedFiles()["productos"];
-    
+
         // Verificar si se cargo correctamente el archivo
         if ($uploadedFile->getError() === UPLOAD_ERR_OK) {
             $csvContent = $uploadedFile->getStream()->getContents();
-    
+
             // Convertir el contenido del CSV en un array de filas
             $filas = explode(PHP_EOL, $csvContent);
             $primerFila = true;
@@ -112,7 +112,7 @@ class ProductoController implements IApiUsable
                     continue;
                 }
                 $datos = str_getcsv($fila);
-    
+
                 // Formato igual al de la tabla de la base de datos
                 $obj = (object)[
                     'id_producto' => $datos[0],
@@ -123,7 +123,7 @@ class ProductoController implements IApiUsable
                     'sector' => $datos[5],
                     'fecha_creacion' => $datos[6]
                 ];
-    
+
                 $producto = Producto::transformarPrototipo($obj);
                 $producto->crearProducto();
             }
@@ -135,5 +135,40 @@ class ProductoController implements IApiUsable
             $response->getBody()->write($payload);
             return $response->withHeader('Content-Type', 'application/json');
         }
+    }
+    public function DescargaMasiva($request, $response, $args)
+    {
+        $productos = Producto::obtenerTodos();
+
+        $csvFile = tmpfile();
+        $header = ["id_producto", "titulo", "tiempo_preparacion", "precio", "estado", "sector", "fecha_creacion"];
+        fputcsv($csvFile, $header);
+
+        foreach ($productos as $producto) {
+            $data = [
+                $producto->idProducto,
+                $producto->titulo,
+                $producto->tiempoPreparacion,
+                $producto->precio,
+                $producto->estado,
+                $producto->sector,
+                $producto->fechaCreacion->format('Y-m-d H:i:s')
+            ];
+            fputcsv($csvFile, $data);
+        }
+
+        // Establecer las cabeceras para descargar el archivo
+        header('Content-Type: application/csv');
+        header('Content-Disposition: attachment; filename="productos_exportados.csv"');
+
+        // Rebobinar el puntero del archivo al principio antes de leerlo
+        rewind($csvFile);
+
+        // Leer y devolver el contenido del archivo CSV
+        $csvContent = stream_get_contents($csvFile);
+        fclose($csvFile);
+
+        $response->getBody()->write($csvContent);
+        return $response->withHeader('Content-Type', 'application/csv');
     }
 }
