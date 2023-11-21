@@ -31,6 +31,11 @@ class EncuestaController implements IApiUsable
         $encuesta->fechaCreacion = new DateTime("now", new DateTimeZone("America/Argentina/Buenos_Aires"));
         $encuesta->guardarEncuesta();
 
+        require_once MODELS . '/Mesa.php';
+        $mesaCerrada = Mesa::obtenerMesa($encuesta->idMesa);
+        $mesaOcupada->estado = Mesa::ESTADO_CERRADA;
+        Mesa::actualizarMesa($mesaOcupada);
+
         $payload = json_encode(array("mensaje" => "Encuesta creada con éxito"));
 
         $response->getBody()->write($payload);
