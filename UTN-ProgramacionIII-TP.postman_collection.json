@@ -12,23 +12,14 @@
 				{
 					"name": "ObtenerUsuarios No autorizado",
 					"request": {
-						"auth": {
-							"type": "basic",
-							"basic": [
-								{
-									"key": "password",
-									"value": "*7924A6822A50269BE36F22130A83D7ED07E32700",
-									"type": "string"
-								},
-								{
-									"key": "username",
-									"value": "oscar_mozo",
-									"type": "string"
-								}
-							]
-						},
 						"method": "GET",
-						"header": [],
+						"header": [
+							{
+								"key": "PHP_AUTH_USER",
+								"value": "oscar_mozo",
+								"type": "text"
+							}
+						],
 						"url": {
 							"raw": "{{protocolo}}://{{server}}:{{puerto}}/{{app}}/{{usuarios}}",
 							"protocol": "{{protocolo}}",
@@ -94,23 +85,14 @@
 				{
 					"name": "ObtenerUsuarios Autorizado",
 					"request": {
-						"auth": {
-							"type": "basic",
-							"basic": [
-								{
-									"key": "password",
-									"value": "*4D78C66DBC6FA11E7084240C135637D650FECAB7",
-									"type": "string"
-								},
-								{
-									"key": "username",
-									"value": "cristobal_socio",
-									"type": "string"
-								}
-							]
-						},
 						"method": "GET",
-						"header": [],
+						"header": [
+							{
+								"key": "PHP_AUTH_USER",
+								"value": "cristobal_socio",
+								"type": "text"
+							}
+						],
 						"url": {
 							"raw": "{{protocolo}}://{{server}}:{{puerto}}/{{app}}/{{usuarios}}",
 							"protocol": "{{protocolo}}",
@@ -176,23 +158,14 @@
 				{
 					"name": "CargarUsuario No autorizado",
 					"request": {
-						"auth": {
-							"type": "basic",
-							"basic": [
-								{
-									"key": "password",
-									"value": "*7924A6822A50269BE36F22130A83D7ED07E32700",
-									"type": "string"
-								},
-								{
-									"key": "username",
-									"value": "oscar_mozo",
-									"type": "string"
-								}
-							]
-						},
 						"method": "POST",
-						"header": [],
+						"header": [
+							{
+								"key": "PHP_AUTH_USER",
+								"value": "oscar_mozo",
+								"type": "text"
+							}
+						],
 						"body": {
 							"mode": "formdata",
 							"formdata": [
@@ -241,23 +214,14 @@
 				{
 					"name": "CargarUsuario Autorizado",
 					"request": {
-						"auth": {
-							"type": "basic",
-							"basic": [
-								{
-									"key": "password",
-									"value": "*4D78C66DBC6FA11E7084240C135637D650FECAB7",
-									"type": "string"
-								},
-								{
-									"key": "username",
-									"value": "cristobal_socio",
-									"type": "string"
-								}
-							]
-						},
 						"method": "POST",
-						"header": [],
+						"header": [
+							{
+								"key": "PHP_AUTH_USER",
+								"value": "cristobal_socio",
+								"type": "text"
+							}
+						],
 						"body": {
 							"mode": "formdata",
 							"formdata": [
@@ -302,19 +266,70 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "CargarUsuario Autorizado 2",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "PHP_AUTH_USER",
+								"value": "cristobal_socio",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "nombre",
+									"value": "Pedro",
+									"type": "text"
+								},
+								{
+									"key": "user",
+									"value": "pedro_mozo",
+									"type": "text"
+								},
+								{
+									"key": "sector",
+									"value": "mesas",
+									"type": "text"
+								},
+								{
+									"key": "tipo",
+									"value": "mozo",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "pedro123",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{protocolo}}://{{server}}:{{puerto}}/{{app}}/{{usuarios}}",
+							"protocol": "{{protocolo}}",
+							"host": [
+								"{{server}}"
+							],
+							"port": "{{puerto}}",
+							"path": [
+								"{{app}}",
+								"{{usuarios}}"
+							]
+						}
+					},
+					"response": []
 				}
 			],
 			"auth": {
-				"type": "basic",
-				"basic": [
+				"type": "bearer",
+				"bearer": [
 					{
-						"key": "password",
-						"value": "",
-						"type": "string"
-					},
-					{
-						"key": "username",
-						"value": "",
+						"key": "token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MDA1ODU4ODksImV4cCI6MTcwMDU4OTQ4OSwiYXVkIjoiMzRjNWQ0YWJlYmY2YjU0YzQxNzJkYzRkNjhiODI5NWYwMWM5ZDUyYSIsImRhdGEiOnsidXN1YXJpbyI6ImNyaXN0b2JhbF9zb2NpbyJ9LCJhcHAiOiJBUEkgUkVTVCBDRCAyMDIzIn0.5PZDcloqpnDWvx3eDXuBnfTp_5jQo8A7JrwCzyGcX50",
 						"type": "string"
 					}
 				]
@@ -346,23 +361,14 @@
 				{
 					"name": "ObtenerProductos No  Autorizado",
 					"request": {
-						"auth": {
-							"type": "basic",
-							"basic": [
-								{
-									"key": "password",
-									"value": "clave_inexistente",
-									"type": "string"
-								},
-								{
-									"key": "username",
-									"value": "usuario_inexistente",
-									"type": "string"
-								}
-							]
-						},
 						"method": "GET",
-						"header": [],
+						"header": [
+							{
+								"key": "PHP_AUTH_USER",
+								"value": "",
+								"type": "text"
+							}
+						],
 						"url": {
 							"raw": "{{protocolo}}://{{server}}:{{puerto}}/{{app}}/{{productos}}",
 							"protocol": "{{protocolo}}",
@@ -428,23 +434,14 @@
 				{
 					"name": "ObtenerProductos Autorizado",
 					"request": {
-						"auth": {
-							"type": "basic",
-							"basic": [
-								{
-									"key": "password",
-									"value": "*7924A6822A50269BE36F22130A83D7ED07E32700",
-									"type": "string"
-								},
-								{
-									"key": "username",
-									"value": "oscar_mozo",
-									"type": "string"
-								}
-							]
-						},
 						"method": "GET",
-						"header": [],
+						"header": [
+							{
+								"key": "PHP_AUTH_USER",
+								"value": "cristobal_socio",
+								"type": "text"
+							}
+						],
 						"url": {
 							"raw": "{{protocolo}}://{{server}}:{{puerto}}/{{app}}/{{productos}}",
 							"protocol": "{{protocolo}}",
@@ -510,23 +507,14 @@
 				{
 					"name": "CargarProducto No autorizado",
 					"request": {
-						"auth": {
-							"type": "basic",
-							"basic": [
-								{
-									"key": "password",
-									"value": "clave_inexistente",
-									"type": "string"
-								},
-								{
-									"key": "username",
-									"value": "usuario_inexistente",
-									"type": "string"
-								}
-							]
-						},
 						"method": "POST",
-						"header": [],
+						"header": [
+							{
+								"key": "PHP_AUTH_USER",
+								"value": "",
+								"type": "text"
+							}
+						],
 						"body": {
 							"mode": "formdata",
 							"formdata": [
@@ -652,23 +640,14 @@
 				{
 					"name": "CargarProducto  Autorizado",
 					"request": {
-						"auth": {
-							"type": "basic",
-							"basic": [
-								{
-									"key": "password",
-									"value": "*7924A6822A50269BE36F22130A83D7ED07E32700",
-									"type": "string"
-								},
-								{
-									"key": "username",
-									"value": "oscar_mozo",
-									"type": "string"
-								}
-							]
-						},
 						"method": "POST",
-						"header": [],
+						"header": [
+							{
+								"key": "PHP_AUTH_USER",
+								"value": "cristobal_socio",
+								"type": "text"
+							}
+						],
 						"body": {
 							"mode": "formdata",
 							"formdata": [
@@ -695,8 +674,7 @@
 								{
 									"key": "precio",
 									"value": "300",
-									"type": "text",
-									"disabled": true
+									"type": "text"
 								}
 							]
 						},
@@ -867,6 +845,95 @@
 							"body": "{\n    \"mensaje\": \"Producto creado con exito\"\n}"
 						}
 					]
+				},
+				{
+					"name": "Cargar Masiva Productos",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "PHP_AUTH_USER",
+								"value": "cristobal_socio",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "productos",
+									"type": "file",
+									"src": "/D:/Environments/XAMP/htdocs/UTN-ProgramacionIII-TP/app-comanda/assets/productos.csv"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{protocolo}}://{{server}}:{{puerto}}/{{app}}/{{productos}}/cargaMasiva",
+							"protocol": "{{protocolo}}",
+							"host": [
+								"{{server}}"
+							],
+							"port": "{{puerto}}",
+							"path": [
+								"{{app}}",
+								"{{productos}}",
+								"cargaMasiva"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cargar Masiva Productos Copy",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{protocolo}}://{{server}}:{{puerto}}/{{app}}/{{productos}}/bulk/descargaMasiva",
+							"protocol": "{{protocolo}}",
+							"host": [
+								"{{server}}"
+							],
+							"port": "{{puerto}}",
+							"path": [
+								"{{app}}",
+								"{{productos}}",
+								"bulk",
+								"descargaMasiva"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MDA1ODU4ODksImV4cCI6MTcwMDU4OTQ4OSwiYXVkIjoiMzRjNWQ0YWJlYmY2YjU0YzQxNzJkYzRkNjhiODI5NWYwMWM5ZDUyYSIsImRhdGEiOnsidXN1YXJpbyI6ImNyaXN0b2JhbF9zb2NpbyJ9LCJhcHAiOiJBUEkgUkVTVCBDRCAyMDIzIn0.5PZDcloqpnDWvx3eDXuBnfTp_5jQo8A7JrwCzyGcX50",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
 				}
 			]
 		},
@@ -876,23 +943,14 @@
 				{
 					"name": "ObtenerMesas Autorizado",
 					"request": {
-						"auth": {
-							"type": "basic",
-							"basic": [
-								{
-									"key": "password",
-									"value": "*7924A6822A50269BE36F22130A83D7ED07E32700",
-									"type": "string"
-								},
-								{
-									"key": "username",
-									"value": "oscar_mozo",
-									"type": "string"
-								}
-							]
-						},
 						"method": "GET",
-						"header": [],
+						"header": [
+							{
+								"key": "PHP_AUTH_USER",
+								"value": "cristobal_socio",
+								"type": "text"
+							}
+						],
 						"url": {
 							"raw": "{{protocolo}}://{{server}}:{{puerto}}/{{app}}/{{mesas}}",
 							"protocol": "{{protocolo}}",
@@ -958,23 +1016,14 @@
 				{
 					"name": "ObtenerMesas No Autorizado",
 					"request": {
-						"auth": {
-							"type": "basic",
-							"basic": [
-								{
-									"key": "password",
-									"value": "*3F835267B6B2F85CD865ACABE0B1395D4CBBBFEC",
-									"type": "string"
-								},
-								{
-									"key": "username",
-									"value": "susana_cocinera",
-									"type": "string"
-								}
-							]
-						},
 						"method": "GET",
-						"header": [],
+						"header": [
+							{
+								"key": "PHP_AUTH_USER",
+								"value": "susana_cocinera",
+								"type": "text"
+							}
+						],
 						"url": {
 							"raw": "{{protocolo}}://{{server}}:{{puerto}}/{{app}}/{{mesas}}",
 							"protocol": "{{protocolo}}",
@@ -1040,23 +1089,14 @@
 				{
 					"name": "CargarMesa Autorizado",
 					"request": {
-						"auth": {
-							"type": "basic",
-							"basic": [
-								{
-									"key": "password",
-									"value": "*7924A6822A50269BE36F22130A83D7ED07E32700",
-									"type": "string"
-								},
-								{
-									"key": "username",
-									"value": "oscar_mozo",
-									"type": "string"
-								}
-							]
-						},
 						"method": "POST",
-						"header": [],
+						"header": [
+							{
+								"key": "PHP_AUTH_USER",
+								"value": "cristobal_socio",
+								"type": "text"
+							}
+						],
 						"url": {
 							"raw": "{{protocolo}}://{{server}}:{{puerto}}/{{app}}/{{mesas}}",
 							"protocol": "{{protocolo}}",
@@ -1122,23 +1162,14 @@
 				{
 					"name": "CargarMesa No Autorizado",
 					"request": {
-						"auth": {
-							"type": "basic",
-							"basic": [
-								{
-									"key": "password",
-									"value": "*3F835267B6B2F85CD865ACABE0B1395D4CBBBFEC",
-									"type": "string"
-								},
-								{
-									"key": "username",
-									"value": "susana_cocinera",
-									"type": "string"
-								}
-							]
-						},
 						"method": "POST",
-						"header": [],
+						"header": [
+							{
+								"key": "PHP_AUTH_USER",
+								"value": "susana_cocinera",
+								"type": "text"
+							}
+						],
 						"url": {
 							"raw": "{{protocolo}}://{{server}}:{{puerto}}/{{app}}/{{mesas}}",
 							"protocol": "{{protocolo}}",
@@ -1201,6 +1232,36 @@
 						}
 					]
 				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MDA1ODU4ODksImV4cCI6MTcwMDU4OTQ4OSwiYXVkIjoiMzRjNWQ0YWJlYmY2YjU0YzQxNzJkYzRkNjhiODI5NWYwMWM5ZDUyYSIsImRhdGEiOnsidXN1YXJpbyI6ImNyaXN0b2JhbF9zb2NpbyJ9LCJhcHAiOiJBUEkgUkVTVCBDRCAyMDIzIn0.5PZDcloqpnDWvx3eDXuBnfTp_5jQo8A7JrwCzyGcX50",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
 			]
 		},
 		{
@@ -1209,23 +1270,14 @@
 				{
 					"name": "CambiarEstado Pedido Autenticado",
 					"request": {
-						"auth": {
-							"type": "basic",
-							"basic": [
-								{
-									"key": "password",
-									"value": "*4D78C66DBC6FA11E7084240C135637D650FECAB7",
-									"type": "string"
-								},
-								{
-									"key": "username",
-									"value": "cristobal_socio",
-									"type": "string"
-								}
-							]
-						},
 						"method": "PUT",
-						"header": [],
+						"header": [
+							{
+								"key": "PHP_AUTH_USER",
+								"value": "cristobal_socio",
+								"type": "text"
+							}
+						],
 						"body": {
 							"mode": "raw",
 							"raw": "{\r\n    \"idMesa\": 1001,\r\n    \"nombreUsuario\": \"Pedro\",\r\n    \"nombreCliente\": \"Federico\",\r\n    \"estado\": \"en preparación\",\r\n    \"items\": [\r\n        {\"nombreProducto\": \"Gancia\", \"cantidad\": 5 , \"estado\": \"en preparación\"},\r\n        {\"nombreProducto\": \"Fernet\", \"cantidad\": 7, \"estado\": \"en preparación\"},\r\n        {\"nombreProducto\": \"Fernet 1984\", \"cantidad\": 1 , \"estado\": \"en preparación\"}\r\n    ]\r\n}",
@@ -1311,23 +1363,14 @@
 				{
 					"name": "ObtenerPedidos Autorizado",
 					"request": {
-						"auth": {
-							"type": "basic",
-							"basic": [
-								{
-									"key": "password",
-									"value": "*3F835267B6B2F85CD865ACABE0B1395D4CBBBFEC",
-									"type": "string"
-								},
-								{
-									"key": "username",
-									"value": "susana_cocinera",
-									"type": "string"
-								}
-							]
-						},
 						"method": "GET",
-						"header": [],
+						"header": [
+							{
+								"key": "PHP_AUTH_USER",
+								"value": "cristobal_socio",
+								"type": "text"
+							}
+						],
 						"url": {
 							"raw": "{{protocolo}}://{{server}}:{{puerto}}/{{app}}/{{pedidos}}",
 							"protocol": "{{protocolo}}",
@@ -1393,23 +1436,14 @@
 				{
 					"name": "ObtenerPedidos No Autorizado",
 					"request": {
-						"auth": {
-							"type": "basic",
-							"basic": [
-								{
-									"key": "password",
-									"value": "clave_inexistente",
-									"type": "string"
-								},
-								{
-									"key": "username",
-									"value": "usuario_inexistente",
-									"type": "string"
-								}
-							]
-						},
 						"method": "GET",
-						"header": [],
+						"header": [
+							{
+								"key": "PHP_AUTH_USER",
+								"value": "no_existe",
+								"type": "text"
+							}
+						],
 						"url": {
 							"raw": "{{protocolo}}://{{server}}:{{puerto}}/{{app}}/{{pedidos}}",
 							"protocol": "{{protocolo}}",
@@ -1475,23 +1509,189 @@
 				{
 					"name": "CargarPedido Autorizado",
 					"request": {
-						"auth": {
-							"type": "basic",
-							"basic": [
+						"method": "POST",
+						"header": [
+							{
+								"key": "PHP_AUTH_USER",
+								"value": "cristobal_socio",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
 								{
-									"key": "password",
-									"value": "*7924A6822A50269BE36F22130A83D7ED07E32700",
-									"type": "string"
+									"key": "idMesa",
+									"value": "1001",
+									"type": "text"
 								},
 								{
-									"key": "username",
-									"value": "oscar_mozo",
-									"type": "string"
+									"key": "nombreUsuario",
+									"value": "Pedro",
+									"type": "text"
+								},
+								{
+									"key": "nombreCliente",
+									"value": "Federico",
+									"type": "text"
+								},
+								{
+									"key": "fotoPedido",
+									"contentType": "",
+									"type": "file",
+									"src": "/D:/Environments/XAMP/htdocs/UTN-ProgramacionIII-TP/app-comanda/assets/vodkaFernet.jpg"
+								},
+								{
+									"key": "items[0][nombreProducto]",
+									"value": "Vodka",
+									"contentType": "",
+									"type": "text"
+								},
+								{
+									"key": "items[0][cantidad]",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "items[1][nombreProducto]",
+									"value": "Daiquiri",
+									"type": "text"
+								},
+								{
+									"key": "items[1][cantidad]",
+									"value": "3",
+									"contentType": "",
+									"type": "text"
 								}
 							]
 						},
+						"url": {
+							"raw": "{{protocolo}}://{{server}}:{{puerto}}/{{app}}/{{pedidos}}",
+							"protocol": "{{protocolo}}",
+							"host": [
+								"{{server}}"
+							],
+							"port": "{{puerto}}",
+							"path": [
+								"{{app}}",
+								"{{pedidos}}"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "CargarPedido Autorizado",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "PHP_AUTH_USER",
+										"value": "cristobal_socio",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "idMesa",
+											"value": "1001",
+											"type": "text"
+										},
+										{
+											"key": "nombreUsuario",
+											"value": "Pedro",
+											"type": "text"
+										},
+										{
+											"key": "nombreCliente",
+											"value": "Federico",
+											"type": "text"
+										},
+										{
+											"key": "fotoPedido",
+											"contentType": "",
+											"type": "file",
+											"src": "/D:/Environments/XAMP/htdocs/UTN-ProgramacionIII-TP/app-comanda/assets/vodkaFernet.jpg"
+										},
+										{
+											"key": "items[0][nombreProducto]",
+											"value": "Vodka",
+											"contentType": "",
+											"type": "text"
+										},
+										{
+											"key": "items[0][cantidad]",
+											"value": "2",
+											"type": "text"
+										},
+										{
+											"key": "items[1][nombreProducto]",
+											"value": "Fernet Branca",
+											"type": "text"
+										},
+										{
+											"key": "items[1][cantidad]",
+											"value": "3",
+											"contentType": "",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{protocolo}}://{{server}}:{{puerto}}/{{app}}/{{pedidos}}",
+									"protocol": "{{protocolo}}",
+									"host": [
+										"{{server}}"
+									],
+									"port": "{{puerto}}",
+									"path": [
+										"{{app}}",
+										"{{pedidos}}"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:666"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 21 Nov 2023 16:08:28 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.4"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"mensaje\": \"Items creados con éxito\"\n}"
+						}
+					]
+				},
+				{
+					"name": "CargarPedido No Autorizado",
+					"request": {
 						"method": "POST",
-						"header": [],
+						"header": [
+							{
+								"key": "PHP_AUTH_USER",
+								"value": "susana_cocinera",
+								"type": "text"
+							}
+						],
 						"body": {
 							"mode": "formdata",
 							"formdata": [
@@ -1537,12 +1737,6 @@
 									"value": "3",
 									"contentType": "",
 									"type": "text"
-								},
-								{
-									"key": "info",
-									"value": "https://www.baeldung.com/java-postman-send-array",
-									"type": "text",
-									"disabled": true
 								}
 							]
 						},
@@ -1560,38 +1754,108 @@
 						}
 					},
 					"response": []
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MDA1ODU4ODksImV4cCI6MTcwMDU4OTQ4OSwiYXVkIjoiMzRjNWQ0YWJlYmY2YjU0YzQxNzJkYzRkNjhiODI5NWYwMWM5ZDUyYSIsImRhdGEiOnsidXN1YXJpbyI6ImNyaXN0b2JhbF9zb2NpbyJ9LCJhcHAiOiJBUEkgUkVTVCBDRCAyMDIzIn0.5PZDcloqpnDWvx3eDXuBnfTp_5jQo8A7JrwCzyGcX50",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
 				},
 				{
-					"name": "CargarPedido No Autorizado",
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Encuestas",
+			"item": [
+				{
+					"name": "CargarEncuesta Autorizado",
 					"request": {
-						"auth": {
-							"type": "basic",
-							"basic": [
+						"method": "POST",
+						"header": [
+							{
+								"key": "PHP_AUTH_USER",
+								"value": "cristobal_socio",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
 								{
-									"key": "username",
-									"value": "usuario_inexistente",
-									"type": "string"
+									"key": "idPedido",
+									"value": "1000",
+									"type": "text"
 								},
 								{
-									"key": "password",
-									"value": "*7924A6822A50269BE36F22130A83D7ED07E32700",
-									"type": "string"
+									"key": "idMesa",
+									"value": "1001",
+									"type": "text"
+								},
+								{
+									"key": "idMozo",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "idCocinero",
+									"value": "4",
+									"type": "text"
+								},
+								{
+									"key": "puntuacionMesa",
+									"value": "10",
+									"contentType": "",
+									"type": "text"
+								},
+								{
+									"key": "puntuacionRestaurante",
+									"value": "8",
+									"contentType": "",
+									"type": "text"
+								},
+								{
+									"key": "puntuacionMozo",
+									"value": "6",
+									"type": "text"
+								},
+								{
+									"key": "puntuacionCocinero",
+									"value": "5",
+									"type": "text"
+								},
+								{
+									"key": "experienciaTexto",
+									"value": "\"Muy bueno el pedido, aunque el mozo tardo demasiado\"",
+									"contentType": "",
+									"type": "text"
 								}
 							]
 						},
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"idMesa\": 1001,\r\n    \"nombreUsuario\": \"Pedro\",\r\n    \"nombreCliente\": \"Federico\",\r\n    \"items\": [\r\n        {\"nombreProducto\": \"Fernet\", \"cantidad\": 2},\r\n        {\"nombreProducto\": \"Gancia\", \"cantidad\": 1}\r\n    ]\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
 						"url": {
-							"raw": "{{protocolo}}://{{server}}:{{puerto}}/{{app}}/{{pedidos}}",
+							"raw": "{{protocolo}}://{{server}}:{{puerto}}/{{app}}/{{encuestas}}",
 							"protocol": "{{protocolo}}",
 							"host": [
 								"{{server}}"
@@ -1599,27 +1863,77 @@
 							"port": "{{puerto}}",
 							"path": [
 								"{{app}}",
-								"{{pedidos}}"
+								"{{encuestas}}"
 							]
 						}
 					},
 					"response": [
 						{
-							"name": "CargarPedido Autorizado",
+							"name": "CargarPedido Autorizado Copy",
 							"originalRequest": {
 								"method": "POST",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n    \"idMesa\": 1001,\r\n    \"nombreUsuario\": \"Pedro\",\r\n    \"nombreCliente\": \"Federico\",\r\n    \"items\": [\r\n        {\"nombreProducto\": \"Fernet\", \"cantidad\": 2},\r\n        {\"nombreProducto\": \"Gancia\", \"cantidad\": 1}\r\n    ]\r\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
+								"header": [
+									{
+										"key": "PHP_AUTH_USER",
+										"value": "cristobal_socio",
+										"type": "text"
 									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "idPedido",
+											"value": "1000",
+											"type": "text"
+										},
+										{
+											"key": "idMesa",
+											"value": "1001",
+											"type": "text"
+										},
+										{
+											"key": "idMozo",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "idCocinero",
+											"value": "4",
+											"type": "text"
+										},
+										{
+											"key": "puntuacionMesa",
+											"value": "10",
+											"contentType": "",
+											"type": "text"
+										},
+										{
+											"key": "puntuacionRestaurante",
+											"value": "8",
+											"contentType": "",
+											"type": "text"
+										},
+										{
+											"key": "puntuacionMozo",
+											"value": "6",
+											"type": "text"
+										},
+										{
+											"key": "puntuacionCocinero",
+											"value": "5",
+											"type": "text"
+										},
+										{
+											"key": "experienciaTexto",
+											"value": "\"Muy bueno el pedido, aunque el mozo tardo demasiado\"",
+											"contentType": "",
+											"type": "text"
+										}
+									]
 								},
 								"url": {
-									"raw": "{{protocolo}}://{{server}}:{{puerto}}/{{app}}/{{pedidos}}",
+									"raw": "{{protocolo}}://{{server}}:{{puerto}}/{{app}}/{{encuestas}}",
 									"protocol": "{{protocolo}}",
 									"host": [
 										"{{server}}"
@@ -1627,7 +1941,7 @@
 									"port": "{{puerto}}",
 									"path": [
 										"{{app}}",
-										"{{pedidos}}"
+										"{{encuestas}}"
 									]
 								}
 							},
@@ -1641,7 +1955,7 @@
 								},
 								{
 									"key": "Date",
-									"value": "Sun, 19 Nov 2023 15:33:36 GMT"
+									"value": "Tue, 21 Nov 2023 16:22:44 GMT"
 								},
 								{
 									"key": "Connection",
@@ -1657,11 +1971,232 @@
 								}
 							],
 							"cookie": [],
-							"body": "{\n    \"mensaje\": \"Items creados con éxito\"\n}"
+							"body": "{\n    \"mensaje\": \"Encuesta creada con éxito\"\n}"
 						}
 					]
+				},
+				{
+					"name": "ObtenerEncuesta Autorizado",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "PHP_AUTH_USER",
+								"value": "cristobal_socio",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{protocolo}}://{{server}}:{{puerto}}/{{app}}/{{encuestas}}",
+							"protocol": "{{protocolo}}",
+							"host": [
+								"{{server}}"
+							],
+							"port": "{{puerto}}",
+							"path": [
+								"{{app}}",
+								"{{encuestas}}"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "CargarEncuesta Autorizado Copy",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "PHP_AUTH_USER",
+										"value": "cristobal_socio",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{protocolo}}://{{server}}:{{puerto}}/{{app}}/{{encuestas}}",
+									"protocol": "{{protocolo}}",
+									"host": [
+										"{{server}}"
+									],
+									"port": "{{puerto}}",
+									"path": [
+										"{{app}}",
+										"{{encuestas}}"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:666"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 21 Nov 2023 16:29:22 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.4"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"listaEncuestas\": [\n        {\n            \"idEncuesta\": 1000,\n            \"idPedido\": 1000,\n            \"idMesa\": 1001,\n            \"idMozo\": 1,\n            \"idCocinero\": 4,\n            \"puntuacionMesa\": 10,\n            \"puntuacionRestaurante\": 8,\n            \"puntuacionMozo\": 6,\n            \"puntuacionCocinero\": 5,\n            \"experienciaTexto\": \"\\\"Muy bueno el pedido, aunque el mozo tardo demasiado\\\"\",\n            \"fechaCreacion\": {\n                \"date\": \"2023-11-21 13:22:44.000000\",\n                \"timezone_type\": 3,\n                \"timezone\": \"America/Argentina/Buenos_Aires\"\n            }\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "ObtenerEncuesta Autorizado",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "PHP_AUTH_USER",
+								"value": "cristobal_socio",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{protocolo}}://{{server}}:{{puerto}}/{{app}}/{{encuestas}}/1000",
+							"protocol": "{{protocolo}}",
+							"host": [
+								"{{server}}"
+							],
+							"port": "{{puerto}}",
+							"path": [
+								"{{app}}",
+								"{{encuestas}}",
+								"1000"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MDA1ODU4ODksImV4cCI6MTcwMDU4OTQ4OSwiYXVkIjoiMzRjNWQ0YWJlYmY2YjU0YzQxNzJkYzRkNjhiODI5NWYwMWM5ZDUyYSIsImRhdGEiOnsidXN1YXJpbyI6ImNyaXN0b2JhbF9zb2NpbyJ9LCJhcHAiOiJBUEkgUkVTVCBDRCAyMDIzIn0.5PZDcloqpnDWvx3eDXuBnfTp_5jQo8A7JrwCzyGcX50",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
 				}
 			]
+		},
+		{
+			"name": "Generar Token",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "usuario",
+							"value": "cristobal_socio",
+							"type": "text"
+						},
+						{
+							"key": "contraseña",
+							"value": "*4D78C66DBC6FA11E7084240C135637D650FECAB7",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{protocolo}}://{{server}}:{{puerto}}/{{app}}/auth/login",
+					"protocol": "{{protocolo}}",
+					"host": [
+						"{{server}}"
+					],
+					"port": "{{puerto}}",
+					"path": [
+						"{{app}}",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Verificacion Token",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MDA1NDI0NzUsImV4cCI6MTcwMDU0NjA3NSwiYXVkIjoiMzRjNWQ0YWJlYmY2YjU0YzQxNzJkYzRkNjhiODI5NWYwMWM5ZDUyYSIsImRhdGEiOnsidXN1YXJpbyI6ImNyaXN0b2JhbF9zb2NpbyJ9LCJhcHAiOiJBUEkgUkVTVCBDRCAyMDIzIn0.qoYhM_tr9vu4afGJ4lfq_hVanW4fjh0cyJMMfrA35xc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "usuario",
+							"value": "prueba",
+							"type": "text"
+						},
+						{
+							"key": "contraseña",
+							"value": "1234",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{protocolo}}://{{server}}:{{puerto}}/{{app}}/auth/verificarToken",
+					"protocol": "{{protocolo}}",
+					"host": [
+						"{{server}}"
+					],
+					"port": "{{puerto}}",
+					"path": [
+						"{{app}}",
+						"auth",
+						"verificarToken"
+					]
+				}
+			},
+			"response": []
 		}
 	],
 	"event": [
@@ -1728,6 +2263,11 @@
 		{
 			"key": "pedidos",
 			"value": "pedidos",
+			"type": "string"
+		},
+		{
+			"key": "encuestas",
+			"value": "encuestas",
 			"type": "string"
 		}
 	]
