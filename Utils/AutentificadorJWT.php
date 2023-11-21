@@ -34,7 +34,7 @@ class AutentificadorJWT
     {
 
         if (empty($token) || $token == "") {
-            throw new Exception("El token esta vacio.");
+            throw new Exception("El token esta vacio.", 0);
         }
         // las siguientes lineas lanzan una excepcion, de no ser correcto o de haberse terminado el tiempo       
         try {
@@ -44,12 +44,12 @@ class AutentificadorJWT
             );
         } catch (ExpiredException $e) {
             //var_dump($e);
-            throw new Exception("Clave fuera de tiempo");
+            throw new Exception("Clave fuera de tiempo", 0);
         }
 
         // si no da error,  verifico los datos de AUD que uso para saber de que lugar viene  
         if ($decodificado->aud !== self::Aud()) {
-            throw new Exception("No es el usuario valido");
+            throw new Exception("No es el usuario valido", 0);
         }
     }
 

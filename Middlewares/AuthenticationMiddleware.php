@@ -11,14 +11,19 @@ class AuthenticationMiddleware
     {
         $header = $request->getHeaderLine('Authorization');
         $token = trim(explode("Bearer", $header)[1]);
-        $esValido = false;
-
         try {
             AutentificadorJWT::verificarToken($token);
             return $handler->handle($request);
         } catch (Exception $e) {
+            $mensaje = "";
+            if($e.getcwd() == 0){
+                $mensaje = "No se pudo autenticar la request: " . $e->getMessage();
+            }
+            else{
+                $mensaje = "Error: " . $e->getMessage();
+            }
             $response = new Response();
-            $payload = json_encode(['mensaje' => "No se pudo autenticar la request: " . $e->getMessage()]);
+            $payload = json_encode(['mensaje' => $mensaje]);
             $response->getBody()->write($payload);
             return $response->withHeader('Content-Type', 'application/json');
         }
