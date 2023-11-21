@@ -31,7 +31,7 @@ class Mesa
     public static function obtenerTodasLasMesas()
     {
         $objAccesoDatos = AccesoDatos::obtenerInstancia();
-        $consulta = $objAccesoDatos->prepararConsulta("SELECT * FROM Mesas");
+        $consulta = $objAccesoDatos->prepararConsulta("SELECT * FROM Mesas WHERE eliminado = " . ACTIVO);
         $consulta->execute();
         $arrayMesas = array();
         foreach ($consulta->fetchAll(PDO::FETCH_OBJ) as $registro) {
@@ -44,7 +44,7 @@ class Mesa
     {
         $rtn = false;
         $objAccesoDatos = AccesoDatos::obtenerInstancia();
-        $consulta = $objAccesoDatos->prepararConsulta("SELECT * FROM Mesas WHERE idMesa = ?");
+        $consulta = $objAccesoDatos->prepararConsulta("SELECT * FROM Mesas WHERE idMesa = ? AND eliminado = " . ACTIVO);
         $consulta->bindParam(1, $id);
         $consulta->execute();
 
@@ -80,7 +80,7 @@ class Mesa
     public function actualizarMesa()
     {
         $objAccesoDatos = AccesoDatos::obtenerInstancia();
-        $consulta = $objAccesoDatos->prepararConsulta("UPDATE Mesas SET estado = ?, fechaCierre = ? WHERE idMesa = ?");
+        $consulta = $objAccesoDatos->prepararConsulta("UPDATE Mesas SET estado = ?, fechaCierre = ? WHERE idMesa = ? AND eliminado = " . ACTIVO);
         $fechaCierre = new DateTime("now", new DateTimeZone("America/Argentina/Buenos_Aires"));
         $consulta->bindParam(1, $this->estado);
         $consulta->bindParam(2, $fechaCierre);
@@ -91,7 +91,7 @@ class Mesa
     public function eliminarMesa()
     {
         $objAccesoDatos = AccesoDatos::obtenerInstancia();
-        $consulta = $objAccesoDatos->prepararConsulta("DELETE FROM Mesas WHERE idMesa = ?");
+        $consulta = $objAccesoDatos->prepararConsulta("UPDATE Mesas WHERE idMesa = ? SET eliminado = " . INACTIVO);
         $consulta->bindParam(1, $this->idMesa);
         $consulta->execute();
     }

@@ -39,7 +39,7 @@ class Item
     public static function obtenerTodos()
     {
         $objAccesoDatos = AccesoDatos::obtenerInstancia();
-        $consulta = $objAccesoDatos->prepararConsulta("SELECT * FROM ItemPedidos");
+        $consulta = $objAccesoDatos->prepararConsulta("SELECT * FROM ItemPedidos AND eliminado = " . ACTIVO);
         $consulta->execute();
 
         $arrayItems = array();
@@ -53,7 +53,7 @@ class Item
     public static function obtenerItemsPorPedido($idPedido)
     {
         $objAccesoDatos = AccesoDatos::obtenerInstancia();
-        $consulta = $objAccesoDatos->prepararConsulta("SELECT * FROM ItemPedidos WHERE id_pedido = ?");
+        $consulta = $objAccesoDatos->prepararConsulta("SELECT * FROM ItemPedidos WHERE id_pedido = ? AND eliminado = " . ACTIVO);
         $consulta->bindParam(1, $idPedido);
         $consulta->execute();
 
@@ -68,7 +68,7 @@ class Item
     {
         $rtn = false;
         $objAccesoDatos = AccesoDatos::obtenerInstancia();
-        $consulta = $objAccesoDatos->prepararConsulta("SELECT * FROM ItemPedidos WHERE id_pedido = ? AND id_producto = ?");
+        $consulta = $objAccesoDatos->prepararConsulta("SELECT * FROM ItemPedidos WHERE id_pedido = ? AND id_producto = ? AND eliminado = " . ACTIVO);
         $consulta->bindParam(1, $idPedido);
         $consulta->bindParam(2, $idProducto);
         $consulta->execute();
@@ -107,7 +107,7 @@ class Item
     public static function modificarItem($item)
     {
         $objAccesoDato = AccesoDatos::obtenerInstancia();
-        $consulta = $objAccesoDato->prepararConsulta("UPDATE ItemPedidos SET cantidad = ?, SET fecha_creacion = ? ,  fecha_estimada_finalizacion = ?, fecha_finalizacion = ?, estado = ?  WHERE id_pedido = ? AND id_producto = ?");
+        $consulta = $objAccesoDato->prepararConsulta("UPDATE ItemPedidos SET cantidad = ?, SET fecha_creacion = ? ,  fecha_estimada_finalizacion = ?, fecha_finalizacion = ?, estado = ?  WHERE id_pedido = ? AND id_producto = ? AND eliminado = " . ACTIVO);
         $consulta->bindParam(1, $item->cantidad);
         $consulta->bindParam(2, $item->fechaCreacion);
         $consulta->bindParam(3, $item->fechaEstimadaFinalizacion);
@@ -121,7 +121,7 @@ class Item
     public static function borrarItem($idPedido, $idProducto = null)
     {
         $objAccesoDato = AccesoDatos::obtenerInstancia();        
-        $consulta = $objAccesoDato->prepararConsulta("DELETE FROM itempedidos WHERE id_pedido = ? and ISNULL(id_producto = ?)");
+        $consulta = $objAccesoDato->prepararConsulta("UPDATE FROM itempedidos WHERE id_pedido = ? and ISNULL(id_producto = ?) SET eliminado = " . INACTIVO);
         $consulta->bindParam(1, $idPedido);
         $consulta->bindParam(2, $idProducto);
         $consulta->execute();

@@ -37,6 +37,7 @@ class AccesoDatos
             password VARCHAR(255) NOT NULL,
             sector VARCHAR(255) NOT NULL,
             tipo VARCHAR(255) NOT NULL,
+            eliminado BOOL NULL DEFAULT FALSE,
             UNIQUE (nombre, user)
         )
         SQL;
@@ -52,6 +53,7 @@ class AccesoDatos
             estado ENUM('Activo', 'Inactivo') NOT NULL,
             sector VARCHAR(255) NOT NULL,
             fecha_creacion DATETIME NOT NULL,
+            eliminado BOOL NULL DEFAULT FALSE,
             UNIQUE (titulo)
         )
         SQL;
@@ -63,7 +65,8 @@ class AccesoDatos
             idMesa INT AUTO_INCREMENT PRIMARY KEY,
             estado ENUM('con_cliente_esperando_pedido', 'con_cliente_comiendo', 'con_cliente_pagando', 'cerrada') NOT NULL,
             fechaApertura DATETIME NOT NULL,
-            fechaCierre DATETIME
+            fechaCierre DATETIME,
+            eliminado BOOL DEFAULT FALSE
             ) AUTO_INCREMENT=1000;
         SQL;
 
@@ -79,6 +82,7 @@ class AccesoDatos
             fecha_finalizacion DATETIME,
             importe_total DECIMAL NOT NULL,
             nombre_cliente VARCHAR(255) NOT NULL,
+            eliminado BOOL DEFAULT FALSE,
             estado ENUM('pendiente', 'en preparación', 'listo para servir', 'cancelado') NOT NULL,
             FOREIGN KEY (id_mesa) REFERENCES Mesas (idMesa) ON DELETE CASCADE,
             FOREIGN KEY (id_usuario) REFERENCES Usuarios (idUsuario) ON DELETE CASCADE
@@ -95,6 +99,7 @@ class AccesoDatos
             fecha_estimada_finalizacion DATETIME NOT NULL,
             fecha_finalizacion DATETIME,
             estado ENUM('pendiente', 'en preparación', 'listo para servir', 'cancelado') NOT NULL,
+            eliminado BOOL DEFAULT FALSE,
             FOREIGN KEY (id_pedido) REFERENCES Pedidos (id_pedido) ON DELETE CASCADE,
             FOREIGN KEY (id_producto) REFERENCES Productos (id_producto) ON DELETE CASCADE
         )
@@ -114,6 +119,7 @@ class AccesoDatos
             puntuacion_cocinero INT NOT NULL,
             experiencia_texto VARCHAR(66) NOT NULL,
             fecha_creacion DATETIME NOT NULL,
+            eliminado BOOL NULL DEFAULT FALSE,
             FOREIGN KEY (id_pedido) REFERENCES Pedidos (id_pedido) ON DELETE CASCADE,
             FOREIGN KEY (id_mesa) REFERENCES Mesas (idMesa) ON DELETE CASCADE,
             FOREIGN KEY (id_mozo) REFERENCES Usuarios (idUsuario) ON DELETE CASCADE,

@@ -44,7 +44,7 @@ class Usuario{
     public static function obtenerTodos()
     {
         $objAccesoDatos = AccesoDatos::obtenerInstancia();
-        $consulta = $objAccesoDatos->prepararConsulta("SELECT * FROM usuarios");
+        $consulta = $objAccesoDatos->prepararConsulta("SELECT * FROM usuarios WHERE eliminado = " . ACTIVO);
         $consulta->execute();
 
         $arrayUsuarios = array();
@@ -61,7 +61,7 @@ class Usuario{
     {
         $rtn = false;
         $objAccesoDatos = AccesoDatos::obtenerInstancia();
-        $consulta = $objAccesoDatos->prepararConsulta("SELECT * FROM usuarios WHERE idUsuario = ?");
+        $consulta = $objAccesoDatos->prepararConsulta("SELECT * FROM usuarios WHERE idUsuario = ? AND eliminado = " . ACTIVO);
         $consulta->bindParam(1, $id);
         $consulta->execute();
 
@@ -78,7 +78,7 @@ class Usuario{
     {
         $rtn = false;
         $objAccesoDatos = AccesoDatos::obtenerInstancia();
-        $consulta = $objAccesoDatos->prepararConsulta("SELECT * FROM usuarios WHERE nombre = ?");
+        $consulta = $objAccesoDatos->prepararConsulta("SELECT * FROM usuarios WHERE nombre = ? AND eliminado = " . ACTIVO);
         $consulta->bindParam(1, $nombreUsuario);
         $consulta->execute();
 
@@ -95,7 +95,7 @@ class Usuario{
     {
         $rtn = false;
         $objAccesoDatos = AccesoDatos::obtenerInstancia();
-        $consulta = $objAccesoDatos->prepararConsulta("SELECT * FROM usuarios WHERE user = ?");
+        $consulta = $objAccesoDatos->prepararConsulta("SELECT * FROM usuarios WHERE user = ? AND eliminado = " . ACTIVO);
         $consulta->bindParam(1, $userUsuario);
         $consulta->execute();
 
@@ -131,7 +131,7 @@ class Usuario{
     public static function modificarUsuario($usuario)
     {
         $objAccesoDato = AccesoDatos::obtenerInstancia();
-        $consulta = $objAccesoDato->prepararConsulta("UPDATE usuarios SET nombre = ?, user = ?, password = ?, sector = ?, tipo = ?  WHERE idUsuario = ?");
+        $consulta = $objAccesoDato->prepararConsulta("UPDATE usuarios SET nombre = ?, user = ?, password = ?, sector = ?, tipo = ?  WHERE idUsuario = ? AND eliminado = " . ACTIVO);
         $claveHash = password_hash($usuario->password, PASSWORD_DEFAULT);
         $consulta->bindParam(1, $usuario->nombre);
         $consulta->bindParam(2, $usuario->user);
@@ -145,10 +145,11 @@ class Usuario{
     public static function borrarUsuario($usuario)
     {
         $objAccesoDato = AccesoDatos::obtenerInstancia();
-        $consulta = $objAccesoDato->prepararConsulta("UPDATE usuarios SET fechaFinalizacion = ? WHERE idUsuario = ?");
+        $consulta = $objAccesoDato->prepararConsulta("UPDATE usuarios SET fechaFinalizacion = ?, eliminado = ? WHERE idUsuario = ?");
         $fecha = new DateTime("now",new DateTimeZone("America/Argentina/Buenos_Aires"));
         $fechaString = date_format($fecha, 'Y-m-d H:i:s');
         $consulta->bindParam(1, $fechaString);
+        $consulta->bindParam(1, INACTIVO);
         $consulta->bindParam(2, $usuario->idUsuario);
         $consulta->execute();
     }

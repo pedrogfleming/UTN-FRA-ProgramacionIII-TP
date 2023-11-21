@@ -68,12 +68,12 @@ $app->group('/usuarios', function (RouteCollectorProxy $group) {
         exit;
     }
     $cargarUnoReqValidatorKeys = $settings['usuarios']['CargarUno']['validation_config'];
-    $group->get('[/]', \UsuarioController::class . ':TraerTodos')->add(\AuthMiddleware::class . ':verificarToken');
+    $group->get('[/]', \UsuarioController::class . ':TraerTodos');
     $group->get('/{usuario}', \UsuarioController::class . ':TraerUno');
     $group->post('[/]', \UsuarioController::class . ':CargarUno')->add(new RequestValidatorMiddleware($cargarUnoReqValidatorKeys));
     $group->put('/{usuario}', \UsuarioController::class . ':ModificarUno');
     $group->delete('/{usuario}', \UsuarioController::class . ':BorrarUno');
-})->add($usuariosAuthorizationMiddleware);
+})->add($usuariosAuthorizationMiddleware)->add(new AuthenticationMiddleware());
 
 $app->group('/productos', function (RouteCollectorProxy $group) {
     $cargarUnoProducto = new AuthorizationMiddleware([ROL_ADMIN, ROL_SOCIO]);
@@ -95,7 +95,7 @@ $app->group('/productos', function (RouteCollectorProxy $group) {
     $group->delete('/{producto}', \ProductoController::class . ':BorrarUno')->add($borrarUnoProducto);
     $group->post('/cargaMasiva', \ProductoController::class . ':CargaMasiva')->add($cargarUnoProducto);
     $group->get('/bulk/descargaMasiva', \ProductoController::class . ':DescargaMasiva')->add($traerTodosProducto);
-});
+})->add(new AuthenticationMiddleware());
 
 $app->group('/mesas', function (RouteCollectorProxy $group) {
     $cargarUnoMesa = new AuthorizationMiddleware([ROL_ADMIN, ROL_SOCIO, ROL_MOZO]);
@@ -108,7 +108,7 @@ $app->group('/mesas', function (RouteCollectorProxy $group) {
     $group->post('[/]', \MesaController::class . ':CargarUno')->add($cargarUnoMesa);
     $group->put('/{mesa}', \MesaController::class . ':ModificarUno')->add($modificarUnoMesa);
     $group->delete('/{mesa}', \MesaController::class . ':BorrarUno')->add($borrarUnoMesa);
-});
+})->add(new AuthenticationMiddleware());
 
 $app->group('/pedidos', function (RouteCollectorProxy $group) {
     $contenidos = file_get_contents(SETTINGS);
@@ -129,7 +129,7 @@ $app->group('/pedidos', function (RouteCollectorProxy $group) {
     $group->post('[/]', \PedidoController::class . ':CargarUno')->add($cargarUnoPedido)->add(new RequestValidatorMiddleware($cargarUnoReqValidatorKeys));
     $group->put('/{pedido}', \PedidoController::class . ':ModificarUno')->add($modificarUnoPedido);
     $group->delete('/{pedido}', \PedidoController::class . ':BorrarUno')->add($borrarUnoPedido);
-});
+})->add(new AuthenticationMiddleware());
 
 $app->group('/encuestas', function (RouteCollectorProxy $group) {
     $contenidos = file_get_contents(SETTINGS);
@@ -150,6 +150,6 @@ $app->group('/encuestas', function (RouteCollectorProxy $group) {
     $group->post('[/]', \EncuestaController::class . ':CargarUno')->add($cargarUnoEncuesta)->add(new RequestValidatorMiddleware($cargarUnoReqValidatorKeys));
     $group->put('/{encuesta}', \EncuestaController::class . ':ModificarUno')->add($modificarUnoEncuesta);
     $group->delete('/{encuesta}', \EncuestaController::class . ':BorrarUno')->add($borrarUnoEncuesta);
-});
+})->add(new AuthenticationMiddleware());
 
 $app->run();

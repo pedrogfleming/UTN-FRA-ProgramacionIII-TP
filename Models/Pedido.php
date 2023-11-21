@@ -61,10 +61,10 @@ class Pedido
     {
         $objAccesoDatos = AccesoDatos::obtenerInstancia();
         if ($idPedido == null) {
-            $consulta = $objAccesoDatos->prepararConsulta("SELECT * FROM pedidos");
+            $consulta = $objAccesoDatos->prepararConsulta("SELECT * FROM pedidos WHERE eliminado = " . ACTIVO);
         } else {
 
-            $consulta = $objAccesoDatos->prepararConsulta("SELECT * FROM pedidos WHERE idPedido = ?");
+            $consulta = $objAccesoDatos->prepararConsulta("SELECT * FROM pedidos WHERE idPedido = ? AND eliminado = " . ACTIVO);
             $consulta->bindParam(1, $idPedido);
         }
 
@@ -82,7 +82,7 @@ class Pedido
     {
         $rtn = false;
         $objAccesoDatos = AccesoDatos::obtenerInstancia();
-        $consulta = $objAccesoDatos->prepararConsulta("SELECT * FROM pedidos WHERE id_pedido = ?");
+        $consulta = $objAccesoDatos->prepararConsulta("SELECT * FROM pedidos WHERE id_pedido = ? AND eliminado = " . ACTIVO);
         $consulta->bindParam(1, $id);
         $consulta->execute();
 
@@ -129,7 +129,7 @@ class Pedido
         $fechaCreacionString = date_format($pedido->fechaCreacion, 'Y-m-d H:i:s');
 
         // Actualizar el pedido en la base de datos
-        $consulta = $objAccesoDato->prepararConsulta("UPDATE Pedidos SET id_usuario = ?, id_mesa = ?, fecha_creacion = ?, fecha_estimada_finalizacion = ?, fecha_finalizacion = ?, importe_total = ?, nombre_cliente = ?, estado = ? WHERE id_pedido = ?");
+        $consulta = $objAccesoDato->prepararConsulta("UPDATE Pedidos SET id_usuario = ?, id_mesa = ?, fecha_creacion = ?, fecha_estimada_finalizacion = ?, fecha_finalizacion = ?, importe_total = ?, nombre_cliente = ?, estado = ? WHERE id_pedido = ? AND eliminado = " . ACTIVO);
         
         $consulta->bindParam(1, $pedido->usuarioAsignado->idUsuario);
         $consulta->bindParam(2, $pedido->idMesa);
@@ -147,7 +147,7 @@ class Pedido
     public static function borrarPedido($pedido)
     {
         $objAccesoDato = AccesoDatos::obtenerInstancia();
-        $consulta = $objAccesoDato->prepararConsulta("UPDATE Pedidos SET estado = ? WHERE id_pedido = ?");
+        $consulta = $objAccesoDato->prepararConsulta("UPDATE Pedidos SET estado = ? WHERE id_pedido = ? AND eliminado = " . ACTIVO);
         $consulta->bindParam(1, self::ESTADO_CANCELADO);
         $consulta->bindParam(2, $pedido->idPedido);
         $consulta->execute();

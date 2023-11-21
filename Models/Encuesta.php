@@ -40,7 +40,7 @@ class Encuesta
     public static function obtenerEncuesta($id)
     {
         $objAccesoDatos = AccesoDatos::obtenerInstancia();
-        $consulta = $objAccesoDatos->prepararConsulta("SELECT * FROM Encuestas WHERE id_encuesta = ?");
+        $consulta = $objAccesoDatos->prepararConsulta("SELECT * FROM Encuestas WHERE id_encuesta = ? AND eliminado = " . ACTIVO);
         $consulta->bindParam(1, $id);
         $consulta->execute();
 
@@ -55,7 +55,7 @@ class Encuesta
     public static function obtenerTodos()
     {
         $objAccesoDatos = AccesoDatos::obtenerInstancia();
-        $consulta = $objAccesoDatos->prepararConsulta("SELECT * FROM Encuestas");
+        $consulta = $objAccesoDatos->prepararConsulta("SELECT * FROM Encuestas WHERE eliminado = " . ACTIVO);
         $consulta->execute();
 
         $arrayEncuestas = array();
@@ -69,7 +69,7 @@ class Encuesta
     public static function modificarEncuesta($encuesta)
     {
         $objAccesoDato = AccesoDatos::obtenerInstancia();
-        $consulta = $objAccesoDato->prepararConsulta("UPDATE Encuestas SET id_mesa = ?, id_mozo = ?, id_cocinero = ?, puntuacion_mesa = ?, puntuacion_restaurante = ?, puntuacion_mozo = ?, puntuacion_cocinero = ?, experiencia_texto = ? WHERE id_encuesta = ?");
+        $consulta = $objAccesoDato->prepararConsulta("UPDATE Encuestas SET id_mesa = ?, id_mozo = ?, id_cocinero = ?, puntuacion_mesa = ?, puntuacion_restaurante = ?, puntuacion_mozo = ?, puntuacion_cocinero = ?, experiencia_texto = ? WHERE id_encuesta = ? AND eliminado = " . ACTIVO);
         $consulta->bindParam(1, $encuesta->idMesa);
         $consulta->bindParam(2, $encuesta->idMozo);
         $consulta->bindParam(3, $encuesta->idCocinero);
@@ -85,7 +85,7 @@ class Encuesta
     public static function borrarEncuesta($encuesta)
     {
         $objAccesoDato = AccesoDatos::obtenerInstancia();
-        $consulta = $objAccesoDato->prepararConsulta("DELETE FROM Encuestas WHERE id_encuesta = ?");
+        $consulta = $objAccesoDato->prepararConsulta("UPDATE Encuestas WHERE id_encuesta = ? SET eliminado = " . ACTIVO);
         $consulta->bindParam(1, $encuesta->idEncuesta);
         $consulta->execute();
     }

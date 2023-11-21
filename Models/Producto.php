@@ -37,7 +37,7 @@ class Producto
     public static function obtenerTodos()
     {
         $objAccesoDatos = AccesoDatos::obtenerInstancia();
-        $consulta = $objAccesoDatos->prepararConsulta("SELECT * FROM productos");
+        $consulta = $objAccesoDatos->prepararConsulta("SELECT * FROM productos WHERE eliminado = " . ACTIVO);
         $consulta->execute();
 
         $arrayProductos = array();
@@ -52,7 +52,7 @@ class Producto
     {
         $rtn = false;
         $objAccesoDatos = AccesoDatos::obtenerInstancia();
-        $consulta = $objAccesoDatos->prepararConsulta("SELECT * FROM productos WHERE id_producto = ?");
+        $consulta = $objAccesoDatos->prepararConsulta("SELECT * FROM productos WHERE id_producto = ? AND eliminado = " . ACTIVO);
         $consulta->bindParam(1, $id);
         $consulta->execute();
 
@@ -68,7 +68,7 @@ class Producto
     {
         $rtn = false;
         $objAccesoDatos = AccesoDatos::obtenerInstancia();
-        $consulta = $objAccesoDatos->prepararConsulta("SELECT * FROM productos WHERE titulo = ?");
+        $consulta = $objAccesoDatos->prepararConsulta("SELECT * FROM productos WHERE titulo = ? AND eliminado = " . ACTIVO);
         $consulta->bindParam(1, $nombreProducto);
         $consulta->execute();
 
@@ -96,7 +96,7 @@ class Producto
     public static function modificarProducto($producto)
     {
         $objAccesoDato = AccesoDatos::obtenerInstancia();
-        $consulta = $objAccesoDato->prepararConsulta("UPDATE productos SET titulo = ?, tiempo_preparacion = ?, precio = ?, estado = ?, sector = ?  WHERE id_producto = ?");
+        $consulta = $objAccesoDato->prepararConsulta("UPDATE productos SET titulo = ?, tiempo_preparacion = ?, precio = ?, estado = ?, sector = ?  WHERE id_producto = ? AND eliminado = " . ACTIVO);
         $consulta->bindParam(1, $producto->titulo);
         $consulta->bindParam(2, $producto->tiempoPreparacion);
         $consulta->bindParam(3, $producto->precio);
@@ -109,7 +109,7 @@ class Producto
     public static function borrarProducto($producto)
     {
         $objAccesoDato = AccesoDatos::obtenerInstancia();
-        $consulta = $objAccesoDato->prepararConsulta("DELETE FROM productos WHERE id_producto = ?");
+        $consulta = $objAccesoDato->prepararConsulta("UPDATE productos WHERE id_producto = ? SET eliminado = " . INACTIVO);
         $consulta->bindParam(1, $producto->idProducto);
         $consulta->execute();
     }

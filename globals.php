@@ -24,3 +24,8 @@ define("SECTOR_CERVECERIA", "cerveza");
 define("SECTOR_MESAS", "mesas");
 define("SECTOR_ADMINISTRACION", "administracion");
 define("SECTOR_BAR", "bar");
+
+// eliminacion logica
+
+define("ACTIVO", 0);
+define("INACTIVO", 1);
