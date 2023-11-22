@@ -10,7 +10,8 @@ class AuthController
         $usuarioExiste = Usuario::obtenerUsuarioByUsername($usuario);
         $payload = json_encode(array('error' => 'Usuario o contraseña incorrectos'));
         if ($usuarioExiste) {
-            $contraseñaCorrecta = $usuarioExiste->password === $contraseña;            
+            
+            $contraseñaCorrecta = password_verify($contraseña, $usuarioExiste->password);            
             if ($contraseñaCorrecta) {
                 $datos = array('usuario' => $usuario);
                 $token = AutentificadorJWT::CrearToken($datos);

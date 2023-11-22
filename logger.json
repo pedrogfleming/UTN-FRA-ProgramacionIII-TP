@@ -1488,4 +1488,388 @@
         },
         "timestamp": "2023-11-22 00:22:05"
     }
+],
+[
+    {
+        "request": {
+            "method": "POST",
+            "uri": "http:\/\/localhost:666\/app\/auth\/login",
+            "headers": {
+                "User-Agent": [
+                    "PostmanRuntime\/7.35.0"
+                ],
+                "Accept": [
+                    "*\/*"
+                ],
+                "Postman-Token": [
+                    "83f6da15-6a9e-423b-aca1-a05b3ea80359"
+                ],
+                "Host": [
+                    "localhost"
+                ],
+                "Accept-Encoding": [
+                    "gzip, deflate, br"
+                ],
+                "Connection": [
+                    "keep-alive"
+                ],
+                "Content-Type": [
+                    "multipart\/form-data; boundary=--------------------------674208330589674822750810"
+                ],
+                "Content-Length": [
+                    "328"
+                ]
+            },
+            "body": ""
+        },
+        "response": {
+            "statusCode": 200,
+            "headers": {
+                "Content-Type": [
+                    "application\/json"
+                ]
+            },
+            "body": "{\"jwt\":\"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MDA2MTA5MTAsImV4cCI6MTcwMDYxNDUxMCwiYXVkIjoiMzRjNWQ0YWJlYmY2YjU0YzQxNzJkYzRkNjhiODI5NWYwMWM5ZDUyYSIsImRhdGEiOnsidXN1YXJpbyI6ImNyaXN0b2JhbF9zb2NpbyJ9LCJhcHAiOiJBUEkgUkVTVCBDRCAyMDIzIn0.eaMaQvgIWZZJTYQCP2_2d1qBj-DgBJ2cqhCgrr4alUk\"}"
+        },
+        "timestamp": "2023-11-22 00:55:10"
+    }
+],
+[
+    {
+        "request": {
+            "method": "GET",
+            "uri": "http:\/\/localhost:666\/app\/pedidos",
+            "headers": {
+                "PHP-AUTH-USER": [
+                    "cristobal_socio"
+                ],
+                "Authorization": [
+                    "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MDA2MTA5MTAsImV4cCI6MTcwMDYxNDUxMCwiYXVkIjoiMzRjNWQ0YWJlYmY2YjU0YzQxNzJkYzRkNjhiODI5NWYwMWM5ZDUyYSIsImRhdGEiOnsidXN1YXJpbyI6ImNyaXN0b2JhbF9zb2NpbyJ9LCJhcHAiOiJBUEkgUkVTVCBDRCAyMDIzIn0.eaMaQvgIWZZJTYQCP2_2d1qBj-DgBJ2cqhCgrr4alUk"
+                ],
+                "User-Agent": [
+                    "PostmanRuntime\/7.35.0"
+                ],
+                "Accept": [
+                    "*\/*"
+                ],
+                "Postman-Token": [
+                    "03ad80da-a7eb-4b4e-b430-7f1535863137"
+                ],
+                "Host": [
+                    "localhost"
+                ],
+                "Accept-Encoding": [
+                    "gzip, deflate, br"
+                ],
+                "Connection": [
+                    "keep-alive"
+                ]
+            },
+            "body": ""
+        },
+        "response": {
+            "statusCode": 200,
+            "headers": {
+                "Content-Type": [
+                    "application\/json"
+                ]
+            },
+            "body": "{\"listaPedido\":[{\"idPedido\":1000,\"idMesa\":1001,\"usuarioAsignado\":5,\"itemsPedidos\":[{\"idPedido\":1000,\"idProducto\":1,\"cantidad\":2,\"fechaCreacion\":{\"date\":\"2023-11-21 14:15:09.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaEstimadaFinalizacion\":{\"date\":\"2023-11-21 14:27:09.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaFinalizacion\":null,\"estado\":\"pendiente\",\"minutosEstimados\":12},{\"idPedido\":1000,\"idProducto\":2,\"cantidad\":3,\"fechaCreacion\":{\"date\":\"2023-11-21 14:15:09.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaEstimadaFinalizacion\":{\"date\":\"2023-11-21 14:36:09.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaFinalizacion\":null,\"estado\":\"pendiente\",\"minutosEstimados\":21}],\"fechaCreacion\":{\"date\":\"2023-11-21 14:15:09.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaEstimadaDeFinalizacion\":{\"date\":\"2023-11-21 14:48:09.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaFinalizacion\":null,\"estado\":\"pendiente\",\"importeTotal\":960,\"nombreCliente\":\"Federico\",\"minutosEstimados\":33},{\"idPedido\":1003,\"idMesa\":1002,\"usuarioAsignado\":2,\"itemsPedidos\":[{\"idPedido\":1003,\"idProducto\":26,\"cantidad\":1,\"fechaCreacion\":{\"date\":\"2023-11-21 20:03:28.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaEstimadaFinalizacion\":{\"date\":\"2023-11-21 20:18:28.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaFinalizacion\":null,\"estado\":\"pendiente\",\"minutosEstimados\":15},{\"idPedido\":1003,\"idProducto\":27,\"cantidad\":2,\"fechaCreacion\":{\"date\":\"2023-11-21 20:03:28.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaEstimadaFinalizacion\":{\"date\":\"2023-11-21 20:23:28.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaFinalizacion\":null,\"estado\":\"pendiente\",\"minutosEstimados\":20},{\"idPedido\":1003,\"idProducto\":28,\"cantidad\":1,\"fechaCreacion\":{\"date\":\"2023-11-21 20:03:28.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaEstimadaFinalizacion\":{\"date\":\"2023-11-21 20:08:28.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaFinalizacion\":null,\"estado\":\"pendiente\",\"minutosEstimados\":5},{\"idPedido\":1003,\"idProducto\":29,\"cantidad\":1,\"fechaCreacion\":{\"date\":\"2023-11-21 20:03:28.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaEstimadaFinalizacion\":{\"date\":\"2023-11-21 20:11:28.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaFinalizacion\":null,\"estado\":\"pendiente\",\"minutosEstimados\":8}],\"fechaCreacion\":{\"date\":\"2023-11-21 20:03:28.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaEstimadaDeFinalizacion\":{\"date\":\"2023-11-21 20:51:28.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaFinalizacion\":null,\"estado\":\"pendiente\",\"importeTotal\":730,\"nombreCliente\":\"Franco\",\"minutosEstimados\":48}]}"
+        },
+        "timestamp": "2023-11-22 00:55:45"
+    }
+],
+[
+    {
+        "request": {
+            "method": "GET",
+            "uri": "http:\/\/localhost:666\/app\/pedidos",
+            "headers": {
+                "PHP-AUTH-USER": [
+                    "oscar_mozo"
+                ],
+                "Authorization": [
+                    "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MDA2MTA5MTAsImV4cCI6MTcwMDYxNDUxMCwiYXVkIjoiMzRjNWQ0YWJlYmY2YjU0YzQxNzJkYzRkNjhiODI5NWYwMWM5ZDUyYSIsImRhdGEiOnsidXN1YXJpbyI6ImNyaXN0b2JhbF9zb2NpbyJ9LCJhcHAiOiJBUEkgUkVTVCBDRCAyMDIzIn0.eaMaQvgIWZZJTYQCP2_2d1qBj-DgBJ2cqhCgrr4alUk"
+                ],
+                "User-Agent": [
+                    "PostmanRuntime\/7.35.0"
+                ],
+                "Accept": [
+                    "*\/*"
+                ],
+                "Postman-Token": [
+                    "dc496bd1-8760-4468-b64a-7bc9b75f6748"
+                ],
+                "Host": [
+                    "localhost"
+                ],
+                "Accept-Encoding": [
+                    "gzip, deflate, br"
+                ],
+                "Connection": [
+                    "keep-alive"
+                ]
+            },
+            "body": ""
+        },
+        "response": {
+            "statusCode": 200,
+            "headers": {
+                "Content-Type": [
+                    "application\/json"
+                ]
+            },
+            "body": "{\"listaPedido\":[]}"
+        },
+        "timestamp": "2023-11-22 00:56:15"
+    }
+],
+[
+    {
+        "request": {
+            "method": "POST",
+            "uri": "http:\/\/localhost:666\/app\/productos\/cargaMasiva",
+            "headers": {
+                "PHP-AUTH-USER": [
+                    "cristobal_socio"
+                ],
+                "Authorization": [
+                    "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MDA2MDU1MzUsImV4cCI6MTcwMDYwOTEzNSwiYXVkIjoiMzRjNWQ0YWJlYmY2YjU0YzQxNzJkYzRkNjhiODI5NWYwMWM5ZDUyYSIsImRhdGEiOnsidXN1YXJpbyI6ImNyaXN0b2JhbF9zb2NpbyJ9LCJhcHAiOiJBUEkgUkVTVCBDRCAyMDIzIn0.d2HS_Q2pwqeveIN5RscPxkGDfErY6kXlgN8txi1VK04"
+                ],
+                "User-Agent": [
+                    "PostmanRuntime\/7.35.0"
+                ],
+                "Accept": [
+                    "*\/*"
+                ],
+                "Postman-Token": [
+                    "c8eca2a3-24b2-4031-87e8-b1104ce4ace6"
+                ],
+                "Host": [
+                    "localhost"
+                ],
+                "Accept-Encoding": [
+                    "gzip, deflate, br"
+                ],
+                "Connection": [
+                    "keep-alive"
+                ],
+                "Content-Type": [
+                    "multipart\/form-data; boundary=--------------------------506220662561804599658630"
+                ],
+                "Content-Length": [
+                    "1242"
+                ]
+            },
+            "body": ""
+        },
+        "response": {
+            "statusCode": 200,
+            "headers": {
+                "Content-Type": [
+                    "application\/json"
+                ]
+            },
+            "body": "{\"mensaje\":\"Error: Clave fuera de tiempo\"}"
+        },
+        "timestamp": "2023-11-22 01:18:12"
+    }
+],
+[
+    {
+        "request": {
+            "method": "POST",
+            "uri": "http:\/\/localhost:666\/app\/productos\/cargaMasiva",
+            "headers": {
+                "PHP-AUTH-USER": [
+                    "cristobal_socio"
+                ],
+                "Authorization": [
+                    "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MDA2MTA5MTAsImV4cCI6MTcwMDYxNDUxMCwiYXVkIjoiMzRjNWQ0YWJlYmY2YjU0YzQxNzJkYzRkNjhiODI5NWYwMWM5ZDUyYSIsImRhdGEiOnsidXN1YXJpbyI6ImNyaXN0b2JhbF9zb2NpbyJ9LCJhcHAiOiJBUEkgUkVTVCBDRCAyMDIzIn0.eaMaQvgIWZZJTYQCP2_2d1qBj-DgBJ2cqhCgrr4alUk"
+                ],
+                "User-Agent": [
+                    "PostmanRuntime\/7.35.0"
+                ],
+                "Accept": [
+                    "*\/*"
+                ],
+                "Postman-Token": [
+                    "69b24228-c82b-4f0c-9fd0-b1047d4ac063"
+                ],
+                "Host": [
+                    "localhost"
+                ],
+                "Accept-Encoding": [
+                    "gzip, deflate, br"
+                ],
+                "Connection": [
+                    "keep-alive"
+                ],
+                "Content-Type": [
+                    "multipart\/form-data; boundary=--------------------------663912916201782733362553"
+                ],
+                "Content-Length": [
+                    "1242"
+                ]
+            },
+            "body": ""
+        },
+        "response": {
+            "statusCode": 200,
+            "headers": {
+                "Content-Type": [
+                    "application\/json"
+                ]
+            },
+            "body": "{\"mensaje\":\"Usuario inexistente\"}"
+        },
+        "timestamp": "2023-11-22 01:18:30"
+    }
+],
+[
+    {
+        "request": {
+            "method": "POST",
+            "uri": "http:\/\/localhost:666\/app\/productos\/cargaMasiva",
+            "headers": {
+                "PHP-AUTH-USER": [
+                    "cristobal_socio"
+                ],
+                "Authorization": [
+                    "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MDA2MTA5MTAsImV4cCI6MTcwMDYxNDUxMCwiYXVkIjoiMzRjNWQ0YWJlYmY2YjU0YzQxNzJkYzRkNjhiODI5NWYwMWM5ZDUyYSIsImRhdGEiOnsidXN1YXJpbyI6ImNyaXN0b2JhbF9zb2NpbyJ9LCJhcHAiOiJBUEkgUkVTVCBDRCAyMDIzIn0.eaMaQvgIWZZJTYQCP2_2d1qBj-DgBJ2cqhCgrr4alUk"
+                ],
+                "User-Agent": [
+                    "PostmanRuntime\/7.35.0"
+                ],
+                "Accept": [
+                    "*\/*"
+                ],
+                "Postman-Token": [
+                    "c257f6a2-1c89-479c-b915-91403ca4436f"
+                ],
+                "Host": [
+                    "localhost"
+                ],
+                "Accept-Encoding": [
+                    "gzip, deflate, br"
+                ],
+                "Connection": [
+                    "keep-alive"
+                ],
+                "Content-Type": [
+                    "multipart\/form-data; boundary=--------------------------861957747185964628276780"
+                ],
+                "Content-Length": [
+                    "1242"
+                ]
+            },
+            "body": ""
+        },
+        "response": {
+            "statusCode": 200,
+            "headers": {
+                "Content-Type": [
+                    "application\/json"
+                ]
+            },
+            "body": "{\"mensaje\":\"CSV procesado  correctamente\"}"
+        },
+        "timestamp": "2023-11-22 01:19:15"
+    }
+],
+[
+    {
+        "request": {
+            "method": "GET",
+            "uri": "http:\/\/localhost:666\/app\/productos\/bulk\/descargaMasiva",
+            "headers": {
+                "PHP-AUTH-USER": [
+                    "cristobal_socio"
+                ],
+                "Authorization": [
+                    "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MDA2MTA5MTAsImV4cCI6MTcwMDYxNDUxMCwiYXVkIjoiMzRjNWQ0YWJlYmY2YjU0YzQxNzJkYzRkNjhiODI5NWYwMWM5ZDUyYSIsImRhdGEiOnsidXN1YXJpbyI6ImNyaXN0b2JhbF9zb2NpbyJ9LCJhcHAiOiJBUEkgUkVTVCBDRCAyMDIzIn0.eaMaQvgIWZZJTYQCP2_2d1qBj-DgBJ2cqhCgrr4alUk"
+                ],
+                "User-Agent": [
+                    "PostmanRuntime\/7.35.0"
+                ],
+                "Accept": [
+                    "*\/*"
+                ],
+                "Postman-Token": [
+                    "4aa58e66-a055-4fa0-b7c0-8a25040e71e5"
+                ],
+                "Host": [
+                    "localhost"
+                ],
+                "Accept-Encoding": [
+                    "gzip, deflate, br"
+                ],
+                "Connection": [
+                    "keep-alive"
+                ]
+            },
+            "body": ""
+        },
+        "response": {
+            "statusCode": 200,
+            "headers": {
+                "Content-Type": [
+                    "application\/csv"
+                ]
+            },
+            "body": "id_producto,titulo,tiempo_preparacion,precio,estado,sector,fecha_creacion\n1,Vodka,6,180.00,Activo,bar,\"2023-11-21 21:19:15\"\n2,Daiquiri,7,200.00,Activo,bar,\"2023-11-21 21:19:15\"\n3,\"Mai Tai\",8,220.00,Activo,bar,\"2023-11-21 21:19:15\"\n4,\"Tequila Sunrise\",6,160.00,Activo,bar,\"2023-11-21 21:19:15\"\n5,\"Pi\u00f1a Colada\",7,190.00,Activo,bar,\"2023-11-21 21:19:15\"\n6,Manhattan,8,250.00,Activo,bar,\"2023-11-21 21:19:15\"\n7,\"Old Fashioned\",7,230.00,Activo,bar,\"2023-11-21 21:19:15\"\n8,\"Cuba Libre\",6,150.00,Activo,bar,\"2023-11-21 21:19:15\"\n9,\"Whiskey Sour\",7,200.00,Activo,bar,\"2023-11-21 21:19:15\"\n10,\"Gin Tonic\",6,170.00,Activo,bar,\"2023-11-21 21:19:15\"\n11,\"Milanesa a Caballo\",15,180.00,Activo,restaurante,\"2023-11-21 21:19:15\"\n12,\"Hamburguesa de Garbanzo\",10,150.00,Activo,restaurante,\"2023-11-21 21:19:15\"\n13,\"Una Corona\",5,40.00,Activo,bar,\"2023-11-21 21:19:15\"\n14,\"Un Daikiri\",8,210.00,Activo,bar,\"2023-11-21 21:19:15\"\n"
+        },
+        "timestamp": "2023-11-22 01:19:44"
+    }
+],
+[
+    {
+        "request": {
+            "method": "POST",
+            "uri": "http:\/\/localhost:666\/app\/productos\/cargaMasiva",
+            "headers": {
+                "PHP-AUTH-USER": [
+                    "cristobal_socio"
+                ],
+                "Authorization": [
+                    "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MDA2MTA5MTAsImV4cCI6MTcwMDYxNDUxMCwiYXVkIjoiMzRjNWQ0YWJlYmY2YjU0YzQxNzJkYzRkNjhiODI5NWYwMWM5ZDUyYSIsImRhdGEiOnsidXN1YXJpbyI6ImNyaXN0b2JhbF9zb2NpbyJ9LCJhcHAiOiJBUEkgUkVTVCBDRCAyMDIzIn0.eaMaQvgIWZZJTYQCP2_2d1qBj-DgBJ2cqhCgrr4alUk"
+                ],
+                "User-Agent": [
+                    "PostmanRuntime\/7.35.0"
+                ],
+                "Accept": [
+                    "*\/*"
+                ],
+                "Postman-Token": [
+                    "d29d5928-33ce-439a-8175-cadfeda25a4b"
+                ],
+                "Host": [
+                    "localhost"
+                ],
+                "Accept-Encoding": [
+                    "gzip, deflate, br"
+                ],
+                "Connection": [
+                    "keep-alive"
+                ],
+                "Content-Type": [
+                    "multipart\/form-data; boundary=--------------------------048229412400208244713191"
+                ],
+                "Content-Length": [
+                    "1242"
+                ]
+            },
+            "body": ""
+        },
+        "response": {
+            "statusCode": 200,
+            "headers": {
+                "Content-Type": [
+                    "application\/json"
+                ]
+            },
+            "body": "{\"mensaje\":\"CSV procesado incompleto con errores por registros duplicados en destino\"}"
+        },
+        "timestamp": "2023-11-22 01:19:50"
+    }
 ]
