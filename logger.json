@@ -1872,4 +1872,1594 @@
         },
         "timestamp": "2023-11-22 01:19:50"
     }
+],
+[
+    {
+        "request": {
+            "method": "POST",
+            "uri": "http:\/\/localhost:666\/app\/productos\/cargaMasiva",
+            "headers": {
+                "PHP-AUTH-USER": [
+                    "cristobal_socio"
+                ],
+                "Authorization": [
+                    "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MDA2MTA5MTAsImV4cCI6MTcwMDYxNDUxMCwiYXVkIjoiMzRjNWQ0YWJlYmY2YjU0YzQxNzJkYzRkNjhiODI5NWYwMWM5ZDUyYSIsImRhdGEiOnsidXN1YXJpbyI6ImNyaXN0b2JhbF9zb2NpbyJ9LCJhcHAiOiJBUEkgUkVTVCBDRCAyMDIzIn0.eaMaQvgIWZZJTYQCP2_2d1qBj-DgBJ2cqhCgrr4alUk"
+                ],
+                "User-Agent": [
+                    "PostmanRuntime\/7.35.0"
+                ],
+                "Accept": [
+                    "*\/*"
+                ],
+                "Postman-Token": [
+                    "c8a35aab-e700-43c4-9394-502c3656a052"
+                ],
+                "Host": [
+                    "localhost"
+                ],
+                "Accept-Encoding": [
+                    "gzip, deflate, br"
+                ],
+                "Connection": [
+                    "keep-alive"
+                ],
+                "Content-Type": [
+                    "multipart\/form-data; boundary=--------------------------393040535026117247634370"
+                ],
+                "Content-Length": [
+                    "175"
+                ]
+            },
+            "body": ""
+        },
+        "response": {
+            "statusCode": 200,
+            "headers": {
+                "Content-Type": [
+                    "application\/json"
+                ]
+            },
+            "body": "{\"mensaje\":\"Error: Clave fuera de tiempo\"}"
+        },
+        "timestamp": "2023-11-23 02:23:56"
+    }
+],
+[
+    {
+        "request": {
+            "method": "POST",
+            "uri": "http:\/\/localhost:666\/app\/auth\/login",
+            "headers": {
+                "User-Agent": [
+                    "PostmanRuntime\/7.35.0"
+                ],
+                "Accept": [
+                    "*\/*"
+                ],
+                "Postman-Token": [
+                    "ab976551-32be-4e50-b69d-1629e09a2b77"
+                ],
+                "Host": [
+                    "localhost"
+                ],
+                "Accept-Encoding": [
+                    "gzip, deflate, br"
+                ],
+                "Connection": [
+                    "keep-alive"
+                ],
+                "Content-Type": [
+                    "multipart\/form-data; boundary=--------------------------306275109816173383411274"
+                ],
+                "Content-Length": [
+                    "328"
+                ]
+            },
+            "body": ""
+        },
+        "response": {
+            "statusCode": 200,
+            "headers": {
+                "Content-Type": [
+                    "application\/json"
+                ]
+            },
+            "body": "{\"error\":\"Usuario o contrase\\u00f1a incorrectos\"}"
+        },
+        "timestamp": "2023-11-23 02:24:02"
+    }
+],
+[
+    {
+        "request": {
+            "method": "POST",
+            "uri": "http:\/\/localhost:666\/app\/auth\/login",
+            "headers": {
+                "User-Agent": [
+                    "PostmanRuntime\/7.35.0"
+                ],
+                "Accept": [
+                    "*\/*"
+                ],
+                "Postman-Token": [
+                    "9b881173-f872-4ad0-be84-ecd2f45903ea"
+                ],
+                "Host": [
+                    "localhost"
+                ],
+                "Accept-Encoding": [
+                    "gzip, deflate, br"
+                ],
+                "Connection": [
+                    "keep-alive"
+                ],
+                "Content-Type": [
+                    "multipart\/form-data; boundary=--------------------------716599088183194138369465"
+                ],
+                "Content-Length": [
+                    "296"
+                ]
+            },
+            "body": ""
+        },
+        "response": {
+            "statusCode": 200,
+            "headers": {
+                "Content-Type": [
+                    "application\/json"
+                ]
+            },
+            "body": "{\"error\":\"Usuario o contrase\\u00f1a incorrectos\"}"
+        },
+        "timestamp": "2023-11-23 02:31:48"
+    }
+],
+[
+    {
+        "request": {
+            "method": "POST",
+            "uri": "http:\/\/localhost:666\/app\/auth\/login",
+            "headers": {
+                "User-Agent": [
+                    "PostmanRuntime\/7.35.0"
+                ],
+                "Accept": [
+                    "*\/*"
+                ],
+                "Postman-Token": [
+                    "cf4789f7-2d04-401e-9a51-f997ae884fd1"
+                ],
+                "Host": [
+                    "localhost"
+                ],
+                "Accept-Encoding": [
+                    "gzip, deflate, br"
+                ],
+                "Connection": [
+                    "keep-alive"
+                ],
+                "Content-Type": [
+                    "multipart\/form-data; boundary=--------------------------450868077559414908981792"
+                ],
+                "Content-Length": [
+                    "296"
+                ]
+            },
+            "body": ""
+        },
+        "response": {
+            "statusCode": 200,
+            "headers": {
+                "Content-Type": [
+                    "application\/json"
+                ]
+            },
+            "body": "{\"error\":\"Usuario o contrase\\u00f1a incorrectos\"}"
+        },
+        "timestamp": "2023-11-23 02:32:49"
+    }
+],
+[
+    {
+        "request": {
+            "method": "POST",
+            "uri": "http:\/\/localhost:666\/app\/auth\/login",
+            "headers": {
+                "User-Agent": [
+                    "PostmanRuntime\/7.35.0"
+                ],
+                "Accept": [
+                    "*\/*"
+                ],
+                "Postman-Token": [
+                    "784a194c-69a9-4211-9f06-83bad62b007c"
+                ],
+                "Host": [
+                    "localhost"
+                ],
+                "Accept-Encoding": [
+                    "gzip, deflate, br"
+                ],
+                "Connection": [
+                    "keep-alive"
+                ],
+                "Content-Type": [
+                    "multipart\/form-data; boundary=--------------------------546212661966905134961412"
+                ],
+                "Content-Length": [
+                    "296"
+                ]
+            },
+            "body": ""
+        },
+        "response": {
+            "statusCode": 200,
+            "headers": {
+                "Content-Type": [
+                    "application\/json"
+                ]
+            },
+            "body": "{\"error\":\"Usuario o contrase\\u00f1a incorrectos\"}"
+        },
+        "timestamp": "2023-11-23 02:39:37"
+    }
+],
+[
+    {
+        "request": {
+            "method": "GET",
+            "uri": "http:\/\/localhost:666\/app\/auth\/verificarToken",
+            "headers": {
+                "Authorization": [
+                    "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MDA1NDI0NzUsImV4cCI6MTcwMDU0NjA3NSwiYXVkIjoiMzRjNWQ0YWJlYmY2YjU0YzQxNzJkYzRkNjhiODI5NWYwMWM5ZDUyYSIsImRhdGEiOnsidXN1YXJpbyI6ImNyaXN0b2JhbF9zb2NpbyJ9LCJhcHAiOiJBUEkgUkVTVCBDRCAyMDIzIn0.qoYhM_tr9vu4afGJ4lfq_hVanW4fjh0cyJMMfrA35xc"
+                ],
+                "User-Agent": [
+                    "PostmanRuntime\/7.35.0"
+                ],
+                "Accept": [
+                    "*\/*"
+                ],
+                "Postman-Token": [
+                    "70dd7e2e-afa8-407b-8e93-b9e1befd6629"
+                ],
+                "Host": [
+                    "localhost"
+                ],
+                "Accept-Encoding": [
+                    "gzip, deflate, br"
+                ],
+                "Connection": [
+                    "keep-alive"
+                ],
+                "Content-Type": [
+                    "multipart\/form-data; boundary=--------------------------945812848222583108240719"
+                ],
+                "Content-Length": [
+                    "282"
+                ]
+            },
+            "body": "----------------------------945812848222583108240719\r\nContent-Disposition: form-data; name=\"usuario\"\r\n\r\nprueba\r\n----------------------------945812848222583108240719\r\nContent-Disposition: form-data; name=\"contrase\u00f1a\"\r\n\r\n1234\r\n----------------------------945812848222583108240719--\r\n"
+        },
+        "response": {
+            "statusCode": 200,
+            "headers": {
+                "Content-Type": [
+                    "application\/json"
+                ]
+            },
+            "body": "{\"error\":\"Signature verification failed\"}"
+        },
+        "timestamp": "2023-11-23 02:39:41"
+    }
+],
+[
+    {
+        "request": {
+            "method": "GET",
+            "uri": "http:\/\/localhost:666\/app\/auth\/verificarToken",
+            "headers": {
+                "Authorization": [
+                    "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MDA1NDI0NzUsImV4cCI6MTcwMDU0NjA3NSwiYXVkIjoiMzRjNWQ0YWJlYmY2YjU0YzQxNzJkYzRkNjhiODI5NWYwMWM5ZDUyYSIsImRhdGEiOnsidXN1YXJpbyI6ImNyaXN0b2JhbF9zb2NpbyJ9LCJhcHAiOiJBUEkgUkVTVCBDRCAyMDIzIn0.qoYhM_tr9vu4afGJ4lfq_hVanW4fjh0cyJMMfrA35xc"
+                ],
+                "User-Agent": [
+                    "PostmanRuntime\/7.35.0"
+                ],
+                "Accept": [
+                    "*\/*"
+                ],
+                "Postman-Token": [
+                    "0b94b183-d6aa-4366-932e-ef9681cc4735"
+                ],
+                "Host": [
+                    "localhost"
+                ],
+                "Accept-Encoding": [
+                    "gzip, deflate, br"
+                ],
+                "Connection": [
+                    "keep-alive"
+                ],
+                "Content-Type": [
+                    "multipart\/form-data; boundary=--------------------------886862440234466615577279"
+                ],
+                "Content-Length": [
+                    "282"
+                ]
+            },
+            "body": "----------------------------886862440234466615577279\r\nContent-Disposition: form-data; name=\"usuario\"\r\n\r\nprueba\r\n----------------------------886862440234466615577279\r\nContent-Disposition: form-data; name=\"contrase\u00f1a\"\r\n\r\n1234\r\n----------------------------886862440234466615577279--\r\n"
+        },
+        "response": {
+            "statusCode": 200,
+            "headers": {
+                "Content-Type": [
+                    "application\/json"
+                ]
+            },
+            "body": "{\"error\":\"Signature verification failed\"}"
+        },
+        "timestamp": "2023-11-23 02:39:47"
+    }
+],
+[
+    {
+        "request": {
+            "method": "GET",
+            "uri": "http:\/\/localhost:666\/app\/usuarios",
+            "headers": {
+                "PHP-AUTH-USER": [
+                    "cristobal_socio"
+                ],
+                "Authorization": [
+                    "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MDA2MDU1MzUsImV4cCI6MTcwMDYwOTEzNSwiYXVkIjoiMzRjNWQ0YWJlYmY2YjU0YzQxNzJkYzRkNjhiODI5NWYwMWM5ZDUyYSIsImRhdGEiOnsidXN1YXJpbyI6ImNyaXN0b2JhbF9zb2NpbyJ9LCJhcHAiOiJBUEkgUkVTVCBDRCAyMDIzIn0.d2HS_Q2pwqeveIN5RscPxkGDfErY6kXlgN8txi1VK04"
+                ],
+                "User-Agent": [
+                    "PostmanRuntime\/7.35.0"
+                ],
+                "Accept": [
+                    "*\/*"
+                ],
+                "Postman-Token": [
+                    "9593dc01-58df-4c4e-96c7-02293436902d"
+                ],
+                "Host": [
+                    "localhost"
+                ],
+                "Accept-Encoding": [
+                    "gzip, deflate, br"
+                ],
+                "Connection": [
+                    "keep-alive"
+                ]
+            },
+            "body": ""
+        },
+        "response": {
+            "statusCode": 200,
+            "headers": {
+                "Content-Type": [
+                    "application\/json"
+                ]
+            },
+            "body": "{\"mensaje\":\"Error: Clave fuera de tiempo\"}"
+        },
+        "timestamp": "2023-11-23 05:05:56"
+    }
+],
+[
+    {
+        "request": {
+            "method": "GET",
+            "uri": "http:\/\/localhost:666\/app\/usuarios",
+            "headers": {
+                "PHP-AUTH-USER": [
+                    "cristobal_socio"
+                ],
+                "Authorization": [
+                    "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MDA2MDU1MzUsImV4cCI6MTcwMDYwOTEzNSwiYXVkIjoiMzRjNWQ0YWJlYmY2YjU0YzQxNzJkYzRkNjhiODI5NWYwMWM5ZDUyYSIsImRhdGEiOnsidXN1YXJpbyI6ImNyaXN0b2JhbF9zb2NpbyJ9LCJhcHAiOiJBUEkgUkVTVCBDRCAyMDIzIn0.d2HS_Q2pwqeveIN5RscPxkGDfErY6kXlgN8txi1VK04"
+                ],
+                "User-Agent": [
+                    "PostmanRuntime\/7.35.0"
+                ],
+                "Accept": [
+                    "*\/*"
+                ],
+                "Postman-Token": [
+                    "f0ce73e2-6cf8-49a3-9b11-37344f7d2dad"
+                ],
+                "Host": [
+                    "localhost"
+                ],
+                "Accept-Encoding": [
+                    "gzip, deflate, br"
+                ],
+                "Connection": [
+                    "keep-alive"
+                ]
+            },
+            "body": ""
+        },
+        "response": {
+            "statusCode": 500,
+            "headers": {
+                "Content-type": [
+                    "text\/html"
+                ]
+            },
+            "body": "<!doctype html><html lang=\"en\">    <head>        <meta charset=\"utf-8\">        <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">        <title>Slim Application Error<\/title>        <style>            body{margin:0;padding:30px;font:12px\/1.5 Helvetica,Arial,Verdana,sans-serif}            h1{margin:0;font-size:48px;font-weight:normal;line-height:48px}            strong{display:inline-block;width:65px}        <\/style>    <\/head>    <body>        <h1>Slim Application Error<\/h1>        <div><p>The application could not run because of the following error:<\/p><h2>Details<\/h2><div><strong>Type:<\/strong> PDOException<\/div><div><strong>Code:<\/strong> HY000<\/div><div><strong>Message:<\/strong> SQLSTATE[HY000]: General error: 2014 Cannot execute queries while other unbuffered queries are active.  Consider using PDOStatement::fetchAll().  Alternatively, if your code is only ever going to run against mysql, you may enable query buffering by setting the PDO::MYSQL_ATTR_USE_BUFFERED_QUERY attribute.<\/div><div><strong>File:<\/strong> D:\\Environments\\XAMP\\htdocs\\UTN-ProgramacionIII-TP\\app-comanda\\Models\\Usuario.php<\/div><div><strong>Line:<\/strong> 49<\/div><h2>Trace<\/h2><pre>#0 D:\\Environments\\XAMP\\htdocs\\UTN-ProgramacionIII-TP\\app-comanda\\Models\\Usuario.php(49): PDOStatement-&gt;execute()\n#1 D:\\Environments\\XAMP\\htdocs\\UTN-ProgramacionIII-TP\\app-comanda\\Controllers\\UsuarioControllers.php(51): Usuario::obtenerTodos()\n#2 D:\\Environments\\XAMP\\htdocs\\UTN-ProgramacionIII-TP\\app-comanda\\vendor\\slim\\slim\\Slim\\Handlers\\Strategies\\RequestResponse.php(38): UsuarioController-&gt;TraerTodos(Object(Slim\\Psr7\\Request), Object(Slim\\Psr7\\Response), Array)\n#3 D:\\Environments\\XAMP\\htdocs\\UTN-ProgramacionIII-TP\\app-comanda\\vendor\\slim\\slim\\Slim\\Routing\\Route.php(358): Slim\\Handlers\\Strategies\\RequestResponse-&gt;__invoke(Array, Object(Slim\\Psr7\\Request), Object(Slim\\Psr7\\Response), Array)\n#4 D:\\Environments\\XAMP\\htdocs\\UTN-ProgramacionIII-TP\\app-comanda\\vendor\\slim\\slim\\Slim\\MiddlewareDispatcher.php(65): Slim\\Routing\\Route-&gt;handle(Object(Slim\\Psr7\\Request))\n#5 D:\\Environments\\XAMP\\htdocs\\UTN-ProgramacionIII-TP\\app-comanda\\vendor\\slim\\slim\\Slim\\MiddlewareDispatcher.php(65): Slim\\MiddlewareDispatcher-&gt;handle(Object(Slim\\Psr7\\Request))\n#6 D:\\Environments\\XAMP\\htdocs\\UTN-ProgramacionIII-TP\\app-comanda\\vendor\\slim\\slim\\Slim\\Routing\\Route.php(315): Slim\\MiddlewareDispatcher-&gt;handle(Object(Slim\\Psr7\\Request))\n#7 D:\\Environments\\XAMP\\htdocs\\UTN-ProgramacionIII-TP\\app-comanda\\vendor\\slim\\slim\\Slim\\Routing\\RouteRunner.php(68): Slim\\Routing\\Route-&gt;run(Object(Slim\\Psr7\\Request))\n#8 D:\\Environments\\XAMP\\htdocs\\UTN-ProgramacionIII-TP\\app-comanda\\vendor\\slim\\slim\\Slim\\Middleware\\ErrorMiddleware.php(76): Slim\\Routing\\RouteRunner-&gt;handle(Object(Slim\\Psr7\\Request))\n#9 D:\\Environments\\XAMP\\htdocs\\UTN-ProgramacionIII-TP\\app-comanda\\vendor\\slim\\slim\\Slim\\MiddlewareDispatcher.php(121): Slim\\Middleware\\ErrorMiddleware-&gt;process(Object(Slim\\Psr7\\Request), Object(Slim\\Routing\\RouteRunner))\n#10 D:\\Environments\\XAMP\\htdocs\\UTN-ProgramacionIII-TP\\app-comanda\\vendor\\slim\\slim\\Slim\\Middleware\\BodyParsingMiddleware.php(64): Psr\\Http\\Server\\RequestHandlerInterface@anonymous-&gt;handle(Object(Slim\\Psr7\\Request))\n#11 D:\\Environments\\XAMP\\htdocs\\UTN-ProgramacionIII-TP\\app-comanda\\vendor\\slim\\slim\\Slim\\MiddlewareDispatcher.php(121): Slim\\Middleware\\BodyParsingMiddleware-&gt;process(Object(Slim\\Psr7\\Request), Object(Psr\\Http\\Server\\RequestHandlerInterface@anonymous))\n#12 D:\\Environments\\XAMP\\htdocs\\UTN-ProgramacionIII-TP\\app-comanda\\Middlewares\\LoggerMiddleware.php(13): Psr\\Http\\Server\\RequestHandlerInterface@anonymous-&gt;handle(Object(Slim\\Psr7\\Request))\n#13 D:\\Environments\\XAMP\\htdocs\\UTN-ProgramacionIII-TP\\app-comanda\\vendor\\slim\\slim\\Slim\\MiddlewareDispatcher.php(269): LoggerMiddleware-&gt;__invoke(Object(Slim\\Psr7\\Request), Object(Psr\\Http\\Server\\RequestHandlerInterface@anonymous))\n#14 D:\\Environments\\XAMP\\htdocs\\UTN-ProgramacionIII-TP\\app-comanda\\vendor\\slim\\slim\\Slim\\MiddlewareDispatcher.php(65): Psr\\Http\\Server\\RequestHandlerInterface@anonymous-&gt;handle(Object(Slim\\Psr7\\Request))\n#15 D:\\Environments\\XAMP\\htdocs\\UTN-ProgramacionIII-TP\\app-comanda\\vendor\\slim\\slim\\Slim\\App.php(199): Slim\\MiddlewareDispatcher-&gt;handle(Object(Slim\\Psr7\\Request))\n#16 D:\\Environments\\XAMP\\htdocs\\UTN-ProgramacionIII-TP\\app-comanda\\vendor\\slim\\slim\\Slim\\App.php(183): Slim\\App-&gt;handle(Object(Slim\\Psr7\\Request))\n#17 D:\\Environments\\XAMP\\htdocs\\UTN-ProgramacionIII-TP\\app-comanda\\app\\index.php(157): Slim\\App-&gt;run()\n#18 {main}<\/pre><\/div>        <a href=\"#\" onclick=\"window.history.go(-1)\">Go Back<\/a>    <\/body><\/html>"
+        },
+        "timestamp": "2023-11-23 05:06:22"
+    }
+],
+[
+    {
+        "request": {
+            "method": "GET",
+            "uri": "http:\/\/localhost:666\/app\/usuarios",
+            "headers": {
+                "PHP-AUTH-USER": [
+                    "cristobal_socio"
+                ],
+                "Authorization": [
+                    "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MDA2MDU1MzUsImV4cCI6MTcwMDYwOTEzNSwiYXVkIjoiMzRjNWQ0YWJlYmY2YjU0YzQxNzJkYzRkNjhiODI5NWYwMWM5ZDUyYSIsImRhdGEiOnsidXN1YXJpbyI6ImNyaXN0b2JhbF9zb2NpbyJ9LCJhcHAiOiJBUEkgUkVTVCBDRCAyMDIzIn0.d2HS_Q2pwqeveIN5RscPxkGDfErY6kXlgN8txi1VK04"
+                ],
+                "User-Agent": [
+                    "PostmanRuntime\/7.35.0"
+                ],
+                "Accept": [
+                    "*\/*"
+                ],
+                "Postman-Token": [
+                    "8f1a8d06-eabf-4824-b04f-9e12065dad86"
+                ],
+                "Host": [
+                    "localhost"
+                ],
+                "Accept-Encoding": [
+                    "gzip, deflate, br"
+                ],
+                "Connection": [
+                    "keep-alive"
+                ]
+            },
+            "body": ""
+        },
+        "response": {
+            "statusCode": 500,
+            "headers": {
+                "Content-type": [
+                    "text\/html"
+                ]
+            },
+            "body": "<!doctype html><html lang=\"en\">    <head>        <meta charset=\"utf-8\">        <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">        <title>Slim Application Error<\/title>        <style>            body{margin:0;padding:30px;font:12px\/1.5 Helvetica,Arial,Verdana,sans-serif}            h1{margin:0;font-size:48px;font-weight:normal;line-height:48px}            strong{display:inline-block;width:65px}        <\/style>    <\/head>    <body>        <h1>Slim Application Error<\/h1>        <div><p>The application could not run because of the following error:<\/p><h2>Details<\/h2><div><strong>Type:<\/strong> PDOException<\/div><div><strong>Code:<\/strong> HY000<\/div><div><strong>Message:<\/strong> SQLSTATE[HY000]: General error: 2014 Cannot execute queries while other unbuffered queries are active.  Consider using PDOStatement::fetchAll().  Alternatively, if your code is only ever going to run against mysql, you may enable query buffering by setting the PDO::MYSQL_ATTR_USE_BUFFERED_QUERY attribute.<\/div><div><strong>File:<\/strong> D:\\Environments\\XAMP\\htdocs\\UTN-ProgramacionIII-TP\\app-comanda\\Models\\Usuario.php<\/div><div><strong>Line:<\/strong> 49<\/div><h2>Trace<\/h2><pre>#0 D:\\Environments\\XAMP\\htdocs\\UTN-ProgramacionIII-TP\\app-comanda\\Models\\Usuario.php(49): PDOStatement-&gt;execute()\n#1 D:\\Environments\\XAMP\\htdocs\\UTN-ProgramacionIII-TP\\app-comanda\\Controllers\\UsuarioControllers.php(51): Usuario::obtenerTodos()\n#2 D:\\Environments\\XAMP\\htdocs\\UTN-ProgramacionIII-TP\\app-comanda\\vendor\\slim\\slim\\Slim\\Handlers\\Strategies\\RequestResponse.php(38): UsuarioController-&gt;TraerTodos(Object(Slim\\Psr7\\Request), Object(Slim\\Psr7\\Response), Array)\n#3 D:\\Environments\\XAMP\\htdocs\\UTN-ProgramacionIII-TP\\app-comanda\\vendor\\slim\\slim\\Slim\\Routing\\Route.php(358): Slim\\Handlers\\Strategies\\RequestResponse-&gt;__invoke(Array, Object(Slim\\Psr7\\Request), Object(Slim\\Psr7\\Response), Array)\n#4 D:\\Environments\\XAMP\\htdocs\\UTN-ProgramacionIII-TP\\app-comanda\\vendor\\slim\\slim\\Slim\\MiddlewareDispatcher.php(65): Slim\\Routing\\Route-&gt;handle(Object(Slim\\Psr7\\Request))\n#5 D:\\Environments\\XAMP\\htdocs\\UTN-ProgramacionIII-TP\\app-comanda\\vendor\\slim\\slim\\Slim\\MiddlewareDispatcher.php(65): Slim\\MiddlewareDispatcher-&gt;handle(Object(Slim\\Psr7\\Request))\n#6 D:\\Environments\\XAMP\\htdocs\\UTN-ProgramacionIII-TP\\app-comanda\\vendor\\slim\\slim\\Slim\\Routing\\Route.php(315): Slim\\MiddlewareDispatcher-&gt;handle(Object(Slim\\Psr7\\Request))\n#7 D:\\Environments\\XAMP\\htdocs\\UTN-ProgramacionIII-TP\\app-comanda\\vendor\\slim\\slim\\Slim\\Routing\\RouteRunner.php(68): Slim\\Routing\\Route-&gt;run(Object(Slim\\Psr7\\Request))\n#8 D:\\Environments\\XAMP\\htdocs\\UTN-ProgramacionIII-TP\\app-comanda\\vendor\\slim\\slim\\Slim\\Middleware\\ErrorMiddleware.php(76): Slim\\Routing\\RouteRunner-&gt;handle(Object(Slim\\Psr7\\Request))\n#9 D:\\Environments\\XAMP\\htdocs\\UTN-ProgramacionIII-TP\\app-comanda\\vendor\\slim\\slim\\Slim\\MiddlewareDispatcher.php(121): Slim\\Middleware\\ErrorMiddleware-&gt;process(Object(Slim\\Psr7\\Request), Object(Slim\\Routing\\RouteRunner))\n#10 D:\\Environments\\XAMP\\htdocs\\UTN-ProgramacionIII-TP\\app-comanda\\vendor\\slim\\slim\\Slim\\Middleware\\BodyParsingMiddleware.php(64): Psr\\Http\\Server\\RequestHandlerInterface@anonymous-&gt;handle(Object(Slim\\Psr7\\Request))\n#11 D:\\Environments\\XAMP\\htdocs\\UTN-ProgramacionIII-TP\\app-comanda\\vendor\\slim\\slim\\Slim\\MiddlewareDispatcher.php(121): Slim\\Middleware\\BodyParsingMiddleware-&gt;process(Object(Slim\\Psr7\\Request), Object(Psr\\Http\\Server\\RequestHandlerInterface@anonymous))\n#12 D:\\Environments\\XAMP\\htdocs\\UTN-ProgramacionIII-TP\\app-comanda\\Middlewares\\LoggerMiddleware.php(13): Psr\\Http\\Server\\RequestHandlerInterface@anonymous-&gt;handle(Object(Slim\\Psr7\\Request))\n#13 D:\\Environments\\XAMP\\htdocs\\UTN-ProgramacionIII-TP\\app-comanda\\vendor\\slim\\slim\\Slim\\MiddlewareDispatcher.php(269): LoggerMiddleware-&gt;__invoke(Object(Slim\\Psr7\\Request), Object(Psr\\Http\\Server\\RequestHandlerInterface@anonymous))\n#14 D:\\Environments\\XAMP\\htdocs\\UTN-ProgramacionIII-TP\\app-comanda\\vendor\\slim\\slim\\Slim\\MiddlewareDispatcher.php(65): Psr\\Http\\Server\\RequestHandlerInterface@anonymous-&gt;handle(Object(Slim\\Psr7\\Request))\n#15 D:\\Environments\\XAMP\\htdocs\\UTN-ProgramacionIII-TP\\app-comanda\\vendor\\slim\\slim\\Slim\\App.php(199): Slim\\MiddlewareDispatcher-&gt;handle(Object(Slim\\Psr7\\Request))\n#16 D:\\Environments\\XAMP\\htdocs\\UTN-ProgramacionIII-TP\\app-comanda\\vendor\\slim\\slim\\Slim\\App.php(183): Slim\\App-&gt;handle(Object(Slim\\Psr7\\Request))\n#17 D:\\Environments\\XAMP\\htdocs\\UTN-ProgramacionIII-TP\\app-comanda\\app\\index.php(157): Slim\\App-&gt;run()\n#18 {main}<\/pre><\/div>        <a href=\"#\" onclick=\"window.history.go(-1)\">Go Back<\/a>    <\/body><\/html>"
+        },
+        "timestamp": "2023-11-23 05:07:09"
+    }
+],
+[
+    {
+        "request": {
+            "method": "GET",
+            "uri": "http:\/\/localhost:666\/app\/usuarios",
+            "headers": {
+                "PHP-AUTH-USER": [
+                    "cristobal_socio"
+                ],
+                "Authorization": [
+                    "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MDA2MDU1MzUsImV4cCI6MTcwMDYwOTEzNSwiYXVkIjoiMzRjNWQ0YWJlYmY2YjU0YzQxNzJkYzRkNjhiODI5NWYwMWM5ZDUyYSIsImRhdGEiOnsidXN1YXJpbyI6ImNyaXN0b2JhbF9zb2NpbyJ9LCJhcHAiOiJBUEkgUkVTVCBDRCAyMDIzIn0.d2HS_Q2pwqeveIN5RscPxkGDfErY6kXlgN8txi1VK04"
+                ],
+                "User-Agent": [
+                    "PostmanRuntime\/7.35.0"
+                ],
+                "Accept": [
+                    "*\/*"
+                ],
+                "Postman-Token": [
+                    "e1939310-60fd-4288-94b1-505dac25901b"
+                ],
+                "Host": [
+                    "localhost"
+                ],
+                "Accept-Encoding": [
+                    "gzip, deflate, br"
+                ],
+                "Connection": [
+                    "keep-alive"
+                ]
+            },
+            "body": ""
+        },
+        "response": {
+            "statusCode": 500,
+            "headers": {
+                "Content-type": [
+                    "text\/html"
+                ]
+            },
+            "body": "<!doctype html><html lang=\"en\">    <head>        <meta charset=\"utf-8\">        <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">        <title>Slim Application Error<\/title>        <style>            body{margin:0;padding:30px;font:12px\/1.5 Helvetica,Arial,Verdana,sans-serif}            h1{margin:0;font-size:48px;font-weight:normal;line-height:48px}            strong{display:inline-block;width:65px}        <\/style>    <\/head>    <body>        <h1>Slim Application Error<\/h1>        <div><p>The application could not run because of the following error:<\/p><h2>Details<\/h2><div><strong>Type:<\/strong> PDOException<\/div><div><strong>Code:<\/strong> HY000<\/div><div><strong>Message:<\/strong> SQLSTATE[HY000]: General error: 2014 Cannot execute queries while other unbuffered queries are active.  Consider using PDOStatement::fetchAll().  Alternatively, if your code is only ever going to run against mysql, you may enable query buffering by setting the PDO::MYSQL_ATTR_USE_BUFFERED_QUERY attribute.<\/div><div><strong>File:<\/strong> D:\\Environments\\XAMP\\htdocs\\UTN-ProgramacionIII-TP\\app-comanda\\Models\\Usuario.php<\/div><div><strong>Line:<\/strong> 49<\/div><h2>Trace<\/h2><pre>#0 D:\\Environments\\XAMP\\htdocs\\UTN-ProgramacionIII-TP\\app-comanda\\Models\\Usuario.php(49): PDOStatement-&gt;execute()\n#1 D:\\Environments\\XAMP\\htdocs\\UTN-ProgramacionIII-TP\\app-comanda\\Controllers\\UsuarioControllers.php(51): Usuario::obtenerTodos()\n#2 D:\\Environments\\XAMP\\htdocs\\UTN-ProgramacionIII-TP\\app-comanda\\vendor\\slim\\slim\\Slim\\Handlers\\Strategies\\RequestResponse.php(38): UsuarioController-&gt;TraerTodos(Object(Slim\\Psr7\\Request), Object(Slim\\Psr7\\Response), Array)\n#3 D:\\Environments\\XAMP\\htdocs\\UTN-ProgramacionIII-TP\\app-comanda\\vendor\\slim\\slim\\Slim\\Routing\\Route.php(358): Slim\\Handlers\\Strategies\\RequestResponse-&gt;__invoke(Array, Object(Slim\\Psr7\\Request), Object(Slim\\Psr7\\Response), Array)\n#4 D:\\Environments\\XAMP\\htdocs\\UTN-ProgramacionIII-TP\\app-comanda\\vendor\\slim\\slim\\Slim\\MiddlewareDispatcher.php(65): Slim\\Routing\\Route-&gt;handle(Object(Slim\\Psr7\\Request))\n#5 D:\\Environments\\XAMP\\htdocs\\UTN-ProgramacionIII-TP\\app-comanda\\vendor\\slim\\slim\\Slim\\MiddlewareDispatcher.php(65): Slim\\MiddlewareDispatcher-&gt;handle(Object(Slim\\Psr7\\Request))\n#6 D:\\Environments\\XAMP\\htdocs\\UTN-ProgramacionIII-TP\\app-comanda\\vendor\\slim\\slim\\Slim\\Routing\\Route.php(315): Slim\\MiddlewareDispatcher-&gt;handle(Object(Slim\\Psr7\\Request))\n#7 D:\\Environments\\XAMP\\htdocs\\UTN-ProgramacionIII-TP\\app-comanda\\vendor\\slim\\slim\\Slim\\Routing\\RouteRunner.php(68): Slim\\Routing\\Route-&gt;run(Object(Slim\\Psr7\\Request))\n#8 D:\\Environments\\XAMP\\htdocs\\UTN-ProgramacionIII-TP\\app-comanda\\vendor\\slim\\slim\\Slim\\Middleware\\ErrorMiddleware.php(76): Slim\\Routing\\RouteRunner-&gt;handle(Object(Slim\\Psr7\\Request))\n#9 D:\\Environments\\XAMP\\htdocs\\UTN-ProgramacionIII-TP\\app-comanda\\vendor\\slim\\slim\\Slim\\MiddlewareDispatcher.php(121): Slim\\Middleware\\ErrorMiddleware-&gt;process(Object(Slim\\Psr7\\Request), Object(Slim\\Routing\\RouteRunner))\n#10 D:\\Environments\\XAMP\\htdocs\\UTN-ProgramacionIII-TP\\app-comanda\\vendor\\slim\\slim\\Slim\\Middleware\\BodyParsingMiddleware.php(64): Psr\\Http\\Server\\RequestHandlerInterface@anonymous-&gt;handle(Object(Slim\\Psr7\\Request))\n#11 D:\\Environments\\XAMP\\htdocs\\UTN-ProgramacionIII-TP\\app-comanda\\vendor\\slim\\slim\\Slim\\MiddlewareDispatcher.php(121): Slim\\Middleware\\BodyParsingMiddleware-&gt;process(Object(Slim\\Psr7\\Request), Object(Psr\\Http\\Server\\RequestHandlerInterface@anonymous))\n#12 D:\\Environments\\XAMP\\htdocs\\UTN-ProgramacionIII-TP\\app-comanda\\Middlewares\\LoggerMiddleware.php(13): Psr\\Http\\Server\\RequestHandlerInterface@anonymous-&gt;handle(Object(Slim\\Psr7\\Request))\n#13 D:\\Environments\\XAMP\\htdocs\\UTN-ProgramacionIII-TP\\app-comanda\\vendor\\slim\\slim\\Slim\\MiddlewareDispatcher.php(269): LoggerMiddleware-&gt;__invoke(Object(Slim\\Psr7\\Request), Object(Psr\\Http\\Server\\RequestHandlerInterface@anonymous))\n#14 D:\\Environments\\XAMP\\htdocs\\UTN-ProgramacionIII-TP\\app-comanda\\vendor\\slim\\slim\\Slim\\MiddlewareDispatcher.php(65): Psr\\Http\\Server\\RequestHandlerInterface@anonymous-&gt;handle(Object(Slim\\Psr7\\Request))\n#15 D:\\Environments\\XAMP\\htdocs\\UTN-ProgramacionIII-TP\\app-comanda\\vendor\\slim\\slim\\Slim\\App.php(199): Slim\\MiddlewareDispatcher-&gt;handle(Object(Slim\\Psr7\\Request))\n#16 D:\\Environments\\XAMP\\htdocs\\UTN-ProgramacionIII-TP\\app-comanda\\vendor\\slim\\slim\\Slim\\App.php(183): Slim\\App-&gt;handle(Object(Slim\\Psr7\\Request))\n#17 D:\\Environments\\XAMP\\htdocs\\UTN-ProgramacionIII-TP\\app-comanda\\app\\index.php(157): Slim\\App-&gt;run()\n#18 {main}<\/pre><\/div>        <a href=\"#\" onclick=\"window.history.go(-1)\">Go Back<\/a>    <\/body><\/html>"
+        },
+        "timestamp": "2023-11-23 05:07:34"
+    }
+],
+[
+    {
+        "request": {
+            "method": "GET",
+            "uri": "http:\/\/localhost:666\/app\/usuarios",
+            "headers": {
+                "PHP-AUTH-USER": [
+                    "cristobal_socio"
+                ],
+                "Authorization": [
+                    "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MDA2MDU1MzUsImV4cCI6MTcwMDYwOTEzNSwiYXVkIjoiMzRjNWQ0YWJlYmY2YjU0YzQxNzJkYzRkNjhiODI5NWYwMWM5ZDUyYSIsImRhdGEiOnsidXN1YXJpbyI6ImNyaXN0b2JhbF9zb2NpbyJ9LCJhcHAiOiJBUEkgUkVTVCBDRCAyMDIzIn0.d2HS_Q2pwqeveIN5RscPxkGDfErY6kXlgN8txi1VK04"
+                ],
+                "User-Agent": [
+                    "PostmanRuntime\/7.35.0"
+                ],
+                "Accept": [
+                    "*\/*"
+                ],
+                "Postman-Token": [
+                    "0921cdee-b79e-43cb-95d5-bf5c4b8f625b"
+                ],
+                "Host": [
+                    "localhost"
+                ],
+                "Accept-Encoding": [
+                    "gzip, deflate, br"
+                ],
+                "Connection": [
+                    "keep-alive"
+                ]
+            },
+            "body": ""
+        },
+        "response": {
+            "statusCode": 200,
+            "headers": {
+                "Content-Type": [
+                    "application\/json"
+                ]
+            },
+            "body": "{\"listaUsuario\":[{\"idUsuario\":1,\"nombre\":\"cristobal\",\"fechaCreacion\":{\"date\":\"2023-11-14 11:54:37.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaFinalizacion\":null,\"user\":\"cristobal_socio\",\"password\":\"*4D78C66DBC6FA11E7084240C135637D650FECAB7\",\"sector\":\"administracion\",\"tipo\":\"admin\"},{\"idUsuario\":2,\"nombre\":\"oscar\",\"fechaCreacion\":{\"date\":\"2023-11-15 11:54:37.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaFinalizacion\":null,\"user\":\"oscar_mozo\",\"password\":\"*7924A6822A50269BE36F22130A83D7ED07E32700\",\"sector\":\"mesas\",\"tipo\":\"mozo\"},{\"idUsuario\":3,\"nombre\":\"susana\",\"fechaCreacion\":{\"date\":\"2023-02-15 11:54:37.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaFinalizacion\":null,\"user\":\"susana_cocinera\",\"password\":\"*3F835267B6B2F85CD865ACABE0B1395D4CBBBFEC\",\"sector\":\"cocina\",\"tipo\":\"cocinero\"},{\"idUsuario\":4,\"nombre\":\"admin\",\"fechaCreacion\":{\"date\":\"2023-11-23 01:25:23.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaFinalizacion\":null,\"user\":\"admin\",\"password\":\"$2y$10$qW3JhSoT\\\/1zIWCN3F2C1seds6PQhsWva8GPRonVWmf50UurMvm8FW\",\"sector\":\"admin\",\"tipo\":\"admin\"}]}"
+        },
+        "timestamp": "2023-11-23 05:25:27"
+    }
+],
+[
+    {
+        "request": {
+            "method": "GET",
+            "uri": "http:\/\/localhost:666\/app\/usuarios",
+            "headers": {
+                "PHP-AUTH-USER": [
+                    "cristobal_socio"
+                ],
+                "Authorization": [
+                    "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MDA2MDU1MzUsImV4cCI6MTcwMDYwOTEzNSwiYXVkIjoiMzRjNWQ0YWJlYmY2YjU0YzQxNzJkYzRkNjhiODI5NWYwMWM5ZDUyYSIsImRhdGEiOnsidXN1YXJpbyI6ImNyaXN0b2JhbF9zb2NpbyJ9LCJhcHAiOiJBUEkgUkVTVCBDRCAyMDIzIn0.d2HS_Q2pwqeveIN5RscPxkGDfErY6kXlgN8txi1VK04"
+                ],
+                "User-Agent": [
+                    "PostmanRuntime\/7.35.0"
+                ],
+                "Accept": [
+                    "*\/*"
+                ],
+                "Postman-Token": [
+                    "0958e1e4-3e30-4f90-a9a5-869ebb14f7b2"
+                ],
+                "Host": [
+                    "localhost"
+                ],
+                "Accept-Encoding": [
+                    "gzip, deflate, br"
+                ],
+                "Connection": [
+                    "keep-alive"
+                ]
+            },
+            "body": ""
+        },
+        "response": {
+            "statusCode": 200,
+            "headers": {
+                "Content-Type": [
+                    "application\/json"
+                ]
+            },
+            "body": "{\"listaUsuario\":[{\"idUsuario\":1,\"nombre\":\"cristobal\",\"fechaCreacion\":{\"date\":\"2023-11-14 11:54:37.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaFinalizacion\":null,\"user\":\"cristobal_socio\",\"password\":\"*4D78C66DBC6FA11E7084240C135637D650FECAB7\",\"sector\":\"administracion\",\"tipo\":\"admin\"},{\"idUsuario\":2,\"nombre\":\"oscar\",\"fechaCreacion\":{\"date\":\"2023-11-15 11:54:37.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaFinalizacion\":null,\"user\":\"oscar_mozo\",\"password\":\"*7924A6822A50269BE36F22130A83D7ED07E32700\",\"sector\":\"mesas\",\"tipo\":\"mozo\"},{\"idUsuario\":3,\"nombre\":\"susana\",\"fechaCreacion\":{\"date\":\"2023-02-15 11:54:37.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaFinalizacion\":null,\"user\":\"susana_cocinera\",\"password\":\"*3F835267B6B2F85CD865ACABE0B1395D4CBBBFEC\",\"sector\":\"cocina\",\"tipo\":\"cocinero\"},{\"idUsuario\":4,\"nombre\":\"admin\",\"fechaCreacion\":{\"date\":\"2023-11-23 01:25:23.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaFinalizacion\":null,\"user\":\"admin\",\"password\":\"$2y$10$qW3JhSoT\\\/1zIWCN3F2C1seds6PQhsWva8GPRonVWmf50UurMvm8FW\",\"sector\":\"admin\",\"tipo\":\"admin\"}]}"
+        },
+        "timestamp": "2023-11-23 05:25:43"
+    }
+],
+[
+    {
+        "request": {
+            "method": "GET",
+            "uri": "http:\/\/localhost:666\/app\/usuarios",
+            "headers": {
+                "PHP-AUTH-USER": [
+                    "cristobal_socio"
+                ],
+                "Authorization": [
+                    "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MDA2MDU1MzUsImV4cCI6MTcwMDYwOTEzNSwiYXVkIjoiMzRjNWQ0YWJlYmY2YjU0YzQxNzJkYzRkNjhiODI5NWYwMWM5ZDUyYSIsImRhdGEiOnsidXN1YXJpbyI6ImNyaXN0b2JhbF9zb2NpbyJ9LCJhcHAiOiJBUEkgUkVTVCBDRCAyMDIzIn0.d2HS_Q2pwqeveIN5RscPxkGDfErY6kXlgN8txi1VK04"
+                ],
+                "User-Agent": [
+                    "PostmanRuntime\/7.35.0"
+                ],
+                "Accept": [
+                    "*\/*"
+                ],
+                "Postman-Token": [
+                    "409dc35c-7492-4a16-98c2-dcf3cc544818"
+                ],
+                "Host": [
+                    "localhost"
+                ],
+                "Accept-Encoding": [
+                    "gzip, deflate, br"
+                ],
+                "Connection": [
+                    "keep-alive"
+                ]
+            },
+            "body": ""
+        },
+        "response": {
+            "statusCode": 200,
+            "headers": {
+                "Content-Type": [
+                    "application\/json"
+                ]
+            },
+            "body": "{\"listaUsuario\":[{\"idUsuario\":1,\"nombre\":\"cristobal\",\"fechaCreacion\":{\"date\":\"2023-11-14 11:54:37.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaFinalizacion\":null,\"user\":\"cristobal_socio\",\"password\":\"*4D78C66DBC6FA11E7084240C135637D650FECAB7\",\"sector\":\"administracion\",\"tipo\":\"admin\"},{\"idUsuario\":2,\"nombre\":\"oscar\",\"fechaCreacion\":{\"date\":\"2023-11-15 11:54:37.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaFinalizacion\":null,\"user\":\"oscar_mozo\",\"password\":\"*7924A6822A50269BE36F22130A83D7ED07E32700\",\"sector\":\"mesas\",\"tipo\":\"mozo\"},{\"idUsuario\":3,\"nombre\":\"susana\",\"fechaCreacion\":{\"date\":\"2023-02-15 11:54:37.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaFinalizacion\":null,\"user\":\"susana_cocinera\",\"password\":\"*3F835267B6B2F85CD865ACABE0B1395D4CBBBFEC\",\"sector\":\"cocina\",\"tipo\":\"cocinero\"},{\"idUsuario\":4,\"nombre\":\"admin\",\"fechaCreacion\":{\"date\":\"2023-11-23 01:25:23.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaFinalizacion\":null,\"user\":\"admin\",\"password\":\"$2y$10$qW3JhSoT\\\/1zIWCN3F2C1seds6PQhsWva8GPRonVWmf50UurMvm8FW\",\"sector\":\"admin\",\"tipo\":\"admin\"}]}"
+        },
+        "timestamp": "2023-11-23 05:25:49"
+    }
+],
+[
+    {
+        "request": {
+            "method": "POST",
+            "uri": "http:\/\/localhost:666\/app\/auth\/login",
+            "headers": {
+                "User-Agent": [
+                    "PostmanRuntime\/7.35.0"
+                ],
+                "Accept": [
+                    "*\/*"
+                ],
+                "Postman-Token": [
+                    "91fe7352-1c5f-4b09-b788-720f56d6a32b"
+                ],
+                "Host": [
+                    "localhost"
+                ],
+                "Accept-Encoding": [
+                    "gzip, deflate, br"
+                ],
+                "Connection": [
+                    "keep-alive"
+                ],
+                "Content-Type": [
+                    "multipart\/form-data; boundary=--------------------------910171175165126756823202"
+                ],
+                "Content-Length": [
+                    "285"
+                ]
+            },
+            "body": ""
+        },
+        "response": {
+            "statusCode": 200,
+            "headers": {
+                "Content-Type": [
+                    "application\/json"
+                ]
+            },
+            "body": "{\"error\":\"Usuario o contrase\\u00f1a incorrectos\"}"
+        },
+        "timestamp": "2023-11-23 05:26:59"
+    }
+],
+[
+    {
+        "request": {
+            "method": "POST",
+            "uri": "http:\/\/localhost:666\/app\/auth\/login",
+            "headers": {
+                "User-Agent": [
+                    "PostmanRuntime\/7.35.0"
+                ],
+                "Accept": [
+                    "*\/*"
+                ],
+                "Postman-Token": [
+                    "04e4864f-bc14-42de-9f3c-d8f461c90886"
+                ],
+                "Host": [
+                    "localhost"
+                ],
+                "Accept-Encoding": [
+                    "gzip, deflate, br"
+                ],
+                "Connection": [
+                    "keep-alive"
+                ],
+                "Content-Type": [
+                    "multipart\/form-data; boundary=--------------------------824155043036159004660991"
+                ],
+                "Content-Length": [
+                    "285"
+                ]
+            },
+            "body": ""
+        },
+        "response": {
+            "statusCode": 200,
+            "headers": {
+                "Content-Type": [
+                    "application\/json"
+                ]
+            },
+            "body": "{\"error\":\"Usuario o contrase\\u00f1a incorrectos\"}"
+        },
+        "timestamp": "2023-11-23 05:27:40"
+    }
+],
+[
+    {
+        "request": {
+            "method": "POST",
+            "uri": "http:\/\/localhost:666\/app\/auth\/login",
+            "headers": {
+                "User-Agent": [
+                    "PostmanRuntime\/7.35.0"
+                ],
+                "Accept": [
+                    "*\/*"
+                ],
+                "Postman-Token": [
+                    "5fd03af9-bd74-4199-ab16-8410981c4d05"
+                ],
+                "Host": [
+                    "localhost"
+                ],
+                "Accept-Encoding": [
+                    "gzip, deflate, br"
+                ],
+                "Connection": [
+                    "keep-alive"
+                ],
+                "Content-Type": [
+                    "multipart\/form-data; boundary=--------------------------915345238248825718068401"
+                ],
+                "Content-Length": [
+                    "285"
+                ]
+            },
+            "body": ""
+        },
+        "response": {
+            "statusCode": 200,
+            "headers": {
+                "Content-Type": [
+                    "application\/json"
+                ]
+            },
+            "body": "{\"jwt\":\"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MDA3MTM2ODIsImV4cCI6MTcwMDcxNzI4MiwiYXVkIjoiMzRjNWQ0YWJlYmY2YjU0YzQxNzJkYzRkNjhiODI5NWYwMWM5ZDUyYSIsImRhdGEiOnsidXN1YXJpbyI6ImFkbWluIn0sImFwcCI6IkFQSSBSRVNUIENEIDIwMjMifQ.tIW_NF-2PgFf5aUykKrVcB5q1pc4j-nGkjjJqc0TG88\"}"
+        },
+        "timestamp": "2023-11-23 05:28:02"
+    }
+],
+[
+    {
+        "request": {
+            "method": "GET",
+            "uri": "http:\/\/localhost:666\/app\/usuarios",
+            "headers": {
+                "Authorization": [
+                    "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MDA3MTM2ODIsImV4cCI6MTcwMDcxNzI4MiwiYXVkIjoiMzRjNWQ0YWJlYmY2YjU0YzQxNzJkYzRkNjhiODI5NWYwMWM5ZDUyYSIsImRhdGEiOnsidXN1YXJpbyI6ImFkbWluIn0sImFwcCI6IkFQSSBSRVNUIENEIDIwMjMifQ.tIW_NF-2PgFf5aUykKrVcB5q1pc4j-nGkjjJqc0TG88"
+                ],
+                "User-Agent": [
+                    "PostmanRuntime\/7.35.0"
+                ],
+                "Accept": [
+                    "*\/*"
+                ],
+                "Postman-Token": [
+                    "092234d3-81b4-4714-9db2-e410dc14381a"
+                ],
+                "Host": [
+                    "localhost"
+                ],
+                "Accept-Encoding": [
+                    "gzip, deflate, br"
+                ],
+                "Connection": [
+                    "keep-alive"
+                ]
+            },
+            "body": ""
+        },
+        "response": {
+            "statusCode": 200,
+            "headers": {
+                "Content-Type": [
+                    "application\/json"
+                ]
+            },
+            "body": "{\"mensaje\":\"Usuario inexistente\"}"
+        },
+        "timestamp": "2023-11-23 05:28:41"
+    }
+],
+[
+    {
+        "request": {
+            "method": "GET",
+            "uri": "http:\/\/localhost:666\/app\/usuarios",
+            "headers": {
+                "Authorization": [
+                    "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MDA3MTM2ODIsImV4cCI6MTcwMDcxNzI4MiwiYXVkIjoiMzRjNWQ0YWJlYmY2YjU0YzQxNzJkYzRkNjhiODI5NWYwMWM5ZDUyYSIsImRhdGEiOnsidXN1YXJpbyI6ImFkbWluIn0sImFwcCI6IkFQSSBSRVNUIENEIDIwMjMifQ.tIW_NF-2PgFf5aUykKrVcB5q1pc4j-nGkjjJqc0TG88"
+                ],
+                "User-Agent": [
+                    "PostmanRuntime\/7.35.0"
+                ],
+                "Accept": [
+                    "*\/*"
+                ],
+                "Postman-Token": [
+                    "0d363b16-d986-4688-9ebb-4a2e6cc89e30"
+                ],
+                "Host": [
+                    "localhost"
+                ],
+                "Accept-Encoding": [
+                    "gzip, deflate, br"
+                ],
+                "Connection": [
+                    "keep-alive"
+                ]
+            },
+            "body": ""
+        },
+        "response": {
+            "statusCode": 200,
+            "headers": {
+                "Content-Type": [
+                    "application\/json"
+                ]
+            },
+            "body": "{\"mensaje\":\"Usuario inexistente\"}"
+        },
+        "timestamp": "2023-11-23 05:30:12"
+    }
+],
+[
+    {
+        "request": {
+            "method": "POST",
+            "uri": "http:\/\/localhost:666\/app\/auth\/login",
+            "headers": {
+                "User-Agent": [
+                    "PostmanRuntime\/7.35.0"
+                ],
+                "Accept": [
+                    "*\/*"
+                ],
+                "Postman-Token": [
+                    "da3ec920-d538-4d9b-8092-3bd6fdf340b8"
+                ],
+                "Host": [
+                    "localhost"
+                ],
+                "Accept-Encoding": [
+                    "gzip, deflate, br"
+                ],
+                "Connection": [
+                    "keep-alive"
+                ],
+                "Content-Type": [
+                    "multipart\/form-data; boundary=--------------------------025053490467101237127254"
+                ],
+                "Content-Length": [
+                    "285"
+                ]
+            },
+            "body": ""
+        },
+        "response": {
+            "statusCode": 200,
+            "headers": {
+                "Content-Type": [
+                    "application\/json"
+                ]
+            },
+            "body": "{\"jwt\":\"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MDA3MTM5NTksImV4cCI6MTcwMDcxNzU1OSwiYXVkIjoiMzRjNWQ0YWJlYmY2YjU0YzQxNzJkYzRkNjhiODI5NWYwMWM5ZDUyYSIsImRhdGEiOnsidXN1YXJpbyI6ImFkbWluIiwidGlwbyI6ImFkbWluIiwic2VjdG9yIjoiYWRtaW4ifSwiYXBwIjoiQVBJIFJFU1QgQ0QgMjAyMyJ9.i7SBwOewvb10stib4T6nfTVaH47QTrj8dLuLT2RQqsU\"}"
+        },
+        "timestamp": "2023-11-23 05:32:39"
+    }
+],
+[
+    {
+        "request": {
+            "method": "GET",
+            "uri": "http:\/\/localhost:666\/app\/usuarios",
+            "headers": {
+                "Authorization": [
+                    "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MDA3MTM5NTksImV4cCI6MTcwMDcxNzU1OSwiYXVkIjoiMzRjNWQ0YWJlYmY2YjU0YzQxNzJkYzRkNjhiODI5NWYwMWM5ZDUyYSIsImRhdGEiOnsidXN1YXJpbyI6ImFkbWluIiwidGlwbyI6ImFkbWluIiwic2VjdG9yIjoiYWRtaW4ifSwiYXBwIjoiQVBJIFJFU1QgQ0QgMjAyMyJ9.i7SBwOewvb10stib4T6nfTVaH47QTrj8dLuLT2RQqsU"
+                ],
+                "User-Agent": [
+                    "PostmanRuntime\/7.35.0"
+                ],
+                "Accept": [
+                    "*\/*"
+                ],
+                "Postman-Token": [
+                    "28e29789-8f0c-46fb-aa45-c69d69e6634e"
+                ],
+                "Host": [
+                    "localhost"
+                ],
+                "Accept-Encoding": [
+                    "gzip, deflate, br"
+                ],
+                "Connection": [
+                    "keep-alive"
+                ]
+            },
+            "body": ""
+        },
+        "response": {
+            "statusCode": 200,
+            "headers": {
+                "Content-Type": [
+                    "application\/json"
+                ]
+            },
+            "body": "{\"mensaje\":\"Usuario inexistente\"}"
+        },
+        "timestamp": "2023-11-23 05:35:50"
+    }
+],
+[
+    {
+        "request": {
+            "method": "GET",
+            "uri": "http:\/\/localhost:666\/app\/usuarios",
+            "headers": {
+                "Authorization": [
+                    "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MDA3MTM5NTksImV4cCI6MTcwMDcxNzU1OSwiYXVkIjoiMzRjNWQ0YWJlYmY2YjU0YzQxNzJkYzRkNjhiODI5NWYwMWM5ZDUyYSIsImRhdGEiOnsidXN1YXJpbyI6ImFkbWluIiwidGlwbyI6ImFkbWluIiwic2VjdG9yIjoiYWRtaW4ifSwiYXBwIjoiQVBJIFJFU1QgQ0QgMjAyMyJ9.i7SBwOewvb10stib4T6nfTVaH47QTrj8dLuLT2RQqsU"
+                ],
+                "User-Agent": [
+                    "PostmanRuntime\/7.35.0"
+                ],
+                "Accept": [
+                    "*\/*"
+                ],
+                "Postman-Token": [
+                    "141d8704-f287-49b4-8aae-e7b665538e7f"
+                ],
+                "Host": [
+                    "localhost"
+                ],
+                "Accept-Encoding": [
+                    "gzip, deflate, br"
+                ],
+                "Connection": [
+                    "keep-alive"
+                ]
+            },
+            "body": ""
+        },
+        "response": {
+            "statusCode": 200,
+            "headers": {
+                "Content-Type": [
+                    "application\/json"
+                ]
+            },
+            "body": "{\"listaUsuario\":[{\"idUsuario\":1,\"nombre\":\"cristobal\",\"fechaCreacion\":{\"date\":\"2023-11-14 11:54:37.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaFinalizacion\":null,\"user\":\"cristobal_socio\",\"password\":\"*4D78C66DBC6FA11E7084240C135637D650FECAB7\",\"sector\":\"administracion\",\"tipo\":\"admin\"},{\"idUsuario\":2,\"nombre\":\"oscar\",\"fechaCreacion\":{\"date\":\"2023-11-15 11:54:37.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaFinalizacion\":null,\"user\":\"oscar_mozo\",\"password\":\"*7924A6822A50269BE36F22130A83D7ED07E32700\",\"sector\":\"mesas\",\"tipo\":\"mozo\"},{\"idUsuario\":3,\"nombre\":\"susana\",\"fechaCreacion\":{\"date\":\"2023-02-15 11:54:37.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaFinalizacion\":null,\"user\":\"susana_cocinera\",\"password\":\"*3F835267B6B2F85CD865ACABE0B1395D4CBBBFEC\",\"sector\":\"cocina\",\"tipo\":\"cocinero\"},{\"idUsuario\":4,\"nombre\":\"admin\",\"fechaCreacion\":{\"date\":\"2023-11-23 01:25:23.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaFinalizacion\":null,\"user\":\"admin\",\"password\":\"$2y$10$qW3JhSoT\\\/1zIWCN3F2C1seds6PQhsWva8GPRonVWmf50UurMvm8FW\",\"sector\":\"admin\",\"tipo\":\"admin\"}]}"
+        },
+        "timestamp": "2023-11-23 05:37:49"
+    }
+],
+[
+    {
+        "request": {
+            "method": "GET",
+            "uri": "http:\/\/localhost:666\/app\/usuarios",
+            "headers": {
+                "Authorization": [
+                    "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MDA3MTM5NTksImV4cCI6MTcwMDcxNzU1OSwiYXVkIjoiMzRjNWQ0YWJlYmY2YjU0YzQxNzJkYzRkNjhiODI5NWYwMWM5ZDUyYSIsImRhdGEiOnsidXN1YXJpbyI6ImFkbWluIiwidGlwbyI6ImFkbWluIiwic2VjdG9yIjoiYWRtaW4ifSwiYXBwIjoiQVBJIFJFU1QgQ0QgMjAyMyJ9.i7SBwOewvb10stib4T6nfTVaH47QTrj8dLuLT2RQqsU"
+                ],
+                "User-Agent": [
+                    "PostmanRuntime\/7.35.0"
+                ],
+                "Accept": [
+                    "*\/*"
+                ],
+                "Postman-Token": [
+                    "effb91f7-6487-488f-9e4a-147c3c5a8a99"
+                ],
+                "Host": [
+                    "localhost"
+                ],
+                "Accept-Encoding": [
+                    "gzip, deflate, br"
+                ],
+                "Connection": [
+                    "keep-alive"
+                ]
+            },
+            "body": ""
+        },
+        "response": {
+            "statusCode": 200,
+            "headers": {
+                "Content-Type": [
+                    "application\/json"
+                ]
+            },
+            "body": "{\"listaUsuario\":[{\"idUsuario\":1,\"nombre\":\"cristobal\",\"fechaCreacion\":{\"date\":\"2023-11-14 11:54:37.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaFinalizacion\":null,\"user\":\"cristobal_socio\",\"password\":\"*4D78C66DBC6FA11E7084240C135637D650FECAB7\",\"sector\":\"administracion\",\"tipo\":\"admin\"},{\"idUsuario\":2,\"nombre\":\"oscar\",\"fechaCreacion\":{\"date\":\"2023-11-15 11:54:37.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaFinalizacion\":null,\"user\":\"oscar_mozo\",\"password\":\"*7924A6822A50269BE36F22130A83D7ED07E32700\",\"sector\":\"mesas\",\"tipo\":\"mozo\"},{\"idUsuario\":3,\"nombre\":\"susana\",\"fechaCreacion\":{\"date\":\"2023-02-15 11:54:37.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaFinalizacion\":null,\"user\":\"susana_cocinera\",\"password\":\"*3F835267B6B2F85CD865ACABE0B1395D4CBBBFEC\",\"sector\":\"cocina\",\"tipo\":\"cocinero\"},{\"idUsuario\":4,\"nombre\":\"admin\",\"fechaCreacion\":{\"date\":\"2023-11-23 01:25:23.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaFinalizacion\":null,\"user\":\"admin\",\"password\":\"$2y$10$qW3JhSoT\\\/1zIWCN3F2C1seds6PQhsWva8GPRonVWmf50UurMvm8FW\",\"sector\":\"admin\",\"tipo\":\"admin\"}]}"
+        },
+        "timestamp": "2023-11-23 05:39:51"
+    }
+],
+[
+    {
+        "request": {
+            "method": "GET",
+            "uri": "http:\/\/localhost:666\/app\/mesas",
+            "headers": {
+                "PHP-AUTH-USER": [
+                    "cristobal_socio"
+                ],
+                "Authorization": [
+                    "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MDA2MDU1MzUsImV4cCI6MTcwMDYwOTEzNSwiYXVkIjoiMzRjNWQ0YWJlYmY2YjU0YzQxNzJkYzRkNjhiODI5NWYwMWM5ZDUyYSIsImRhdGEiOnsidXN1YXJpbyI6ImNyaXN0b2JhbF9zb2NpbyJ9LCJhcHAiOiJBUEkgUkVTVCBDRCAyMDIzIn0.d2HS_Q2pwqeveIN5RscPxkGDfErY6kXlgN8txi1VK04"
+                ],
+                "User-Agent": [
+                    "PostmanRuntime\/7.35.0"
+                ],
+                "Accept": [
+                    "*\/*"
+                ],
+                "Postman-Token": [
+                    "b3d47a32-6fb3-42d3-8064-208f169c9fe9"
+                ],
+                "Host": [
+                    "localhost"
+                ],
+                "Accept-Encoding": [
+                    "gzip, deflate, br"
+                ],
+                "Connection": [
+                    "keep-alive"
+                ]
+            },
+            "body": ""
+        },
+        "response": {
+            "statusCode": 200,
+            "headers": {
+                "Content-Type": [
+                    "application\/json"
+                ]
+            },
+            "body": "{\"mensaje\":\"Error: Clave fuera de tiempo\"}"
+        },
+        "timestamp": "2023-11-23 05:40:04"
+    }
+],
+[
+    {
+        "request": {
+            "method": "GET",
+            "uri": "http:\/\/localhost:666\/app\/pedidos",
+            "headers": {
+                "PHP-AUTH-USER": [
+                    "oscar_mozo"
+                ],
+                "Authorization": [
+                    "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MDA2MTA5MTAsImV4cCI6MTcwMDYxNDUxMCwiYXVkIjoiMzRjNWQ0YWJlYmY2YjU0YzQxNzJkYzRkNjhiODI5NWYwMWM5ZDUyYSIsImRhdGEiOnsidXN1YXJpbyI6ImNyaXN0b2JhbF9zb2NpbyJ9LCJhcHAiOiJBUEkgUkVTVCBDRCAyMDIzIn0.eaMaQvgIWZZJTYQCP2_2d1qBj-DgBJ2cqhCgrr4alUk"
+                ],
+                "User-Agent": [
+                    "PostmanRuntime\/7.35.0"
+                ],
+                "Accept": [
+                    "*\/*"
+                ],
+                "Postman-Token": [
+                    "cd28f721-1258-44f2-9648-382686d8fa8f"
+                ],
+                "Host": [
+                    "localhost"
+                ],
+                "Accept-Encoding": [
+                    "gzip, deflate, br"
+                ],
+                "Connection": [
+                    "keep-alive"
+                ]
+            },
+            "body": ""
+        },
+        "response": {
+            "statusCode": 200,
+            "headers": {
+                "Content-Type": [
+                    "application\/json"
+                ]
+            },
+            "body": "{\"mensaje\":\"Error: Clave fuera de tiempo\"}"
+        },
+        "timestamp": "2023-11-23 05:40:12"
+    }
+],
+[
+    {
+        "request": {
+            "method": "GET",
+            "uri": "http:\/\/localhost:666\/app\/pedidos",
+            "headers": {
+                "PHP-AUTH-USER": [
+                    "oscar_mozo"
+                ],
+                "Authorization": [
+                    "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MDA2MTA5MTAsImV4cCI6MTcwMDYxNDUxMCwiYXVkIjoiMzRjNWQ0YWJlYmY2YjU0YzQxNzJkYzRkNjhiODI5NWYwMWM5ZDUyYSIsImRhdGEiOnsidXN1YXJpbyI6ImNyaXN0b2JhbF9zb2NpbyJ9LCJhcHAiOiJBUEkgUkVTVCBDRCAyMDIzIn0.eaMaQvgIWZZJTYQCP2_2d1qBj-DgBJ2cqhCgrr4alUk"
+                ],
+                "User-Agent": [
+                    "PostmanRuntime\/7.35.0"
+                ],
+                "Accept": [
+                    "*\/*"
+                ],
+                "Postman-Token": [
+                    "f19ff6b2-2de5-411d-8144-43264c2537ae"
+                ],
+                "Host": [
+                    "localhost"
+                ],
+                "Accept-Encoding": [
+                    "gzip, deflate, br"
+                ],
+                "Connection": [
+                    "keep-alive"
+                ]
+            },
+            "body": ""
+        },
+        "response": {
+            "statusCode": 200,
+            "headers": {
+                "Content-Type": [
+                    "application\/json"
+                ]
+            },
+            "body": "{\"mensaje\":\"Error: Clave fuera de tiempo\"}"
+        },
+        "timestamp": "2023-11-23 05:40:24"
+    }
+],
+[
+    {
+        "request": {
+            "method": "GET",
+            "uri": "http:\/\/localhost:666\/app\/pedidos",
+            "headers": {
+                "PHP-AUTH-USER": [
+                    "oscar_mozo"
+                ],
+                "Authorization": [
+                    "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MDA2MTA5MTAsImV4cCI6MTcwMDYxNDUxMCwiYXVkIjoiMzRjNWQ0YWJlYmY2YjU0YzQxNzJkYzRkNjhiODI5NWYwMWM5ZDUyYSIsImRhdGEiOnsidXN1YXJpbyI6ImNyaXN0b2JhbF9zb2NpbyJ9LCJhcHAiOiJBUEkgUkVTVCBDRCAyMDIzIn0.eaMaQvgIWZZJTYQCP2_2d1qBj-DgBJ2cqhCgrr4alUk"
+                ],
+                "User-Agent": [
+                    "PostmanRuntime\/7.35.0"
+                ],
+                "Accept": [
+                    "*\/*"
+                ],
+                "Postman-Token": [
+                    "95abc64c-e8b3-40b4-b791-17f1261c402e"
+                ],
+                "Host": [
+                    "localhost"
+                ],
+                "Accept-Encoding": [
+                    "gzip, deflate, br"
+                ],
+                "Connection": [
+                    "keep-alive"
+                ]
+            },
+            "body": ""
+        },
+        "response": {
+            "statusCode": 200,
+            "headers": {
+                "Content-Type": [
+                    "application\/json"
+                ]
+            },
+            "body": "{\"mensaje\":\"Error: Clave fuera de tiempo\"}"
+        },
+        "timestamp": "2023-11-23 05:40:43"
+    }
+],
+[
+    {
+        "request": {
+            "method": "GET",
+            "uri": "http:\/\/localhost:666\/app\/usuarios",
+            "headers": {
+                "Authorization": [
+                    "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MDA3MTM5NTksImV4cCI6MTcwMDcxNzU1OSwiYXVkIjoiMzRjNWQ0YWJlYmY2YjU0YzQxNzJkYzRkNjhiODI5NWYwMWM5ZDUyYSIsImRhdGEiOnsidXN1YXJpbyI6ImFkbWluIiwidGlwbyI6ImFkbWluIiwic2VjdG9yIjoiYWRtaW4ifSwiYXBwIjoiQVBJIFJFU1QgQ0QgMjAyMyJ9.i7SBwOewvb10stib4T6nfTVaH47QTrj8dLuLT2RQqsU"
+                ],
+                "User-Agent": [
+                    "PostmanRuntime\/7.35.0"
+                ],
+                "Accept": [
+                    "*\/*"
+                ],
+                "Postman-Token": [
+                    "26a1ae08-f6f9-4ea0-b207-46af0d048760"
+                ],
+                "Host": [
+                    "localhost"
+                ],
+                "Accept-Encoding": [
+                    "gzip, deflate, br"
+                ],
+                "Connection": [
+                    "keep-alive"
+                ]
+            },
+            "body": ""
+        },
+        "response": {
+            "statusCode": 200,
+            "headers": {
+                "Content-Type": [
+                    "application\/json"
+                ]
+            },
+            "body": "{\"listaUsuario\":[{\"idUsuario\":1,\"nombre\":\"cristobal\",\"fechaCreacion\":{\"date\":\"2023-11-14 11:54:37.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaFinalizacion\":null,\"user\":\"cristobal_socio\",\"password\":\"*4D78C66DBC6FA11E7084240C135637D650FECAB7\",\"sector\":\"administracion\",\"tipo\":\"admin\"},{\"idUsuario\":2,\"nombre\":\"oscar\",\"fechaCreacion\":{\"date\":\"2023-11-15 11:54:37.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaFinalizacion\":null,\"user\":\"oscar_mozo\",\"password\":\"*7924A6822A50269BE36F22130A83D7ED07E32700\",\"sector\":\"mesas\",\"tipo\":\"mozo\"},{\"idUsuario\":3,\"nombre\":\"susana\",\"fechaCreacion\":{\"date\":\"2023-02-15 11:54:37.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaFinalizacion\":null,\"user\":\"susana_cocinera\",\"password\":\"*3F835267B6B2F85CD865ACABE0B1395D4CBBBFEC\",\"sector\":\"cocina\",\"tipo\":\"cocinero\"},{\"idUsuario\":4,\"nombre\":\"admin\",\"fechaCreacion\":{\"date\":\"2023-11-23 01:25:23.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaFinalizacion\":null,\"user\":\"admin\",\"password\":\"$2y$10$qW3JhSoT\\\/1zIWCN3F2C1seds6PQhsWva8GPRonVWmf50UurMvm8FW\",\"sector\":\"admin\",\"tipo\":\"admin\"}]}"
+        },
+        "timestamp": "2023-11-23 05:41:25"
+    }
+],
+[
+    {
+        "request": {
+            "method": "POST",
+            "uri": "http:\/\/localhost:666\/app\/pedidos",
+            "headers": {
+                "Authorization": [
+                    "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MDA3MTM5NTksImV4cCI6MTcwMDcxNzU1OSwiYXVkIjoiMzRjNWQ0YWJlYmY2YjU0YzQxNzJkYzRkNjhiODI5NWYwMWM5ZDUyYSIsImRhdGEiOnsidXN1YXJpbyI6ImFkbWluIiwidGlwbyI6ImFkbWluIiwic2VjdG9yIjoiYWRtaW4ifSwiYXBwIjoiQVBJIFJFU1QgQ0QgMjAyMyJ9.i7SBwOewvb10stib4T6nfTVaH47QTrj8dLuLT2RQqsU"
+                ],
+                "User-Agent": [
+                    "PostmanRuntime\/7.35.0"
+                ],
+                "Accept": [
+                    "*\/*"
+                ],
+                "Postman-Token": [
+                    "a28949cc-a62f-4b5c-9597-5d94aa528e19"
+                ],
+                "Host": [
+                    "localhost"
+                ],
+                "Accept-Encoding": [
+                    "gzip, deflate, br"
+                ],
+                "Connection": [
+                    "keep-alive"
+                ],
+                "Content-Type": [
+                    "multipart\/form-data; boundary=--------------------------612146218189252390661684"
+                ],
+                "Content-Length": [
+                    "897"
+                ]
+            },
+            "body": ""
+        },
+        "response": {
+            "statusCode": 200,
+            "headers": {
+                "Content-Type": [
+                    "application\/json"
+                ]
+            },
+            "body": "{\"mensaje\":\"Error: testeando\"}"
+        },
+        "timestamp": "2023-11-23 05:50:58"
+    }
+],
+[
+    {
+        "request": {
+            "method": "POST",
+            "uri": "http:\/\/localhost:666\/app\/pedidos",
+            "headers": {
+                "Authorization": [
+                    "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MDA3MTM5NTksImV4cCI6MTcwMDcxNzU1OSwiYXVkIjoiMzRjNWQ0YWJlYmY2YjU0YzQxNzJkYzRkNjhiODI5NWYwMWM5ZDUyYSIsImRhdGEiOnsidXN1YXJpbyI6ImFkbWluIiwidGlwbyI6ImFkbWluIiwic2VjdG9yIjoiYWRtaW4ifSwiYXBwIjoiQVBJIFJFU1QgQ0QgMjAyMyJ9.i7SBwOewvb10stib4T6nfTVaH47QTrj8dLuLT2RQqsU"
+                ],
+                "User-Agent": [
+                    "PostmanRuntime\/7.35.0"
+                ],
+                "Accept": [
+                    "*\/*"
+                ],
+                "Postman-Token": [
+                    "277faa1f-eb98-4629-b2fa-9dc39026cbc4"
+                ],
+                "Host": [
+                    "localhost"
+                ],
+                "Accept-Encoding": [
+                    "gzip, deflate, br"
+                ],
+                "Connection": [
+                    "keep-alive"
+                ],
+                "Content-Type": [
+                    "multipart\/form-data; boundary=--------------------------086799941814417854269103"
+                ],
+                "Content-Length": [
+                    "897"
+                ]
+            },
+            "body": ""
+        },
+        "response": {
+            "statusCode": 200,
+            "headers": {
+                "Content-Type": [
+                    "application\/json"
+                ]
+            },
+            "body": "{\"mensaje\":\"Error: testeando\"}"
+        },
+        "timestamp": "2023-11-23 05:51:06"
+    }
+],
+[
+    {
+        "request": {
+            "method": "POST",
+            "uri": "http:\/\/localhost:666\/app\/pedidos",
+            "headers": {
+                "Authorization": [
+                    "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MDA3MTM5NTksImV4cCI6MTcwMDcxNzU1OSwiYXVkIjoiMzRjNWQ0YWJlYmY2YjU0YzQxNzJkYzRkNjhiODI5NWYwMWM5ZDUyYSIsImRhdGEiOnsidXN1YXJpbyI6ImFkbWluIiwidGlwbyI6ImFkbWluIiwic2VjdG9yIjoiYWRtaW4ifSwiYXBwIjoiQVBJIFJFU1QgQ0QgMjAyMyJ9.i7SBwOewvb10stib4T6nfTVaH47QTrj8dLuLT2RQqsU"
+                ],
+                "User-Agent": [
+                    "PostmanRuntime\/7.35.0"
+                ],
+                "Accept": [
+                    "*\/*"
+                ],
+                "Postman-Token": [
+                    "76b0e0d1-e3b9-42b4-9d8c-cdd26c3ab717"
+                ],
+                "Host": [
+                    "localhost"
+                ],
+                "Accept-Encoding": [
+                    "gzip, deflate, br"
+                ],
+                "Connection": [
+                    "keep-alive"
+                ],
+                "Content-Type": [
+                    "multipart\/form-data; boundary=--------------------------520474355125016682824231"
+                ],
+                "Content-Length": [
+                    "897"
+                ]
+            },
+            "body": ""
+        },
+        "response": {
+            "statusCode": 200,
+            "headers": {
+                "Content-Type": [
+                    "application\/json"
+                ]
+            },
+            "body": "{\"mensaje\":\"Error: testeando\"}"
+        },
+        "timestamp": "2023-11-23 05:51:10"
+    }
+],
+[
+    {
+        "request": {
+            "method": "POST",
+            "uri": "http:\/\/localhost:666\/app\/pedidos",
+            "headers": {
+                "Authorization": [
+                    "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MDA3MTM5NTksImV4cCI6MTcwMDcxNzU1OSwiYXVkIjoiMzRjNWQ0YWJlYmY2YjU0YzQxNzJkYzRkNjhiODI5NWYwMWM5ZDUyYSIsImRhdGEiOnsidXN1YXJpbyI6ImFkbWluIiwidGlwbyI6ImFkbWluIiwic2VjdG9yIjoiYWRtaW4ifSwiYXBwIjoiQVBJIFJFU1QgQ0QgMjAyMyJ9.i7SBwOewvb10stib4T6nfTVaH47QTrj8dLuLT2RQqsU"
+                ],
+                "User-Agent": [
+                    "PostmanRuntime\/7.35.0"
+                ],
+                "Accept": [
+                    "*\/*"
+                ],
+                "Postman-Token": [
+                    "956c47f5-5004-40a2-ad5c-a603ff9e2884"
+                ],
+                "Host": [
+                    "localhost"
+                ],
+                "Accept-Encoding": [
+                    "gzip, deflate, br"
+                ],
+                "Connection": [
+                    "keep-alive"
+                ],
+                "Content-Type": [
+                    "multipart\/form-data; boundary=--------------------------452901882657616391010643"
+                ],
+                "Content-Length": [
+                    "897"
+                ]
+            },
+            "body": ""
+        },
+        "response": {
+            "statusCode": 200,
+            "headers": {
+                "Content-Type": [
+                    "application\/json"
+                ]
+            },
+            "body": "{\"mensaje\":\"Error: testeando\"}"
+        },
+        "timestamp": "2023-11-23 05:51:25"
+    }
+],
+[
+    {
+        "request": {
+            "method": "POST",
+            "uri": "http:\/\/localhost:666\/app\/pedidos",
+            "headers": {
+                "Authorization": [
+                    "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MDA3MTM5NTksImV4cCI6MTcwMDcxNzU1OSwiYXVkIjoiMzRjNWQ0YWJlYmY2YjU0YzQxNzJkYzRkNjhiODI5NWYwMWM5ZDUyYSIsImRhdGEiOnsidXN1YXJpbyI6ImFkbWluIiwidGlwbyI6ImFkbWluIiwic2VjdG9yIjoiYWRtaW4ifSwiYXBwIjoiQVBJIFJFU1QgQ0QgMjAyMyJ9.i7SBwOewvb10stib4T6nfTVaH47QTrj8dLuLT2RQqsU"
+                ],
+                "User-Agent": [
+                    "PostmanRuntime\/7.35.0"
+                ],
+                "Accept": [
+                    "*\/*"
+                ],
+                "Postman-Token": [
+                    "e6a6a86e-e8bc-4a0a-b40f-6b8203ed37f1"
+                ],
+                "Host": [
+                    "localhost"
+                ],
+                "Accept-Encoding": [
+                    "gzip, deflate, br"
+                ],
+                "Connection": [
+                    "keep-alive"
+                ],
+                "Content-Type": [
+                    "multipart\/form-data; boundary=--------------------------747857959145208198426104"
+                ],
+                "Content-Length": [
+                    "897"
+                ]
+            },
+            "body": ""
+        },
+        "response": {
+            "statusCode": 200,
+            "headers": {
+                "Content-Type": [
+                    "application\/json"
+                ]
+            },
+            "body": "{\"mensaje\":\"Error: testeando\"}"
+        },
+        "timestamp": "2023-11-23 05:51:26"
+    }
+],
+[
+    {
+        "request": {
+            "method": "POST",
+            "uri": "http:\/\/localhost:666\/app\/pedidos",
+            "headers": {
+                "Authorization": [
+                    "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MDA3MTM5NTksImV4cCI6MTcwMDcxNzU1OSwiYXVkIjoiMzRjNWQ0YWJlYmY2YjU0YzQxNzJkYzRkNjhiODI5NWYwMWM5ZDUyYSIsImRhdGEiOnsidXN1YXJpbyI6ImFkbWluIiwidGlwbyI6ImFkbWluIiwic2VjdG9yIjoiYWRtaW4ifSwiYXBwIjoiQVBJIFJFU1QgQ0QgMjAyMyJ9.i7SBwOewvb10stib4T6nfTVaH47QTrj8dLuLT2RQqsU"
+                ],
+                "User-Agent": [
+                    "PostmanRuntime\/7.35.0"
+                ],
+                "Accept": [
+                    "*\/*"
+                ],
+                "Postman-Token": [
+                    "cb8bd87a-0e97-42c5-b2c5-433d441d4c8f"
+                ],
+                "Host": [
+                    "localhost"
+                ],
+                "Accept-Encoding": [
+                    "gzip, deflate, br"
+                ],
+                "Connection": [
+                    "keep-alive"
+                ],
+                "Content-Type": [
+                    "multipart\/form-data; boundary=--------------------------291017292537061128603722"
+                ],
+                "Content-Length": [
+                    "897"
+                ]
+            },
+            "body": ""
+        },
+        "response": {
+            "statusCode": 200,
+            "headers": {
+                "Content-Type": [
+                    "application\/json"
+                ]
+            },
+            "body": "{\"mensaje\":\"Error: testeando\"}"
+        },
+        "timestamp": "2023-11-23 05:51:28"
+    }
+],
+[
+    {
+        "request": {
+            "method": "POST",
+            "uri": "http:\/\/localhost:666\/app\/pedidos",
+            "headers": {
+                "Authorization": [
+                    "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MDA3MTM5NTksImV4cCI6MTcwMDcxNzU1OSwiYXVkIjoiMzRjNWQ0YWJlYmY2YjU0YzQxNzJkYzRkNjhiODI5NWYwMWM5ZDUyYSIsImRhdGEiOnsidXN1YXJpbyI6ImFkbWluIiwidGlwbyI6ImFkbWluIiwic2VjdG9yIjoiYWRtaW4ifSwiYXBwIjoiQVBJIFJFU1QgQ0QgMjAyMyJ9.i7SBwOewvb10stib4T6nfTVaH47QTrj8dLuLT2RQqsU"
+                ],
+                "User-Agent": [
+                    "PostmanRuntime\/7.35.0"
+                ],
+                "Accept": [
+                    "*\/*"
+                ],
+                "Postman-Token": [
+                    "784f8fc8-f3ae-462d-9efd-27d1a18482e1"
+                ],
+                "Host": [
+                    "localhost"
+                ],
+                "Accept-Encoding": [
+                    "gzip, deflate, br"
+                ],
+                "Connection": [
+                    "keep-alive"
+                ],
+                "Content-Type": [
+                    "multipart\/form-data; boundary=--------------------------926165408817770501453061"
+                ],
+                "Content-Length": [
+                    "897"
+                ]
+            },
+            "body": ""
+        },
+        "response": {
+            "statusCode": 200,
+            "headers": {
+                "Content-Type": [
+                    "application\/json"
+                ]
+            },
+            "body": "{\"mensaje\":\"Error: testeando\"}"
+        },
+        "timestamp": "2023-11-23 05:51:48"
+    }
 ]

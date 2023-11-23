@@ -42,7 +42,6 @@ $pedidosAuthorizationMiddleware = new AuthorizationMiddleware([ROL_ADMIN, ROL_SO
 
 // Add error middleware
 $app->addErrorMiddleware(true, true, true);
-
 // Add parse body
 $app->addBodyParsingMiddleware();
 

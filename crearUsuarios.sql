@@ -22,3 +22,4 @@ SET @hashed_password = PASSWORD(@password);
 INSERT INTO db_utn_tp_comanda.usuarios
 (nombre, fechaCreacion, fechaFinalizacion, `user`, password, sector, tipo)
 VALUES('susana', '2023-02-15 11:54:37.000', NULL, 'susana_cocinera', @hashed_password, 'cocina', 'cocinero');
+

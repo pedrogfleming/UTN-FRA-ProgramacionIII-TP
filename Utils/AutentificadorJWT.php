@@ -54,22 +54,20 @@ class AutentificadorJWT
     }
 
 
-    // public static function ObtenerPayLoad($token)
-    // {
-    //     return JWT::decode(
-    //         $token,
-    //         self::$claveSecreta,
-    //         self::$tipoEncriptacion
-    //     );
-    // }
-    // public static function ObtenerData($token)
-    // {
-    //     return JWT::decode(
-    //         $token,
-    //         self::$claveSecreta,
-    //         self::$tipoEncriptacion
-    //     )->data;
-    // }
+    public static function ObtenerPayLoad($token)
+    {
+        return JWT::decode(
+            $token,
+            new Key(self::$claveSecreta, self::$tipoEncriptacion[0])
+        );
+    }
+    public static function ObtenerData($token)
+    {
+        return JWT::decode(
+            $token,
+            new Key(self::$claveSecreta, self::$tipoEncriptacion[0])
+        )->data;
+    }
     private static function Aud()
     {
         $aud = '';

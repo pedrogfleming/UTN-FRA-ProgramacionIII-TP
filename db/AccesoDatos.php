@@ -41,7 +41,6 @@ class AccesoDatos
             UNIQUE (nombre, user)
         )
         SQL;
-
         $this->objetoPDO->exec($crear_tabla_usuarios);
 
         $crear_tabla_productos = <<<SQL
@@ -57,7 +56,6 @@ class AccesoDatos
             UNIQUE (titulo)
         )
         SQL;
-
         $this->objetoPDO->exec($crear_tabla_productos);
 
         $crear_tabla_mesas = <<<SQL
@@ -69,7 +67,6 @@ class AccesoDatos
             eliminado BOOL DEFAULT FALSE
             ) AUTO_INCREMENT=1000;
         SQL;
-
         $this->objetoPDO->exec($crear_tabla_mesas);
 
         $crear_tabla_pedidos = <<<SQL
@@ -127,6 +124,29 @@ class AccesoDatos
         ) AUTO_INCREMENT=1000;
         SQL;
         $this->objetoPDO->exec($crear_tabla_encuestas);
+
+        $chequearUsuarioAdmin = <<<SQL
+        SELECT * FROM Usuarios WHERE user = 'admin' AND eliminado = 0
+        SQL;
+        $consulta = $this->prepararConsulta($chequearUsuarioAdmin);
+        $consulta->execute();
+
+        $crearAdmin = true;
+        foreach ($consulta->fetchAll(PDO::FETCH_OBJ) as $prototipo) {
+            if (isset($prototipo->user) && $prototipo->user == 'admin' && $prototipo->eliminado == ACTIVO) {
+                $crearAdmin = false;
+            }
+        }
+        if (!$crearAdmin) {
+            $claveHash = password_hash('admin123', PASSWORD_DEFAULT);
+            $crearAdminComando = <<<SQL
+                INSERT INTO Usuarios (nombre, fechaCreacion, fechaFinalizacion, user, password, sector, tipo) VALUES('admin', NOW(), NULL, 'admin', :claveHash, 'admin', 'admin')
+            SQL;
+
+            $consultaInsercion = $this->prepararConsulta($crearAdminComando);
+            $consultaInsercion->bindParam(':claveHash', $claveHash, PDO::PARAM_STR);
+            $consultaInsercion->execute();
+        }
     }
 
     public static function obtenerInstancia()

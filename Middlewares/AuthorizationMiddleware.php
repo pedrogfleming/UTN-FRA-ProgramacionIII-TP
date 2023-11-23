@@ -20,12 +20,12 @@ class AuthorizationMiddleware
     public function __invoke(Request $request, RequestHandler $handler): Response
     {
         $headerParams = $request->getServerParams();
-        if(!isset($headerParams['HTTP_PHP_AUTH_USER'])){
-            throw new HttpBadRequestException($request, "No se encontro la key PHP_AUTH_USER");
-        }
-        $nombreUsuario =  $headerParams['HTTP_PHP_AUTH_USER']; 
 
-        $autorizacion = $this->isAuthorized($nombreUsuario);
+        $header = $request->getHeaderLine('Authorization');
+        $token = trim(explode("Bearer", $header)[1]);
+        $datosUsuario = AutentificadorJWT::ObtenerData($token);
+
+        $autorizacion = $this->isAuthorized($datosUsuario);
         if ($autorizacion->estaAutorizado) {
             return $handler->handle($request);
         } else {
@@ -36,22 +36,19 @@ class AuthorizationMiddleware
         }
     }
 
-    private function isAuthorized($nombreUsuario)
+    private function isAuthorized($datosUsuario)
     {
         $ret = new stdClass();
         $ret->estaAutorizado = true;
         $ret->msj = "Usuario autenticado con exito";
 
-        $usuarioExiste = Usuario::obtenerUsuarioByUsername($nombreUsuario);
-
-        if ($usuarioExiste) {
-            $rolAutorizado = in_array($usuarioExiste->tipo, $this->rolesAutorizados);
+        if ($datosUsuario->tipo) {
+            $rolAutorizado = in_array($datosUsuario->tipo, $this->rolesAutorizados);
             if (!$rolAutorizado) {
                 $ret->estaAutorizado = false;
                 $ret->msj = "Usuario no posee permisos suficientes para realizar la accion";
             }
-        }
-        else{
+        } else {
             $ret->estaAutorizado = false;
             $ret->msj = "Usuario inexistente";
         }
