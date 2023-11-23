@@ -137,7 +137,7 @@ class AccesoDatos
                 $crearAdmin = false;
             }
         }
-        if (!$crearAdmin) {
+        if ($crearAdmin) {
             $claveHash = password_hash('admin123', PASSWORD_DEFAULT);
             $crearAdminComando = <<<SQL
                 INSERT INTO Usuarios (nombre, fechaCreacion, fechaFinalizacion, user, password, sector, tipo) VALUES('admin', NOW(), NULL, 'admin', :claveHash, 'admin', 'admin')
