@@ -50,24 +50,20 @@ class Pedido
         //Registro cada uno de los item del pedido en la tabla correspondiente
         foreach ($this->itemsPedidos as $item) {
             $item->idPedido = $idPedido;
-            if(!$item->crearItem()){
-                throw new Exception("No se pudo crear el item ". $item->idProducto . " del pedido " . $item->pedido);
+            if (!$item->crearItem()) {
+                throw new Exception("No se pudo crear el item " . $item->idProducto . " del pedido " . $item->pedido);
             }
-        }        
+        }
         return $idPedido;
     }
 
-    public static function obtenerTodos($idPedido = NULL)
+    public static function obtenerTodos($filtroEstado = null)
     {
         $objAccesoDatos = AccesoDatos::obtenerInstancia();
-        if ($idPedido == null) {
-            $consulta = $objAccesoDatos->prepararConsulta("SELECT * FROM pedidos WHERE eliminado = " . ACTIVO);
-        } else {
 
-            $consulta = $objAccesoDatos->prepararConsulta("SELECT * FROM pedidos WHERE idPedido = ? AND eliminado = " . ACTIVO);
-            $consulta->bindParam(1, $idPedido);
-        }
-
+        $consulta = $objAccesoDatos->prepararConsulta("SELECT * FROM pedidos WHERE eliminado = " . ACTIVO . " AND (? IS NULL OR estado = ?)");
+        $consulta->bindParam(1, $filtroEstado);
+        $consulta->bindParam(2, $filtroEstado);
         $consulta->execute();
 
         $arrayPedidos = array();
@@ -102,17 +98,17 @@ class Pedido
         $pedido->usuarioAsignado = $prototipo->id_usuario;
         $pedido->fechaCreacion = DateTime::createFromFormat('Y-m-d H:i:s', $prototipo->fecha_creacion, new DateTimeZone("America/Argentina/Buenos_Aires"));
         $pedido->fechaEstimadaDeFinalizacion = DateTime::createFromFormat('Y-m-d H:i:s', $prototipo->fecha_estimada_finalizacion, new DateTimeZone("America/Argentina/Buenos_Aires"));
-    
+
         if ($prototipo->fecha_finalizacion != NULL) {
             $pedido->fechaFinalizacion = DateTime::createFromFormat('Y-m-d H:i:s', $prototipo->fecha_finalizacion, new DateTimeZone("America/Argentina/Buenos_Aires"));
         } else {
             $pedido->fechaFinalizacion = $prototipo->fecha_finalizacion;
         }
-    
+
         $pedido->importeTotal = (float) $prototipo->importe_total;
         $pedido->nombreCliente = $prototipo->nombre_cliente;
         $pedido->estado = $prototipo->estado;
-    
+
         // Puedes agregar la lógica para obtener los items relacionados con el pedido
         $pedido->itemsPedidos = Item::obtenerItemsPorPedido($pedido->idPedido);
         // Calcular la diferencia en minutos entre la fecha de creación y la fecha estimada de finalización
@@ -124,13 +120,13 @@ class Pedido
     public static function modificarPedido($pedido)
     {
         $objAccesoDato = AccesoDatos::obtenerInstancia();
-        
+
         $fechaEstimadaFinalizacionString = date_format($pedido->fechaEstimadaDeFinalizacion, 'Y-m-d H:i:s');
         $fechaCreacionString = date_format($pedido->fechaCreacion, 'Y-m-d H:i:s');
 
         // Actualizar el pedido en la base de datos
         $consulta = $objAccesoDato->prepararConsulta("UPDATE Pedidos SET id_usuario = ?, id_mesa = ?, fecha_creacion = ?, fecha_estimada_finalizacion = ?, fecha_finalizacion = ?, importe_total = ?, nombre_cliente = ?, estado = ? WHERE id_pedido = ? AND eliminado = " . ACTIVO);
-        
+
         $consulta->bindParam(1, $pedido->usuarioAsignado->idUsuario);
         $consulta->bindParam(2, $pedido->idMesa);
         $consulta->bindParam(3, $fechaCreacionString);

@@ -7,6 +7,7 @@ include_once MODELS . '/Pedido.php';
 include_once MODELS . "/Item.php";
 include_once MODELS . "/Usuario.php";
 require_once INTERFACES . '/IApiUsable.php';
+include_once UTILS . '/AutentificadorJWT.php';
 
 class PedidoController implements IApiUsable
 {
@@ -96,16 +97,20 @@ class PedidoController implements IApiUsable
 
     public function TraerTodos($request, $response, $args)
     {
-        $username = $request->getServerParams()[HEADER_USUARIO];
+        $filtroEstado =$request->getQueryParams();
+        $filtroEstado = isset($filtroEstado['estado']) ? $filtroEstado['estado'] : null;
+        $header = $request->getHeaderLine('Authorization');
+        $token = trim(explode("Bearer", $header)[1]);
+        $usuario = AutentificadorJWT::ObtenerData($token);
 
-        $lista = Pedido::obtenerTodos();
+
+        $lista = Pedido::obtenerTodos($filtroEstado);
         $pedidosFiltrados = $lista;
-        if(isset($username)){
-            $usuario = Usuario::obtenerUsuarioByUsername($username);
+        if(isset($usuario)){
             // El socio puede ver todos los pedidos
             if($usuario->tipo != Usuario::TIPO_SOCIO && $usuario->tipo != Usuario::TIPO_ADMIN){
-                $pedidosFiltrados = array_filter($lista, function ($pedido) use ($username) {
-                    return $pedido->usuarioAsignado == $username;
+                $pedidosFiltrados = array_filter($lista, function ($pedido) use ($usuario) {
+                    return $pedido->usuarioAsignado == $usuario->usuario;
                 });
             }
         }
