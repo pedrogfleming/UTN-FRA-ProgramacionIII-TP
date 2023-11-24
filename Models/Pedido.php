@@ -108,7 +108,7 @@ class Pedido
         $pedido->nombreCliente = $prototipo->nombre_cliente;
         $pedido->estado = $prototipo->estado;
 
-        $pedido->itemsPedidos = $traerItems === true ? Item::obtenerItemsPorPedido($pedido->idPedido) : [];
+        $pedido->itemsPedidos = $traerItems == "true" ? Item::obtenerItemsPorPedido($pedido->idPedido) : [];
         // Calcular la diferencia en minutos entre la fecha de creación y la fecha estimada de finalización
         $diferencia = $pedido->fechaCreacion->diff($pedido->fechaEstimadaDeFinalizacion);
         $pedido->minutosEstimados = $diferencia->days * 24 * 60 + $diferencia->h * 60 + $diferencia->i;
