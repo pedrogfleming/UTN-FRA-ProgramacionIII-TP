@@ -5615,4 +5615,2002 @@
         },
         "timestamp": "2023-11-24 01:54:55"
     }
+],
+[
+    {
+        "request": {
+            "method": "GET",
+            "uri": "http:\/\/localhost:666\/app\/pedidos?idMesa=1000&idPedido=1001",
+            "headers": {
+                "Authorization": [
+                    "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MDA3ODcwMjQsImV4cCI6MTcwMDc5MDYyNCwiYXVkIjoiMzRjNWQ0YWJlYmY2YjU0YzQxNzJkYzRkNjhiODI5NWYwMWM5ZDUyYSIsImRhdGEiOnsidXN1YXJpbyI6ImFkbWluIiwidGlwbyI6ImFkbWluIiwic2VjdG9yIjoiYWRtaW4ifSwiYXBwIjoiQVBJIFJFU1QgQ0QgMjAyMyJ9.8alnnsLnN92DzTFZbWfwZH0gnanDBMc5u-SkTrF6w1o"
+                ],
+                "User-Agent": [
+                    "PostmanRuntime\/7.35.0"
+                ],
+                "Accept": [
+                    "*\/*"
+                ],
+                "Postman-Token": [
+                    "13c9fab3-309c-4c9b-8fd4-3408efbd9b75"
+                ],
+                "Host": [
+                    "localhost"
+                ],
+                "Accept-Encoding": [
+                    "gzip, deflate, br"
+                ],
+                "Connection": [
+                    "keep-alive"
+                ]
+            },
+            "body": ""
+        },
+        "response": {
+            "statusCode": 200,
+            "headers": {
+                "Content-Type": [
+                    "application\/json"
+                ]
+            },
+            "body": "{\"listaPedido\":[{\"idPedido\":1001,\"idMesa\":1000,\"usuarioAsignado\":2,\"itemsPedidos\":[],\"fechaCreacion\":{\"date\":\"2023-11-23 21:20:20.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaEstimadaDeFinalizacion\":{\"date\":\"2023-11-23 22:07:20.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaFinalizacion\":null,\"estado\":\"pendiente\",\"importeTotal\":720,\"nombreCliente\":\"Franco\",\"minutosEstimados\":47}]}"
+        },
+        "timestamp": "2023-11-24 02:03:13"
+    }
+],
+[
+    {
+        "request": {
+            "method": "GET",
+            "uri": "http:\/\/localhost:666\/app\/pedidos?idMesa=999&idPedido=1001",
+            "headers": {
+                "Authorization": [
+                    "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MDA3ODcwMjQsImV4cCI6MTcwMDc5MDYyNCwiYXVkIjoiMzRjNWQ0YWJlYmY2YjU0YzQxNzJkYzRkNjhiODI5NWYwMWM5ZDUyYSIsImRhdGEiOnsidXN1YXJpbyI6ImFkbWluIiwidGlwbyI6ImFkbWluIiwic2VjdG9yIjoiYWRtaW4ifSwiYXBwIjoiQVBJIFJFU1QgQ0QgMjAyMyJ9.8alnnsLnN92DzTFZbWfwZH0gnanDBMc5u-SkTrF6w1o"
+                ],
+                "User-Agent": [
+                    "PostmanRuntime\/7.35.0"
+                ],
+                "Accept": [
+                    "*\/*"
+                ],
+                "Postman-Token": [
+                    "6bcf1c33-4f4e-4348-87a4-3ec988f794d6"
+                ],
+                "Host": [
+                    "localhost"
+                ],
+                "Accept-Encoding": [
+                    "gzip, deflate, br"
+                ],
+                "Connection": [
+                    "keep-alive"
+                ]
+            },
+            "body": ""
+        },
+        "response": {
+            "statusCode": 200,
+            "headers": {
+                "Content-Type": [
+                    "application\/json"
+                ]
+            },
+            "body": "{\"listaPedido\":[{\"idPedido\":1001,\"idMesa\":1000,\"usuarioAsignado\":2,\"itemsPedidos\":[],\"fechaCreacion\":{\"date\":\"2023-11-23 21:20:20.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaEstimadaDeFinalizacion\":{\"date\":\"2023-11-23 22:07:20.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaFinalizacion\":null,\"estado\":\"pendiente\",\"importeTotal\":720,\"nombreCliente\":\"Franco\",\"minutosEstimados\":47}]}"
+        },
+        "timestamp": "2023-11-24 02:03:21"
+    }
+],
+[
+    {
+        "request": {
+            "method": "GET",
+            "uri": "http:\/\/localhost:666\/app\/pedidos?idMesa=999&idPedido=1001",
+            "headers": {
+                "Authorization": [
+                    "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MDA3ODcwMjQsImV4cCI6MTcwMDc5MDYyNCwiYXVkIjoiMzRjNWQ0YWJlYmY2YjU0YzQxNzJkYzRkNjhiODI5NWYwMWM5ZDUyYSIsImRhdGEiOnsidXN1YXJpbyI6ImFkbWluIiwidGlwbyI6ImFkbWluIiwic2VjdG9yIjoiYWRtaW4ifSwiYXBwIjoiQVBJIFJFU1QgQ0QgMjAyMyJ9.8alnnsLnN92DzTFZbWfwZH0gnanDBMc5u-SkTrF6w1o"
+                ],
+                "User-Agent": [
+                    "PostmanRuntime\/7.35.0"
+                ],
+                "Accept": [
+                    "*\/*"
+                ],
+                "Postman-Token": [
+                    "fe9e3889-42a1-40b6-bdff-5de91d8c1ef4"
+                ],
+                "Host": [
+                    "localhost"
+                ],
+                "Accept-Encoding": [
+                    "gzip, deflate, br"
+                ],
+                "Connection": [
+                    "keep-alive"
+                ]
+            },
+            "body": ""
+        },
+        "response": {
+            "statusCode": 200,
+            "headers": {
+                "Content-Type": [
+                    "application\/json"
+                ]
+            },
+            "body": "{\"listaPedido\":[{\"idPedido\":1001,\"idMesa\":1000,\"usuarioAsignado\":2,\"itemsPedidos\":[],\"fechaCreacion\":{\"date\":\"2023-11-23 21:20:20.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaEstimadaDeFinalizacion\":{\"date\":\"2023-11-23 22:07:20.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaFinalizacion\":null,\"estado\":\"pendiente\",\"importeTotal\":720,\"nombreCliente\":\"Franco\",\"minutosEstimados\":47}]}"
+        },
+        "timestamp": "2023-11-24 02:03:45"
+    }
+],
+[
+    {
+        "request": {
+            "method": "GET",
+            "uri": "http:\/\/localhost:666\/app\/pedidos?idMesa=999&idPedido=1001",
+            "headers": {
+                "Authorization": [
+                    "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MDA3ODcwMjQsImV4cCI6MTcwMDc5MDYyNCwiYXVkIjoiMzRjNWQ0YWJlYmY2YjU0YzQxNzJkYzRkNjhiODI5NWYwMWM5ZDUyYSIsImRhdGEiOnsidXN1YXJpbyI6ImFkbWluIiwidGlwbyI6ImFkbWluIiwic2VjdG9yIjoiYWRtaW4ifSwiYXBwIjoiQVBJIFJFU1QgQ0QgMjAyMyJ9.8alnnsLnN92DzTFZbWfwZH0gnanDBMc5u-SkTrF6w1o"
+                ],
+                "User-Agent": [
+                    "PostmanRuntime\/7.35.0"
+                ],
+                "Accept": [
+                    "*\/*"
+                ],
+                "Postman-Token": [
+                    "c96f14ff-f3ff-4b3a-80df-653d4f84f34d"
+                ],
+                "Host": [
+                    "localhost"
+                ],
+                "Accept-Encoding": [
+                    "gzip, deflate, br"
+                ],
+                "Connection": [
+                    "keep-alive"
+                ]
+            },
+            "body": ""
+        },
+        "response": {
+            "statusCode": 200,
+            "headers": {
+                "Content-Type": [
+                    "application\/json"
+                ]
+            },
+            "body": "{\"listaPedido\":[{\"idPedido\":1001,\"idMesa\":1000,\"usuarioAsignado\":2,\"itemsPedidos\":[],\"fechaCreacion\":{\"date\":\"2023-11-23 21:20:20.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaEstimadaDeFinalizacion\":{\"date\":\"2023-11-23 22:07:20.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaFinalizacion\":null,\"estado\":\"pendiente\",\"importeTotal\":720,\"nombreCliente\":\"Franco\",\"minutosEstimados\":47}]}"
+        },
+        "timestamp": "2023-11-24 02:03:57"
+    }
+],
+[
+    {
+        "request": {
+            "method": "GET",
+            "uri": "http:\/\/localhost:666\/app\/pedidos?idMesa=999&idPedido=1001",
+            "headers": {
+                "Authorization": [
+                    "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MDA3ODcwMjQsImV4cCI6MTcwMDc5MDYyNCwiYXVkIjoiMzRjNWQ0YWJlYmY2YjU0YzQxNzJkYzRkNjhiODI5NWYwMWM5ZDUyYSIsImRhdGEiOnsidXN1YXJpbyI6ImFkbWluIiwidGlwbyI6ImFkbWluIiwic2VjdG9yIjoiYWRtaW4ifSwiYXBwIjoiQVBJIFJFU1QgQ0QgMjAyMyJ9.8alnnsLnN92DzTFZbWfwZH0gnanDBMc5u-SkTrF6w1o"
+                ],
+                "User-Agent": [
+                    "PostmanRuntime\/7.35.0"
+                ],
+                "Accept": [
+                    "*\/*"
+                ],
+                "Postman-Token": [
+                    "6e83fee4-ad60-4a5c-974c-e6ffb2bc8462"
+                ],
+                "Host": [
+                    "localhost"
+                ],
+                "Accept-Encoding": [
+                    "gzip, deflate, br"
+                ],
+                "Connection": [
+                    "keep-alive"
+                ]
+            },
+            "body": ""
+        },
+        "response": {
+            "statusCode": 200,
+            "headers": {
+                "Content-Type": [
+                    "application\/json"
+                ]
+            },
+            "body": "{\"listaPedido\":[{\"idPedido\":1001,\"idMesa\":1000,\"usuarioAsignado\":2,\"itemsPedidos\":[],\"fechaCreacion\":{\"date\":\"2023-11-23 21:20:20.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaEstimadaDeFinalizacion\":{\"date\":\"2023-11-23 22:07:20.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaFinalizacion\":null,\"estado\":\"pendiente\",\"importeTotal\":720,\"nombreCliente\":\"Franco\",\"minutosEstimados\":47}]}"
+        },
+        "timestamp": "2023-11-24 02:04:05"
+    }
+],
+[
+    {
+        "request": {
+            "method": "GET",
+            "uri": "http:\/\/localhost:666\/app\/pedidos?idPedido=1001&idMesa=999",
+            "headers": {
+                "Authorization": [
+                    "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MDA3ODcwMjQsImV4cCI6MTcwMDc5MDYyNCwiYXVkIjoiMzRjNWQ0YWJlYmY2YjU0YzQxNzJkYzRkNjhiODI5NWYwMWM5ZDUyYSIsImRhdGEiOnsidXN1YXJpbyI6ImFkbWluIiwidGlwbyI6ImFkbWluIiwic2VjdG9yIjoiYWRtaW4ifSwiYXBwIjoiQVBJIFJFU1QgQ0QgMjAyMyJ9.8alnnsLnN92DzTFZbWfwZH0gnanDBMc5u-SkTrF6w1o"
+                ],
+                "User-Agent": [
+                    "PostmanRuntime\/7.35.0"
+                ],
+                "Accept": [
+                    "*\/*"
+                ],
+                "Postman-Token": [
+                    "822e9161-4e46-4d86-b5d6-4e58c8a5feed"
+                ],
+                "Host": [
+                    "localhost"
+                ],
+                "Accept-Encoding": [
+                    "gzip, deflate, br"
+                ],
+                "Connection": [
+                    "keep-alive"
+                ]
+            },
+            "body": ""
+        },
+        "response": {
+            "statusCode": 200,
+            "headers": {
+                "Content-Type": [
+                    "application\/json"
+                ]
+            },
+            "body": "{\"listaPedido\":[{\"idPedido\":1001,\"idMesa\":1000,\"usuarioAsignado\":2,\"itemsPedidos\":[],\"fechaCreacion\":{\"date\":\"2023-11-23 21:20:20.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaEstimadaDeFinalizacion\":{\"date\":\"2023-11-23 22:07:20.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaFinalizacion\":null,\"estado\":\"pendiente\",\"importeTotal\":720,\"nombreCliente\":\"Franco\",\"minutosEstimados\":47}]}"
+        },
+        "timestamp": "2023-11-24 02:04:33"
+    }
+],
+[
+    {
+        "request": {
+            "method": "GET",
+            "uri": "http:\/\/localhost:666\/app\/pedidos?idPedido=1001&idMesa=999",
+            "headers": {
+                "Authorization": [
+                    "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MDA3ODcwMjQsImV4cCI6MTcwMDc5MDYyNCwiYXVkIjoiMzRjNWQ0YWJlYmY2YjU0YzQxNzJkYzRkNjhiODI5NWYwMWM5ZDUyYSIsImRhdGEiOnsidXN1YXJpbyI6ImFkbWluIiwidGlwbyI6ImFkbWluIiwic2VjdG9yIjoiYWRtaW4ifSwiYXBwIjoiQVBJIFJFU1QgQ0QgMjAyMyJ9.8alnnsLnN92DzTFZbWfwZH0gnanDBMc5u-SkTrF6w1o"
+                ],
+                "User-Agent": [
+                    "PostmanRuntime\/7.35.0"
+                ],
+                "Accept": [
+                    "*\/*"
+                ],
+                "Postman-Token": [
+                    "5180f871-fbad-4e4d-9432-1ba526c57574"
+                ],
+                "Host": [
+                    "localhost"
+                ],
+                "Accept-Encoding": [
+                    "gzip, deflate, br"
+                ],
+                "Connection": [
+                    "keep-alive"
+                ]
+            },
+            "body": ""
+        },
+        "response": {
+            "statusCode": 200,
+            "headers": {
+                "Content-Type": [
+                    "application\/json"
+                ]
+            },
+            "body": "{\"listaPedido\":[{\"idPedido\":1001,\"idMesa\":1000,\"usuarioAsignado\":2,\"itemsPedidos\":[],\"fechaCreacion\":{\"date\":\"2023-11-23 21:20:20.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaEstimadaDeFinalizacion\":{\"date\":\"2023-11-23 22:07:20.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaFinalizacion\":null,\"estado\":\"pendiente\",\"importeTotal\":720,\"nombreCliente\":\"Franco\",\"minutosEstimados\":47}]}"
+        },
+        "timestamp": "2023-11-24 02:04:47"
+    }
+],
+[
+    {
+        "request": {
+            "method": "GET",
+            "uri": "http:\/\/localhost:666\/app\/pedidos?idPedido=1001",
+            "headers": {
+                "Authorization": [
+                    "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MDA3ODcwMjQsImV4cCI6MTcwMDc5MDYyNCwiYXVkIjoiMzRjNWQ0YWJlYmY2YjU0YzQxNzJkYzRkNjhiODI5NWYwMWM5ZDUyYSIsImRhdGEiOnsidXN1YXJpbyI6ImFkbWluIiwidGlwbyI6ImFkbWluIiwic2VjdG9yIjoiYWRtaW4ifSwiYXBwIjoiQVBJIFJFU1QgQ0QgMjAyMyJ9.8alnnsLnN92DzTFZbWfwZH0gnanDBMc5u-SkTrF6w1o"
+                ],
+                "User-Agent": [
+                    "PostmanRuntime\/7.35.0"
+                ],
+                "Accept": [
+                    "*\/*"
+                ],
+                "Postman-Token": [
+                    "16ea8bde-2d47-4a21-bc28-9372884944ac"
+                ],
+                "Host": [
+                    "localhost"
+                ],
+                "Accept-Encoding": [
+                    "gzip, deflate, br"
+                ],
+                "Connection": [
+                    "keep-alive"
+                ]
+            },
+            "body": ""
+        },
+        "response": {
+            "statusCode": 200,
+            "headers": {
+                "Content-Type": [
+                    "application\/json"
+                ]
+            },
+            "body": "{\"listaPedido\":[{\"idPedido\":1001,\"idMesa\":1000,\"usuarioAsignado\":2,\"itemsPedidos\":[],\"fechaCreacion\":{\"date\":\"2023-11-23 21:20:20.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaEstimadaDeFinalizacion\":{\"date\":\"2023-11-23 22:07:20.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaFinalizacion\":null,\"estado\":\"pendiente\",\"importeTotal\":720,\"nombreCliente\":\"Franco\",\"minutosEstimados\":47}]}"
+        },
+        "timestamp": "2023-11-24 02:05:10"
+    }
+],
+[
+    {
+        "request": {
+            "method": "GET",
+            "uri": "http:\/\/localhost:666\/app\/pedidos?idMesa=999",
+            "headers": {
+                "Authorization": [
+                    "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MDA3ODcwMjQsImV4cCI6MTcwMDc5MDYyNCwiYXVkIjoiMzRjNWQ0YWJlYmY2YjU0YzQxNzJkYzRkNjhiODI5NWYwMWM5ZDUyYSIsImRhdGEiOnsidXN1YXJpbyI6ImFkbWluIiwidGlwbyI6ImFkbWluIiwic2VjdG9yIjoiYWRtaW4ifSwiYXBwIjoiQVBJIFJFU1QgQ0QgMjAyMyJ9.8alnnsLnN92DzTFZbWfwZH0gnanDBMc5u-SkTrF6w1o"
+                ],
+                "User-Agent": [
+                    "PostmanRuntime\/7.35.0"
+                ],
+                "Accept": [
+                    "*\/*"
+                ],
+                "Postman-Token": [
+                    "d7db719a-a628-4fbe-9947-23b09c69f024"
+                ],
+                "Host": [
+                    "localhost"
+                ],
+                "Accept-Encoding": [
+                    "gzip, deflate, br"
+                ],
+                "Connection": [
+                    "keep-alive"
+                ]
+            },
+            "body": ""
+        },
+        "response": {
+            "statusCode": 200,
+            "headers": {
+                "Content-Type": [
+                    "application\/json"
+                ]
+            },
+            "body": "{\"listaPedido\":[{\"idPedido\":1001,\"idMesa\":1000,\"usuarioAsignado\":2,\"itemsPedidos\":[],\"fechaCreacion\":{\"date\":\"2023-11-23 21:20:20.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaEstimadaDeFinalizacion\":{\"date\":\"2023-11-23 22:07:20.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaFinalizacion\":null,\"estado\":\"pendiente\",\"importeTotal\":720,\"nombreCliente\":\"Franco\",\"minutosEstimados\":47}]}"
+        },
+        "timestamp": "2023-11-24 02:05:14"
+    }
+],
+[
+    {
+        "request": {
+            "method": "GET",
+            "uri": "http:\/\/localhost:666\/app\/pedidos?idPedido=1001&idMesa=999",
+            "headers": {
+                "Authorization": [
+                    "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MDA3ODcwMjQsImV4cCI6MTcwMDc5MDYyNCwiYXVkIjoiMzRjNWQ0YWJlYmY2YjU0YzQxNzJkYzRkNjhiODI5NWYwMWM5ZDUyYSIsImRhdGEiOnsidXN1YXJpbyI6ImFkbWluIiwidGlwbyI6ImFkbWluIiwic2VjdG9yIjoiYWRtaW4ifSwiYXBwIjoiQVBJIFJFU1QgQ0QgMjAyMyJ9.8alnnsLnN92DzTFZbWfwZH0gnanDBMc5u-SkTrF6w1o"
+                ],
+                "User-Agent": [
+                    "PostmanRuntime\/7.35.0"
+                ],
+                "Accept": [
+                    "*\/*"
+                ],
+                "Postman-Token": [
+                    "a382c32a-8839-4b9a-8b5d-e8ee46258dae"
+                ],
+                "Host": [
+                    "localhost"
+                ],
+                "Accept-Encoding": [
+                    "gzip, deflate, br"
+                ],
+                "Connection": [
+                    "keep-alive"
+                ]
+            },
+            "body": ""
+        },
+        "response": {
+            "statusCode": 200,
+            "headers": {
+                "Content-Type": [
+                    "application\/json"
+                ]
+            },
+            "body": "{\"listaPedido\":[{\"idPedido\":1001,\"idMesa\":1000,\"usuarioAsignado\":2,\"itemsPedidos\":[],\"fechaCreacion\":{\"date\":\"2023-11-23 21:20:20.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaEstimadaDeFinalizacion\":{\"date\":\"2023-11-23 22:07:20.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaFinalizacion\":null,\"estado\":\"pendiente\",\"importeTotal\":720,\"nombreCliente\":\"Franco\",\"minutosEstimados\":47}]}"
+        },
+        "timestamp": "2023-11-24 02:05:17"
+    }
+],
+[
+    {
+        "request": {
+            "method": "GET",
+            "uri": "http:\/\/localhost:666\/app\/pedidos\/1001?idMesa=1000",
+            "headers": {
+                "Authorization": [
+                    "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MDA3ODcwMjQsImV4cCI6MTcwMDc5MDYyNCwiYXVkIjoiMzRjNWQ0YWJlYmY2YjU0YzQxNzJkYzRkNjhiODI5NWYwMWM5ZDUyYSIsImRhdGEiOnsidXN1YXJpbyI6ImFkbWluIiwidGlwbyI6ImFkbWluIiwic2VjdG9yIjoiYWRtaW4ifSwiYXBwIjoiQVBJIFJFU1QgQ0QgMjAyMyJ9.8alnnsLnN92DzTFZbWfwZH0gnanDBMc5u-SkTrF6w1o"
+                ],
+                "User-Agent": [
+                    "PostmanRuntime\/7.35.0"
+                ],
+                "Accept": [
+                    "*\/*"
+                ],
+                "Postman-Token": [
+                    "8bb8447e-ce8d-4d8b-a99f-93def734c839"
+                ],
+                "Host": [
+                    "localhost"
+                ],
+                "Accept-Encoding": [
+                    "gzip, deflate, br"
+                ],
+                "Connection": [
+                    "keep-alive"
+                ]
+            },
+            "body": ""
+        },
+        "response": {
+            "statusCode": 200,
+            "headers": {
+                "Content-Type": [
+                    "application\/json"
+                ]
+            },
+            "body": "{\"err\":\"no se encontro el pedido con el id solicitado\"}"
+        },
+        "timestamp": "2023-11-24 02:06:26"
+    }
+],
+[
+    {
+        "request": {
+            "method": "GET",
+            "uri": "http:\/\/localhost:666\/app\/pedidos\/1001?idMesa=1000",
+            "headers": {
+                "Authorization": [
+                    "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MDA3ODcwMjQsImV4cCI6MTcwMDc5MDYyNCwiYXVkIjoiMzRjNWQ0YWJlYmY2YjU0YzQxNzJkYzRkNjhiODI5NWYwMWM5ZDUyYSIsImRhdGEiOnsidXN1YXJpbyI6ImFkbWluIiwidGlwbyI6ImFkbWluIiwic2VjdG9yIjoiYWRtaW4ifSwiYXBwIjoiQVBJIFJFU1QgQ0QgMjAyMyJ9.8alnnsLnN92DzTFZbWfwZH0gnanDBMc5u-SkTrF6w1o"
+                ],
+                "User-Agent": [
+                    "PostmanRuntime\/7.35.0"
+                ],
+                "Accept": [
+                    "*\/*"
+                ],
+                "Postman-Token": [
+                    "330e6376-5dd8-467f-b837-e9908647a4c1"
+                ],
+                "Host": [
+                    "localhost"
+                ],
+                "Accept-Encoding": [
+                    "gzip, deflate, br"
+                ],
+                "Connection": [
+                    "keep-alive"
+                ]
+            },
+            "body": ""
+        },
+        "response": {
+            "statusCode": 200,
+            "headers": {
+                "Content-Type": [
+                    "application\/json"
+                ]
+            },
+            "body": "{\"err\":\"no se encontro el pedido con el id solicitado\"}"
+        },
+        "timestamp": "2023-11-24 02:07:05"
+    }
+],
+[
+    {
+        "request": {
+            "method": "GET",
+            "uri": "http:\/\/localhost:666\/app\/pedidos\/1001?idMesa=1000",
+            "headers": {
+                "Authorization": [
+                    "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MDA3ODcwMjQsImV4cCI6MTcwMDc5MDYyNCwiYXVkIjoiMzRjNWQ0YWJlYmY2YjU0YzQxNzJkYzRkNjhiODI5NWYwMWM5ZDUyYSIsImRhdGEiOnsidXN1YXJpbyI6ImFkbWluIiwidGlwbyI6ImFkbWluIiwic2VjdG9yIjoiYWRtaW4ifSwiYXBwIjoiQVBJIFJFU1QgQ0QgMjAyMyJ9.8alnnsLnN92DzTFZbWfwZH0gnanDBMc5u-SkTrF6w1o"
+                ],
+                "User-Agent": [
+                    "PostmanRuntime\/7.35.0"
+                ],
+                "Accept": [
+                    "*\/*"
+                ],
+                "Postman-Token": [
+                    "116db249-1e45-468f-8532-a8d451fc9c63"
+                ],
+                "Host": [
+                    "localhost"
+                ],
+                "Accept-Encoding": [
+                    "gzip, deflate, br"
+                ],
+                "Connection": [
+                    "keep-alive"
+                ]
+            },
+            "body": ""
+        },
+        "response": {
+            "statusCode": 200,
+            "headers": {
+                "Content-Type": [
+                    "application\/json"
+                ]
+            },
+            "body": "{\"idPedido\":1001,\"idMesa\":1000,\"usuarioAsignado\":2,\"itemsPedidos\":[],\"fechaCreacion\":{\"date\":\"2023-11-23 21:20:20.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaEstimadaDeFinalizacion\":{\"date\":\"2023-11-23 22:07:20.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaFinalizacion\":null,\"estado\":\"pendiente\",\"importeTotal\":720,\"nombreCliente\":\"Franco\",\"minutosEstimados\":47}"
+        },
+        "timestamp": "2023-11-24 02:07:26"
+    }
+],
+[
+    {
+        "request": {
+            "method": "GET",
+            "uri": "http:\/\/localhost:666\/app\/pedidos\/1001?idMesa=900",
+            "headers": {
+                "Authorization": [
+                    "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MDA3ODcwMjQsImV4cCI6MTcwMDc5MDYyNCwiYXVkIjoiMzRjNWQ0YWJlYmY2YjU0YzQxNzJkYzRkNjhiODI5NWYwMWM5ZDUyYSIsImRhdGEiOnsidXN1YXJpbyI6ImFkbWluIiwidGlwbyI6ImFkbWluIiwic2VjdG9yIjoiYWRtaW4ifSwiYXBwIjoiQVBJIFJFU1QgQ0QgMjAyMyJ9.8alnnsLnN92DzTFZbWfwZH0gnanDBMc5u-SkTrF6w1o"
+                ],
+                "User-Agent": [
+                    "PostmanRuntime\/7.35.0"
+                ],
+                "Accept": [
+                    "*\/*"
+                ],
+                "Postman-Token": [
+                    "1ac398ca-d218-486f-ba7e-dc6f4406f8c4"
+                ],
+                "Host": [
+                    "localhost"
+                ],
+                "Accept-Encoding": [
+                    "gzip, deflate, br"
+                ],
+                "Connection": [
+                    "keep-alive"
+                ]
+            },
+            "body": ""
+        },
+        "response": {
+            "statusCode": 200,
+            "headers": {
+                "Content-Type": [
+                    "application\/json"
+                ]
+            },
+            "body": "{\"err\":\"no se encontro el pedido con el id solicitado\"}"
+        },
+        "timestamp": "2023-11-24 02:07:43"
+    }
+],
+[
+    {
+        "request": {
+            "method": "GET",
+            "uri": "http:\/\/localhost:666\/app\/pedidos\/1001?idMesa=1000",
+            "headers": {
+                "Authorization": [
+                    "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MDA3ODcwMjQsImV4cCI6MTcwMDc5MDYyNCwiYXVkIjoiMzRjNWQ0YWJlYmY2YjU0YzQxNzJkYzRkNjhiODI5NWYwMWM5ZDUyYSIsImRhdGEiOnsidXN1YXJpbyI6ImFkbWluIiwidGlwbyI6ImFkbWluIiwic2VjdG9yIjoiYWRtaW4ifSwiYXBwIjoiQVBJIFJFU1QgQ0QgMjAyMyJ9.8alnnsLnN92DzTFZbWfwZH0gnanDBMc5u-SkTrF6w1o"
+                ],
+                "User-Agent": [
+                    "PostmanRuntime\/7.35.0"
+                ],
+                "Accept": [
+                    "*\/*"
+                ],
+                "Postman-Token": [
+                    "11cb8d46-56f2-483a-b324-391c16196595"
+                ],
+                "Host": [
+                    "localhost"
+                ],
+                "Accept-Encoding": [
+                    "gzip, deflate, br"
+                ],
+                "Connection": [
+                    "keep-alive"
+                ]
+            },
+            "body": ""
+        },
+        "response": {
+            "statusCode": 200,
+            "headers": {
+                "Content-Type": [
+                    "application\/json"
+                ]
+            },
+            "body": "{\"idPedido\":1001,\"idMesa\":1000,\"usuarioAsignado\":2,\"itemsPedidos\":[],\"fechaCreacion\":{\"date\":\"2023-11-23 21:20:20.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaEstimadaDeFinalizacion\":{\"date\":\"2023-11-23 22:07:20.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaFinalizacion\":null,\"estado\":\"pendiente\",\"importeTotal\":720,\"nombreCliente\":\"Franco\",\"minutosEstimados\":47}"
+        },
+        "timestamp": "2023-11-24 02:07:55"
+    }
+],
+[
+    {
+        "request": {
+            "method": "GET",
+            "uri": "http:\/\/localhost:666\/app\/pedidos?idMesa=1000&idPedido=1001",
+            "headers": {
+                "Authorization": [
+                    "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MDA3ODcwMjQsImV4cCI6MTcwMDc5MDYyNCwiYXVkIjoiMzRjNWQ0YWJlYmY2YjU0YzQxNzJkYzRkNjhiODI5NWYwMWM5ZDUyYSIsImRhdGEiOnsidXN1YXJpbyI6ImFkbWluIiwidGlwbyI6ImFkbWluIiwic2VjdG9yIjoiYWRtaW4ifSwiYXBwIjoiQVBJIFJFU1QgQ0QgMjAyMyJ9.8alnnsLnN92DzTFZbWfwZH0gnanDBMc5u-SkTrF6w1o"
+                ],
+                "User-Agent": [
+                    "PostmanRuntime\/7.35.0"
+                ],
+                "Accept": [
+                    "*\/*"
+                ],
+                "Postman-Token": [
+                    "b537e065-2eb6-4037-aba5-298a16068023"
+                ],
+                "Host": [
+                    "localhost"
+                ],
+                "Accept-Encoding": [
+                    "gzip, deflate, br"
+                ],
+                "Connection": [
+                    "keep-alive"
+                ]
+            },
+            "body": ""
+        },
+        "response": {
+            "statusCode": 200,
+            "headers": {
+                "Content-Type": [
+                    "application\/json"
+                ]
+            },
+            "body": "{\"listaPedido\":[{\"idPedido\":1001,\"idMesa\":1000,\"usuarioAsignado\":2,\"itemsPedidos\":[],\"fechaCreacion\":{\"date\":\"2023-11-23 21:20:20.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaEstimadaDeFinalizacion\":{\"date\":\"2023-11-23 22:07:20.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaFinalizacion\":null,\"estado\":\"pendiente\",\"importeTotal\":720,\"nombreCliente\":\"Franco\",\"minutosEstimados\":47}]}"
+        },
+        "timestamp": "2023-11-24 02:10:38"
+    }
+],
+[
+    {
+        "request": {
+            "method": "GET",
+            "uri": "http:\/\/localhost:666\/app\/pedidos",
+            "headers": {
+                "Authorization": [
+                    "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MDA3ODcwMjQsImV4cCI6MTcwMDc5MDYyNCwiYXVkIjoiMzRjNWQ0YWJlYmY2YjU0YzQxNzJkYzRkNjhiODI5NWYwMWM5ZDUyYSIsImRhdGEiOnsidXN1YXJpbyI6ImFkbWluIiwidGlwbyI6ImFkbWluIiwic2VjdG9yIjoiYWRtaW4ifSwiYXBwIjoiQVBJIFJFU1QgQ0QgMjAyMyJ9.8alnnsLnN92DzTFZbWfwZH0gnanDBMc5u-SkTrF6w1o"
+                ],
+                "User-Agent": [
+                    "PostmanRuntime\/7.35.0"
+                ],
+                "Accept": [
+                    "*\/*"
+                ],
+                "Postman-Token": [
+                    "796d49ab-d35a-4827-b85b-e797dad4a2aa"
+                ],
+                "Host": [
+                    "localhost"
+                ],
+                "Accept-Encoding": [
+                    "gzip, deflate, br"
+                ],
+                "Connection": [
+                    "keep-alive"
+                ]
+            },
+            "body": ""
+        },
+        "response": {
+            "statusCode": 200,
+            "headers": {
+                "Content-Type": [
+                    "application\/json"
+                ]
+            },
+            "body": "{\"listaPedido\":[{\"idPedido\":1001,\"idMesa\":1000,\"usuarioAsignado\":2,\"itemsPedidos\":[],\"fechaCreacion\":{\"date\":\"2023-11-23 21:20:20.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaEstimadaDeFinalizacion\":{\"date\":\"2023-11-23 22:07:20.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaFinalizacion\":null,\"estado\":\"pendiente\",\"importeTotal\":720,\"nombreCliente\":\"Franco\",\"minutosEstimados\":47}]}"
+        },
+        "timestamp": "2023-11-24 02:13:33"
+    }
+],
+[
+    {
+        "request": {
+            "method": "GET",
+            "uri": "http:\/\/localhost:666\/app\/pedidos?idMesa=1000&idPedido=1001&incluirItems=true",
+            "headers": {
+                "Authorization": [
+                    "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MDA3ODcwMjQsImV4cCI6MTcwMDc5MDYyNCwiYXVkIjoiMzRjNWQ0YWJlYmY2YjU0YzQxNzJkYzRkNjhiODI5NWYwMWM5ZDUyYSIsImRhdGEiOnsidXN1YXJpbyI6ImFkbWluIiwidGlwbyI6ImFkbWluIiwic2VjdG9yIjoiYWRtaW4ifSwiYXBwIjoiQVBJIFJFU1QgQ0QgMjAyMyJ9.8alnnsLnN92DzTFZbWfwZH0gnanDBMc5u-SkTrF6w1o"
+                ],
+                "User-Agent": [
+                    "PostmanRuntime\/7.35.0"
+                ],
+                "Accept": [
+                    "*\/*"
+                ],
+                "Postman-Token": [
+                    "0d02e352-5236-4f9c-a224-bfa81ed5bd18"
+                ],
+                "Host": [
+                    "localhost"
+                ],
+                "Accept-Encoding": [
+                    "gzip, deflate, br"
+                ],
+                "Connection": [
+                    "keep-alive"
+                ]
+            },
+            "body": ""
+        },
+        "response": {
+            "statusCode": 200,
+            "headers": {
+                "Content-Type": [
+                    "application\/json"
+                ]
+            },
+            "body": "{\"listaPedido\":[{\"idPedido\":1001,\"idMesa\":1000,\"usuarioAsignado\":2,\"itemsPedidos\":[],\"fechaCreacion\":{\"date\":\"2023-11-23 21:20:20.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaEstimadaDeFinalizacion\":{\"date\":\"2023-11-23 22:07:20.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaFinalizacion\":null,\"estado\":\"pendiente\",\"importeTotal\":720,\"nombreCliente\":\"Franco\",\"minutosEstimados\":47}]}"
+        },
+        "timestamp": "2023-11-24 02:23:50"
+    }
+],
+[
+    {
+        "request": {
+            "method": "GET",
+            "uri": "http:\/\/localhost:666\/app\/pedidos?idMesa=1000&idPedido=1001&incluirItems=true",
+            "headers": {
+                "Authorization": [
+                    "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MDA3ODcwMjQsImV4cCI6MTcwMDc5MDYyNCwiYXVkIjoiMzRjNWQ0YWJlYmY2YjU0YzQxNzJkYzRkNjhiODI5NWYwMWM5ZDUyYSIsImRhdGEiOnsidXN1YXJpbyI6ImFkbWluIiwidGlwbyI6ImFkbWluIiwic2VjdG9yIjoiYWRtaW4ifSwiYXBwIjoiQVBJIFJFU1QgQ0QgMjAyMyJ9.8alnnsLnN92DzTFZbWfwZH0gnanDBMc5u-SkTrF6w1o"
+                ],
+                "User-Agent": [
+                    "PostmanRuntime\/7.35.0"
+                ],
+                "Accept": [
+                    "*\/*"
+                ],
+                "Postman-Token": [
+                    "aab271b3-3ab4-4ebb-b29b-cead697f21d8"
+                ],
+                "Host": [
+                    "localhost"
+                ],
+                "Accept-Encoding": [
+                    "gzip, deflate, br"
+                ],
+                "Connection": [
+                    "keep-alive"
+                ]
+            },
+            "body": ""
+        },
+        "response": {
+            "statusCode": 200,
+            "headers": {
+                "Content-Type": [
+                    "application\/json"
+                ]
+            },
+            "body": "{\"listaPedido\":[{\"idPedido\":1001,\"idMesa\":1000,\"usuarioAsignado\":2,\"itemsPedidos\":[],\"fechaCreacion\":{\"date\":\"2023-11-23 21:20:20.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaEstimadaDeFinalizacion\":{\"date\":\"2023-11-23 22:07:20.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaFinalizacion\":null,\"estado\":\"pendiente\",\"importeTotal\":720,\"nombreCliente\":\"Franco\",\"minutosEstimados\":47}]}"
+        },
+        "timestamp": "2023-11-24 02:24:12"
+    }
+],
+[
+    {
+        "request": {
+            "method": "GET",
+            "uri": "http:\/\/localhost:666\/app\/pedidos?idMesa=1000&idPedido=1001&incluirItems=true",
+            "headers": {
+                "Authorization": [
+                    "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MDA3ODcwMjQsImV4cCI6MTcwMDc5MDYyNCwiYXVkIjoiMzRjNWQ0YWJlYmY2YjU0YzQxNzJkYzRkNjhiODI5NWYwMWM5ZDUyYSIsImRhdGEiOnsidXN1YXJpbyI6ImFkbWluIiwidGlwbyI6ImFkbWluIiwic2VjdG9yIjoiYWRtaW4ifSwiYXBwIjoiQVBJIFJFU1QgQ0QgMjAyMyJ9.8alnnsLnN92DzTFZbWfwZH0gnanDBMc5u-SkTrF6w1o"
+                ],
+                "User-Agent": [
+                    "PostmanRuntime\/7.35.0"
+                ],
+                "Accept": [
+                    "*\/*"
+                ],
+                "Postman-Token": [
+                    "782d2896-2e84-46e8-8ecb-a3b2c8894a2b"
+                ],
+                "Host": [
+                    "localhost"
+                ],
+                "Accept-Encoding": [
+                    "gzip, deflate, br"
+                ],
+                "Connection": [
+                    "keep-alive"
+                ]
+            },
+            "body": ""
+        },
+        "response": {
+            "statusCode": 500,
+            "headers": {
+                "Content-type": [
+                    "text\/html"
+                ]
+            },
+            "body": "<!doctype html><html lang=\"en\">    <head>        <meta charset=\"utf-8\">        <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">        <title>Slim Application Error<\/title>        <style>            body{margin:0;padding:30px;font:12px\/1.5 Helvetica,Arial,Verdana,sans-serif}            h1{margin:0;font-size:48px;font-weight:normal;line-height:48px}            strong{display:inline-block;width:65px}        <\/style>    <\/head>    <body>        <h1>Slim Application Error<\/h1>        <div><p>The application could not run because of the following error:<\/p><h2>Details<\/h2><div><strong>Type:<\/strong> Error<\/div><div><strong>Code:<\/strong> 0<\/div><div><strong>Message:<\/strong> PDOStatement::bindParam(): Argument #2 ($var) cannot be passed by reference<\/div><div><strong>File:<\/strong> D:\\Environments\\XAMP\\htdocs\\UTN-ProgramacionIII-TP\\app-comanda\\Models\\Pedido.php<\/div><div><strong>Line:<\/strong> 84<\/div><h2>Trace<\/h2><pre>#0 D:\\Environments\\XAMP\\htdocs\\UTN-ProgramacionIII-TP\\app-comanda\\Controllers\\PedidoController.php(112): Pedido::obtenerTodos(NULL, &#039;true&#039;)\n#1 D:\\Environments\\XAMP\\htdocs\\UTN-ProgramacionIII-TP\\app-comanda\\vendor\\slim\\slim\\Slim\\Handlers\\Strategies\\RequestResponse.php(38): PedidoController-&gt;TraerTodos(Object(Slim\\Psr7\\Request), Object(Slim\\Psr7\\Response), Array)\n#2 D:\\Environments\\XAMP\\htdocs\\UTN-ProgramacionIII-TP\\app-comanda\\vendor\\slim\\slim\\Slim\\Routing\\Route.php(358): Slim\\Handlers\\Strategies\\RequestResponse-&gt;__invoke(Array, Object(Slim\\Psr7\\Request), Object(Slim\\Psr7\\Response), Array)\n#3 D:\\Environments\\XAMP\\htdocs\\UTN-ProgramacionIII-TP\\app-comanda\\Middlewares\\AuthorizationMiddleware.php(30): Slim\\Routing\\Route-&gt;handle(Object(Slim\\Psr7\\Request))\n#4 D:\\Environments\\XAMP\\htdocs\\UTN-ProgramacionIII-TP\\app-comanda\\vendor\\slim\\slim\\Slim\\MiddlewareDispatcher.php(269): AuthorizationMiddleware-&gt;__invoke(Object(Slim\\Psr7\\Request), Object(Slim\\Routing\\Route))\n#5 D:\\Environments\\XAMP\\htdocs\\UTN-ProgramacionIII-TP\\app-comanda\\vendor\\slim\\slim\\Slim\\MiddlewareDispatcher.php(65): Psr\\Http\\Server\\RequestHandlerInterface@anonymous-&gt;handle(Object(Slim\\Psr7\\Request))\n#6 D:\\Environments\\XAMP\\htdocs\\UTN-ProgramacionIII-TP\\app-comanda\\Middlewares\\AuthenticationMiddleware.php(16): Slim\\MiddlewareDispatcher-&gt;handle(Object(Slim\\Psr7\\Request))\n#7 D:\\Environments\\XAMP\\htdocs\\UTN-ProgramacionIII-TP\\app-comanda\\vendor\\slim\\slim\\Slim\\MiddlewareDispatcher.php(269): AuthenticationMiddleware-&gt;__invoke(Object(Slim\\Psr7\\Request), Object(Slim\\MiddlewareDispatcher))\n#8 D:\\Environments\\XAMP\\htdocs\\UTN-ProgramacionIII-TP\\app-comanda\\vendor\\slim\\slim\\Slim\\MiddlewareDispatcher.php(65): Psr\\Http\\Server\\RequestHandlerInterface@anonymous-&gt;handle(Object(Slim\\Psr7\\Request))\n#9 D:\\Environments\\XAMP\\htdocs\\UTN-ProgramacionIII-TP\\app-comanda\\vendor\\slim\\slim\\Slim\\Routing\\Route.php(315): Slim\\MiddlewareDispatcher-&gt;handle(Object(Slim\\Psr7\\Request))\n#10 D:\\Environments\\XAMP\\htdocs\\UTN-ProgramacionIII-TP\\app-comanda\\vendor\\slim\\slim\\Slim\\Routing\\RouteRunner.php(68): Slim\\Routing\\Route-&gt;run(Object(Slim\\Psr7\\Request))\n#11 D:\\Environments\\XAMP\\htdocs\\UTN-ProgramacionIII-TP\\app-comanda\\vendor\\slim\\slim\\Slim\\Middleware\\ErrorMiddleware.php(76): Slim\\Routing\\RouteRunner-&gt;handle(Object(Slim\\Psr7\\Request))\n#12 D:\\Environments\\XAMP\\htdocs\\UTN-ProgramacionIII-TP\\app-comanda\\vendor\\slim\\slim\\Slim\\MiddlewareDispatcher.php(121): Slim\\Middleware\\ErrorMiddleware-&gt;process(Object(Slim\\Psr7\\Request), Object(Slim\\Routing\\RouteRunner))\n#13 D:\\Environments\\XAMP\\htdocs\\UTN-ProgramacionIII-TP\\app-comanda\\vendor\\slim\\slim\\Slim\\Middleware\\BodyParsingMiddleware.php(64): Psr\\Http\\Server\\RequestHandlerInterface@anonymous-&gt;handle(Object(Slim\\Psr7\\Request))\n#14 D:\\Environments\\XAMP\\htdocs\\UTN-ProgramacionIII-TP\\app-comanda\\vendor\\slim\\slim\\Slim\\MiddlewareDispatcher.php(121): Slim\\Middleware\\BodyParsingMiddleware-&gt;process(Object(Slim\\Psr7\\Request), Object(Psr\\Http\\Server\\RequestHandlerInterface@anonymous))\n#15 D:\\Environments\\XAMP\\htdocs\\UTN-ProgramacionIII-TP\\app-comanda\\Middlewares\\LoggerMiddleware.php(13): Psr\\Http\\Server\\RequestHandlerInterface@anonymous-&gt;handle(Object(Slim\\Psr7\\Request))\n#16 D:\\Environments\\XAMP\\htdocs\\UTN-ProgramacionIII-TP\\app-comanda\\vendor\\slim\\slim\\Slim\\MiddlewareDispatcher.php(269): LoggerMiddleware-&gt;__invoke(Object(Slim\\Psr7\\Request), Object(Psr\\Http\\Server\\RequestHandlerInterface@anonymous))\n#17 D:\\Environments\\XAMP\\htdocs\\UTN-ProgramacionIII-TP\\app-comanda\\vendor\\slim\\slim\\Slim\\MiddlewareDispatcher.php(65): Psr\\Http\\Server\\RequestHandlerInterface@anonymous-&gt;handle(Object(Slim\\Psr7\\Request))\n#18 D:\\Environments\\XAMP\\htdocs\\UTN-ProgramacionIII-TP\\app-comanda\\vendor\\slim\\slim\\Slim\\App.php(199): Slim\\MiddlewareDispatcher-&gt;handle(Object(Slim\\Psr7\\Request))\n#19 D:\\Environments\\XAMP\\htdocs\\UTN-ProgramacionIII-TP\\app-comanda\\vendor\\slim\\slim\\Slim\\App.php(183): Slim\\App-&gt;handle(Object(Slim\\Psr7\\Request))\n#20 D:\\Environments\\XAMP\\htdocs\\UTN-ProgramacionIII-TP\\app-comanda\\app\\index.php(156): Slim\\App-&gt;run()\n#21 {main}<\/pre><\/div>        <a href=\"#\" onclick=\"window.history.go(-1)\">Go Back<\/a>    <\/body><\/html>"
+        },
+        "timestamp": "2023-11-24 02:25:02"
+    }
+],
+[
+    {
+        "request": {
+            "method": "GET",
+            "uri": "http:\/\/localhost:666\/app\/pedidos?idMesa=1000&idPedido=1001&incluirItems=true",
+            "headers": {
+                "Authorization": [
+                    "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MDA3ODcwMjQsImV4cCI6MTcwMDc5MDYyNCwiYXVkIjoiMzRjNWQ0YWJlYmY2YjU0YzQxNzJkYzRkNjhiODI5NWYwMWM5ZDUyYSIsImRhdGEiOnsidXN1YXJpbyI6ImFkbWluIiwidGlwbyI6ImFkbWluIiwic2VjdG9yIjoiYWRtaW4ifSwiYXBwIjoiQVBJIFJFU1QgQ0QgMjAyMyJ9.8alnnsLnN92DzTFZbWfwZH0gnanDBMc5u-SkTrF6w1o"
+                ],
+                "User-Agent": [
+                    "PostmanRuntime\/7.35.0"
+                ],
+                "Accept": [
+                    "*\/*"
+                ],
+                "Postman-Token": [
+                    "54863e1e-d016-4442-901e-0e3f7aed6df5"
+                ],
+                "Host": [
+                    "localhost"
+                ],
+                "Accept-Encoding": [
+                    "gzip, deflate, br"
+                ],
+                "Connection": [
+                    "keep-alive"
+                ]
+            },
+            "body": ""
+        },
+        "response": {
+            "statusCode": 200,
+            "headers": {
+                "Content-Type": [
+                    "application\/json"
+                ]
+            },
+            "body": "{\"listaPedido\":null}"
+        },
+        "timestamp": "2023-11-24 02:26:12"
+    }
+],
+[
+    {
+        "request": {
+            "method": "GET",
+            "uri": "http:\/\/localhost:666\/app\/pedidos?idMesa=1000&idPedido=1001&incluirItems=true",
+            "headers": {
+                "Authorization": [
+                    "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MDA3ODcwMjQsImV4cCI6MTcwMDc5MDYyNCwiYXVkIjoiMzRjNWQ0YWJlYmY2YjU0YzQxNzJkYzRkNjhiODI5NWYwMWM5ZDUyYSIsImRhdGEiOnsidXN1YXJpbyI6ImFkbWluIiwidGlwbyI6ImFkbWluIiwic2VjdG9yIjoiYWRtaW4ifSwiYXBwIjoiQVBJIFJFU1QgQ0QgMjAyMyJ9.8alnnsLnN92DzTFZbWfwZH0gnanDBMc5u-SkTrF6w1o"
+                ],
+                "User-Agent": [
+                    "PostmanRuntime\/7.35.0"
+                ],
+                "Accept": [
+                    "*\/*"
+                ],
+                "Postman-Token": [
+                    "e6a9d0c6-9e2a-43fc-9303-75952209834e"
+                ],
+                "Host": [
+                    "localhost"
+                ],
+                "Accept-Encoding": [
+                    "gzip, deflate, br"
+                ],
+                "Connection": [
+                    "keep-alive"
+                ]
+            },
+            "body": ""
+        },
+        "response": {
+            "statusCode": 200,
+            "headers": {
+                "Content-Type": [
+                    "application\/json"
+                ]
+            },
+            "body": "{\"listaPedido\":null}"
+        },
+        "timestamp": "2023-11-24 02:32:21"
+    }
+],
+[
+    {
+        "request": {
+            "method": "GET",
+            "uri": "http:\/\/localhost:666\/app\/pedidos?idMesa=1000&idPedido=1001&incluirItems=true",
+            "headers": {
+                "Authorization": [
+                    "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MDA3ODcwMjQsImV4cCI6MTcwMDc5MDYyNCwiYXVkIjoiMzRjNWQ0YWJlYmY2YjU0YzQxNzJkYzRkNjhiODI5NWYwMWM5ZDUyYSIsImRhdGEiOnsidXN1YXJpbyI6ImFkbWluIiwidGlwbyI6ImFkbWluIiwic2VjdG9yIjoiYWRtaW4ifSwiYXBwIjoiQVBJIFJFU1QgQ0QgMjAyMyJ9.8alnnsLnN92DzTFZbWfwZH0gnanDBMc5u-SkTrF6w1o"
+                ],
+                "User-Agent": [
+                    "PostmanRuntime\/7.35.0"
+                ],
+                "Accept": [
+                    "*\/*"
+                ],
+                "Postman-Token": [
+                    "c7d1e379-c4c8-47f1-ba10-007b87c05e89"
+                ],
+                "Host": [
+                    "localhost"
+                ],
+                "Accept-Encoding": [
+                    "gzip, deflate, br"
+                ],
+                "Connection": [
+                    "keep-alive"
+                ]
+            },
+            "body": ""
+        },
+        "response": {
+            "statusCode": 200,
+            "headers": {
+                "Content-Type": [
+                    "application\/json"
+                ]
+            },
+            "body": "{\"listaPedido\":null}"
+        },
+        "timestamp": "2023-11-24 02:33:03"
+    }
+],
+[
+    {
+        "request": {
+            "method": "GET",
+            "uri": "http:\/\/localhost:666\/app\/pedidos?idMesa=1000&idPedido=1001&incluirItems=true",
+            "headers": {
+                "Authorization": [
+                    "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MDA3ODcwMjQsImV4cCI6MTcwMDc5MDYyNCwiYXVkIjoiMzRjNWQ0YWJlYmY2YjU0YzQxNzJkYzRkNjhiODI5NWYwMWM5ZDUyYSIsImRhdGEiOnsidXN1YXJpbyI6ImFkbWluIiwidGlwbyI6ImFkbWluIiwic2VjdG9yIjoiYWRtaW4ifSwiYXBwIjoiQVBJIFJFU1QgQ0QgMjAyMyJ9.8alnnsLnN92DzTFZbWfwZH0gnanDBMc5u-SkTrF6w1o"
+                ],
+                "User-Agent": [
+                    "PostmanRuntime\/7.35.0"
+                ],
+                "Accept": [
+                    "*\/*"
+                ],
+                "Postman-Token": [
+                    "cea14c58-be49-48bf-af6d-2177f07c5d2f"
+                ],
+                "Host": [
+                    "localhost"
+                ],
+                "Accept-Encoding": [
+                    "gzip, deflate, br"
+                ],
+                "Connection": [
+                    "keep-alive"
+                ]
+            },
+            "body": ""
+        },
+        "response": {
+            "statusCode": 200,
+            "headers": {
+                "Content-Type": [
+                    "application\/json"
+                ]
+            },
+            "body": "{\"mensaje\":\"Error: Clave fuera de tiempo\"}"
+        },
+        "timestamp": "2023-11-24 02:50:34"
+    }
+],
+[
+    {
+        "request": {
+            "method": "GET",
+            "uri": "http:\/\/localhost:666\/app\/pedidos?idMesa=1000&idPedido=1001&incluirItems=true",
+            "headers": {
+                "Authorization": [
+                    "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MDA3ODcwMjQsImV4cCI6MTcwMDc5MDYyNCwiYXVkIjoiMzRjNWQ0YWJlYmY2YjU0YzQxNzJkYzRkNjhiODI5NWYwMWM5ZDUyYSIsImRhdGEiOnsidXN1YXJpbyI6ImFkbWluIiwidGlwbyI6ImFkbWluIiwic2VjdG9yIjoiYWRtaW4ifSwiYXBwIjoiQVBJIFJFU1QgQ0QgMjAyMyJ9.8alnnsLnN92DzTFZbWfwZH0gnanDBMc5u-SkTrF6w1o"
+                ],
+                "User-Agent": [
+                    "PostmanRuntime\/7.35.0"
+                ],
+                "Accept": [
+                    "*\/*"
+                ],
+                "Postman-Token": [
+                    "e22e7e02-654a-47e8-be28-5ad9b218fcf5"
+                ],
+                "Host": [
+                    "localhost"
+                ],
+                "Accept-Encoding": [
+                    "gzip, deflate, br"
+                ],
+                "Connection": [
+                    "keep-alive"
+                ]
+            },
+            "body": ""
+        },
+        "response": {
+            "statusCode": 200,
+            "headers": {
+                "Content-Type": [
+                    "application\/json"
+                ]
+            },
+            "body": "{\"mensaje\":\"Error: Clave fuera de tiempo\"}"
+        },
+        "timestamp": "2023-11-24 02:50:41"
+    }
+],
+[
+    {
+        "request": {
+            "method": "GET",
+            "uri": "http:\/\/localhost:666\/app\/auth\/verificarToken",
+            "headers": {
+                "Authorization": [
+                    "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MDA1NDI0NzUsImV4cCI6MTcwMDU0NjA3NSwiYXVkIjoiMzRjNWQ0YWJlYmY2YjU0YzQxNzJkYzRkNjhiODI5NWYwMWM5ZDUyYSIsImRhdGEiOnsidXN1YXJpbyI6ImNyaXN0b2JhbF9zb2NpbyJ9LCJhcHAiOiJBUEkgUkVTVCBDRCAyMDIzIn0.qoYhM_tr9vu4afGJ4lfq_hVanW4fjh0cyJMMfrA35xc"
+                ],
+                "User-Agent": [
+                    "PostmanRuntime\/7.35.0"
+                ],
+                "Accept": [
+                    "*\/*"
+                ],
+                "Postman-Token": [
+                    "5846f423-4227-4b9c-9026-930d0b675dc6"
+                ],
+                "Host": [
+                    "localhost"
+                ],
+                "Accept-Encoding": [
+                    "gzip, deflate, br"
+                ],
+                "Connection": [
+                    "keep-alive"
+                ],
+                "Content-Type": [
+                    "multipart\/form-data; boundary=--------------------------673870344069664804644646"
+                ],
+                "Content-Length": [
+                    "282"
+                ]
+            },
+            "body": "----------------------------673870344069664804644646\r\nContent-Disposition: form-data; name=\"usuario\"\r\n\r\nprueba\r\n----------------------------673870344069664804644646\r\nContent-Disposition: form-data; name=\"contrase\u00f1a\"\r\n\r\n1234\r\n----------------------------673870344069664804644646--\r\n"
+        },
+        "response": {
+            "statusCode": 200,
+            "headers": {
+                "Content-Type": [
+                    "application\/json"
+                ]
+            },
+            "body": "{\"error\":\"Signature verification failed\"}"
+        },
+        "timestamp": "2023-11-24 02:50:43"
+    }
+],
+[
+    {
+        "request": {
+            "method": "POST",
+            "uri": "http:\/\/localhost:666\/app\/auth\/login",
+            "headers": {
+                "User-Agent": [
+                    "PostmanRuntime\/7.35.0"
+                ],
+                "Accept": [
+                    "*\/*"
+                ],
+                "Postman-Token": [
+                    "e333688a-15b8-4d19-a402-95f9a1e2a852"
+                ],
+                "Host": [
+                    "localhost"
+                ],
+                "Accept-Encoding": [
+                    "gzip, deflate, br"
+                ],
+                "Connection": [
+                    "keep-alive"
+                ],
+                "Content-Type": [
+                    "multipart\/form-data; boundary=--------------------------922025087848659088671884"
+                ],
+                "Content-Length": [
+                    "285"
+                ]
+            },
+            "body": ""
+        },
+        "response": {
+            "statusCode": 200,
+            "headers": {
+                "Content-Type": [
+                    "application\/json"
+                ]
+            },
+            "body": "{\"jwt\":\"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MDA3OTA2NDYsImV4cCI6MTcwMDc5NDI0NiwiYXVkIjoiMzRjNWQ0YWJlYmY2YjU0YzQxNzJkYzRkNjhiODI5NWYwMWM5ZDUyYSIsImRhdGEiOnsidXN1YXJpbyI6ImFkbWluIiwidGlwbyI6ImFkbWluIiwic2VjdG9yIjoiYWRtaW4ifSwiYXBwIjoiQVBJIFJFU1QgQ0QgMjAyMyJ9.fMWDKFNuuXYmbxcT49VT7NeQZjESitLswmTdcXXGVdI\"}"
+        },
+        "timestamp": "2023-11-24 02:50:46"
+    }
+],
+[
+    {
+        "request": {
+            "method": "GET",
+            "uri": "http:\/\/localhost:666\/app\/pedidos?idMesa=1000&idPedido=1001&incluirItems=true",
+            "headers": {
+                "Authorization": [
+                    "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MDA3OTA2NDYsImV4cCI6MTcwMDc5NDI0NiwiYXVkIjoiMzRjNWQ0YWJlYmY2YjU0YzQxNzJkYzRkNjhiODI5NWYwMWM5ZDUyYSIsImRhdGEiOnsidXN1YXJpbyI6ImFkbWluIiwidGlwbyI6ImFkbWluIiwic2VjdG9yIjoiYWRtaW4ifSwiYXBwIjoiQVBJIFJFU1QgQ0QgMjAyMyJ9.fMWDKFNuuXYmbxcT49VT7NeQZjESitLswmTdcXXGVdI"
+                ],
+                "User-Agent": [
+                    "PostmanRuntime\/7.35.0"
+                ],
+                "Accept": [
+                    "*\/*"
+                ],
+                "Postman-Token": [
+                    "4ac05c47-1f4e-4737-8e22-66577e707a1e"
+                ],
+                "Host": [
+                    "localhost"
+                ],
+                "Accept-Encoding": [
+                    "gzip, deflate, br"
+                ],
+                "Connection": [
+                    "keep-alive"
+                ]
+            },
+            "body": ""
+        },
+        "response": {
+            "statusCode": 200,
+            "headers": {
+                "Content-Type": [
+                    "application\/json"
+                ]
+            },
+            "body": "{\"listaPedido\":null}"
+        },
+        "timestamp": "2023-11-24 02:54:53"
+    }
+],
+[
+    {
+        "request": {
+            "method": "GET",
+            "uri": "http:\/\/localhost:666\/app\/pedidos?idMesa=1000&idPedido=1001&incluirItems=true",
+            "headers": {
+                "Authorization": [
+                    "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MDA3OTA2NDYsImV4cCI6MTcwMDc5NDI0NiwiYXVkIjoiMzRjNWQ0YWJlYmY2YjU0YzQxNzJkYzRkNjhiODI5NWYwMWM5ZDUyYSIsImRhdGEiOnsidXN1YXJpbyI6ImFkbWluIiwidGlwbyI6ImFkbWluIiwic2VjdG9yIjoiYWRtaW4ifSwiYXBwIjoiQVBJIFJFU1QgQ0QgMjAyMyJ9.fMWDKFNuuXYmbxcT49VT7NeQZjESitLswmTdcXXGVdI"
+                ],
+                "User-Agent": [
+                    "PostmanRuntime\/7.35.0"
+                ],
+                "Accept": [
+                    "*\/*"
+                ],
+                "Postman-Token": [
+                    "81b65c37-6e8b-4a68-b1e4-c29f9ffde758"
+                ],
+                "Host": [
+                    "localhost"
+                ],
+                "Accept-Encoding": [
+                    "gzip, deflate, br"
+                ],
+                "Connection": [
+                    "keep-alive"
+                ]
+            },
+            "body": ""
+        },
+        "response": {
+            "statusCode": 500,
+            "headers": {
+                "Content-type": [
+                    "text\/html"
+                ]
+            },
+            "body": "<!doctype html><html lang=\"en\">    <head>        <meta charset=\"utf-8\">        <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">        <title>Slim Application Error<\/title>        <style>            body{margin:0;padding:30px;font:12px\/1.5 Helvetica,Arial,Verdana,sans-serif}            h1{margin:0;font-size:48px;font-weight:normal;line-height:48px}            strong{display:inline-block;width:65px}        <\/style>    <\/head>    <body>        <h1>Slim Application Error<\/h1>        <div><p>The application could not run because of the following error:<\/p><h2>Details<\/h2><div><strong>Type:<\/strong> Error<\/div><div><strong>Code:<\/strong> 0<\/div><div><strong>Message:<\/strong> Call to undefined method AccesoDatos::setAttribute()<\/div><div><strong>File:<\/strong> D:\\Environments\\XAMP\\htdocs\\UTN-ProgramacionIII-TP\\app-comanda\\Models\\Pedido.php<\/div><div><strong>Line:<\/strong> 92<\/div><h2>Trace<\/h2><pre>#0 D:\\Environments\\XAMP\\htdocs\\UTN-ProgramacionIII-TP\\app-comanda\\Controllers\\PedidoController.php(112): Pedido::obtenerTodos(NULL, &#039;true&#039;)\n#1 D:\\Environments\\XAMP\\htdocs\\UTN-ProgramacionIII-TP\\app-comanda\\vendor\\slim\\slim\\Slim\\Handlers\\Strategies\\RequestResponse.php(38): PedidoController-&gt;TraerTodos(Object(Slim\\Psr7\\Request), Object(Slim\\Psr7\\Response), Array)\n#2 D:\\Environments\\XAMP\\htdocs\\UTN-ProgramacionIII-TP\\app-comanda\\vendor\\slim\\slim\\Slim\\Routing\\Route.php(358): Slim\\Handlers\\Strategies\\RequestResponse-&gt;__invoke(Array, Object(Slim\\Psr7\\Request), Object(Slim\\Psr7\\Response), Array)\n#3 D:\\Environments\\XAMP\\htdocs\\UTN-ProgramacionIII-TP\\app-comanda\\Middlewares\\AuthorizationMiddleware.php(30): Slim\\Routing\\Route-&gt;handle(Object(Slim\\Psr7\\Request))\n#4 D:\\Environments\\XAMP\\htdocs\\UTN-ProgramacionIII-TP\\app-comanda\\vendor\\slim\\slim\\Slim\\MiddlewareDispatcher.php(269): AuthorizationMiddleware-&gt;__invoke(Object(Slim\\Psr7\\Request), Object(Slim\\Routing\\Route))\n#5 D:\\Environments\\XAMP\\htdocs\\UTN-ProgramacionIII-TP\\app-comanda\\vendor\\slim\\slim\\Slim\\MiddlewareDispatcher.php(65): Psr\\Http\\Server\\RequestHandlerInterface@anonymous-&gt;handle(Object(Slim\\Psr7\\Request))\n#6 D:\\Environments\\XAMP\\htdocs\\UTN-ProgramacionIII-TP\\app-comanda\\Middlewares\\AuthenticationMiddleware.php(16): Slim\\MiddlewareDispatcher-&gt;handle(Object(Slim\\Psr7\\Request))\n#7 D:\\Environments\\XAMP\\htdocs\\UTN-ProgramacionIII-TP\\app-comanda\\vendor\\slim\\slim\\Slim\\MiddlewareDispatcher.php(269): AuthenticationMiddleware-&gt;__invoke(Object(Slim\\Psr7\\Request), Object(Slim\\MiddlewareDispatcher))\n#8 D:\\Environments\\XAMP\\htdocs\\UTN-ProgramacionIII-TP\\app-comanda\\vendor\\slim\\slim\\Slim\\MiddlewareDispatcher.php(65): Psr\\Http\\Server\\RequestHandlerInterface@anonymous-&gt;handle(Object(Slim\\Psr7\\Request))\n#9 D:\\Environments\\XAMP\\htdocs\\UTN-ProgramacionIII-TP\\app-comanda\\vendor\\slim\\slim\\Slim\\Routing\\Route.php(315): Slim\\MiddlewareDispatcher-&gt;handle(Object(Slim\\Psr7\\Request))\n#10 D:\\Environments\\XAMP\\htdocs\\UTN-ProgramacionIII-TP\\app-comanda\\vendor\\slim\\slim\\Slim\\Routing\\RouteRunner.php(68): Slim\\Routing\\Route-&gt;run(Object(Slim\\Psr7\\Request))\n#11 D:\\Environments\\XAMP\\htdocs\\UTN-ProgramacionIII-TP\\app-comanda\\vendor\\slim\\slim\\Slim\\Middleware\\ErrorMiddleware.php(76): Slim\\Routing\\RouteRunner-&gt;handle(Object(Slim\\Psr7\\Request))\n#12 D:\\Environments\\XAMP\\htdocs\\UTN-ProgramacionIII-TP\\app-comanda\\vendor\\slim\\slim\\Slim\\MiddlewareDispatcher.php(121): Slim\\Middleware\\ErrorMiddleware-&gt;process(Object(Slim\\Psr7\\Request), Object(Slim\\Routing\\RouteRunner))\n#13 D:\\Environments\\XAMP\\htdocs\\UTN-ProgramacionIII-TP\\app-comanda\\vendor\\slim\\slim\\Slim\\Middleware\\BodyParsingMiddleware.php(64): Psr\\Http\\Server\\RequestHandlerInterface@anonymous-&gt;handle(Object(Slim\\Psr7\\Request))\n#14 D:\\Environments\\XAMP\\htdocs\\UTN-ProgramacionIII-TP\\app-comanda\\vendor\\slim\\slim\\Slim\\MiddlewareDispatcher.php(121): Slim\\Middleware\\BodyParsingMiddleware-&gt;process(Object(Slim\\Psr7\\Request), Object(Psr\\Http\\Server\\RequestHandlerInterface@anonymous))\n#15 D:\\Environments\\XAMP\\htdocs\\UTN-ProgramacionIII-TP\\app-comanda\\Middlewares\\LoggerMiddleware.php(13): Psr\\Http\\Server\\RequestHandlerInterface@anonymous-&gt;handle(Object(Slim\\Psr7\\Request))\n#16 D:\\Environments\\XAMP\\htdocs\\UTN-ProgramacionIII-TP\\app-comanda\\vendor\\slim\\slim\\Slim\\MiddlewareDispatcher.php(269): LoggerMiddleware-&gt;__invoke(Object(Slim\\Psr7\\Request), Object(Psr\\Http\\Server\\RequestHandlerInterface@anonymous))\n#17 D:\\Environments\\XAMP\\htdocs\\UTN-ProgramacionIII-TP\\app-comanda\\vendor\\slim\\slim\\Slim\\MiddlewareDispatcher.php(65): Psr\\Http\\Server\\RequestHandlerInterface@anonymous-&gt;handle(Object(Slim\\Psr7\\Request))\n#18 D:\\Environments\\XAMP\\htdocs\\UTN-ProgramacionIII-TP\\app-comanda\\vendor\\slim\\slim\\Slim\\App.php(199): Slim\\MiddlewareDispatcher-&gt;handle(Object(Slim\\Psr7\\Request))\n#19 D:\\Environments\\XAMP\\htdocs\\UTN-ProgramacionIII-TP\\app-comanda\\vendor\\slim\\slim\\Slim\\App.php(183): Slim\\App-&gt;handle(Object(Slim\\Psr7\\Request))\n#20 D:\\Environments\\XAMP\\htdocs\\UTN-ProgramacionIII-TP\\app-comanda\\app\\index.php(156): Slim\\App-&gt;run()\n#21 {main}<\/pre><\/div>        <a href=\"#\" onclick=\"window.history.go(-1)\">Go Back<\/a>    <\/body><\/html>"
+        },
+        "timestamp": "2023-11-24 02:55:07"
+    }
+],
+[
+    {
+        "request": {
+            "method": "GET",
+            "uri": "http:\/\/localhost:666\/app\/pedidos?idMesa=1000&idPedido=1001&incluirItems=true",
+            "headers": {
+                "Authorization": [
+                    "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MDA3OTA2NDYsImV4cCI6MTcwMDc5NDI0NiwiYXVkIjoiMzRjNWQ0YWJlYmY2YjU0YzQxNzJkYzRkNjhiODI5NWYwMWM5ZDUyYSIsImRhdGEiOnsidXN1YXJpbyI6ImFkbWluIiwidGlwbyI6ImFkbWluIiwic2VjdG9yIjoiYWRtaW4ifSwiYXBwIjoiQVBJIFJFU1QgQ0QgMjAyMyJ9.fMWDKFNuuXYmbxcT49VT7NeQZjESitLswmTdcXXGVdI"
+                ],
+                "User-Agent": [
+                    "PostmanRuntime\/7.35.0"
+                ],
+                "Accept": [
+                    "*\/*"
+                ],
+                "Postman-Token": [
+                    "b539c6e6-fe7d-47b3-ac07-da4c25aea7dd"
+                ],
+                "Host": [
+                    "localhost"
+                ],
+                "Accept-Encoding": [
+                    "gzip, deflate, br"
+                ],
+                "Connection": [
+                    "keep-alive"
+                ]
+            },
+            "body": ""
+        },
+        "response": {
+            "statusCode": 200,
+            "headers": {
+                "Content-Type": [
+                    "application\/json"
+                ]
+            },
+            "body": "{\"listaPedido\":null}"
+        },
+        "timestamp": "2023-11-24 02:57:02"
+    }
+],
+[
+    {
+        "request": {
+            "method": "GET",
+            "uri": "http:\/\/localhost:666\/app\/pedidos?idMesa=1000&idPedido=1001&incluirItems=true",
+            "headers": {
+                "Authorization": [
+                    "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MDA3OTA2NDYsImV4cCI6MTcwMDc5NDI0NiwiYXVkIjoiMzRjNWQ0YWJlYmY2YjU0YzQxNzJkYzRkNjhiODI5NWYwMWM5ZDUyYSIsImRhdGEiOnsidXN1YXJpbyI6ImFkbWluIiwidGlwbyI6ImFkbWluIiwic2VjdG9yIjoiYWRtaW4ifSwiYXBwIjoiQVBJIFJFU1QgQ0QgMjAyMyJ9.fMWDKFNuuXYmbxcT49VT7NeQZjESitLswmTdcXXGVdI"
+                ],
+                "User-Agent": [
+                    "PostmanRuntime\/7.35.0"
+                ],
+                "Accept": [
+                    "*\/*"
+                ],
+                "Postman-Token": [
+                    "ad852f9a-f180-42ed-855b-8a683c743761"
+                ],
+                "Host": [
+                    "localhost"
+                ],
+                "Accept-Encoding": [
+                    "gzip, deflate, br"
+                ],
+                "Connection": [
+                    "keep-alive"
+                ]
+            },
+            "body": ""
+        },
+        "response": {
+            "statusCode": 200,
+            "headers": {
+                "Content-Type": [
+                    "application\/json"
+                ]
+            },
+            "body": "{\"mensaje\":\"Error: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens\"}"
+        },
+        "timestamp": "2023-11-24 02:57:11"
+    }
+],
+[
+    {
+        "request": {
+            "method": "GET",
+            "uri": "http:\/\/localhost:666\/app\/pedidos?idMesa=1000&idPedido=1001&incluirItems=true",
+            "headers": {
+                "Authorization": [
+                    "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MDA3OTA2NDYsImV4cCI6MTcwMDc5NDI0NiwiYXVkIjoiMzRjNWQ0YWJlYmY2YjU0YzQxNzJkYzRkNjhiODI5NWYwMWM5ZDUyYSIsImRhdGEiOnsidXN1YXJpbyI6ImFkbWluIiwidGlwbyI6ImFkbWluIiwic2VjdG9yIjoiYWRtaW4ifSwiYXBwIjoiQVBJIFJFU1QgQ0QgMjAyMyJ9.fMWDKFNuuXYmbxcT49VT7NeQZjESitLswmTdcXXGVdI"
+                ],
+                "User-Agent": [
+                    "PostmanRuntime\/7.35.0"
+                ],
+                "Accept": [
+                    "*\/*"
+                ],
+                "Postman-Token": [
+                    "be876608-c0d3-4fa8-93bd-8a58016e8aa9"
+                ],
+                "Host": [
+                    "localhost"
+                ],
+                "Accept-Encoding": [
+                    "gzip, deflate, br"
+                ],
+                "Connection": [
+                    "keep-alive"
+                ]
+            },
+            "body": ""
+        },
+        "response": {
+            "statusCode": 200,
+            "headers": {
+                "Content-Type": [
+                    "application\/json"
+                ]
+            },
+            "body": "{\"listaPedido\":null}"
+        },
+        "timestamp": "2023-11-24 02:57:37"
+    }
+],
+[
+    {
+        "request": {
+            "method": "GET",
+            "uri": "http:\/\/localhost:666\/app\/pedidos?idMesa=1000&idPedido=1001&incluirItems=true",
+            "headers": {
+                "Authorization": [
+                    "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MDA3OTA2NDYsImV4cCI6MTcwMDc5NDI0NiwiYXVkIjoiMzRjNWQ0YWJlYmY2YjU0YzQxNzJkYzRkNjhiODI5NWYwMWM5ZDUyYSIsImRhdGEiOnsidXN1YXJpbyI6ImFkbWluIiwidGlwbyI6ImFkbWluIiwic2VjdG9yIjoiYWRtaW4ifSwiYXBwIjoiQVBJIFJFU1QgQ0QgMjAyMyJ9.fMWDKFNuuXYmbxcT49VT7NeQZjESitLswmTdcXXGVdI"
+                ],
+                "User-Agent": [
+                    "PostmanRuntime\/7.35.0"
+                ],
+                "Accept": [
+                    "*\/*"
+                ],
+                "Postman-Token": [
+                    "ca6cb5d3-f4b9-47c8-afc4-d19e899ecffc"
+                ],
+                "Host": [
+                    "localhost"
+                ],
+                "Accept-Encoding": [
+                    "gzip, deflate, br"
+                ],
+                "Connection": [
+                    "keep-alive"
+                ]
+            },
+            "body": ""
+        },
+        "response": {
+            "statusCode": 200,
+            "headers": {
+                "Content-Type": [
+                    "application\/json"
+                ]
+            },
+            "body": "{\"listaPedido\":null}"
+        },
+        "timestamp": "2023-11-24 02:58:03"
+    }
+],
+[
+    {
+        "request": {
+            "method": "GET",
+            "uri": "http:\/\/localhost:666\/app\/pedidos?idMesa=1000&idPedido=1001&incluirItems=true",
+            "headers": {
+                "Authorization": [
+                    "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MDA3OTA2NDYsImV4cCI6MTcwMDc5NDI0NiwiYXVkIjoiMzRjNWQ0YWJlYmY2YjU0YzQxNzJkYzRkNjhiODI5NWYwMWM5ZDUyYSIsImRhdGEiOnsidXN1YXJpbyI6ImFkbWluIiwidGlwbyI6ImFkbWluIiwic2VjdG9yIjoiYWRtaW4ifSwiYXBwIjoiQVBJIFJFU1QgQ0QgMjAyMyJ9.fMWDKFNuuXYmbxcT49VT7NeQZjESitLswmTdcXXGVdI"
+                ],
+                "User-Agent": [
+                    "PostmanRuntime\/7.35.0"
+                ],
+                "Accept": [
+                    "*\/*"
+                ],
+                "Postman-Token": [
+                    "08f9ba45-a379-481c-aeac-4284b105fe9c"
+                ],
+                "Host": [
+                    "localhost"
+                ],
+                "Accept-Encoding": [
+                    "gzip, deflate, br"
+                ],
+                "Connection": [
+                    "keep-alive"
+                ]
+            },
+            "body": ""
+        },
+        "response": {
+            "statusCode": 200,
+            "headers": {
+                "Content-Type": [
+                    "application\/json"
+                ]
+            },
+            "body": "{\"listaPedido\":null}"
+        },
+        "timestamp": "2023-11-24 02:58:47"
+    }
+],
+[
+    {
+        "request": {
+            "method": "GET",
+            "uri": "http:\/\/localhost:666\/app\/pedidos?idMesa=1000&idPedido=1001&incluirItems=true",
+            "headers": {
+                "Authorization": [
+                    "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MDA3OTA2NDYsImV4cCI6MTcwMDc5NDI0NiwiYXVkIjoiMzRjNWQ0YWJlYmY2YjU0YzQxNzJkYzRkNjhiODI5NWYwMWM5ZDUyYSIsImRhdGEiOnsidXN1YXJpbyI6ImFkbWluIiwidGlwbyI6ImFkbWluIiwic2VjdG9yIjoiYWRtaW4ifSwiYXBwIjoiQVBJIFJFU1QgQ0QgMjAyMyJ9.fMWDKFNuuXYmbxcT49VT7NeQZjESitLswmTdcXXGVdI"
+                ],
+                "User-Agent": [
+                    "PostmanRuntime\/7.35.0"
+                ],
+                "Accept": [
+                    "*\/*"
+                ],
+                "Postman-Token": [
+                    "8446c74a-cf95-4e95-8f6b-5461aff18207"
+                ],
+                "Host": [
+                    "localhost"
+                ],
+                "Accept-Encoding": [
+                    "gzip, deflate, br"
+                ],
+                "Connection": [
+                    "keep-alive"
+                ]
+            },
+            "body": ""
+        },
+        "response": {
+            "statusCode": 200,
+            "headers": {
+                "Content-Type": [
+                    "application\/json"
+                ]
+            },
+            "body": "{\"listaPedido\":null}"
+        },
+        "timestamp": "2023-11-24 03:00:39"
+    }
+],
+[
+    {
+        "request": {
+            "method": "POST",
+            "uri": "http:\/\/localhost:666\/app\/mesas",
+            "headers": {
+                "PHP-AUTH-USER": [
+                    "cristobal_socio"
+                ],
+                "Authorization": [
+                    "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MDA3OTA2NDYsImV4cCI6MTcwMDc5NDI0NiwiYXVkIjoiMzRjNWQ0YWJlYmY2YjU0YzQxNzJkYzRkNjhiODI5NWYwMWM5ZDUyYSIsImRhdGEiOnsidXN1YXJpbyI6ImFkbWluIiwidGlwbyI6ImFkbWluIiwic2VjdG9yIjoiYWRtaW4ifSwiYXBwIjoiQVBJIFJFU1QgQ0QgMjAyMyJ9.fMWDKFNuuXYmbxcT49VT7NeQZjESitLswmTdcXXGVdI"
+                ],
+                "User-Agent": [
+                    "PostmanRuntime\/7.35.0"
+                ],
+                "Accept": [
+                    "*\/*"
+                ],
+                "Postman-Token": [
+                    "920b9666-8b93-4d25-8154-f3c9fdcca94d"
+                ],
+                "Host": [
+                    "localhost"
+                ],
+                "Accept-Encoding": [
+                    "gzip, deflate, br"
+                ],
+                "Connection": [
+                    "keep-alive"
+                ],
+                "Content-Length": [
+                    "0"
+                ]
+            },
+            "body": ""
+        },
+        "response": {
+            "statusCode": 200,
+            "headers": {
+                "Content-Type": [
+                    "application\/json"
+                ]
+            },
+            "body": "{\"mensaje\":\"Mesa creada con \\u00e9xito\",\"id\":\"1000\"}"
+        },
+        "timestamp": "2023-11-24 03:01:25"
+    }
+],
+[
+    {
+        "request": {
+            "method": "POST",
+            "uri": "http:\/\/localhost:666\/app\/pedidos",
+            "headers": {
+                "PHP-AUTH-USER": [
+                    "cristobal_socio"
+                ],
+                "Authorization": [
+                    "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MDA3OTA2NDYsImV4cCI6MTcwMDc5NDI0NiwiYXVkIjoiMzRjNWQ0YWJlYmY2YjU0YzQxNzJkYzRkNjhiODI5NWYwMWM5ZDUyYSIsImRhdGEiOnsidXN1YXJpbyI6ImFkbWluIiwidGlwbyI6ImFkbWluIiwic2VjdG9yIjoiYWRtaW4ifSwiYXBwIjoiQVBJIFJFU1QgQ0QgMjAyMyJ9.fMWDKFNuuXYmbxcT49VT7NeQZjESitLswmTdcXXGVdI"
+                ],
+                "User-Agent": [
+                    "PostmanRuntime\/7.35.0"
+                ],
+                "Accept": [
+                    "*\/*"
+                ],
+                "Postman-Token": [
+                    "7502a890-5cd0-4764-b45b-11f8cd02b5c6"
+                ],
+                "Host": [
+                    "localhost"
+                ],
+                "Accept-Encoding": [
+                    "gzip, deflate, br"
+                ],
+                "Connection": [
+                    "keep-alive"
+                ],
+                "Content-Type": [
+                    "multipart\/form-data; boundary=--------------------------483156941731562730679336"
+                ],
+                "Content-Length": [
+                    "55982"
+                ]
+            },
+            "body": ""
+        },
+        "response": {
+            "statusCode": 200,
+            "headers": {
+                "Content-Type": [
+                    "application\/json"
+                ]
+            },
+            "body": "{\"mensaje\":\"Pedido creado con exito\",\"id\":\"1000\"}"
+        },
+        "timestamp": "2023-11-24 03:01:30"
+    }
+],
+[
+    {
+        "request": {
+            "method": "GET",
+            "uri": "http:\/\/localhost:666\/app\/pedidos",
+            "headers": {
+                "Authorization": [
+                    "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MDA3OTA2NDYsImV4cCI6MTcwMDc5NDI0NiwiYXVkIjoiMzRjNWQ0YWJlYmY2YjU0YzQxNzJkYzRkNjhiODI5NWYwMWM5ZDUyYSIsImRhdGEiOnsidXN1YXJpbyI6ImFkbWluIiwidGlwbyI6ImFkbWluIiwic2VjdG9yIjoiYWRtaW4ifSwiYXBwIjoiQVBJIFJFU1QgQ0QgMjAyMyJ9.fMWDKFNuuXYmbxcT49VT7NeQZjESitLswmTdcXXGVdI"
+                ],
+                "User-Agent": [
+                    "PostmanRuntime\/7.35.0"
+                ],
+                "Accept": [
+                    "*\/*"
+                ],
+                "Postman-Token": [
+                    "f8192822-a744-4ecf-af28-17d368185f6e"
+                ],
+                "Host": [
+                    "localhost"
+                ],
+                "Accept-Encoding": [
+                    "gzip, deflate, br"
+                ],
+                "Connection": [
+                    "keep-alive"
+                ]
+            },
+            "body": ""
+        },
+        "response": {
+            "statusCode": 200,
+            "headers": {
+                "Content-Type": [
+                    "application\/json"
+                ]
+            },
+            "body": "{\"listaPedido\":[{\"idPedido\":1000,\"idMesa\":1000,\"usuarioAsignado\":2,\"itemsPedidos\":[{\"idPedido\":1000,\"idProducto\":11,\"cantidad\":1,\"fechaCreacion\":{\"date\":\"2023-11-23 23:01:30.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaEstimadaFinalizacion\":{\"date\":\"2023-11-23 23:16:30.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaFinalizacion\":null,\"estado\":\"pendiente\",\"minutosEstimados\":15},{\"idPedido\":1000,\"idProducto\":12,\"cantidad\":2,\"fechaCreacion\":{\"date\":\"2023-11-23 23:01:30.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaEstimadaFinalizacion\":{\"date\":\"2023-11-23 23:21:30.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaFinalizacion\":null,\"estado\":\"pendiente\",\"minutosEstimados\":20},{\"idPedido\":1000,\"idProducto\":13,\"cantidad\":1,\"fechaCreacion\":{\"date\":\"2023-11-23 23:01:30.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaEstimadaFinalizacion\":{\"date\":\"2023-11-23 23:06:30.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaFinalizacion\":null,\"estado\":\"pendiente\",\"minutosEstimados\":5},{\"idPedido\":1000,\"idProducto\":2,\"cantidad\":1,\"fechaCreacion\":{\"date\":\"2023-11-23 23:01:30.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaEstimadaFinalizacion\":{\"date\":\"2023-11-23 23:08:30.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaFinalizacion\":null,\"estado\":\"pendiente\",\"minutosEstimados\":7}],\"fechaCreacion\":{\"date\":\"2023-11-23 23:01:30.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaEstimadaDeFinalizacion\":{\"date\":\"2023-11-23 23:48:30.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaFinalizacion\":null,\"estado\":\"pendiente\",\"importeTotal\":720,\"nombreCliente\":\"Franco\",\"minutosEstimados\":47}]}"
+        },
+        "timestamp": "2023-11-24 03:01:34"
+    }
+],
+[
+    {
+        "request": {
+            "method": "GET",
+            "uri": "http:\/\/localhost:666\/app\/pedidos",
+            "headers": {
+                "Authorization": [
+                    "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MDA3OTA2NDYsImV4cCI6MTcwMDc5NDI0NiwiYXVkIjoiMzRjNWQ0YWJlYmY2YjU0YzQxNzJkYzRkNjhiODI5NWYwMWM5ZDUyYSIsImRhdGEiOnsidXN1YXJpbyI6ImFkbWluIiwidGlwbyI6ImFkbWluIiwic2VjdG9yIjoiYWRtaW4ifSwiYXBwIjoiQVBJIFJFU1QgQ0QgMjAyMyJ9.fMWDKFNuuXYmbxcT49VT7NeQZjESitLswmTdcXXGVdI"
+                ],
+                "User-Agent": [
+                    "PostmanRuntime\/7.35.0"
+                ],
+                "Accept": [
+                    "*\/*"
+                ],
+                "Postman-Token": [
+                    "167d92b8-991c-4e0e-8230-808ffbaee181"
+                ],
+                "Host": [
+                    "localhost"
+                ],
+                "Accept-Encoding": [
+                    "gzip, deflate, br"
+                ],
+                "Connection": [
+                    "keep-alive"
+                ]
+            },
+            "body": ""
+        },
+        "response": {
+            "statusCode": 200,
+            "headers": {
+                "Content-Type": [
+                    "application\/json"
+                ]
+            },
+            "body": "{\"listaPedido\":[{\"idPedido\":1000,\"idMesa\":1000,\"usuarioAsignado\":2,\"itemsPedidos\":[{\"idPedido\":1000,\"idProducto\":11,\"cantidad\":1,\"fechaCreacion\":{\"date\":\"2023-11-23 23:01:30.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaEstimadaFinalizacion\":{\"date\":\"2023-11-23 23:16:30.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaFinalizacion\":null,\"estado\":\"pendiente\",\"minutosEstimados\":15},{\"idPedido\":1000,\"idProducto\":12,\"cantidad\":2,\"fechaCreacion\":{\"date\":\"2023-11-23 23:01:30.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaEstimadaFinalizacion\":{\"date\":\"2023-11-23 23:21:30.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaFinalizacion\":null,\"estado\":\"pendiente\",\"minutosEstimados\":20},{\"idPedido\":1000,\"idProducto\":13,\"cantidad\":1,\"fechaCreacion\":{\"date\":\"2023-11-23 23:01:30.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaEstimadaFinalizacion\":{\"date\":\"2023-11-23 23:06:30.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaFinalizacion\":null,\"estado\":\"pendiente\",\"minutosEstimados\":5},{\"idPedido\":1000,\"idProducto\":2,\"cantidad\":1,\"fechaCreacion\":{\"date\":\"2023-11-23 23:01:30.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaEstimadaFinalizacion\":{\"date\":\"2023-11-23 23:08:30.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaFinalizacion\":null,\"estado\":\"pendiente\",\"minutosEstimados\":7}],\"fechaCreacion\":{\"date\":\"2023-11-23 23:01:30.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaEstimadaDeFinalizacion\":{\"date\":\"2023-11-23 23:48:30.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaFinalizacion\":null,\"estado\":\"pendiente\",\"importeTotal\":720,\"nombreCliente\":\"Franco\",\"minutosEstimados\":47}]}"
+        },
+        "timestamp": "2023-11-24 03:02:16"
+    }
+],
+[
+    {
+        "request": {
+            "method": "GET",
+            "uri": "http:\/\/localhost:666\/app\/pedidos",
+            "headers": {
+                "Authorization": [
+                    "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MDA3OTA2NDYsImV4cCI6MTcwMDc5NDI0NiwiYXVkIjoiMzRjNWQ0YWJlYmY2YjU0YzQxNzJkYzRkNjhiODI5NWYwMWM5ZDUyYSIsImRhdGEiOnsidXN1YXJpbyI6ImFkbWluIiwidGlwbyI6ImFkbWluIiwic2VjdG9yIjoiYWRtaW4ifSwiYXBwIjoiQVBJIFJFU1QgQ0QgMjAyMyJ9.fMWDKFNuuXYmbxcT49VT7NeQZjESitLswmTdcXXGVdI"
+                ],
+                "User-Agent": [
+                    "PostmanRuntime\/7.35.0"
+                ],
+                "Accept": [
+                    "*\/*"
+                ],
+                "Postman-Token": [
+                    "0fb81a80-1791-445c-bc69-9873383e509f"
+                ],
+                "Host": [
+                    "localhost"
+                ],
+                "Accept-Encoding": [
+                    "gzip, deflate, br"
+                ],
+                "Connection": [
+                    "keep-alive"
+                ]
+            },
+            "body": ""
+        },
+        "response": {
+            "statusCode": 200,
+            "headers": {
+                "Content-Type": [
+                    "application\/json"
+                ]
+            },
+            "body": "{\"listaPedido\":[{\"idPedido\":1000,\"idMesa\":1000,\"usuarioAsignado\":2,\"itemsPedidos\":null,\"fechaCreacion\":{\"date\":\"2023-11-23 23:01:30.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaEstimadaDeFinalizacion\":{\"date\":\"2023-11-23 23:48:30.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaFinalizacion\":null,\"estado\":\"pendiente\",\"importeTotal\":720,\"nombreCliente\":\"Franco\",\"minutosEstimados\":47}]}"
+        },
+        "timestamp": "2023-11-24 03:03:38"
+    }
+],
+[
+    {
+        "request": {
+            "method": "GET",
+            "uri": "http:\/\/localhost:666\/app\/pedidos",
+            "headers": {
+                "Authorization": [
+                    "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MDA3OTA2NDYsImV4cCI6MTcwMDc5NDI0NiwiYXVkIjoiMzRjNWQ0YWJlYmY2YjU0YzQxNzJkYzRkNjhiODI5NWYwMWM5ZDUyYSIsImRhdGEiOnsidXN1YXJpbyI6ImFkbWluIiwidGlwbyI6ImFkbWluIiwic2VjdG9yIjoiYWRtaW4ifSwiYXBwIjoiQVBJIFJFU1QgQ0QgMjAyMyJ9.fMWDKFNuuXYmbxcT49VT7NeQZjESitLswmTdcXXGVdI"
+                ],
+                "User-Agent": [
+                    "PostmanRuntime\/7.35.0"
+                ],
+                "Accept": [
+                    "*\/*"
+                ],
+                "Postman-Token": [
+                    "94518c66-5270-4023-b2a8-24b78d6131f0"
+                ],
+                "Host": [
+                    "localhost"
+                ],
+                "Accept-Encoding": [
+                    "gzip, deflate, br"
+                ],
+                "Connection": [
+                    "keep-alive"
+                ]
+            },
+            "body": ""
+        },
+        "response": {
+            "statusCode": 200,
+            "headers": {
+                "Content-Type": [
+                    "application\/json"
+                ]
+            },
+            "body": "{\"listaPedido\":[{\"idPedido\":1000,\"idMesa\":1000,\"usuarioAsignado\":2,\"itemsPedidos\":[],\"fechaCreacion\":{\"date\":\"2023-11-23 23:01:30.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaEstimadaDeFinalizacion\":{\"date\":\"2023-11-23 23:48:30.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaFinalizacion\":null,\"estado\":\"pendiente\",\"importeTotal\":720,\"nombreCliente\":\"Franco\",\"minutosEstimados\":47}]}"
+        },
+        "timestamp": "2023-11-24 03:04:42"
+    }
+],
+[
+    {
+        "request": {
+            "method": "GET",
+            "uri": "http:\/\/localhost:666\/app\/pedidos",
+            "headers": {
+                "Authorization": [
+                    "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MDA3OTA2NDYsImV4cCI6MTcwMDc5NDI0NiwiYXVkIjoiMzRjNWQ0YWJlYmY2YjU0YzQxNzJkYzRkNjhiODI5NWYwMWM5ZDUyYSIsImRhdGEiOnsidXN1YXJpbyI6ImFkbWluIiwidGlwbyI6ImFkbWluIiwic2VjdG9yIjoiYWRtaW4ifSwiYXBwIjoiQVBJIFJFU1QgQ0QgMjAyMyJ9.fMWDKFNuuXYmbxcT49VT7NeQZjESitLswmTdcXXGVdI"
+                ],
+                "User-Agent": [
+                    "PostmanRuntime\/7.35.0"
+                ],
+                "Accept": [
+                    "*\/*"
+                ],
+                "Postman-Token": [
+                    "a9b2440f-e591-40a5-b684-f42b753fc08b"
+                ],
+                "Host": [
+                    "localhost"
+                ],
+                "Accept-Encoding": [
+                    "gzip, deflate, br"
+                ],
+                "Connection": [
+                    "keep-alive"
+                ]
+            },
+            "body": ""
+        },
+        "response": {
+            "statusCode": 200,
+            "headers": {
+                "Content-Type": [
+                    "application\/json"
+                ]
+            },
+            "body": "{\"listaPedido\":[{\"idPedido\":1000,\"idMesa\":1000,\"usuarioAsignado\":2,\"itemsPedidos\":[],\"fechaCreacion\":{\"date\":\"2023-11-23 23:01:30.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaEstimadaDeFinalizacion\":{\"date\":\"2023-11-23 23:48:30.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaFinalizacion\":null,\"estado\":\"pendiente\",\"importeTotal\":720,\"nombreCliente\":\"Franco\",\"minutosEstimados\":47}]}"
+        },
+        "timestamp": "2023-11-24 03:05:35"
+    }
+],
+[
+    {
+        "request": {
+            "method": "GET",
+            "uri": "http:\/\/localhost:666\/app\/pedidos?incluirItems=true",
+            "headers": {
+                "Authorization": [
+                    "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MDA3OTA2NDYsImV4cCI6MTcwMDc5NDI0NiwiYXVkIjoiMzRjNWQ0YWJlYmY2YjU0YzQxNzJkYzRkNjhiODI5NWYwMWM5ZDUyYSIsImRhdGEiOnsidXN1YXJpbyI6ImFkbWluIiwidGlwbyI6ImFkbWluIiwic2VjdG9yIjoiYWRtaW4ifSwiYXBwIjoiQVBJIFJFU1QgQ0QgMjAyMyJ9.fMWDKFNuuXYmbxcT49VT7NeQZjESitLswmTdcXXGVdI"
+                ],
+                "User-Agent": [
+                    "PostmanRuntime\/7.35.0"
+                ],
+                "Accept": [
+                    "*\/*"
+                ],
+                "Postman-Token": [
+                    "2c8d0b5a-526a-4a65-9a9a-f88b6c68a825"
+                ],
+                "Host": [
+                    "localhost"
+                ],
+                "Accept-Encoding": [
+                    "gzip, deflate, br"
+                ],
+                "Connection": [
+                    "keep-alive"
+                ]
+            },
+            "body": ""
+        },
+        "response": {
+            "statusCode": 200,
+            "headers": {
+                "Content-Type": [
+                    "application\/json"
+                ]
+            },
+            "body": "{\"listaPedido\":[{\"idPedido\":1000,\"idMesa\":1000,\"usuarioAsignado\":2,\"itemsPedidos\":[{\"idPedido\":1000,\"idProducto\":11,\"cantidad\":1,\"fechaCreacion\":{\"date\":\"2023-11-23 23:01:30.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaEstimadaFinalizacion\":{\"date\":\"2023-11-23 23:16:30.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaFinalizacion\":null,\"estado\":\"pendiente\",\"minutosEstimados\":15},{\"idPedido\":1000,\"idProducto\":12,\"cantidad\":2,\"fechaCreacion\":{\"date\":\"2023-11-23 23:01:30.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaEstimadaFinalizacion\":{\"date\":\"2023-11-23 23:21:30.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaFinalizacion\":null,\"estado\":\"pendiente\",\"minutosEstimados\":20},{\"idPedido\":1000,\"idProducto\":13,\"cantidad\":1,\"fechaCreacion\":{\"date\":\"2023-11-23 23:01:30.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaEstimadaFinalizacion\":{\"date\":\"2023-11-23 23:06:30.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaFinalizacion\":null,\"estado\":\"pendiente\",\"minutosEstimados\":5},{\"idPedido\":1000,\"idProducto\":2,\"cantidad\":1,\"fechaCreacion\":{\"date\":\"2023-11-23 23:01:30.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaEstimadaFinalizacion\":{\"date\":\"2023-11-23 23:08:30.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaFinalizacion\":null,\"estado\":\"pendiente\",\"minutosEstimados\":7}],\"fechaCreacion\":{\"date\":\"2023-11-23 23:01:30.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaEstimadaDeFinalizacion\":{\"date\":\"2023-11-23 23:48:30.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaFinalizacion\":null,\"estado\":\"pendiente\",\"importeTotal\":720,\"nombreCliente\":\"Franco\",\"minutosEstimados\":47}]}"
+        },
+        "timestamp": "2023-11-24 03:05:49"
+    }
+],
+[
+    {
+        "request": {
+            "method": "GET",
+            "uri": "http:\/\/localhost:666\/app\/pedidos?incluirItems=false",
+            "headers": {
+                "Authorization": [
+                    "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MDA3OTA2NDYsImV4cCI6MTcwMDc5NDI0NiwiYXVkIjoiMzRjNWQ0YWJlYmY2YjU0YzQxNzJkYzRkNjhiODI5NWYwMWM5ZDUyYSIsImRhdGEiOnsidXN1YXJpbyI6ImFkbWluIiwidGlwbyI6ImFkbWluIiwic2VjdG9yIjoiYWRtaW4ifSwiYXBwIjoiQVBJIFJFU1QgQ0QgMjAyMyJ9.fMWDKFNuuXYmbxcT49VT7NeQZjESitLswmTdcXXGVdI"
+                ],
+                "User-Agent": [
+                    "PostmanRuntime\/7.35.0"
+                ],
+                "Accept": [
+                    "*\/*"
+                ],
+                "Postman-Token": [
+                    "f7341f40-bb39-4283-9a4f-1a331090e6c4"
+                ],
+                "Host": [
+                    "localhost"
+                ],
+                "Accept-Encoding": [
+                    "gzip, deflate, br"
+                ],
+                "Connection": [
+                    "keep-alive"
+                ]
+            },
+            "body": ""
+        },
+        "response": {
+            "statusCode": 200,
+            "headers": {
+                "Content-Type": [
+                    "application\/json"
+                ]
+            },
+            "body": "{\"listaPedido\":[{\"idPedido\":1000,\"idMesa\":1000,\"usuarioAsignado\":2,\"itemsPedidos\":[{\"idPedido\":1000,\"idProducto\":11,\"cantidad\":1,\"fechaCreacion\":{\"date\":\"2023-11-23 23:01:30.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaEstimadaFinalizacion\":{\"date\":\"2023-11-23 23:16:30.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaFinalizacion\":null,\"estado\":\"pendiente\",\"minutosEstimados\":15},{\"idPedido\":1000,\"idProducto\":12,\"cantidad\":2,\"fechaCreacion\":{\"date\":\"2023-11-23 23:01:30.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaEstimadaFinalizacion\":{\"date\":\"2023-11-23 23:21:30.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaFinalizacion\":null,\"estado\":\"pendiente\",\"minutosEstimados\":20},{\"idPedido\":1000,\"idProducto\":13,\"cantidad\":1,\"fechaCreacion\":{\"date\":\"2023-11-23 23:01:30.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaEstimadaFinalizacion\":{\"date\":\"2023-11-23 23:06:30.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaFinalizacion\":null,\"estado\":\"pendiente\",\"minutosEstimados\":5},{\"idPedido\":1000,\"idProducto\":2,\"cantidad\":1,\"fechaCreacion\":{\"date\":\"2023-11-23 23:01:30.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaEstimadaFinalizacion\":{\"date\":\"2023-11-23 23:08:30.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaFinalizacion\":null,\"estado\":\"pendiente\",\"minutosEstimados\":7}],\"fechaCreacion\":{\"date\":\"2023-11-23 23:01:30.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaEstimadaDeFinalizacion\":{\"date\":\"2023-11-23 23:48:30.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaFinalizacion\":null,\"estado\":\"pendiente\",\"importeTotal\":720,\"nombreCliente\":\"Franco\",\"minutosEstimados\":47}]}"
+        },
+        "timestamp": "2023-11-24 03:06:19"
+    }
+],
+[
+    {
+        "request": {
+            "method": "GET",
+            "uri": "http:\/\/localhost:666\/app\/pedidos?incluirItems=false",
+            "headers": {
+                "Authorization": [
+                    "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MDA3OTA2NDYsImV4cCI6MTcwMDc5NDI0NiwiYXVkIjoiMzRjNWQ0YWJlYmY2YjU0YzQxNzJkYzRkNjhiODI5NWYwMWM5ZDUyYSIsImRhdGEiOnsidXN1YXJpbyI6ImFkbWluIiwidGlwbyI6ImFkbWluIiwic2VjdG9yIjoiYWRtaW4ifSwiYXBwIjoiQVBJIFJFU1QgQ0QgMjAyMyJ9.fMWDKFNuuXYmbxcT49VT7NeQZjESitLswmTdcXXGVdI"
+                ],
+                "User-Agent": [
+                    "PostmanRuntime\/7.35.0"
+                ],
+                "Accept": [
+                    "*\/*"
+                ],
+                "Postman-Token": [
+                    "6853fda0-dc4e-478b-9e6d-e6e7c7df7afd"
+                ],
+                "Host": [
+                    "localhost"
+                ],
+                "Accept-Encoding": [
+                    "gzip, deflate, br"
+                ],
+                "Connection": [
+                    "keep-alive"
+                ]
+            },
+            "body": ""
+        },
+        "response": {
+            "statusCode": 200,
+            "headers": {
+                "Content-Type": [
+                    "application\/json"
+                ]
+            },
+            "body": "{\"listaPedido\":[{\"idPedido\":1000,\"idMesa\":1000,\"usuarioAsignado\":2,\"itemsPedidos\":[{\"idPedido\":1000,\"idProducto\":11,\"cantidad\":1,\"fechaCreacion\":{\"date\":\"2023-11-23 23:01:30.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaEstimadaFinalizacion\":{\"date\":\"2023-11-23 23:16:30.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaFinalizacion\":null,\"estado\":\"pendiente\",\"minutosEstimados\":15},{\"idPedido\":1000,\"idProducto\":12,\"cantidad\":2,\"fechaCreacion\":{\"date\":\"2023-11-23 23:01:30.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaEstimadaFinalizacion\":{\"date\":\"2023-11-23 23:21:30.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaFinalizacion\":null,\"estado\":\"pendiente\",\"minutosEstimados\":20},{\"idPedido\":1000,\"idProducto\":13,\"cantidad\":1,\"fechaCreacion\":{\"date\":\"2023-11-23 23:01:30.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaEstimadaFinalizacion\":{\"date\":\"2023-11-23 23:06:30.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaFinalizacion\":null,\"estado\":\"pendiente\",\"minutosEstimados\":5},{\"idPedido\":1000,\"idProducto\":2,\"cantidad\":1,\"fechaCreacion\":{\"date\":\"2023-11-23 23:01:30.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaEstimadaFinalizacion\":{\"date\":\"2023-11-23 23:08:30.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaFinalizacion\":null,\"estado\":\"pendiente\",\"minutosEstimados\":7}],\"fechaCreacion\":{\"date\":\"2023-11-23 23:01:30.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaEstimadaDeFinalizacion\":{\"date\":\"2023-11-23 23:48:30.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaFinalizacion\":null,\"estado\":\"pendiente\",\"importeTotal\":720,\"nombreCliente\":\"Franco\",\"minutosEstimados\":47}]}"
+        },
+        "timestamp": "2023-11-24 03:07:13"
+    }
+],
+[
+    {
+        "request": {
+            "method": "GET",
+            "uri": "http:\/\/localhost:666\/app\/pedidos?incluirItems=false",
+            "headers": {
+                "Authorization": [
+                    "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MDA3OTA2NDYsImV4cCI6MTcwMDc5NDI0NiwiYXVkIjoiMzRjNWQ0YWJlYmY2YjU0YzQxNzJkYzRkNjhiODI5NWYwMWM5ZDUyYSIsImRhdGEiOnsidXN1YXJpbyI6ImFkbWluIiwidGlwbyI6ImFkbWluIiwic2VjdG9yIjoiYWRtaW4ifSwiYXBwIjoiQVBJIFJFU1QgQ0QgMjAyMyJ9.fMWDKFNuuXYmbxcT49VT7NeQZjESitLswmTdcXXGVdI"
+                ],
+                "User-Agent": [
+                    "PostmanRuntime\/7.35.0"
+                ],
+                "Accept": [
+                    "*\/*"
+                ],
+                "Postman-Token": [
+                    "6571354a-ec82-4174-bb63-e0e7ab66abe5"
+                ],
+                "Host": [
+                    "localhost"
+                ],
+                "Accept-Encoding": [
+                    "gzip, deflate, br"
+                ],
+                "Connection": [
+                    "keep-alive"
+                ]
+            },
+            "body": ""
+        },
+        "response": {
+            "statusCode": 200,
+            "headers": {
+                "Content-Type": [
+                    "application\/json"
+                ]
+            },
+            "body": "{\"listaPedido\":[{\"idPedido\":1000,\"idMesa\":1000,\"usuarioAsignado\":2,\"itemsPedidos\":[],\"fechaCreacion\":{\"date\":\"2023-11-23 23:01:30.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaEstimadaDeFinalizacion\":{\"date\":\"2023-11-23 23:48:30.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaFinalizacion\":null,\"estado\":\"pendiente\",\"importeTotal\":720,\"nombreCliente\":\"Franco\",\"minutosEstimados\":47}]}"
+        },
+        "timestamp": "2023-11-24 03:07:25"
+    }
+],
+[
+    {
+        "request": {
+            "method": "GET",
+            "uri": "http:\/\/localhost:666\/app\/pedidos?incluirItems=true",
+            "headers": {
+                "Authorization": [
+                    "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MDA3OTA2NDYsImV4cCI6MTcwMDc5NDI0NiwiYXVkIjoiMzRjNWQ0YWJlYmY2YjU0YzQxNzJkYzRkNjhiODI5NWYwMWM5ZDUyYSIsImRhdGEiOnsidXN1YXJpbyI6ImFkbWluIiwidGlwbyI6ImFkbWluIiwic2VjdG9yIjoiYWRtaW4ifSwiYXBwIjoiQVBJIFJFU1QgQ0QgMjAyMyJ9.fMWDKFNuuXYmbxcT49VT7NeQZjESitLswmTdcXXGVdI"
+                ],
+                "User-Agent": [
+                    "PostmanRuntime\/7.35.0"
+                ],
+                "Accept": [
+                    "*\/*"
+                ],
+                "Postman-Token": [
+                    "3188130f-6ea4-4c33-8d91-55a1681cb835"
+                ],
+                "Host": [
+                    "localhost"
+                ],
+                "Accept-Encoding": [
+                    "gzip, deflate, br"
+                ],
+                "Connection": [
+                    "keep-alive"
+                ]
+            },
+            "body": ""
+        },
+        "response": {
+            "statusCode": 200,
+            "headers": {
+                "Content-Type": [
+                    "application\/json"
+                ]
+            },
+            "body": "{\"listaPedido\":[{\"idPedido\":1000,\"idMesa\":1000,\"usuarioAsignado\":2,\"itemsPedidos\":[],\"fechaCreacion\":{\"date\":\"2023-11-23 23:01:30.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaEstimadaDeFinalizacion\":{\"date\":\"2023-11-23 23:48:30.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaFinalizacion\":null,\"estado\":\"pendiente\",\"importeTotal\":720,\"nombreCliente\":\"Franco\",\"minutosEstimados\":47}]}"
+        },
+        "timestamp": "2023-11-24 03:07:39"
+    }
 ]

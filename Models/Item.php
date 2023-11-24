@@ -81,7 +81,7 @@ class Item
         return $rtn;
     }
 
-    private static function transformarPrototipo($prototipo)
+    public static function transformarPrototipo($prototipo)
     {
         $item = new Item();
         $item->idPedido = $prototipo->id_pedido;

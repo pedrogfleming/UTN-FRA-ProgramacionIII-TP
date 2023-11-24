@@ -81,8 +81,11 @@ class PedidoController implements IApiUsable
     public function TraerUno($request, $response, $args)
     {
         $id = $args["pedido"];
+        $filtroIdMesa =$request->getQueryParams();
+        $filtroIdMesa = isset($filtroIdMesa['idMesa']) ? $filtroIdMesa['idMesa'] : null;
+
         $pedido = Pedido::obtenerPedido($id);
-        if (!$pedido) {
+        if (!$pedido || $pedido->idMesa != $filtroIdMesa) {
             $ret = new stdClass();
             $ret->err = "no se encontro el pedido con el id solicitado";
             $err_payload = json_encode($ret);
@@ -97,14 +100,16 @@ class PedidoController implements IApiUsable
 
     public function TraerTodos($request, $response, $args)
     {
-        $filtroEstado =$request->getQueryParams();
-        $filtroEstado = isset($filtroEstado['estado']) ? $filtroEstado['estado'] : null;
+        $filtros =$request->getQueryParams();
+        $filtroEstado = isset($filtros['estado']) ? $filtros['estado'] : null;
+        $traerItems = isset($filtros['incluirItems']) ? $filtros['incluirItems'] : null;
+
         $header = $request->getHeaderLine('Authorization');
         $token = trim(explode("Bearer", $header)[1]);
         $usuario = AutentificadorJWT::ObtenerData($token);
 
 
-        $lista = Pedido::obtenerTodos($filtroEstado);
+        $lista = Pedido::obtenerTodos($filtroEstado, $traerItems);
         $pedidosFiltrados = $lista;
         if(isset($usuario)){
             // El socio puede ver todos los pedidos

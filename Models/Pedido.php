@@ -57,10 +57,9 @@ class Pedido
         return $idPedido;
     }
 
-    public static function obtenerTodos($filtroEstado = null)
+    public static function obtenerTodos($filtroEstado = null, $traerItems = null)
     {
         $objAccesoDatos = AccesoDatos::obtenerInstancia();
-
         $consulta = $objAccesoDatos->prepararConsulta("SELECT * FROM pedidos WHERE eliminado = " . ACTIVO . " AND (? IS NULL OR estado = ?)");
         $consulta->bindParam(1, $filtroEstado);
         $consulta->bindParam(2, $filtroEstado);
@@ -68,7 +67,7 @@ class Pedido
 
         $arrayPedidos = array();
         foreach ($consulta->fetchAll(PDO::FETCH_OBJ) as $prototipo) {
-            array_push($arrayPedidos, Pedido::transformarPrototipo($prototipo));
+            array_push($arrayPedidos, Pedido::transformarPrototipo($prototipo, $traerItems));
         }
 
         return $arrayPedidos;
@@ -90,7 +89,7 @@ class Pedido
         return $rtn;
     }
 
-    private static function transformarPrototipo($prototipo)
+    private static function transformarPrototipo($prototipo, $traerItems = null)
     {
         $pedido = new Pedido();
         $pedido->idPedido = $prototipo->id_pedido;
@@ -109,8 +108,7 @@ class Pedido
         $pedido->nombreCliente = $prototipo->nombre_cliente;
         $pedido->estado = $prototipo->estado;
 
-        // Puedes agregar la lógica para obtener los items relacionados con el pedido
-        $pedido->itemsPedidos = Item::obtenerItemsPorPedido($pedido->idPedido);
+        $pedido->itemsPedidos = $traerItems === true ? Item::obtenerItemsPorPedido($pedido->idPedido) : [];
         // Calcular la diferencia en minutos entre la fecha de creación y la fecha estimada de finalización
         $diferencia = $pedido->fechaCreacion->diff($pedido->fechaEstimadaDeFinalizacion);
         $pedido->minutosEstimados = $diferencia->days * 24 * 60 + $diferencia->h * 60 + $diferencia->i;
