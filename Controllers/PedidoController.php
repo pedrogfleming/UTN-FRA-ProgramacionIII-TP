@@ -16,11 +16,11 @@ class PedidoController implements IApiUsable
         $items = $parametros['items'];
 
         $pedido = new Pedido();
-        $nombreUsuario = $parametros['nombreUsuario'];
+        $nombreMozo = $parametros['nombreMozo'];
         $nombreCliente = $parametros['nombreCliente'];
         $pedido->nombreCliente = $nombreCliente;
 
-        $pedido->usuarioAsignado = Usuario::obtenerUsuarioByName($nombreUsuario);
+        $pedido->usuarioAsignado = Usuario::obtenerUsuarioByName($nombreMozo);
         if ($pedido->usuarioAsignado === false) {
             throw new Exception("No existe el usuario con el nombre suministrado");
         }
@@ -49,7 +49,6 @@ class PedidoController implements IApiUsable
             $interval = DateInterval::createFromDateString($minutosDelItem . 'minutes');
             $fechaEstimadaFinalizacion = clone $item->fechaCreacion;
             $item->fechaEstimadaFinalizacion = $fechaEstimadaFinalizacion->add($interval);
-            // $item->fechaEstimadaFinalizacion = $item->fechaCreacion->add($interval);
             $item->estado = Item::ESTADO_PENDIENTE;
             array_push($pedido->itemsPedidos, $item);
             $pedido->importeTotal += $productoObtenido->precio * $item->cantidad;
@@ -60,7 +59,7 @@ class PedidoController implements IApiUsable
         $pedido->fechaEstimadaDeFinalizacion = $pedido->fechaEstimadaDeFinalizacion->add($aux);
 
         $idCreado = $pedido->crearPedido();
-        $mensaje = "Pedido creado con exito. Id pedido: " . $idCreado;
+        $mensaje = "Pedido creado con exito";
         $nombreFoto = $idCreado . "-pedido.jpg";
         $fotoGuardadaConExito = $this->GuardarFoto($nombreFoto);
 
@@ -73,7 +72,7 @@ class PedidoController implements IApiUsable
         $mesaOcupada->estado = Mesa::ESTADO_PENDIENTE;
         Mesa::actualizarMesa($mesaOcupada);
 
-        $payload = json_encode(array("mensaje" => $mensaje));
+        $payload = json_encode(array("mensaje" => $mensaje, "id" => $idCreado));
         $response->getBody()->write($payload);
         return $response->withHeader('Content-Type', 'application/json');
     }

@@ -4362,4 +4362,384 @@
         },
         "timestamp": "2023-11-24 01:12:37"
     }
+],
+[
+    {
+        "request": {
+            "method": "GET",
+            "uri": "http:\/\/localhost:666\/app\/usuarios",
+            "headers": {
+                "Authorization": [
+                    "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MDA3MTM5NTksImV4cCI6MTcwMDcxNzU1OSwiYXVkIjoiMzRjNWQ0YWJlYmY2YjU0YzQxNzJkYzRkNjhiODI5NWYwMWM5ZDUyYSIsImRhdGEiOnsidXN1YXJpbyI6ImFkbWluIiwidGlwbyI6ImFkbWluIiwic2VjdG9yIjoiYWRtaW4ifSwiYXBwIjoiQVBJIFJFU1QgQ0QgMjAyMyJ9.i7SBwOewvb10stib4T6nfTVaH47QTrj8dLuLT2RQqsU"
+                ],
+                "User-Agent": [
+                    "PostmanRuntime\/7.35.0"
+                ],
+                "Accept": [
+                    "*\/*"
+                ],
+                "Postman-Token": [
+                    "947747aa-db13-4a13-bda8-1d3292080f3e"
+                ],
+                "Host": [
+                    "localhost"
+                ],
+                "Accept-Encoding": [
+                    "gzip, deflate, br"
+                ],
+                "Connection": [
+                    "keep-alive"
+                ]
+            },
+            "body": ""
+        },
+        "response": {
+            "statusCode": 200,
+            "headers": {
+                "Content-Type": [
+                    "application\/json"
+                ]
+            },
+            "body": "{\"mensaje\":\"Error: Clave fuera de tiempo\"}"
+        },
+        "timestamp": "2023-11-24 01:14:06"
+    }
+],
+[
+    {
+        "request": {
+            "method": "GET",
+            "uri": "http:\/\/localhost:666\/app\/usuarios",
+            "headers": {
+                "Authorization": [
+                    "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MDA3ODI1OTcsImV4cCI6MTcwMDc4NjE5NywiYXVkIjoiMzRjNWQ0YWJlYmY2YjU0YzQxNzJkYzRkNjhiODI5NWYwMWM5ZDUyYSIsImRhdGEiOnsidXN1YXJpbyI6ImFkbWluIiwidGlwbyI6ImFkbWluIiwic2VjdG9yIjoiYWRtaW4ifSwiYXBwIjoiQVBJIFJFU1QgQ0QgMjAyMyJ9.tue1ytcMaFltqs4YzVZWCQa_5Y4nCvlF5pXyKyLsYg8"
+                ],
+                "User-Agent": [
+                    "PostmanRuntime\/7.35.0"
+                ],
+                "Accept": [
+                    "*\/*"
+                ],
+                "Postman-Token": [
+                    "91f9bfff-fc24-4b99-9106-1d86ce15d4ec"
+                ],
+                "Host": [
+                    "localhost"
+                ],
+                "Accept-Encoding": [
+                    "gzip, deflate, br"
+                ],
+                "Connection": [
+                    "keep-alive"
+                ]
+            },
+            "body": ""
+        },
+        "response": {
+            "statusCode": 200,
+            "headers": {
+                "Content-Type": [
+                    "application\/json"
+                ]
+            },
+            "body": "{\"listaUsuario\":[{\"idUsuario\":1,\"nombre\":\"cristobal\",\"fechaCreacion\":{\"date\":\"2023-11-14 11:54:37.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaFinalizacion\":null,\"user\":\"cristobal_socio\",\"password\":\"*4D78C66DBC6FA11E7084240C135637D650FECAB7\",\"sector\":\"administracion\",\"tipo\":\"admin\"},{\"idUsuario\":2,\"nombre\":\"oscar\",\"fechaCreacion\":{\"date\":\"2023-11-15 11:54:37.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaFinalizacion\":null,\"user\":\"oscar_mozo\",\"password\":\"*7924A6822A50269BE36F22130A83D7ED07E32700\",\"sector\":\"mesas\",\"tipo\":\"mozo\"},{\"idUsuario\":3,\"nombre\":\"susana\",\"fechaCreacion\":{\"date\":\"2023-02-15 11:54:37.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaFinalizacion\":null,\"user\":\"susana_cocinera\",\"password\":\"*3F835267B6B2F85CD865ACABE0B1395D4CBBBFEC\",\"sector\":\"cocina\",\"tipo\":\"cocinero\"},{\"idUsuario\":4,\"nombre\":\"admin\",\"fechaCreacion\":{\"date\":\"2023-11-23 01:25:23.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaFinalizacion\":null,\"user\":\"admin\",\"password\":\"$2y$10$qW3JhSoT\\\/1zIWCN3F2C1seds6PQhsWva8GPRonVWmf50UurMvm8FW\",\"sector\":\"admin\",\"tipo\":\"admin\"}]}"
+        },
+        "timestamp": "2023-11-24 01:14:20"
+    }
+],
+[
+    {
+        "request": {
+            "method": "POST",
+            "uri": "http:\/\/localhost:666\/app\/pedidos",
+            "headers": {
+                "PHP-AUTH-USER": [
+                    "cristobal_socio"
+                ],
+                "Authorization": [
+                    "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MDA3ODI1OTcsImV4cCI6MTcwMDc4NjE5NywiYXVkIjoiMzRjNWQ0YWJlYmY2YjU0YzQxNzJkYzRkNjhiODI5NWYwMWM5ZDUyYSIsImRhdGEiOnsidXN1YXJpbyI6ImFkbWluIiwidGlwbyI6ImFkbWluIiwic2VjdG9yIjoiYWRtaW4ifSwiYXBwIjoiQVBJIFJFU1QgQ0QgMjAyMyJ9.tue1ytcMaFltqs4YzVZWCQa_5Y4nCvlF5pXyKyLsYg8"
+                ],
+                "User-Agent": [
+                    "PostmanRuntime\/7.35.0"
+                ],
+                "Accept": [
+                    "*\/*"
+                ],
+                "Postman-Token": [
+                    "30fe0132-b3d4-4456-9b10-ac2e0a887a85"
+                ],
+                "Host": [
+                    "localhost"
+                ],
+                "Accept-Encoding": [
+                    "gzip, deflate, br"
+                ],
+                "Connection": [
+                    "keep-alive"
+                ],
+                "Content-Type": [
+                    "multipart\/form-data; boundary=--------------------------152533846082034688181790"
+                ],
+                "Content-Length": [
+                    "1419"
+                ]
+            },
+            "body": ""
+        },
+        "response": {
+            "statusCode": 400,
+            "headers": [],
+            "body": "{\"error\":\"Falta la clave 'nombreUsuario' en el cuerpo de la solicitud\"}"
+        },
+        "timestamp": "2023-11-24 01:18:01"
+    }
+],
+[
+    {
+        "request": {
+            "method": "POST",
+            "uri": "http:\/\/localhost:666\/app\/pedidos",
+            "headers": {
+                "PHP-AUTH-USER": [
+                    "cristobal_socio"
+                ],
+                "Authorization": [
+                    "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MDA3ODI1OTcsImV4cCI6MTcwMDc4NjE5NywiYXVkIjoiMzRjNWQ0YWJlYmY2YjU0YzQxNzJkYzRkNjhiODI5NWYwMWM5ZDUyYSIsImRhdGEiOnsidXN1YXJpbyI6ImFkbWluIiwidGlwbyI6ImFkbWluIiwic2VjdG9yIjoiYWRtaW4ifSwiYXBwIjoiQVBJIFJFU1QgQ0QgMjAyMyJ9.tue1ytcMaFltqs4YzVZWCQa_5Y4nCvlF5pXyKyLsYg8"
+                ],
+                "User-Agent": [
+                    "PostmanRuntime\/7.35.0"
+                ],
+                "Accept": [
+                    "*\/*"
+                ],
+                "Postman-Token": [
+                    "c6c50265-0899-40b7-8e92-d22d4be49963"
+                ],
+                "Host": [
+                    "localhost"
+                ],
+                "Accept-Encoding": [
+                    "gzip, deflate, br"
+                ],
+                "Connection": [
+                    "keep-alive"
+                ],
+                "Content-Type": [
+                    "multipart\/form-data; boundary=--------------------------641080603244933085343423"
+                ],
+                "Content-Length": [
+                    "1419"
+                ]
+            },
+            "body": ""
+        },
+        "response": {
+            "statusCode": 200,
+            "headers": {
+                "Content-Type": [
+                    "application\/json"
+                ]
+            },
+            "body": "{\"mensaje\":\"Error: No existe el producto con el nombre suministrado\"}"
+        },
+        "timestamp": "2023-11-24 01:18:22"
+    }
+],
+[
+    {
+        "request": {
+            "method": "GET",
+            "uri": "http:\/\/localhost:666\/app\/productos",
+            "headers": {
+                "PHP-AUTH-USER": [
+                    "cristobal_socio"
+                ],
+                "Authorization": [
+                    "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MDA3ODI1OTcsImV4cCI6MTcwMDc4NjE5NywiYXVkIjoiMzRjNWQ0YWJlYmY2YjU0YzQxNzJkYzRkNjhiODI5NWYwMWM5ZDUyYSIsImRhdGEiOnsidXN1YXJpbyI6ImFkbWluIiwidGlwbyI6ImFkbWluIiwic2VjdG9yIjoiYWRtaW4ifSwiYXBwIjoiQVBJIFJFU1QgQ0QgMjAyMyJ9.tue1ytcMaFltqs4YzVZWCQa_5Y4nCvlF5pXyKyLsYg8"
+                ],
+                "User-Agent": [
+                    "PostmanRuntime\/7.35.0"
+                ],
+                "Accept": [
+                    "*\/*"
+                ],
+                "Postman-Token": [
+                    "136a38b5-741a-4901-ade9-0c7df2ad530c"
+                ],
+                "Host": [
+                    "localhost"
+                ],
+                "Accept-Encoding": [
+                    "gzip, deflate, br"
+                ],
+                "Connection": [
+                    "keep-alive"
+                ]
+            },
+            "body": ""
+        },
+        "response": {
+            "statusCode": 200,
+            "headers": {
+                "Content-Type": [
+                    "application\/json"
+                ]
+            },
+            "body": "{\"listaProducto\":[{\"idProducto\":1,\"titulo\":\"Vodka\",\"tiempoPreparacion\":6,\"precio\":\"180.00\",\"estado\":\"Activo\",\"sector\":\"bar\",\"fechaCreacion\":{\"date\":\"2023-11-23 21:08:31.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"}},{\"idProducto\":2,\"titulo\":\"Daiquiri\",\"tiempoPreparacion\":7,\"precio\":\"200.00\",\"estado\":\"Activo\",\"sector\":\"bar\",\"fechaCreacion\":{\"date\":\"2023-11-23 21:08:33.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"}},{\"idProducto\":3,\"titulo\":\"Mai Tai\",\"tiempoPreparacion\":8,\"precio\":\"220.00\",\"estado\":\"Activo\",\"sector\":\"bar\",\"fechaCreacion\":{\"date\":\"2023-11-23 21:08:41.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"}},{\"idProducto\":4,\"titulo\":\"Tequila Sunrise\",\"tiempoPreparacion\":6,\"precio\":\"160.00\",\"estado\":\"Activo\",\"sector\":\"bar\",\"fechaCreacion\":{\"date\":\"2023-11-23 21:08:43.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"}},{\"idProducto\":5,\"titulo\":\"Pi\\u00f1a Colada\",\"tiempoPreparacion\":7,\"precio\":\"190.00\",\"estado\":\"Activo\",\"sector\":\"bar\",\"fechaCreacion\":{\"date\":\"2023-11-23 21:08:44.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"}},{\"idProducto\":6,\"titulo\":\"Manhattan\",\"tiempoPreparacion\":8,\"precio\":\"250.00\",\"estado\":\"Activo\",\"sector\":\"bar\",\"fechaCreacion\":{\"date\":\"2023-11-23 21:08:45.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"}},{\"idProducto\":7,\"titulo\":\"Old Fashioned\",\"tiempoPreparacion\":7,\"precio\":\"230.00\",\"estado\":\"Activo\",\"sector\":\"bar\",\"fechaCreacion\":{\"date\":\"2023-11-23 21:08:46.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"}},{\"idProducto\":8,\"titulo\":\"Cuba Libre\",\"tiempoPreparacion\":6,\"precio\":\"150.00\",\"estado\":\"Activo\",\"sector\":\"bar\",\"fechaCreacion\":{\"date\":\"2023-11-23 21:08:47.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"}},{\"idProducto\":9,\"titulo\":\"Whiskey Sour\",\"tiempoPreparacion\":7,\"precio\":\"200.00\",\"estado\":\"Activo\",\"sector\":\"bar\",\"fechaCreacion\":{\"date\":\"2023-11-23 21:08:48.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"}},{\"idProducto\":10,\"titulo\":\"Gin Tonic\",\"tiempoPreparacion\":6,\"precio\":\"170.00\",\"estado\":\"Activo\",\"sector\":\"bar\",\"fechaCreacion\":{\"date\":\"2023-11-23 21:08:49.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"}},{\"idProducto\":11,\"titulo\":\"Milanesa a Caballo\",\"tiempoPreparacion\":15,\"precio\":\"180.00\",\"estado\":\"Activo\",\"sector\":\"restaurante\",\"fechaCreacion\":{\"date\":\"2023-11-23 21:08:50.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"}},{\"idProducto\":12,\"titulo\":\"Hamburguesa de Garbanzo\",\"tiempoPreparacion\":10,\"precio\":\"150.00\",\"estado\":\"Activo\",\"sector\":\"restaurante\",\"fechaCreacion\":{\"date\":\"2023-11-23 21:08:51.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"}},{\"idProducto\":13,\"titulo\":\"Corona\",\"tiempoPreparacion\":5,\"precio\":\"40.00\",\"estado\":\"Activo\",\"sector\":\"bar\",\"fechaCreacion\":{\"date\":\"2023-11-23 21:08:52.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"}}]}"
+        },
+        "timestamp": "2023-11-24 01:18:37"
+    }
+],
+[
+    {
+        "request": {
+            "method": "POST",
+            "uri": "http:\/\/localhost:666\/app\/pedidos",
+            "headers": {
+                "PHP-AUTH-USER": [
+                    "cristobal_socio"
+                ],
+                "Authorization": [
+                    "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MDA3ODI1OTcsImV4cCI6MTcwMDc4NjE5NywiYXVkIjoiMzRjNWQ0YWJlYmY2YjU0YzQxNzJkYzRkNjhiODI5NWYwMWM5ZDUyYSIsImRhdGEiOnsidXN1YXJpbyI6ImFkbWluIiwidGlwbyI6ImFkbWluIiwic2VjdG9yIjoiYWRtaW4ifSwiYXBwIjoiQVBJIFJFU1QgQ0QgMjAyMyJ9.tue1ytcMaFltqs4YzVZWCQa_5Y4nCvlF5pXyKyLsYg8"
+                ],
+                "User-Agent": [
+                    "PostmanRuntime\/7.35.0"
+                ],
+                "Accept": [
+                    "*\/*"
+                ],
+                "Postman-Token": [
+                    "daf0c54d-714f-427b-8d52-3ddea9383d17"
+                ],
+                "Host": [
+                    "localhost"
+                ],
+                "Accept-Encoding": [
+                    "gzip, deflate, br"
+                ],
+                "Connection": [
+                    "keep-alive"
+                ],
+                "Content-Type": [
+                    "multipart\/form-data; boundary=--------------------------861249784813769148343213"
+                ],
+                "Content-Length": [
+                    "1415"
+                ]
+            },
+            "body": ""
+        },
+        "response": {
+            "statusCode": 200,
+            "headers": {
+                "Content-Type": [
+                    "application\/json"
+                ]
+            },
+            "body": "{\"mensaje\":\"Error: No existe el producto con el nombre suministrado\"}"
+        },
+        "timestamp": "2023-11-24 01:19:12"
+    }
+],
+[
+    {
+        "request": {
+            "method": "POST",
+            "uri": "http:\/\/localhost:666\/app\/pedidos",
+            "headers": {
+                "PHP-AUTH-USER": [
+                    "cristobal_socio"
+                ],
+                "Authorization": [
+                    "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MDA3ODI1OTcsImV4cCI6MTcwMDc4NjE5NywiYXVkIjoiMzRjNWQ0YWJlYmY2YjU0YzQxNzJkYzRkNjhiODI5NWYwMWM5ZDUyYSIsImRhdGEiOnsidXN1YXJpbyI6ImFkbWluIiwidGlwbyI6ImFkbWluIiwic2VjdG9yIjoiYWRtaW4ifSwiYXBwIjoiQVBJIFJFU1QgQ0QgMjAyMyJ9.tue1ytcMaFltqs4YzVZWCQa_5Y4nCvlF5pXyKyLsYg8"
+                ],
+                "User-Agent": [
+                    "PostmanRuntime\/7.35.0"
+                ],
+                "Accept": [
+                    "*\/*"
+                ],
+                "Postman-Token": [
+                    "cec0a788-121e-4fdd-a0ff-c533ee1732b2"
+                ],
+                "Host": [
+                    "localhost"
+                ],
+                "Accept-Encoding": [
+                    "gzip, deflate, br"
+                ],
+                "Connection": [
+                    "keep-alive"
+                ],
+                "Content-Type": [
+                    "multipart\/form-data; boundary=--------------------------089555482305577998913060"
+                ],
+                "Content-Length": [
+                    "1416"
+                ]
+            },
+            "body": ""
+        },
+        "response": {
+            "statusCode": 200,
+            "headers": {
+                "Content-Type": [
+                    "application\/json"
+                ]
+            },
+            "body": "{\"mensaje\":\"Pedido creado con exito. No se pudo guardar la foto del pedido. Error: La extensi\\u00f3n o el tama\\u00f1o de los archivos no es correcto. <br><br><table><tr><td><li>Solo se permiten archivos .png o .jpg<br><li>Se permiten archivos de un m\\u00e1ximo de 300 Kb.<\\\/td><\\\/tr><\\\/table>\",\"id\":\"1000\"}"
+        },
+        "timestamp": "2023-11-24 01:19:22"
+    }
+],
+[
+    {
+        "request": {
+            "method": "POST",
+            "uri": "http:\/\/localhost:666\/app\/pedidos",
+            "headers": {
+                "PHP-AUTH-USER": [
+                    "cristobal_socio"
+                ],
+                "Authorization": [
+                    "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MDA3ODI1OTcsImV4cCI6MTcwMDc4NjE5NywiYXVkIjoiMzRjNWQ0YWJlYmY2YjU0YzQxNzJkYzRkNjhiODI5NWYwMWM5ZDUyYSIsImRhdGEiOnsidXN1YXJpbyI6ImFkbWluIiwidGlwbyI6ImFkbWluIiwic2VjdG9yIjoiYWRtaW4ifSwiYXBwIjoiQVBJIFJFU1QgQ0QgMjAyMyJ9.tue1ytcMaFltqs4YzVZWCQa_5Y4nCvlF5pXyKyLsYg8"
+                ],
+                "User-Agent": [
+                    "PostmanRuntime\/7.35.0"
+                ],
+                "Accept": [
+                    "*\/*"
+                ],
+                "Postman-Token": [
+                    "97d011f5-c944-44b3-a84c-46f5b092e2a2"
+                ],
+                "Host": [
+                    "localhost"
+                ],
+                "Accept-Encoding": [
+                    "gzip, deflate, br"
+                ],
+                "Connection": [
+                    "keep-alive"
+                ],
+                "Content-Type": [
+                    "multipart\/form-data; boundary=--------------------------220381631963319896900726"
+                ],
+                "Content-Length": [
+                    "55982"
+                ]
+            },
+            "body": ""
+        },
+        "response": {
+            "statusCode": 200,
+            "headers": {
+                "Content-Type": [
+                    "application\/json"
+                ]
+            },
+            "body": "{\"mensaje\":\"Pedido creado con exito\",\"id\":\"1001\"}"
+        },
+        "timestamp": "2023-11-24 01:20:20"
+    }
 ]
