@@ -12,9 +12,9 @@ class MesaController implements IApiUsable
         $mesa = new Mesa();
 
         $mesa->estado = Mesa::ESTADO_CERRADA;
-        $mesa->crearMesa();
+        $idMesaCreada = $mesa->crearMesa();
 
-        $payload = json_encode(array("mensaje" => "Mesa creada con éxito"));
+        $payload = json_encode(array("mensaje" => "Mesa creada con éxito", "id" => $idMesaCreada));
 
         $response->getBody()->write($payload);
         return $response->withHeader('Content-Type', 'application/json');
