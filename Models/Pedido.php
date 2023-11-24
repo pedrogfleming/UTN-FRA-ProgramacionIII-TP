@@ -73,7 +73,7 @@ class Pedido
         return $arrayPedidos;
     }
 
-    public static function obtenerPedido($id)
+    public static function obtenerPedido($id, $traerItems = null)
     {
         $rtn = false;
         $objAccesoDatos = AccesoDatos::obtenerInstancia();
@@ -83,7 +83,7 @@ class Pedido
 
         $prototipeObject = $consulta->fetch(PDO::FETCH_OBJ);
         if ($prototipeObject != false) {
-            $rtn = Pedido::transformarPrototipo($prototipeObject);
+            $rtn = Pedido::transformarPrototipo($prototipeObject, $traerItems);
         }
 
         return $rtn;
@@ -138,6 +138,51 @@ class Pedido
         $consulta->execute();
     }
 
+    public static function modificarItemsPedido($pedido, $itemsModificados){
+        $objAccesoDato = AccesoDatos::obtenerInstancia();
+        try {
+            $objAccesoDato->begin_transaction();
+            // Item::borrarItem($pedido->idPedido);
+
+            // Eliminamos todos los items del pedido y volvemos a insertar en base a los recibidos
+            $limpiarItems = $objAccesoDato->prepararConsulta("DELETE FROM itempedidos WHERE id_pedido = ?");
+            $limpiarItems->bindParam(1, $pedido->idPedido);
+            $limpiarItems->execute();
+
+            $accImportTotal = 0;
+            $minutosAcc = 0;
+            $pedido->itemsPedidos = [];
+
+            foreach ($itemsModificados as $item) {
+                $producto = Producto::obtenerProductoByName($item["nombreProducto"]);
+                if ($producto === false) {
+                    throw new Exception("No existe el producto con el nombre suministrado: " . $item["nombreProducto"]);
+                }
+                $i = new Item();
+                $i->idPedido = $pedido->idPedido;
+                $i->idProducto = $producto->idProducto;
+                $i->cantidad = (int)$item["cantidad"];
+                $i->estado = $item["estado"];
+                $i->fechaCreacion =  new DateTime("now", new DateTimeZone("America/Argentina/Buenos_Aires"));
+                $tiempoEnMinutosTotalDelPedido = $producto->tiempoPreparacion * $i->cantidad;
+                $minutosAcc += $tiempoEnMinutosTotalDelPedido;
+                $interval = DateInterval::createFromDateString($tiempoEnMinutosTotalDelPedido . 'minutes');
+                $fechaEstimadaFinalizacion = clone $i->fechaCreacion;
+                $i->fechaEstimadaFinalizacion = $fechaEstimadaFinalizacion->add($interval);
+                if ($i->crearItem() !== true) {
+                    throw new Exception("No se pudo modificar el item " . $item["nombreProducto"] . " del pedido " . $pedido->idPedido);
+                }
+                $accImportTotal += $item["cantidad"] * $producto->precio;
+                array_push($pedido->itemsPedidos, $i);
+            }
+            $pedido->importeTotal = $accImportTotal;
+            $objAccesoDato->commit_transaction();
+        } catch (\Throwable $th) {
+            $objAccesoDato->rollback_transaction();
+            throw new Exception("Error al intentar actualizar items del pedido: " . $th->getMessage());
+        }
+
+    }
     public static function borrarPedido($pedido)
     {
         $objAccesoDato = AccesoDatos::obtenerInstancia();

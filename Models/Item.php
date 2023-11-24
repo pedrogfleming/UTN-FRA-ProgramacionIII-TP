@@ -120,10 +120,21 @@ class Item
 
     public static function borrarItem($idPedido, $idProducto = null)
     {
-        $objAccesoDato = AccesoDatos::obtenerInstancia();        
-        $consulta = $objAccesoDato->prepararConsulta("UPDATE FROM itempedidos WHERE id_pedido = ? and ISNULL(id_producto = ?) SET eliminado = " . INACTIVO);
+        $objAccesoDato = AccesoDatos::obtenerInstancia();
+        $consultaBase = "UPDATE itempedidos SET eliminado = " . INACTIVO . " WHERE id_pedido = ?";
+        
+        // Añadir condicion para id_producto si está presente
+        $consulta = $objAccesoDato->prepararConsulta(
+            $idProducto ? $consultaBase . " AND id_producto = ?" : $consultaBase
+        );
+    
         $consulta->bindParam(1, $idPedido);
-        $consulta->bindParam(2, $idProducto);
+        
+        if ($idProducto) {
+            $consulta->bindParam(2, $idProducto);
+        }
+    
         $consulta->execute();
     }
+    
 }

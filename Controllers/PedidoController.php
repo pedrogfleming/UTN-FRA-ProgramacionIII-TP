@@ -145,34 +145,7 @@ class PedidoController implements IApiUsable
             throw new Exception("No existe el pedido con el id suministrado: ");
         }
 
-        Item::borrarItem($idPedido);
-        $accImportTotal = 0;
-        $minutosAcc = 0;
-        $pedido->itemsPedidos = [];
-        foreach ($items as $item) {
-            $producto = Producto::obtenerProductoByName($item["nombreProducto"]);
-            if ($producto === false) {
-                throw new Exception("No existe el producto con el nombre suministrado: " . $item["nombreProducto"]);
-            }
-            $i = new Item();
-            $i->idPedido = $idPedido;
-            $i->idProducto = $producto->idProducto;
-            $i->cantidad = (int)$item["cantidad"];
-            $i->estado = $item["estado"];
-            $i->fechaCreacion =  new DateTime("now", new DateTimeZone("America/Argentina/Buenos_Aires"));
-            $tiempoEnMinutosTotalDelPedido = $producto->tiempoPreparacion * $i->cantidad;
-            $minutosAcc += $tiempoEnMinutosTotalDelPedido;
-            $interval = DateInterval::createFromDateString($tiempoEnMinutosTotalDelPedido . 'minutes');
-            $fechaEstimadaFinalizacion = clone $i->fechaCreacion;
-            $item->fechaEstimadaFinalizacion = $fechaEstimadaFinalizacion->add($interval);
-            if ($i->crearItem() !== true) {
-                throw new Exception("No se pudo modificar el item " . $item["nombreProducto"] . " del pedido " . $idPedido);
-            }
-            $accImportTotal += $item["cantidad"] * $producto->precio;
-            array_push($pedido->itemsPedidos, $i);
-        }
-
-        $pedido->importeTotal = $accImportTotal;
+        Pedido::modificarItemsPedido($pedido, $items);        
         $pedido->usuarioAsignado = $usuarioAsignado;
         $pedido->idMesa = (int)$idMesa;
         $pedido->nombreCliente = $nombreCliente;
@@ -180,7 +153,11 @@ class PedidoController implements IApiUsable
 
         Pedido::modificarPedido($pedido);
 
-        $payload = json_encode(array("mensaje" => "Pedido modificado con éxito"));
+        $pedidoModificado = Pedido::obtenerPedido($pedido->idPedido, true);
+        $payload = json_encode(array(
+            "mensaje" => "Pedido modificado con éxito",
+            "Pedido" => $pedidoModificado
+            ));
 
         $response->getBody()->write($payload);
         return $response->withHeader('Content-Type', 'application/json');
