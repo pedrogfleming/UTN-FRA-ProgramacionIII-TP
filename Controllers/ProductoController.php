@@ -97,13 +97,17 @@ class ProductoController implements IApiUsable
     public function CargaMasiva($request, $response, $args)
     {
         $huboErroresDuplicados = false;
-        $uploadedFile = $request->getUploadedFiles()["productos"];
+        $archivosSubidos = $request->getUploadedFiles();
+        $archivoProductos = $archivosSubidos["productos"];
+        if($archivoProductos->getClientFilename() === "" || $archivoProductos->getSize() <= 0 || $archivoProductos->getClientMediaType() != "text/csv"){
+            throw new Exception("Request no contiene archivo csv con un formato correcto");            
+        }
         $parametros = $request->getParsedBody();
         $omitirRepetidos = $parametros['omitirRepetidos'];
         $omitirRepetidos = isset($omitirRepetidos) ? $omitirRepetidos : false;
         // Verificar si se cargo correctamente el archivo
-        if ($uploadedFile->getError() === UPLOAD_ERR_OK) {
-            $csvContent = $uploadedFile->getStream()->getContents();
+        if ($archivoProductos->getError() === UPLOAD_ERR_OK) {
+            $csvContent = $archivoProductos->getStream()->getContents();
 
             // Convertir el contenido del CSV en un array de filas
             $filas = explode(PHP_EOL, $csvContent);
