@@ -129,7 +129,7 @@ class Pedido
 
         // Actualizar el pedido en la base de datos
         $consulta = $objAccesoDato->prepararConsulta("UPDATE Pedidos SET id_usuario = ?, id_mesa = ?, fecha_creacion = ?, fecha_estimada_finalizacion = ?, fecha_finalizacion = ?, importe_total = ?, nombre_cliente = ?, estado = ? WHERE id_pedido = ? AND eliminado = " . ACTIVO);
-
+        
         $consulta->bindParam(1, $pedido->usuarioAsignado->idUsuario);
         $consulta->bindParam(2, $pedido->idMesa);
         $consulta->bindParam(3, $fechaCreacionString);

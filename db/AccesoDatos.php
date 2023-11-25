@@ -80,7 +80,7 @@ class AccesoDatos
             importe_total DECIMAL NOT NULL,
             nombre_cliente VARCHAR(255) NOT NULL,
             eliminado BOOL DEFAULT FALSE,
-            estado ENUM('pendiente', 'en preparación', 'listo para servir', 'cancelado') NOT NULL,
+            estado ENUM('pendiente', 'en preparación', 'listo para servir', 'cancelado', 'pagado') NOT NULL,
             FOREIGN KEY (id_mesa) REFERENCES Mesas (idMesa) ON DELETE CASCADE,
             FOREIGN KEY (id_usuario) REFERENCES Usuarios (idUsuario) ON DELETE CASCADE
         ) AUTO_INCREMENT=1000;

@@ -11480,4 +11480,538 @@
         },
         "timestamp": "2023-11-25 01:26:45"
     }
+],
+[
+    {
+        "request": {
+            "method": "PUT",
+            "uri": "http:\/\/localhost:666\/app\/mesas\/1000",
+            "headers": {
+                "X-Http-Method-Override": [
+                    "PUT"
+                ],
+                "Content-Type": [
+                    "application\/json"
+                ],
+                "Authorization": [
+                    "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MDA4NzAzMzYsImV4cCI6MTcwMDg3MzkzNiwiYXVkIjoiMzRjNWQ0YWJlYmY2YjU0YzQxNzJkYzRkNjhiODI5NWYwMWM5ZDUyYSIsImRhdGEiOnsidXN1YXJpbyI6ImFkbWluIiwidGlwbyI6ImFkbWluIiwic2VjdG9yIjoiYWRtaW4ifSwiYXBwIjoiQVBJIFJFU1QgQ0QgMjAyMyJ9.n05zE-CdWKfZq_0pxTNuGrie_P0SBMX5ZoC6Jj53JEE"
+                ],
+                "User-Agent": [
+                    "PostmanRuntime\/7.35.0"
+                ],
+                "Accept": [
+                    "*\/*"
+                ],
+                "Postman-Token": [
+                    "9d767a0e-256b-4155-9f2f-05fc7e8e3748"
+                ],
+                "Host": [
+                    "localhost"
+                ],
+                "Accept-Encoding": [
+                    "gzip, deflate, br"
+                ],
+                "Connection": [
+                    "keep-alive"
+                ],
+                "Content-Length": [
+                    "29"
+                ]
+            },
+            "body": "{\r\n    \"estado\": \"cerrada\"\r\n}"
+        },
+        "response": {
+            "statusCode": 200,
+            "headers": {
+                "Content-Type": [
+                    "application\/json"
+                ]
+            },
+            "body": "{\"mensaje\":\"Mesa modificada con \\u00e9xito\"}"
+        },
+        "timestamp": "2023-11-25 01:27:48"
+    }
+],
+[
+    {
+        "request": {
+            "method": "POST",
+            "uri": "http:\/\/localhost:666\/app\/encuestas",
+            "headers": {
+                "PHP-AUTH-USER": [
+                    "cristobal_socio"
+                ],
+                "Authorization": [
+                    "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MDA4NzAzMzYsImV4cCI6MTcwMDg3MzkzNiwiYXVkIjoiMzRjNWQ0YWJlYmY2YjU0YzQxNzJkYzRkNjhiODI5NWYwMWM5ZDUyYSIsImRhdGEiOnsidXN1YXJpbyI6ImFkbWluIiwidGlwbyI6ImFkbWluIiwic2VjdG9yIjoiYWRtaW4ifSwiYXBwIjoiQVBJIFJFU1QgQ0QgMjAyMyJ9.n05zE-CdWKfZq_0pxTNuGrie_P0SBMX5ZoC6Jj53JEE"
+                ],
+                "User-Agent": [
+                    "PostmanRuntime\/7.35.0"
+                ],
+                "Accept": [
+                    "*\/*"
+                ],
+                "Postman-Token": [
+                    "168b670f-7a70-4f2c-8e31-c85f8f0aa443"
+                ],
+                "Host": [
+                    "localhost"
+                ],
+                "Accept-Encoding": [
+                    "gzip, deflate, br"
+                ],
+                "Connection": [
+                    "keep-alive"
+                ],
+                "Content-Type": [
+                    "multipart\/form-data; boundary=--------------------------697804112751909638037450"
+                ],
+                "Content-Length": [
+                    "1128"
+                ]
+            },
+            "body": ""
+        },
+        "response": {
+            "statusCode": 200,
+            "headers": {
+                "Content-Type": [
+                    "application\/json"
+                ]
+            },
+            "body": "{\"mensaje\":\"Error: Clave fuera de tiempo\"}"
+        },
+        "timestamp": "2023-11-25 16:14:42"
+    }
+],
+[
+    {
+        "request": {
+            "method": "POST",
+            "uri": "http:\/\/localhost:666\/app\/auth\/login",
+            "headers": {
+                "User-Agent": [
+                    "PostmanRuntime\/7.35.0"
+                ],
+                "Accept": [
+                    "*\/*"
+                ],
+                "Postman-Token": [
+                    "19f398c7-5ded-4b77-85ad-dd5a8d7e8795"
+                ],
+                "Host": [
+                    "localhost"
+                ],
+                "Accept-Encoding": [
+                    "gzip, deflate, br"
+                ],
+                "Connection": [
+                    "keep-alive"
+                ],
+                "Content-Type": [
+                    "multipart\/form-data; boundary=--------------------------201262403344294019092111"
+                ],
+                "Content-Length": [
+                    "285"
+                ]
+            },
+            "body": ""
+        },
+        "response": {
+            "statusCode": 200,
+            "headers": {
+                "Content-Type": [
+                    "application\/json"
+                ]
+            },
+            "body": "{\"jwt\":\"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MDA5MjUyODgsImV4cCI6MTcwMDkyODg4OCwiYXVkIjoiMzRjNWQ0YWJlYmY2YjU0YzQxNzJkYzRkNjhiODI5NWYwMWM5ZDUyYSIsImRhdGEiOnsidXN1YXJpbyI6ImFkbWluIiwidGlwbyI6ImFkbWluIiwic2VjdG9yIjoiYWRtaW4ifSwiYXBwIjoiQVBJIFJFU1QgQ0QgMjAyMyJ9.315dGuUhISJAQGWrOqP9kWWEpuHvwi5KhI4mpK85Mq4\"}"
+        },
+        "timestamp": "2023-11-25 16:14:48"
+    }
+],
+[
+    {
+        "request": {
+            "method": "POST",
+            "uri": "http:\/\/localhost:666\/app\/encuestas",
+            "headers": {
+                "PHP-AUTH-USER": [
+                    "cristobal_socio"
+                ],
+                "Authorization": [
+                    "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MDA5MjUyODgsImV4cCI6MTcwMDkyODg4OCwiYXVkIjoiMzRjNWQ0YWJlYmY2YjU0YzQxNzJkYzRkNjhiODI5NWYwMWM5ZDUyYSIsImRhdGEiOnsidXN1YXJpbyI6ImFkbWluIiwidGlwbyI6ImFkbWluIiwic2VjdG9yIjoiYWRtaW4ifSwiYXBwIjoiQVBJIFJFU1QgQ0QgMjAyMyJ9.315dGuUhISJAQGWrOqP9kWWEpuHvwi5KhI4mpK85Mq4"
+                ],
+                "User-Agent": [
+                    "PostmanRuntime\/7.35.0"
+                ],
+                "Accept": [
+                    "*\/*"
+                ],
+                "Postman-Token": [
+                    "a8618f78-ba8c-448f-8010-d724c79d8388"
+                ],
+                "Host": [
+                    "localhost"
+                ],
+                "Accept-Encoding": [
+                    "gzip, deflate, br"
+                ],
+                "Connection": [
+                    "keep-alive"
+                ],
+                "Content-Type": [
+                    "multipart\/form-data; boundary=--------------------------876183009956628133001205"
+                ],
+                "Content-Length": [
+                    "1128"
+                ]
+            },
+            "body": ""
+        },
+        "response": {
+            "statusCode": 500,
+            "headers": {
+                "Content-type": [
+                    "text\/html"
+                ]
+            },
+            "body": "<!doctype html><html lang=\"en\">    <head>        <meta charset=\"utf-8\">        <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">        <title>Slim Application Error<\/title>        <style>            body{margin:0;padding:30px;font:12px\/1.5 Helvetica,Arial,Verdana,sans-serif}            h1{margin:0;font-size:48px;font-weight:normal;line-height:48px}            strong{display:inline-block;width:65px}        <\/style>    <\/head>    <body>        <h1>Slim Application Error<\/h1>        <div><p>The application could not run because of the following error:<\/p><h2>Details<\/h2><div><strong>Type:<\/strong> Error<\/div><div><strong>Code:<\/strong> 0<\/div><div><strong>Message:<\/strong> Attempt to assign property &quot;estado&quot; on null<\/div><div><strong>File:<\/strong> D:\\Environments\\XAMP\\htdocs\\UTN-ProgramacionIII-TP\\app-comanda\\Controllers\\EncuestaController.php<\/div><div><strong>Line:<\/strong> 36<\/div><h2>Trace<\/h2><pre>#0 D:\\Environments\\XAMP\\htdocs\\UTN-ProgramacionIII-TP\\app-comanda\\vendor\\slim\\slim\\Slim\\Handlers\\Strategies\\RequestResponse.php(38): EncuestaController-&gt;CargarUno(Object(Slim\\Psr7\\Request), Object(Slim\\Psr7\\Response), Array)\n#1 D:\\Environments\\XAMP\\htdocs\\UTN-ProgramacionIII-TP\\app-comanda\\vendor\\slim\\slim\\Slim\\Routing\\Route.php(358): Slim\\Handlers\\Strategies\\RequestResponse-&gt;__invoke(Array, Object(Slim\\Psr7\\Request), Object(Slim\\Psr7\\Response), Array)\n#2 D:\\Environments\\XAMP\\htdocs\\UTN-ProgramacionIII-TP\\app-comanda\\Middlewares\\AuthorizationMiddleware.php(30): Slim\\Routing\\Route-&gt;handle(Object(Slim\\Psr7\\Request))\n#3 D:\\Environments\\XAMP\\htdocs\\UTN-ProgramacionIII-TP\\app-comanda\\vendor\\slim\\slim\\Slim\\MiddlewareDispatcher.php(269): AuthorizationMiddleware-&gt;__invoke(Object(Slim\\Psr7\\Request), Object(Slim\\Routing\\Route))\n#4 D:\\Environments\\XAMP\\htdocs\\UTN-ProgramacionIII-TP\\app-comanda\\Middlewares\\RequestValidatorMiddleware.php(62): Psr\\Http\\Server\\RequestHandlerInterface@anonymous-&gt;handle(Object(Slim\\Psr7\\Request))\n#5 D:\\Environments\\XAMP\\htdocs\\UTN-ProgramacionIII-TP\\app-comanda\\vendor\\slim\\slim\\Slim\\MiddlewareDispatcher.php(269): RequestValidatorMiddleware-&gt;__invoke(Object(Slim\\Psr7\\Request), Object(Psr\\Http\\Server\\RequestHandlerInterface@anonymous))\n#6 D:\\Environments\\XAMP\\htdocs\\UTN-ProgramacionIII-TP\\app-comanda\\vendor\\slim\\slim\\Slim\\MiddlewareDispatcher.php(65): Psr\\Http\\Server\\RequestHandlerInterface@anonymous-&gt;handle(Object(Slim\\Psr7\\Request))\n#7 D:\\Environments\\XAMP\\htdocs\\UTN-ProgramacionIII-TP\\app-comanda\\Middlewares\\AuthenticationMiddleware.php(16): Slim\\MiddlewareDispatcher-&gt;handle(Object(Slim\\Psr7\\Request))\n#8 D:\\Environments\\XAMP\\htdocs\\UTN-ProgramacionIII-TP\\app-comanda\\vendor\\slim\\slim\\Slim\\MiddlewareDispatcher.php(269): AuthenticationMiddleware-&gt;__invoke(Object(Slim\\Psr7\\Request), Object(Slim\\MiddlewareDispatcher))\n#9 D:\\Environments\\XAMP\\htdocs\\UTN-ProgramacionIII-TP\\app-comanda\\vendor\\slim\\slim\\Slim\\MiddlewareDispatcher.php(65): Psr\\Http\\Server\\RequestHandlerInterface@anonymous-&gt;handle(Object(Slim\\Psr7\\Request))\n#10 D:\\Environments\\XAMP\\htdocs\\UTN-ProgramacionIII-TP\\app-comanda\\vendor\\slim\\slim\\Slim\\Routing\\Route.php(315): Slim\\MiddlewareDispatcher-&gt;handle(Object(Slim\\Psr7\\Request))\n#11 D:\\Environments\\XAMP\\htdocs\\UTN-ProgramacionIII-TP\\app-comanda\\vendor\\slim\\slim\\Slim\\Routing\\RouteRunner.php(68): Slim\\Routing\\Route-&gt;run(Object(Slim\\Psr7\\Request))\n#12 D:\\Environments\\XAMP\\htdocs\\UTN-ProgramacionIII-TP\\app-comanda\\vendor\\slim\\slim\\Slim\\Middleware\\ErrorMiddleware.php(76): Slim\\Routing\\RouteRunner-&gt;handle(Object(Slim\\Psr7\\Request))\n#13 D:\\Environments\\XAMP\\htdocs\\UTN-ProgramacionIII-TP\\app-comanda\\vendor\\slim\\slim\\Slim\\MiddlewareDispatcher.php(121): Slim\\Middleware\\ErrorMiddleware-&gt;process(Object(Slim\\Psr7\\Request), Object(Slim\\Routing\\RouteRunner))\n#14 D:\\Environments\\XAMP\\htdocs\\UTN-ProgramacionIII-TP\\app-comanda\\vendor\\slim\\slim\\Slim\\Middleware\\BodyParsingMiddleware.php(64): Psr\\Http\\Server\\RequestHandlerInterface@anonymous-&gt;handle(Object(Slim\\Psr7\\Request))\n#15 D:\\Environments\\XAMP\\htdocs\\UTN-ProgramacionIII-TP\\app-comanda\\vendor\\slim\\slim\\Slim\\MiddlewareDispatcher.php(121): Slim\\Middleware\\BodyParsingMiddleware-&gt;process(Object(Slim\\Psr7\\Request), Object(Psr\\Http\\Server\\RequestHandlerInterface@anonymous))\n#16 D:\\Environments\\XAMP\\htdocs\\UTN-ProgramacionIII-TP\\app-comanda\\Middlewares\\LoggerMiddleware.php(13): Psr\\Http\\Server\\RequestHandlerInterface@anonymous-&gt;handle(Object(Slim\\Psr7\\Request))\n#17 D:\\Environments\\XAMP\\htdocs\\UTN-ProgramacionIII-TP\\app-comanda\\vendor\\slim\\slim\\Slim\\MiddlewareDispatcher.php(269): LoggerMiddleware-&gt;__invoke(Object(Slim\\Psr7\\Request), Object(Psr\\Http\\Server\\RequestHandlerInterface@anonymous))\n#18 D:\\Environments\\XAMP\\htdocs\\UTN-ProgramacionIII-TP\\app-comanda\\vendor\\slim\\slim\\Slim\\MiddlewareDispatcher.php(65): Psr\\Http\\Server\\RequestHandlerInterface@anonymous-&gt;handle(Object(Slim\\Psr7\\Request))\n#19 D:\\Environments\\XAMP\\htdocs\\UTN-ProgramacionIII-TP\\app-comanda\\vendor\\slim\\slim\\Slim\\App.php(199): Slim\\MiddlewareDispatcher-&gt;handle(Object(Slim\\Psr7\\Request))\n#20 D:\\Environments\\XAMP\\htdocs\\UTN-ProgramacionIII-TP\\app-comanda\\vendor\\slim\\slim\\Slim\\App.php(183): Slim\\App-&gt;handle(Object(Slim\\Psr7\\Request))\n#21 D:\\Environments\\XAMP\\htdocs\\UTN-ProgramacionIII-TP\\app-comanda\\app\\index.php(156): Slim\\App-&gt;run()\n#22 {main}<\/pre><\/div>        <a href=\"#\" onclick=\"window.history.go(-1)\">Go Back<\/a>    <\/body><\/html>"
+        },
+        "timestamp": "2023-11-25 16:15:41"
+    }
+],
+[
+    {
+        "request": {
+            "method": "PUT",
+            "uri": "http:\/\/localhost:666\/app\/pedidos\/1000",
+            "headers": {
+                "Content-Type": [
+                    "application\/json"
+                ],
+                "Authorization": [
+                    "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MDA5MjUyODgsImV4cCI6MTcwMDkyODg4OCwiYXVkIjoiMzRjNWQ0YWJlYmY2YjU0YzQxNzJkYzRkNjhiODI5NWYwMWM5ZDUyYSIsImRhdGEiOnsidXN1YXJpbyI6ImFkbWluIiwidGlwbyI6ImFkbWluIiwic2VjdG9yIjoiYWRtaW4ifSwiYXBwIjoiQVBJIFJFU1QgQ0QgMjAyMyJ9.315dGuUhISJAQGWrOqP9kWWEpuHvwi5KhI4mpK85Mq4"
+                ],
+                "User-Agent": [
+                    "PostmanRuntime\/7.35.0"
+                ],
+                "Accept": [
+                    "*\/*"
+                ],
+                "Postman-Token": [
+                    "8ca9a14b-3f44-4166-80f1-f6a437d22c8b"
+                ],
+                "Host": [
+                    "localhost"
+                ],
+                "Accept-Encoding": [
+                    "gzip, deflate, br"
+                ],
+                "Connection": [
+                    "keep-alive"
+                ],
+                "Content-Length": [
+                    "509"
+                ]
+            },
+            "body": "{\r\n    \"idMesa\": 1000,\r\n    \"nombreUsuario\": \"oscar\",\r\n    \"nombreCliente\": \"Franco\",\r\n    \"estado\": \"pagado\",\r\n    \"items\": [\r\n        {\"nombreProducto\": \"Milanesa a Caballo\", \"cantidad\": 1 , \"estado\": \"listo para servir\"},\r\n        {\"nombreProducto\": \"Hamburguesa de Garbanzo\", \"cantidad\": 2, \"estado\": \"listo para servir\"},\r\n        {\"nombreProducto\": \"Corona\", \"cantidad\": 1 , \"estado\": \"listo para servir\"},\r\n        {\"nombreProducto\": \"Daiquiri\", \"cantidad\": 1 , \"estado\": \"listo para servir\"}\r\n    ]\r\n}"
+        },
+        "response": {
+            "statusCode": 200,
+            "headers": {
+                "Content-Type": [
+                    "application\/json"
+                ]
+            },
+            "body": "{\"mensaje\":\"Pedido modificado con \\u00e9xito\",\"Pedido\":{\"idPedido\":1000,\"idMesa\":1000,\"usuarioAsignado\":2,\"itemsPedidos\":[{\"idPedido\":1000,\"idProducto\":11,\"cantidad\":1,\"fechaCreacion\":{\"date\":\"2023-11-25 12:17:50.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaEstimadaFinalizacion\":{\"date\":\"2023-11-25 12:32:50.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaFinalizacion\":{\"date\":\"2023-11-25 12:17:50.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"estado\":\"listo para servir\",\"minutosEstimados\":15},{\"idPedido\":1000,\"idProducto\":12,\"cantidad\":2,\"fechaCreacion\":{\"date\":\"2023-11-25 12:17:50.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaEstimadaFinalizacion\":{\"date\":\"2023-11-25 12:37:50.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaFinalizacion\":{\"date\":\"2023-11-25 12:17:50.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"estado\":\"listo para servir\",\"minutosEstimados\":20},{\"idPedido\":1000,\"idProducto\":13,\"cantidad\":1,\"fechaCreacion\":{\"date\":\"2023-11-25 12:17:50.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaEstimadaFinalizacion\":{\"date\":\"2023-11-25 12:22:50.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaFinalizacion\":{\"date\":\"2023-11-25 12:17:50.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"estado\":\"listo para servir\",\"minutosEstimados\":5},{\"idPedido\":1000,\"idProducto\":2,\"cantidad\":1,\"fechaCreacion\":{\"date\":\"2023-11-25 12:17:50.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaEstimadaFinalizacion\":{\"date\":\"2023-11-25 12:24:50.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaFinalizacion\":{\"date\":\"2023-11-25 12:17:50.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"estado\":\"listo para servir\",\"minutosEstimados\":7}],\"fechaCreacion\":{\"date\":\"2023-11-23 23:01:30.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaEstimadaDeFinalizacion\":{\"date\":\"2023-11-23 23:48:30.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaFinalizacion\":{\"date\":\"2023-11-25 12:18:07.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"estado\":\"\",\"importeTotal\":720,\"nombreCliente\":\"Franco\",\"minutosEstimados\":47}}"
+        },
+        "timestamp": "2023-11-25 16:18:33"
+    }
+],
+[
+    {
+        "request": {
+            "method": "PUT",
+            "uri": "http:\/\/localhost:666\/app\/pedidos\/1000",
+            "headers": {
+                "Content-Type": [
+                    "application\/json"
+                ],
+                "Authorization": [
+                    "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MDA5MjUyODgsImV4cCI6MTcwMDkyODg4OCwiYXVkIjoiMzRjNWQ0YWJlYmY2YjU0YzQxNzJkYzRkNjhiODI5NWYwMWM5ZDUyYSIsImRhdGEiOnsidXN1YXJpbyI6ImFkbWluIiwidGlwbyI6ImFkbWluIiwic2VjdG9yIjoiYWRtaW4ifSwiYXBwIjoiQVBJIFJFU1QgQ0QgMjAyMyJ9.315dGuUhISJAQGWrOqP9kWWEpuHvwi5KhI4mpK85Mq4"
+                ],
+                "User-Agent": [
+                    "PostmanRuntime\/7.35.0"
+                ],
+                "Accept": [
+                    "*\/*"
+                ],
+                "Postman-Token": [
+                    "0ac0f1c5-c8eb-4009-bac1-4c4ce0fc87cc"
+                ],
+                "Host": [
+                    "localhost"
+                ],
+                "Accept-Encoding": [
+                    "gzip, deflate, br"
+                ],
+                "Connection": [
+                    "keep-alive"
+                ],
+                "Content-Length": [
+                    "509"
+                ]
+            },
+            "body": "{\r\n    \"idMesa\": 1000,\r\n    \"nombreUsuario\": \"oscar\",\r\n    \"nombreCliente\": \"Franco\",\r\n    \"estado\": \"pagado\",\r\n    \"items\": [\r\n        {\"nombreProducto\": \"Milanesa a Caballo\", \"cantidad\": 1 , \"estado\": \"listo para servir\"},\r\n        {\"nombreProducto\": \"Hamburguesa de Garbanzo\", \"cantidad\": 2, \"estado\": \"listo para servir\"},\r\n        {\"nombreProducto\": \"Corona\", \"cantidad\": 1 , \"estado\": \"listo para servir\"},\r\n        {\"nombreProducto\": \"Daiquiri\", \"cantidad\": 1 , \"estado\": \"listo para servir\"}\r\n    ]\r\n}"
+        },
+        "response": {
+            "statusCode": 200,
+            "headers": {
+                "Content-Type": [
+                    "application\/json"
+                ]
+            },
+            "body": "{\"mensaje\":\"Pedido modificado con \\u00e9xito\",\"Pedido\":{\"idPedido\":1000,\"idMesa\":1000,\"usuarioAsignado\":2,\"itemsPedidos\":[{\"idPedido\":1000,\"idProducto\":11,\"cantidad\":1,\"fechaCreacion\":{\"date\":\"2023-11-25 12:18:51.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaEstimadaFinalizacion\":{\"date\":\"2023-11-25 12:33:51.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaFinalizacion\":{\"date\":\"2023-11-25 12:18:51.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"estado\":\"listo para servir\",\"minutosEstimados\":15},{\"idPedido\":1000,\"idProducto\":12,\"cantidad\":2,\"fechaCreacion\":{\"date\":\"2023-11-25 12:18:51.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaEstimadaFinalizacion\":{\"date\":\"2023-11-25 12:38:51.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaFinalizacion\":{\"date\":\"2023-11-25 12:18:51.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"estado\":\"listo para servir\",\"minutosEstimados\":20},{\"idPedido\":1000,\"idProducto\":13,\"cantidad\":1,\"fechaCreacion\":{\"date\":\"2023-11-25 12:18:51.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaEstimadaFinalizacion\":{\"date\":\"2023-11-25 12:23:51.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaFinalizacion\":{\"date\":\"2023-11-25 12:18:51.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"estado\":\"listo para servir\",\"minutosEstimados\":5},{\"idPedido\":1000,\"idProducto\":2,\"cantidad\":1,\"fechaCreacion\":{\"date\":\"2023-11-25 12:18:51.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaEstimadaFinalizacion\":{\"date\":\"2023-11-25 12:25:51.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaFinalizacion\":{\"date\":\"2023-11-25 12:18:51.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"estado\":\"listo para servir\",\"minutosEstimados\":7}],\"fechaCreacion\":{\"date\":\"2023-11-23 23:01:30.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaEstimadaDeFinalizacion\":{\"date\":\"2023-11-23 23:48:30.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaFinalizacion\":{\"date\":\"2023-11-25 12:18:52.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"estado\":\"\",\"importeTotal\":720,\"nombreCliente\":\"Franco\",\"minutosEstimados\":47}}"
+        },
+        "timestamp": "2023-11-25 16:19:08"
+    }
+],
+[
+    {
+        "request": {
+            "method": "PUT",
+            "uri": "http:\/\/localhost:666\/app\/pedidos\/1000",
+            "headers": {
+                "Content-Type": [
+                    "application\/json"
+                ],
+                "Authorization": [
+                    "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MDA5MjUyODgsImV4cCI6MTcwMDkyODg4OCwiYXVkIjoiMzRjNWQ0YWJlYmY2YjU0YzQxNzJkYzRkNjhiODI5NWYwMWM5ZDUyYSIsImRhdGEiOnsidXN1YXJpbyI6ImFkbWluIiwidGlwbyI6ImFkbWluIiwic2VjdG9yIjoiYWRtaW4ifSwiYXBwIjoiQVBJIFJFU1QgQ0QgMjAyMyJ9.315dGuUhISJAQGWrOqP9kWWEpuHvwi5KhI4mpK85Mq4"
+                ],
+                "User-Agent": [
+                    "PostmanRuntime\/7.35.0"
+                ],
+                "Accept": [
+                    "*\/*"
+                ],
+                "Postman-Token": [
+                    "1be5e00b-5de9-40e1-a1ac-4556af51a644"
+                ],
+                "Host": [
+                    "localhost"
+                ],
+                "Accept-Encoding": [
+                    "gzip, deflate, br"
+                ],
+                "Connection": [
+                    "keep-alive"
+                ],
+                "Content-Length": [
+                    "509"
+                ]
+            },
+            "body": "{\r\n    \"idMesa\": 1000,\r\n    \"nombreUsuario\": \"oscar\",\r\n    \"nombreCliente\": \"Franco\",\r\n    \"estado\": \"pagado\",\r\n    \"items\": [\r\n        {\"nombreProducto\": \"Milanesa a Caballo\", \"cantidad\": 1 , \"estado\": \"listo para servir\"},\r\n        {\"nombreProducto\": \"Hamburguesa de Garbanzo\", \"cantidad\": 2, \"estado\": \"listo para servir\"},\r\n        {\"nombreProducto\": \"Corona\", \"cantidad\": 1 , \"estado\": \"listo para servir\"},\r\n        {\"nombreProducto\": \"Daiquiri\", \"cantidad\": 1 , \"estado\": \"listo para servir\"}\r\n    ]\r\n}"
+        },
+        "response": {
+            "statusCode": 200,
+            "headers": {
+                "Content-Type": [
+                    "application\/json"
+                ]
+            },
+            "body": "{\"mensaje\":\"Pedido modificado con \\u00e9xito\",\"Pedido\":{\"idPedido\":1000,\"idMesa\":1000,\"usuarioAsignado\":2,\"itemsPedidos\":[{\"idPedido\":1000,\"idProducto\":11,\"cantidad\":1,\"fechaCreacion\":{\"date\":\"2023-11-25 12:22:14.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaEstimadaFinalizacion\":{\"date\":\"2023-11-25 12:37:14.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaFinalizacion\":{\"date\":\"2023-11-25 12:22:14.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"estado\":\"listo para servir\",\"minutosEstimados\":15},{\"idPedido\":1000,\"idProducto\":12,\"cantidad\":2,\"fechaCreacion\":{\"date\":\"2023-11-25 12:22:14.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaEstimadaFinalizacion\":{\"date\":\"2023-11-25 12:42:14.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaFinalizacion\":{\"date\":\"2023-11-25 12:22:14.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"estado\":\"listo para servir\",\"minutosEstimados\":20},{\"idPedido\":1000,\"idProducto\":13,\"cantidad\":1,\"fechaCreacion\":{\"date\":\"2023-11-25 12:22:14.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaEstimadaFinalizacion\":{\"date\":\"2023-11-25 12:27:14.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaFinalizacion\":{\"date\":\"2023-11-25 12:22:14.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"estado\":\"listo para servir\",\"minutosEstimados\":5},{\"idPedido\":1000,\"idProducto\":2,\"cantidad\":1,\"fechaCreacion\":{\"date\":\"2023-11-25 12:22:14.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaEstimadaFinalizacion\":{\"date\":\"2023-11-25 12:29:14.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaFinalizacion\":{\"date\":\"2023-11-25 12:22:14.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"estado\":\"listo para servir\",\"minutosEstimados\":7}],\"fechaCreacion\":{\"date\":\"2023-11-23 23:01:30.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaEstimadaDeFinalizacion\":{\"date\":\"2023-11-23 23:48:30.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaFinalizacion\":{\"date\":\"2023-11-25 12:23:08.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"estado\":\"\",\"importeTotal\":720,\"nombreCliente\":\"Franco\",\"minutosEstimados\":47}}"
+        },
+        "timestamp": "2023-11-25 16:24:07"
+    }
+],
+[
+    {
+        "request": {
+            "method": "PUT",
+            "uri": "http:\/\/localhost:666\/app\/pedidos\/1000",
+            "headers": {
+                "Content-Type": [
+                    "application\/json"
+                ],
+                "Authorization": [
+                    "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MDA5MjUyODgsImV4cCI6MTcwMDkyODg4OCwiYXVkIjoiMzRjNWQ0YWJlYmY2YjU0YzQxNzJkYzRkNjhiODI5NWYwMWM5ZDUyYSIsImRhdGEiOnsidXN1YXJpbyI6ImFkbWluIiwidGlwbyI6ImFkbWluIiwic2VjdG9yIjoiYWRtaW4ifSwiYXBwIjoiQVBJIFJFU1QgQ0QgMjAyMyJ9.315dGuUhISJAQGWrOqP9kWWEpuHvwi5KhI4mpK85Mq4"
+                ],
+                "User-Agent": [
+                    "PostmanRuntime\/7.35.0"
+                ],
+                "Accept": [
+                    "*\/*"
+                ],
+                "Postman-Token": [
+                    "cdf9f4eb-58e9-4c08-abaa-e75e57cbbaea"
+                ],
+                "Host": [
+                    "localhost"
+                ],
+                "Accept-Encoding": [
+                    "gzip, deflate, br"
+                ],
+                "Connection": [
+                    "keep-alive"
+                ],
+                "Content-Length": [
+                    "509"
+                ]
+            },
+            "body": "{\r\n    \"idMesa\": 1000,\r\n    \"nombreUsuario\": \"oscar\",\r\n    \"nombreCliente\": \"Franco\",\r\n    \"estado\": \"pagado\",\r\n    \"items\": [\r\n        {\"nombreProducto\": \"Milanesa a Caballo\", \"cantidad\": 1 , \"estado\": \"listo para servir\"},\r\n        {\"nombreProducto\": \"Hamburguesa de Garbanzo\", \"cantidad\": 2, \"estado\": \"listo para servir\"},\r\n        {\"nombreProducto\": \"Corona\", \"cantidad\": 1 , \"estado\": \"listo para servir\"},\r\n        {\"nombreProducto\": \"Daiquiri\", \"cantidad\": 1 , \"estado\": \"listo para servir\"}\r\n    ]\r\n}"
+        },
+        "response": {
+            "statusCode": 200,
+            "headers": {
+                "Content-Type": [
+                    "application\/json"
+                ]
+            },
+            "body": "{\"mensaje\":\"Pedido modificado con \\u00e9xito\",\"Pedido\":{\"idPedido\":1000,\"idMesa\":1000,\"usuarioAsignado\":2,\"itemsPedidos\":[{\"idPedido\":1000,\"idProducto\":11,\"cantidad\":1,\"fechaCreacion\":{\"date\":\"2023-11-25 12:26:05.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaEstimadaFinalizacion\":{\"date\":\"2023-11-25 12:41:05.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaFinalizacion\":{\"date\":\"2023-11-25 12:26:05.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"estado\":\"listo para servir\",\"minutosEstimados\":15},{\"idPedido\":1000,\"idProducto\":12,\"cantidad\":2,\"fechaCreacion\":{\"date\":\"2023-11-25 12:26:05.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaEstimadaFinalizacion\":{\"date\":\"2023-11-25 12:46:05.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaFinalizacion\":{\"date\":\"2023-11-25 12:26:05.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"estado\":\"listo para servir\",\"minutosEstimados\":20},{\"idPedido\":1000,\"idProducto\":13,\"cantidad\":1,\"fechaCreacion\":{\"date\":\"2023-11-25 12:26:05.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaEstimadaFinalizacion\":{\"date\":\"2023-11-25 12:31:05.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaFinalizacion\":{\"date\":\"2023-11-25 12:26:05.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"estado\":\"listo para servir\",\"minutosEstimados\":5},{\"idPedido\":1000,\"idProducto\":2,\"cantidad\":1,\"fechaCreacion\":{\"date\":\"2023-11-25 12:26:05.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaEstimadaFinalizacion\":{\"date\":\"2023-11-25 12:33:05.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaFinalizacion\":{\"date\":\"2023-11-25 12:26:05.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"estado\":\"listo para servir\",\"minutosEstimados\":7}],\"fechaCreacion\":{\"date\":\"2023-11-23 23:01:30.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaEstimadaDeFinalizacion\":{\"date\":\"2023-11-23 23:48:30.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaFinalizacion\":{\"date\":\"2023-11-25 12:26:06.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"estado\":\"\",\"importeTotal\":720,\"nombreCliente\":\"Franco\",\"minutosEstimados\":47}}"
+        },
+        "timestamp": "2023-11-25 16:26:06"
+    }
+],
+[
+    {
+        "request": {
+            "method": "PUT",
+            "uri": "http:\/\/localhost:666\/app\/pedidos\/1000",
+            "headers": {
+                "Content-Type": [
+                    "application\/json"
+                ],
+                "Authorization": [
+                    "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MDA5MjUyODgsImV4cCI6MTcwMDkyODg4OCwiYXVkIjoiMzRjNWQ0YWJlYmY2YjU0YzQxNzJkYzRkNjhiODI5NWYwMWM5ZDUyYSIsImRhdGEiOnsidXN1YXJpbyI6ImFkbWluIiwidGlwbyI6ImFkbWluIiwic2VjdG9yIjoiYWRtaW4ifSwiYXBwIjoiQVBJIFJFU1QgQ0QgMjAyMyJ9.315dGuUhISJAQGWrOqP9kWWEpuHvwi5KhI4mpK85Mq4"
+                ],
+                "User-Agent": [
+                    "PostmanRuntime\/7.35.0"
+                ],
+                "Accept": [
+                    "*\/*"
+                ],
+                "Postman-Token": [
+                    "79802258-b034-4701-8ad8-9283b2380b82"
+                ],
+                "Host": [
+                    "localhost"
+                ],
+                "Accept-Encoding": [
+                    "gzip, deflate, br"
+                ],
+                "Connection": [
+                    "keep-alive"
+                ],
+                "Content-Length": [
+                    "509"
+                ]
+            },
+            "body": "{\r\n    \"idMesa\": 1000,\r\n    \"nombreUsuario\": \"oscar\",\r\n    \"nombreCliente\": \"Franco\",\r\n    \"estado\": \"pagado\",\r\n    \"items\": [\r\n        {\"nombreProducto\": \"Milanesa a Caballo\", \"cantidad\": 1 , \"estado\": \"listo para servir\"},\r\n        {\"nombreProducto\": \"Hamburguesa de Garbanzo\", \"cantidad\": 2, \"estado\": \"listo para servir\"},\r\n        {\"nombreProducto\": \"Corona\", \"cantidad\": 1 , \"estado\": \"listo para servir\"},\r\n        {\"nombreProducto\": \"Daiquiri\", \"cantidad\": 1 , \"estado\": \"listo para servir\"}\r\n    ]\r\n}"
+        },
+        "response": {
+            "statusCode": 200,
+            "headers": {
+                "Content-Type": [
+                    "application\/json"
+                ]
+            },
+            "body": "{\"mensaje\":\"Pedido modificado con \\u00e9xito\",\"Pedido\":{\"idPedido\":1000,\"idMesa\":1000,\"usuarioAsignado\":2,\"itemsPedidos\":[{\"idPedido\":1000,\"idProducto\":11,\"cantidad\":1,\"fechaCreacion\":{\"date\":\"2023-11-25 12:27:53.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaEstimadaFinalizacion\":{\"date\":\"2023-11-25 12:42:53.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaFinalizacion\":{\"date\":\"2023-11-25 12:27:53.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"estado\":\"listo para servir\",\"minutosEstimados\":15},{\"idPedido\":1000,\"idProducto\":12,\"cantidad\":2,\"fechaCreacion\":{\"date\":\"2023-11-25 12:27:53.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaEstimadaFinalizacion\":{\"date\":\"2023-11-25 12:47:53.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaFinalizacion\":{\"date\":\"2023-11-25 12:27:53.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"estado\":\"listo para servir\",\"minutosEstimados\":20},{\"idPedido\":1000,\"idProducto\":13,\"cantidad\":1,\"fechaCreacion\":{\"date\":\"2023-11-25 12:27:53.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaEstimadaFinalizacion\":{\"date\":\"2023-11-25 12:32:53.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaFinalizacion\":{\"date\":\"2023-11-25 12:27:53.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"estado\":\"listo para servir\",\"minutosEstimados\":5},{\"idPedido\":1000,\"idProducto\":2,\"cantidad\":1,\"fechaCreacion\":{\"date\":\"2023-11-25 12:27:53.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaEstimadaFinalizacion\":{\"date\":\"2023-11-25 12:34:53.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaFinalizacion\":{\"date\":\"2023-11-25 12:27:53.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"estado\":\"listo para servir\",\"minutosEstimados\":7}],\"fechaCreacion\":{\"date\":\"2023-11-23 23:01:30.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaEstimadaDeFinalizacion\":{\"date\":\"2023-11-23 23:48:30.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaFinalizacion\":{\"date\":\"2023-11-25 12:27:53.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"estado\":\"\",\"importeTotal\":720,\"nombreCliente\":\"Franco\",\"minutosEstimados\":47}}"
+        },
+        "timestamp": "2023-11-25 16:27:53"
+    }
+],
+[
+    {
+        "request": {
+            "method": "PUT",
+            "uri": "http:\/\/localhost:666\/app\/pedidos\/1000",
+            "headers": {
+                "Content-Type": [
+                    "application\/json"
+                ],
+                "Authorization": [
+                    "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MDA5MjUyODgsImV4cCI6MTcwMDkyODg4OCwiYXVkIjoiMzRjNWQ0YWJlYmY2YjU0YzQxNzJkYzRkNjhiODI5NWYwMWM5ZDUyYSIsImRhdGEiOnsidXN1YXJpbyI6ImFkbWluIiwidGlwbyI6ImFkbWluIiwic2VjdG9yIjoiYWRtaW4ifSwiYXBwIjoiQVBJIFJFU1QgQ0QgMjAyMyJ9.315dGuUhISJAQGWrOqP9kWWEpuHvwi5KhI4mpK85Mq4"
+                ],
+                "User-Agent": [
+                    "PostmanRuntime\/7.35.0"
+                ],
+                "Accept": [
+                    "*\/*"
+                ],
+                "Postman-Token": [
+                    "b96172f4-f407-4727-9da1-8d562fd008f1"
+                ],
+                "Host": [
+                    "localhost"
+                ],
+                "Accept-Encoding": [
+                    "gzip, deflate, br"
+                ],
+                "Connection": [
+                    "keep-alive"
+                ],
+                "Content-Length": [
+                    "509"
+                ]
+            },
+            "body": "{\r\n    \"idMesa\": 1000,\r\n    \"nombreUsuario\": \"oscar\",\r\n    \"nombreCliente\": \"Franco\",\r\n    \"estado\": \"pagado\",\r\n    \"items\": [\r\n        {\"nombreProducto\": \"Milanesa a Caballo\", \"cantidad\": 1 , \"estado\": \"listo para servir\"},\r\n        {\"nombreProducto\": \"Hamburguesa de Garbanzo\", \"cantidad\": 2, \"estado\": \"listo para servir\"},\r\n        {\"nombreProducto\": \"Corona\", \"cantidad\": 1 , \"estado\": \"listo para servir\"},\r\n        {\"nombreProducto\": \"Daiquiri\", \"cantidad\": 1 , \"estado\": \"listo para servir\"}\r\n    ]\r\n}"
+        },
+        "response": {
+            "statusCode": 200,
+            "headers": {
+                "Content-Type": [
+                    "application\/json"
+                ]
+            },
+            "body": "{\"mensaje\":\"Pedido modificado con \\u00e9xito\",\"Pedido\":{\"idPedido\":1000,\"idMesa\":1000,\"usuarioAsignado\":2,\"itemsPedidos\":[{\"idPedido\":1000,\"idProducto\":11,\"cantidad\":1,\"fechaCreacion\":{\"date\":\"2023-11-25 12:28:27.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaEstimadaFinalizacion\":{\"date\":\"2023-11-25 12:43:27.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaFinalizacion\":{\"date\":\"2023-11-25 12:28:27.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"estado\":\"listo para servir\",\"minutosEstimados\":15},{\"idPedido\":1000,\"idProducto\":12,\"cantidad\":2,\"fechaCreacion\":{\"date\":\"2023-11-25 12:28:27.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaEstimadaFinalizacion\":{\"date\":\"2023-11-25 12:48:27.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaFinalizacion\":{\"date\":\"2023-11-25 12:28:27.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"estado\":\"listo para servir\",\"minutosEstimados\":20},{\"idPedido\":1000,\"idProducto\":13,\"cantidad\":1,\"fechaCreacion\":{\"date\":\"2023-11-25 12:28:27.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaEstimadaFinalizacion\":{\"date\":\"2023-11-25 12:33:27.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaFinalizacion\":{\"date\":\"2023-11-25 12:28:27.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"estado\":\"listo para servir\",\"minutosEstimados\":5},{\"idPedido\":1000,\"idProducto\":2,\"cantidad\":1,\"fechaCreacion\":{\"date\":\"2023-11-25 12:28:27.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaEstimadaFinalizacion\":{\"date\":\"2023-11-25 12:35:27.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaFinalizacion\":{\"date\":\"2023-11-25 12:28:27.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"estado\":\"listo para servir\",\"minutosEstimados\":7}],\"fechaCreacion\":{\"date\":\"2023-11-23 23:01:30.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaEstimadaDeFinalizacion\":{\"date\":\"2023-11-23 23:48:30.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaFinalizacion\":{\"date\":\"2023-11-25 12:28:27.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"estado\":\"\",\"importeTotal\":720,\"nombreCliente\":\"Franco\",\"minutosEstimados\":47}}"
+        },
+        "timestamp": "2023-11-25 16:29:20"
+    }
+],
+[
+    {
+        "request": {
+            "method": "PUT",
+            "uri": "http:\/\/localhost:666\/app\/pedidos\/1000",
+            "headers": {
+                "Content-Type": [
+                    "application\/json"
+                ],
+                "Authorization": [
+                    "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MDA5MjUyODgsImV4cCI6MTcwMDkyODg4OCwiYXVkIjoiMzRjNWQ0YWJlYmY2YjU0YzQxNzJkYzRkNjhiODI5NWYwMWM5ZDUyYSIsImRhdGEiOnsidXN1YXJpbyI6ImFkbWluIiwidGlwbyI6ImFkbWluIiwic2VjdG9yIjoiYWRtaW4ifSwiYXBwIjoiQVBJIFJFU1QgQ0QgMjAyMyJ9.315dGuUhISJAQGWrOqP9kWWEpuHvwi5KhI4mpK85Mq4"
+                ],
+                "User-Agent": [
+                    "PostmanRuntime\/7.35.0"
+                ],
+                "Accept": [
+                    "*\/*"
+                ],
+                "Postman-Token": [
+                    "f1c089db-a5f5-4a82-9ff3-bd397505ccbc"
+                ],
+                "Host": [
+                    "localhost"
+                ],
+                "Accept-Encoding": [
+                    "gzip, deflate, br"
+                ],
+                "Connection": [
+                    "keep-alive"
+                ],
+                "Content-Length": [
+                    "509"
+                ]
+            },
+            "body": "{\r\n    \"idMesa\": 1000,\r\n    \"nombreUsuario\": \"oscar\",\r\n    \"nombreCliente\": \"Franco\",\r\n    \"estado\": \"pagado\",\r\n    \"items\": [\r\n        {\"nombreProducto\": \"Milanesa a Caballo\", \"cantidad\": 1 , \"estado\": \"listo para servir\"},\r\n        {\"nombreProducto\": \"Hamburguesa de Garbanzo\", \"cantidad\": 2, \"estado\": \"listo para servir\"},\r\n        {\"nombreProducto\": \"Corona\", \"cantidad\": 1 , \"estado\": \"listo para servir\"},\r\n        {\"nombreProducto\": \"Daiquiri\", \"cantidad\": 1 , \"estado\": \"listo para servir\"}\r\n    ]\r\n}"
+        },
+        "response": {
+            "statusCode": 200,
+            "headers": {
+                "Content-Type": [
+                    "application\/json"
+                ]
+            },
+            "body": "{\"mensaje\":\"Pedido modificado con \\u00e9xito\",\"Pedido\":{\"idPedido\":1000,\"idMesa\":1000,\"usuarioAsignado\":2,\"itemsPedidos\":[{\"idPedido\":1000,\"idProducto\":11,\"cantidad\":1,\"fechaCreacion\":{\"date\":\"2023-11-25 12:33:32.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaEstimadaFinalizacion\":{\"date\":\"2023-11-25 12:48:32.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaFinalizacion\":{\"date\":\"2023-11-25 12:33:32.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"estado\":\"listo para servir\",\"minutosEstimados\":15},{\"idPedido\":1000,\"idProducto\":12,\"cantidad\":2,\"fechaCreacion\":{\"date\":\"2023-11-25 12:33:32.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaEstimadaFinalizacion\":{\"date\":\"2023-11-25 12:53:32.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaFinalizacion\":{\"date\":\"2023-11-25 12:33:32.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"estado\":\"listo para servir\",\"minutosEstimados\":20},{\"idPedido\":1000,\"idProducto\":13,\"cantidad\":1,\"fechaCreacion\":{\"date\":\"2023-11-25 12:33:32.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaEstimadaFinalizacion\":{\"date\":\"2023-11-25 12:38:32.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaFinalizacion\":{\"date\":\"2023-11-25 12:33:32.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"estado\":\"listo para servir\",\"minutosEstimados\":5},{\"idPedido\":1000,\"idProducto\":2,\"cantidad\":1,\"fechaCreacion\":{\"date\":\"2023-11-25 12:33:32.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaEstimadaFinalizacion\":{\"date\":\"2023-11-25 12:40:32.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaFinalizacion\":{\"date\":\"2023-11-25 12:33:32.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"estado\":\"listo para servir\",\"minutosEstimados\":7}],\"fechaCreacion\":{\"date\":\"2023-11-23 23:01:30.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaEstimadaDeFinalizacion\":{\"date\":\"2023-11-23 23:48:30.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"fechaFinalizacion\":{\"date\":\"2023-11-25 12:33:32.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"},\"estado\":\"pagado\",\"importeTotal\":720,\"nombreCliente\":\"Franco\",\"minutosEstimados\":47}}"
+        },
+        "timestamp": "2023-11-25 16:33:40"
+    }
 ]

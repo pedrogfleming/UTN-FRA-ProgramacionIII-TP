@@ -33,8 +33,8 @@ class EncuestaController implements IApiUsable
 
         require_once MODELS . '/Mesa.php';
         $mesaCerrada = Mesa::obtenerMesa($encuesta->idMesa);
-        $mesaOcupada->estado = Mesa::ESTADO_CERRADA;
-        Mesa::actualizarMesa($mesaOcupada);
+        $mesaCerrada->estado = Mesa::ESTADO_CERRADA;
+        Mesa::actualizarMesa($mesaCerrada);
 
         $payload = json_encode(array("mensaje" => "Encuesta creada con éxito"));
 
