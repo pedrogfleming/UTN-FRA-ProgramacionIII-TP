@@ -28,16 +28,24 @@ class Mesa
         return $objAccesoDatos->obtenerUltimoId();
     }
 
-    public static function obtenerTodasLasMesas()
+    public static function obtenerTodasLasMesas($traerMesaMasUsada=null)
     {
         $objAccesoDatos = AccesoDatos::obtenerInstancia();
-        $consulta = $objAccesoDatos->prepararConsulta("SELECT * FROM Mesas WHERE eliminado = " . ACTIVO);
-        $consulta->execute();
-        $arrayMesas = array();
-        foreach ($consulta->fetchAll(PDO::FETCH_OBJ) as $registro) {
-            array_push($arrayMesas, Mesa::transformarRegistro($registro));
+        if($traerMesaMasUsada === null){
+            $consulta = $objAccesoDatos->prepararConsulta("SELECT * FROM Mesas WHERE eliminado = " . ACTIVO);
+            $consulta->execute();
+            $arrayMesas = array();
+            foreach ($consulta->fetchAll(PDO::FETCH_OBJ) as $registro) {
+                array_push($arrayMesas, Mesa::transformarRegistro($registro));
+            }
+            return $arrayMesas;
         }
-        return $arrayMesas;
+        else{
+            $consulta = $objAccesoDatos->prepararConsulta("SELECT id_mesa, COUNT(id_mesa) AS cantidad FROM encuestas WHERE eliminado = " . ACTIVO . " GROUP BY id_mesa ORDER BY cantidad DESC LIMIT 1");
+            $consulta->execute();
+            $mesaMasUsada = $consulta->fetch(PDO::FETCH_OBJ);
+            return $mesaMasUsada;
+        }
     }
 
     public static function obtenerMesa($id)

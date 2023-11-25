@@ -40,8 +40,13 @@ class MesaController implements IApiUsable
 
     public function TraerTodos($request, $response, $args)
     {
-        $lista = Mesa::obtenerTodasLasMesas();
-        $payload = json_encode(array("listaMesas" => $lista));
+        $queryParams = $request->getQueryParams();
+        $mesaMasUsada = isset($queryParams['traerMesaMasUsada']) ? $queryParams['traerMesaMasUsada'] : null;
+
+        $lista = Mesa::obtenerTodasLasMesas($mesaMasUsada);
+        
+        $detalleBodyResponse = $mesaMasUsada ? "mesa_mas_usada" : "listaMesas";
+        $payload = json_encode(array($detalleBodyResponse => $lista));
         $response->getBody()->write($payload);
         return $response->withHeader('Content-Type', 'application/json');
     }
@@ -70,7 +75,7 @@ class MesaController implements IApiUsable
     {
         $id = $args['mesa'];
         $mesa = Mesa::obtenerMesa($id);
-        $mesa->eliminarMesa();
+        Mesa::eliminarMesa($mesa);
 
         $payload = json_encode(array("mensaje" => "Mesa eliminada con éxito"));
 
