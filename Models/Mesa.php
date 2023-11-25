@@ -81,8 +81,12 @@ class Mesa
     {
         $objAccesoDatos = AccesoDatos::obtenerInstancia();
         $consulta = $objAccesoDatos->prepararConsulta("UPDATE Mesas SET estado = ?, fechaCierre = ? WHERE idMesa = ? AND eliminado = " . ACTIVO);
-        $fechaCierre = new DateTime("now", new DateTimeZone("America/Argentina/Buenos_Aires"));
-        $fechaCierreString = date_format($fechaCierre, 'Y-m-d H:i:s');
+        $fechaCierreString = null;
+        if($mesa->estado == Mesa::ESTADO_CERRADA){
+            $fechaCierre = new DateTime("now", new DateTimeZone("America/Argentina/Buenos_Aires"));
+            $fechaCierreString = date_format($fechaCierre, 'Y-m-d H:i:s');
+        }
+
         $consulta->bindParam(1, $mesa->estado);
         $consulta->bindParam(2, $fechaCierreString);
         $consulta->bindParam(3, $mesa->idMesa);

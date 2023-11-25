@@ -23,6 +23,7 @@ class Pedido
     const ESTADO_PREPARACION = "en preparación";
     const ESTADO_LISTO = "listo para servir";
     const ESTADO_CANCELADO = "cancelado";
+    const ESTADO_PAGADO = "pagado";
 
     const SECTOR_CERVEZA = "cerveza";
     const SECTOR_BARTENDER = "bartender";

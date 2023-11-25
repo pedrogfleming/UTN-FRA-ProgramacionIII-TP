@@ -47,21 +47,19 @@ class MesaController implements IApiUsable
     }
 
     public function ModificarUno($request, $response, $args)
-    {
+    {        
         $parametros = $request->getParsedBody();
-
-        $id = $args['idMesa'];
-        $mozo = $parametros['mozo'];
-        $importeTotal = $parametros['importeTotal'];
-        $nombreCliente = $parametros['nombreCliente'];
         $estado = $parametros['estado'];
+        $idMesa = $args['mesa'];
 
-        $mesa = Mesa::obtenerMesa($id);
-
-        $mesa->estado = $estado;
-
-        $mesa->actualizarMesa();
-
+        $mesa = Mesa::obtenerMesa($idMesa);
+        if($mesa){
+            $mesa->estado = $estado;
+            Mesa::actualizarMesa($mesa);
+        }
+        else{
+            throw new Exception("No se encontro la mesa con el id enviado");            
+        }
         $payload = json_encode(array("mensaje" => "Mesa modificada con éxito"));
 
         $response->getBody()->write($payload);
