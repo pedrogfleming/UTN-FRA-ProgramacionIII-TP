@@ -22,6 +22,10 @@ class Item
         $fechaCreacionString = date_format($this->fechaCreacion, 'Y-m-d H:i:s');
         $fechaEstimadaFinalizacionString = date_format($this->fechaEstimadaFinalizacion, 'Y-m-d H:i:s');
 
+        if($this->estado == Item::ESTADO_LISTO_PARA_SERVIR){
+            $this->fechaFinalizacion = new DateTime("now", new DateTimeZone("America/Argentina/Buenos_Aires"));
+            $this->fechaFinalizacion = date_format($this->fechaFinalizacion, 'Y-m-d H:i:s');
+        }
         $objAccesoDatos = AccesoDatos::obtenerInstancia();
         $consulta = $objAccesoDatos->prepararConsulta("INSERT INTO ItemPedidos (id_pedido, id_producto, cantidad, fecha_creacion, fecha_estimada_finalizacion, fecha_finalizacion, estado) VALUES (?, ?, ?, ?, ?, ?, ?)");
         $consulta->bindParam(1, $this->idPedido);

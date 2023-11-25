@@ -145,11 +145,11 @@ class PedidoController implements IApiUsable
             throw new Exception("No existe el pedido con el id suministrado: ");
         }
 
-        Pedido::modificarItemsPedido($pedido, $items);        
         $pedido->usuarioAsignado = $usuarioAsignado;
         $pedido->idMesa = (int)$idMesa;
         $pedido->nombreCliente = $nombreCliente;
         $pedido->estado = $estadoPedido;
+        Pedido::modificarItemsPedido($pedido, $items);        
 
         Pedido::modificarPedido($pedido);
 

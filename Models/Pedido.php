@@ -120,6 +120,10 @@ class Pedido
     {
         $objAccesoDato = AccesoDatos::obtenerInstancia();
 
+        if($pedido->estado == Pedido::ESTADO_PAGADO || $pedido->fechaFinalizacion){
+            $pedido->fechaFinalizacion = new DateTime("now", new DateTimeZone("America/Argentina/Buenos_Aires"));
+            $pedido->fechaFinalizacion = date_format($pedido->fechaFinalizacion, 'Y-m-d H:i:s');
+        }
         $fechaEstimadaFinalizacionString = date_format($pedido->fechaEstimadaDeFinalizacion, 'Y-m-d H:i:s');
         $fechaCreacionString = date_format($pedido->fechaCreacion, 'Y-m-d H:i:s');
 
@@ -170,6 +174,7 @@ class Pedido
                 $interval = DateInterval::createFromDateString($tiempoEnMinutosTotalDelPedido . 'minutes');
                 $fechaEstimadaFinalizacion = clone $i->fechaCreacion;
                 $i->fechaEstimadaFinalizacion = $fechaEstimadaFinalizacion->add($interval);
+
                 if ($i->crearItem() !== true) {
                     throw new Exception("No se pudo modificar el item " . $item["nombreProducto"] . " del pedido " . $pedido->idPedido);
                 }
