@@ -12014,4 +12014,1051 @@
         },
         "timestamp": "2023-11-25 16:33:40"
     }
+],
+[
+    {
+        "request": {
+            "method": "POST",
+            "uri": "http:\/\/localhost:666\/app\/encuestas",
+            "headers": {
+                "PHP-AUTH-USER": [
+                    "cristobal_socio"
+                ],
+                "Authorization": [
+                    "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MDA5MjUyODgsImV4cCI6MTcwMDkyODg4OCwiYXVkIjoiMzRjNWQ0YWJlYmY2YjU0YzQxNzJkYzRkNjhiODI5NWYwMWM5ZDUyYSIsImRhdGEiOnsidXN1YXJpbyI6ImFkbWluIiwidGlwbyI6ImFkbWluIiwic2VjdG9yIjoiYWRtaW4ifSwiYXBwIjoiQVBJIFJFU1QgQ0QgMjAyMyJ9.315dGuUhISJAQGWrOqP9kWWEpuHvwi5KhI4mpK85Mq4"
+                ],
+                "User-Agent": [
+                    "PostmanRuntime\/7.35.0"
+                ],
+                "Accept": [
+                    "*\/*"
+                ],
+                "Postman-Token": [
+                    "eaad73ec-a8f5-4e7f-bbde-b1d213298780"
+                ],
+                "Host": [
+                    "localhost"
+                ],
+                "Accept-Encoding": [
+                    "gzip, deflate, br"
+                ],
+                "Connection": [
+                    "keep-alive"
+                ],
+                "Content-Type": [
+                    "multipart\/form-data; boundary=--------------------------833535743435068880966616"
+                ],
+                "Content-Length": [
+                    "1128"
+                ]
+            },
+            "body": ""
+        },
+        "response": {
+            "statusCode": 200,
+            "headers": {
+                "Content-Type": [
+                    "application\/json"
+                ]
+            },
+            "body": "{\"mensaje\":\"Encuesta creada con \\u00e9xito\"}"
+        },
+        "timestamp": "2023-11-25 16:36:17"
+    }
+],
+[
+    {
+        "request": {
+            "method": "POST",
+            "uri": "http:\/\/localhost:666\/app\/encuestas",
+            "headers": {
+                "PHP-AUTH-USER": [
+                    "cristobal_socio"
+                ],
+                "Authorization": [
+                    "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MDA5MjUyODgsImV4cCI6MTcwMDkyODg4OCwiYXVkIjoiMzRjNWQ0YWJlYmY2YjU0YzQxNzJkYzRkNjhiODI5NWYwMWM5ZDUyYSIsImRhdGEiOnsidXN1YXJpbyI6ImFkbWluIiwidGlwbyI6ImFkbWluIiwic2VjdG9yIjoiYWRtaW4ifSwiYXBwIjoiQVBJIFJFU1QgQ0QgMjAyMyJ9.315dGuUhISJAQGWrOqP9kWWEpuHvwi5KhI4mpK85Mq4"
+                ],
+                "User-Agent": [
+                    "PostmanRuntime\/7.35.0"
+                ],
+                "Accept": [
+                    "*\/*"
+                ],
+                "Postman-Token": [
+                    "59e8d9d9-5db4-45e4-9c4c-43d2f37ef8cc"
+                ],
+                "Host": [
+                    "localhost"
+                ],
+                "Accept-Encoding": [
+                    "gzip, deflate, br"
+                ],
+                "Connection": [
+                    "keep-alive"
+                ],
+                "Content-Type": [
+                    "multipart\/form-data; boundary=--------------------------545490223531522785121094"
+                ],
+                "Content-Length": [
+                    "1128"
+                ]
+            },
+            "body": ""
+        },
+        "response": {
+            "statusCode": 200,
+            "headers": {
+                "Content-Type": [
+                    "application\/json"
+                ]
+            },
+            "body": "{\"mensaje\":\"Encuesta creada con \\u00e9xito\",\"id\":\"1\"}"
+        },
+        "timestamp": "2023-11-25 16:37:38"
+    }
+],
+[
+    {
+        "request": {
+            "method": "GET",
+            "uri": "http:\/\/localhost:666\/app\/encuestas?filtroPuntaje=7",
+            "headers": {
+                "PHP-AUTH-USER": [
+                    "cristobal_socio"
+                ],
+                "Authorization": [
+                    "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MDA5MjUyODgsImV4cCI6MTcwMDkyODg4OCwiYXVkIjoiMzRjNWQ0YWJlYmY2YjU0YzQxNzJkYzRkNjhiODI5NWYwMWM5ZDUyYSIsImRhdGEiOnsidXN1YXJpbyI6ImFkbWluIiwidGlwbyI6ImFkbWluIiwic2VjdG9yIjoiYWRtaW4ifSwiYXBwIjoiQVBJIFJFU1QgQ0QgMjAyMyJ9.315dGuUhISJAQGWrOqP9kWWEpuHvwi5KhI4mpK85Mq4"
+                ],
+                "User-Agent": [
+                    "PostmanRuntime\/7.35.0"
+                ],
+                "Accept": [
+                    "*\/*"
+                ],
+                "Postman-Token": [
+                    "e19c3140-3d72-4632-ac58-031e2ac6565a"
+                ],
+                "Host": [
+                    "localhost"
+                ],
+                "Accept-Encoding": [
+                    "gzip, deflate, br"
+                ],
+                "Connection": [
+                    "keep-alive"
+                ]
+            },
+            "body": ""
+        },
+        "response": {
+            "statusCode": 200,
+            "headers": {
+                "Content-Type": [
+                    "application\/json"
+                ]
+            },
+            "body": "{\"listaEncuestas\":[{\"idEncuesta\":1,\"idPedido\":1000,\"idMesa\":1000,\"idMozo\":2,\"idCocinero\":3,\"puntuacionMesa\":10,\"puntuacionRestaurante\":8,\"puntuacionMozo\":6,\"puntuacionCocinero\":5,\"experienciaTexto\":\"\\\"Muy bueno el pedido, aunque el mozo tardo demasiado\\\"\",\"fechaCreacion\":{\"date\":\"2023-11-25 12:37:38.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"}}]}"
+        },
+        "timestamp": "2023-11-25 16:40:36"
+    }
+],
+[
+    {
+        "request": {
+            "method": "GET",
+            "uri": "http:\/\/localhost:666\/app\/encuestas?filtroPuntaje=7",
+            "headers": {
+                "PHP-AUTH-USER": [
+                    "cristobal_socio"
+                ],
+                "Authorization": [
+                    "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MDA5MjUyODgsImV4cCI6MTcwMDkyODg4OCwiYXVkIjoiMzRjNWQ0YWJlYmY2YjU0YzQxNzJkYzRkNjhiODI5NWYwMWM5ZDUyYSIsImRhdGEiOnsidXN1YXJpbyI6ImFkbWluIiwidGlwbyI6ImFkbWluIiwic2VjdG9yIjoiYWRtaW4ifSwiYXBwIjoiQVBJIFJFU1QgQ0QgMjAyMyJ9.315dGuUhISJAQGWrOqP9kWWEpuHvwi5KhI4mpK85Mq4"
+                ],
+                "User-Agent": [
+                    "PostmanRuntime\/7.35.0"
+                ],
+                "Accept": [
+                    "*\/*"
+                ],
+                "Postman-Token": [
+                    "3025baa3-1f0b-4e7e-93f0-d47a5a0769fd"
+                ],
+                "Host": [
+                    "localhost"
+                ],
+                "Accept-Encoding": [
+                    "gzip, deflate, br"
+                ],
+                "Connection": [
+                    "keep-alive"
+                ]
+            },
+            "body": ""
+        },
+        "response": {
+            "statusCode": 200,
+            "headers": {
+                "Content-Type": [
+                    "application\/json"
+                ]
+            },
+            "body": "{\"listaEncuestas\":[{\"idEncuesta\":1,\"idPedido\":1000,\"idMesa\":1000,\"idMozo\":2,\"idCocinero\":3,\"puntuacionMesa\":10,\"puntuacionRestaurante\":8,\"puntuacionMozo\":6,\"puntuacionCocinero\":5,\"experienciaTexto\":\"\\\"Muy bueno el pedido, aunque el mozo tardo demasiado\\\"\",\"fechaCreacion\":{\"date\":\"2023-11-25 12:37:38.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"}}]}"
+        },
+        "timestamp": "2023-11-25 16:41:09"
+    }
+],
+[
+    {
+        "request": {
+            "method": "GET",
+            "uri": "http:\/\/localhost:666\/app\/encuestas?filtroPuntaje=7",
+            "headers": {
+                "PHP-AUTH-USER": [
+                    "cristobal_socio"
+                ],
+                "Authorization": [
+                    "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MDA5MjUyODgsImV4cCI6MTcwMDkyODg4OCwiYXVkIjoiMzRjNWQ0YWJlYmY2YjU0YzQxNzJkYzRkNjhiODI5NWYwMWM5ZDUyYSIsImRhdGEiOnsidXN1YXJpbyI6ImFkbWluIiwidGlwbyI6ImFkbWluIiwic2VjdG9yIjoiYWRtaW4ifSwiYXBwIjoiQVBJIFJFU1QgQ0QgMjAyMyJ9.315dGuUhISJAQGWrOqP9kWWEpuHvwi5KhI4mpK85Mq4"
+                ],
+                "User-Agent": [
+                    "PostmanRuntime\/7.35.0"
+                ],
+                "Accept": [
+                    "*\/*"
+                ],
+                "Postman-Token": [
+                    "970b996a-d88c-41b8-af6a-cd039c597a4c"
+                ],
+                "Host": [
+                    "localhost"
+                ],
+                "Accept-Encoding": [
+                    "gzip, deflate, br"
+                ],
+                "Connection": [
+                    "keep-alive"
+                ]
+            },
+            "body": ""
+        },
+        "response": {
+            "statusCode": 200,
+            "headers": {
+                "Content-Type": [
+                    "application\/json"
+                ]
+            },
+            "body": "{\"listaEncuestas\":[{\"idEncuesta\":1,\"idPedido\":1000,\"idMesa\":1000,\"idMozo\":2,\"idCocinero\":3,\"puntuacionMesa\":10,\"puntuacionRestaurante\":8,\"puntuacionMozo\":6,\"puntuacionCocinero\":5,\"experienciaTexto\":\"\\\"Muy bueno el pedido, aunque el mozo tardo demasiado\\\"\",\"fechaCreacion\":{\"date\":\"2023-11-25 12:37:38.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"}}]}"
+        },
+        "timestamp": "2023-11-25 17:07:19"
+    }
+],
+[
+    {
+        "request": {
+            "method": "GET",
+            "uri": "http:\/\/localhost:666\/app\/encuestas?idMesa=7&idMozo&idCocinero&puntuacionMesa&puntuacionRestaurante&puntuacionMozo",
+            "headers": {
+                "PHP-AUTH-USER": [
+                    "cristobal_socio"
+                ],
+                "Authorization": [
+                    "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MDA5MjUyODgsImV4cCI6MTcwMDkyODg4OCwiYXVkIjoiMzRjNWQ0YWJlYmY2YjU0YzQxNzJkYzRkNjhiODI5NWYwMWM5ZDUyYSIsImRhdGEiOnsidXN1YXJpbyI6ImFkbWluIiwidGlwbyI6ImFkbWluIiwic2VjdG9yIjoiYWRtaW4ifSwiYXBwIjoiQVBJIFJFU1QgQ0QgMjAyMyJ9.315dGuUhISJAQGWrOqP9kWWEpuHvwi5KhI4mpK85Mq4"
+                ],
+                "User-Agent": [
+                    "PostmanRuntime\/7.35.0"
+                ],
+                "Accept": [
+                    "*\/*"
+                ],
+                "Postman-Token": [
+                    "2ff00840-3f7e-466c-958a-1fb1bb12ec0c"
+                ],
+                "Host": [
+                    "localhost"
+                ],
+                "Accept-Encoding": [
+                    "gzip, deflate, br"
+                ],
+                "Connection": [
+                    "keep-alive"
+                ]
+            },
+            "body": ""
+        },
+        "response": {
+            "statusCode": 200,
+            "headers": {
+                "Content-Type": [
+                    "application\/json"
+                ]
+            },
+            "body": "{\"mensaje\":\"Error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'idMesa' in 'where clause'\"}"
+        },
+        "timestamp": "2023-11-25 17:08:37"
+    }
+],
+[
+    {
+        "request": {
+            "method": "GET",
+            "uri": "http:\/\/localhost:666\/app\/encuestas",
+            "headers": {
+                "PHP-AUTH-USER": [
+                    "cristobal_socio"
+                ],
+                "Authorization": [
+                    "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MDA5MjUyODgsImV4cCI6MTcwMDkyODg4OCwiYXVkIjoiMzRjNWQ0YWJlYmY2YjU0YzQxNzJkYzRkNjhiODI5NWYwMWM5ZDUyYSIsImRhdGEiOnsidXN1YXJpbyI6ImFkbWluIiwidGlwbyI6ImFkbWluIiwic2VjdG9yIjoiYWRtaW4ifSwiYXBwIjoiQVBJIFJFU1QgQ0QgMjAyMyJ9.315dGuUhISJAQGWrOqP9kWWEpuHvwi5KhI4mpK85Mq4"
+                ],
+                "User-Agent": [
+                    "PostmanRuntime\/7.35.0"
+                ],
+                "Accept": [
+                    "*\/*"
+                ],
+                "Postman-Token": [
+                    "0b662e1f-9a25-4b76-8793-464340ed8381"
+                ],
+                "Host": [
+                    "localhost"
+                ],
+                "Accept-Encoding": [
+                    "gzip, deflate, br"
+                ],
+                "Connection": [
+                    "keep-alive"
+                ]
+            },
+            "body": ""
+        },
+        "response": {
+            "statusCode": 200,
+            "headers": {
+                "Content-Type": [
+                    "application\/json"
+                ]
+            },
+            "body": "[{\"idEncuesta\":1,\"idPedido\":1000,\"idMesa\":1000,\"idMozo\":2,\"idCocinero\":3,\"puntuacionMesa\":10,\"puntuacionRestaurante\":8,\"puntuacionMozo\":6,\"puntuacionCocinero\":5,\"experienciaTexto\":\"\\\"Muy bueno el pedido, aunque el mozo tardo demasiado\\\"\",\"fechaCreacion\":{\"date\":\"2023-11-25 12:37:38.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"}}]"
+        },
+        "timestamp": "2023-11-25 17:08:48"
+    }
+],
+[
+    {
+        "request": {
+            "method": "GET",
+            "uri": "http:\/\/localhost:666\/app\/encuestas?idMesa=1000",
+            "headers": {
+                "PHP-AUTH-USER": [
+                    "cristobal_socio"
+                ],
+                "Authorization": [
+                    "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MDA5MjUyODgsImV4cCI6MTcwMDkyODg4OCwiYXVkIjoiMzRjNWQ0YWJlYmY2YjU0YzQxNzJkYzRkNjhiODI5NWYwMWM5ZDUyYSIsImRhdGEiOnsidXN1YXJpbyI6ImFkbWluIiwidGlwbyI6ImFkbWluIiwic2VjdG9yIjoiYWRtaW4ifSwiYXBwIjoiQVBJIFJFU1QgQ0QgMjAyMyJ9.315dGuUhISJAQGWrOqP9kWWEpuHvwi5KhI4mpK85Mq4"
+                ],
+                "User-Agent": [
+                    "PostmanRuntime\/7.35.0"
+                ],
+                "Accept": [
+                    "*\/*"
+                ],
+                "Postman-Token": [
+                    "a19ee3cb-9ed3-43f6-8dd1-4c79a0605012"
+                ],
+                "Host": [
+                    "localhost"
+                ],
+                "Accept-Encoding": [
+                    "gzip, deflate, br"
+                ],
+                "Connection": [
+                    "keep-alive"
+                ]
+            },
+            "body": ""
+        },
+        "response": {
+            "statusCode": 200,
+            "headers": {
+                "Content-Type": [
+                    "application\/json"
+                ]
+            },
+            "body": "{\"mensaje\":\"Error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'idMesa' in 'where clause'\"}"
+        },
+        "timestamp": "2023-11-25 17:10:00"
+    }
+],
+[
+    {
+        "request": {
+            "method": "GET",
+            "uri": "http:\/\/localhost:666\/app\/encuestas?idMesa=1000",
+            "headers": {
+                "PHP-AUTH-USER": [
+                    "cristobal_socio"
+                ],
+                "Authorization": [
+                    "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MDA5MjUyODgsImV4cCI6MTcwMDkyODg4OCwiYXVkIjoiMzRjNWQ0YWJlYmY2YjU0YzQxNzJkYzRkNjhiODI5NWYwMWM5ZDUyYSIsImRhdGEiOnsidXN1YXJpbyI6ImFkbWluIiwidGlwbyI6ImFkbWluIiwic2VjdG9yIjoiYWRtaW4ifSwiYXBwIjoiQVBJIFJFU1QgQ0QgMjAyMyJ9.315dGuUhISJAQGWrOqP9kWWEpuHvwi5KhI4mpK85Mq4"
+                ],
+                "User-Agent": [
+                    "PostmanRuntime\/7.35.0"
+                ],
+                "Accept": [
+                    "*\/*"
+                ],
+                "Postman-Token": [
+                    "d95ecac8-7cc2-414f-a47d-7e1f142ee135"
+                ],
+                "Host": [
+                    "localhost"
+                ],
+                "Accept-Encoding": [
+                    "gzip, deflate, br"
+                ],
+                "Connection": [
+                    "keep-alive"
+                ]
+            },
+            "body": ""
+        },
+        "response": {
+            "statusCode": 200,
+            "headers": {
+                "Content-Type": [
+                    "application\/json"
+                ]
+            },
+            "body": "[{\"idEncuesta\":1,\"idPedido\":1000,\"idMesa\":1000,\"idMozo\":2,\"idCocinero\":3,\"puntuacionMesa\":10,\"puntuacionRestaurante\":8,\"puntuacionMozo\":6,\"puntuacionCocinero\":5,\"experienciaTexto\":\"\\\"Muy bueno el pedido, aunque el mozo tardo demasiado\\\"\",\"fechaCreacion\":{\"date\":\"2023-11-25 12:37:38.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"}}]"
+        },
+        "timestamp": "2023-11-25 17:11:14"
+    }
+],
+[
+    {
+        "request": {
+            "method": "GET",
+            "uri": "http:\/\/localhost:666\/app\/encuestas",
+            "headers": {
+                "PHP-AUTH-USER": [
+                    "cristobal_socio"
+                ],
+                "Authorization": [
+                    "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MDA5MjUyODgsImV4cCI6MTcwMDkyODg4OCwiYXVkIjoiMzRjNWQ0YWJlYmY2YjU0YzQxNzJkYzRkNjhiODI5NWYwMWM5ZDUyYSIsImRhdGEiOnsidXN1YXJpbyI6ImFkbWluIiwidGlwbyI6ImFkbWluIiwic2VjdG9yIjoiYWRtaW4ifSwiYXBwIjoiQVBJIFJFU1QgQ0QgMjAyMyJ9.315dGuUhISJAQGWrOqP9kWWEpuHvwi5KhI4mpK85Mq4"
+                ],
+                "User-Agent": [
+                    "PostmanRuntime\/7.35.0"
+                ],
+                "Accept": [
+                    "*\/*"
+                ],
+                "Postman-Token": [
+                    "f76fcf2d-3b78-4c4f-bbdb-eba02cf943f8"
+                ],
+                "Host": [
+                    "localhost"
+                ],
+                "Accept-Encoding": [
+                    "gzip, deflate, br"
+                ],
+                "Connection": [
+                    "keep-alive"
+                ]
+            },
+            "body": ""
+        },
+        "response": {
+            "statusCode": 200,
+            "headers": {
+                "Content-Type": [
+                    "application\/json"
+                ]
+            },
+            "body": "[{\"idEncuesta\":1,\"idPedido\":1000,\"idMesa\":1000,\"idMozo\":2,\"idCocinero\":3,\"puntuacionMesa\":10,\"puntuacionRestaurante\":8,\"puntuacionMozo\":6,\"puntuacionCocinero\":5,\"experienciaTexto\":\"\\\"Muy bueno el pedido, aunque el mozo tardo demasiado\\\"\",\"fechaCreacion\":{\"date\":\"2023-11-25 12:37:38.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"}}]"
+        },
+        "timestamp": "2023-11-25 17:11:18"
+    }
+],
+[
+    {
+        "request": {
+            "method": "GET",
+            "uri": "http:\/\/localhost:666\/app\/encuestas?idMozo=2",
+            "headers": {
+                "PHP-AUTH-USER": [
+                    "cristobal_socio"
+                ],
+                "Authorization": [
+                    "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MDA5MjUyODgsImV4cCI6MTcwMDkyODg4OCwiYXVkIjoiMzRjNWQ0YWJlYmY2YjU0YzQxNzJkYzRkNjhiODI5NWYwMWM5ZDUyYSIsImRhdGEiOnsidXN1YXJpbyI6ImFkbWluIiwidGlwbyI6ImFkbWluIiwic2VjdG9yIjoiYWRtaW4ifSwiYXBwIjoiQVBJIFJFU1QgQ0QgMjAyMyJ9.315dGuUhISJAQGWrOqP9kWWEpuHvwi5KhI4mpK85Mq4"
+                ],
+                "User-Agent": [
+                    "PostmanRuntime\/7.35.0"
+                ],
+                "Accept": [
+                    "*\/*"
+                ],
+                "Postman-Token": [
+                    "1a49234e-c95e-4015-8420-81f73bcc4e32"
+                ],
+                "Host": [
+                    "localhost"
+                ],
+                "Accept-Encoding": [
+                    "gzip, deflate, br"
+                ],
+                "Connection": [
+                    "keep-alive"
+                ]
+            },
+            "body": ""
+        },
+        "response": {
+            "statusCode": 200,
+            "headers": {
+                "Content-Type": [
+                    "application\/json"
+                ]
+            },
+            "body": "[{\"idEncuesta\":1,\"idPedido\":1000,\"idMesa\":1000,\"idMozo\":2,\"idCocinero\":3,\"puntuacionMesa\":10,\"puntuacionRestaurante\":8,\"puntuacionMozo\":6,\"puntuacionCocinero\":5,\"experienciaTexto\":\"\\\"Muy bueno el pedido, aunque el mozo tardo demasiado\\\"\",\"fechaCreacion\":{\"date\":\"2023-11-25 12:37:38.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"}}]"
+        },
+        "timestamp": "2023-11-25 17:11:25"
+    }
+],
+[
+    {
+        "request": {
+            "method": "GET",
+            "uri": "http:\/\/localhost:666\/app\/encuestas?idCocinero=3",
+            "headers": {
+                "PHP-AUTH-USER": [
+                    "cristobal_socio"
+                ],
+                "Authorization": [
+                    "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MDA5MjUyODgsImV4cCI6MTcwMDkyODg4OCwiYXVkIjoiMzRjNWQ0YWJlYmY2YjU0YzQxNzJkYzRkNjhiODI5NWYwMWM5ZDUyYSIsImRhdGEiOnsidXN1YXJpbyI6ImFkbWluIiwidGlwbyI6ImFkbWluIiwic2VjdG9yIjoiYWRtaW4ifSwiYXBwIjoiQVBJIFJFU1QgQ0QgMjAyMyJ9.315dGuUhISJAQGWrOqP9kWWEpuHvwi5KhI4mpK85Mq4"
+                ],
+                "User-Agent": [
+                    "PostmanRuntime\/7.35.0"
+                ],
+                "Accept": [
+                    "*\/*"
+                ],
+                "Postman-Token": [
+                    "983a4d54-f084-4314-8d5c-0b1a68de32c7"
+                ],
+                "Host": [
+                    "localhost"
+                ],
+                "Accept-Encoding": [
+                    "gzip, deflate, br"
+                ],
+                "Connection": [
+                    "keep-alive"
+                ]
+            },
+            "body": ""
+        },
+        "response": {
+            "statusCode": 200,
+            "headers": {
+                "Content-Type": [
+                    "application\/json"
+                ]
+            },
+            "body": "[{\"idEncuesta\":1,\"idPedido\":1000,\"idMesa\":1000,\"idMozo\":2,\"idCocinero\":3,\"puntuacionMesa\":10,\"puntuacionRestaurante\":8,\"puntuacionMozo\":6,\"puntuacionCocinero\":5,\"experienciaTexto\":\"\\\"Muy bueno el pedido, aunque el mozo tardo demasiado\\\"\",\"fechaCreacion\":{\"date\":\"2023-11-25 12:37:38.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"}}]"
+        },
+        "timestamp": "2023-11-25 17:11:44"
+    }
+],
+[
+    {
+        "request": {
+            "method": "GET",
+            "uri": "http:\/\/localhost:666\/app\/encuestas?idMozo=2",
+            "headers": {
+                "PHP-AUTH-USER": [
+                    "cristobal_socio"
+                ],
+                "Authorization": [
+                    "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MDA5MjUyODgsImV4cCI6MTcwMDkyODg4OCwiYXVkIjoiMzRjNWQ0YWJlYmY2YjU0YzQxNzJkYzRkNjhiODI5NWYwMWM5ZDUyYSIsImRhdGEiOnsidXN1YXJpbyI6ImFkbWluIiwidGlwbyI6ImFkbWluIiwic2VjdG9yIjoiYWRtaW4ifSwiYXBwIjoiQVBJIFJFU1QgQ0QgMjAyMyJ9.315dGuUhISJAQGWrOqP9kWWEpuHvwi5KhI4mpK85Mq4"
+                ],
+                "User-Agent": [
+                    "PostmanRuntime\/7.35.0"
+                ],
+                "Accept": [
+                    "*\/*"
+                ],
+                "Postman-Token": [
+                    "422e7706-0fee-4e27-87ad-f64e3e931991"
+                ],
+                "Host": [
+                    "localhost"
+                ],
+                "Accept-Encoding": [
+                    "gzip, deflate, br"
+                ],
+                "Connection": [
+                    "keep-alive"
+                ]
+            },
+            "body": ""
+        },
+        "response": {
+            "statusCode": 200,
+            "headers": {
+                "Content-Type": [
+                    "application\/json"
+                ]
+            },
+            "body": "[{\"idEncuesta\":1,\"idPedido\":1000,\"idMesa\":1000,\"idMozo\":2,\"idCocinero\":3,\"puntuacionMesa\":10,\"puntuacionRestaurante\":8,\"puntuacionMozo\":6,\"puntuacionCocinero\":5,\"experienciaTexto\":\"\\\"Muy bueno el pedido, aunque el mozo tardo demasiado\\\"\",\"fechaCreacion\":{\"date\":\"2023-11-25 12:37:38.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"}}]"
+        },
+        "timestamp": "2023-11-25 17:11:48"
+    }
+],
+[
+    {
+        "request": {
+            "method": "GET",
+            "uri": "http:\/\/localhost:666\/app\/encuestas?puntuacionMesa=10",
+            "headers": {
+                "PHP-AUTH-USER": [
+                    "cristobal_socio"
+                ],
+                "Authorization": [
+                    "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MDA5MjUyODgsImV4cCI6MTcwMDkyODg4OCwiYXVkIjoiMzRjNWQ0YWJlYmY2YjU0YzQxNzJkYzRkNjhiODI5NWYwMWM5ZDUyYSIsImRhdGEiOnsidXN1YXJpbyI6ImFkbWluIiwidGlwbyI6ImFkbWluIiwic2VjdG9yIjoiYWRtaW4ifSwiYXBwIjoiQVBJIFJFU1QgQ0QgMjAyMyJ9.315dGuUhISJAQGWrOqP9kWWEpuHvwi5KhI4mpK85Mq4"
+                ],
+                "User-Agent": [
+                    "PostmanRuntime\/7.35.0"
+                ],
+                "Accept": [
+                    "*\/*"
+                ],
+                "Postman-Token": [
+                    "ce10d8af-72fd-46e1-9be5-bc4a9ca23eef"
+                ],
+                "Host": [
+                    "localhost"
+                ],
+                "Accept-Encoding": [
+                    "gzip, deflate, br"
+                ],
+                "Connection": [
+                    "keep-alive"
+                ]
+            },
+            "body": ""
+        },
+        "response": {
+            "statusCode": 200,
+            "headers": {
+                "Content-Type": [
+                    "application\/json"
+                ]
+            },
+            "body": "[{\"idEncuesta\":1,\"idPedido\":1000,\"idMesa\":1000,\"idMozo\":2,\"idCocinero\":3,\"puntuacionMesa\":10,\"puntuacionRestaurante\":8,\"puntuacionMozo\":6,\"puntuacionCocinero\":5,\"experienciaTexto\":\"\\\"Muy bueno el pedido, aunque el mozo tardo demasiado\\\"\",\"fechaCreacion\":{\"date\":\"2023-11-25 12:37:38.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"}}]"
+        },
+        "timestamp": "2023-11-25 17:12:12"
+    }
+],
+[
+    {
+        "request": {
+            "method": "GET",
+            "uri": "http:\/\/localhost:666\/app\/encuestas?puntuacionMesa=11",
+            "headers": {
+                "PHP-AUTH-USER": [
+                    "cristobal_socio"
+                ],
+                "Authorization": [
+                    "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MDA5MjUyODgsImV4cCI6MTcwMDkyODg4OCwiYXVkIjoiMzRjNWQ0YWJlYmY2YjU0YzQxNzJkYzRkNjhiODI5NWYwMWM5ZDUyYSIsImRhdGEiOnsidXN1YXJpbyI6ImFkbWluIiwidGlwbyI6ImFkbWluIiwic2VjdG9yIjoiYWRtaW4ifSwiYXBwIjoiQVBJIFJFU1QgQ0QgMjAyMyJ9.315dGuUhISJAQGWrOqP9kWWEpuHvwi5KhI4mpK85Mq4"
+                ],
+                "User-Agent": [
+                    "PostmanRuntime\/7.35.0"
+                ],
+                "Accept": [
+                    "*\/*"
+                ],
+                "Postman-Token": [
+                    "def2439e-6ac2-4c75-b57f-5fc477a5b281"
+                ],
+                "Host": [
+                    "localhost"
+                ],
+                "Accept-Encoding": [
+                    "gzip, deflate, br"
+                ],
+                "Connection": [
+                    "keep-alive"
+                ]
+            },
+            "body": ""
+        },
+        "response": {
+            "statusCode": 200,
+            "headers": {
+                "Content-Type": [
+                    "application\/json"
+                ]
+            },
+            "body": "[]"
+        },
+        "timestamp": "2023-11-25 17:12:16"
+    }
+],
+[
+    {
+        "request": {
+            "method": "GET",
+            "uri": "http:\/\/localhost:666\/app\/encuestas?puntuacionMesa=10",
+            "headers": {
+                "PHP-AUTH-USER": [
+                    "cristobal_socio"
+                ],
+                "Authorization": [
+                    "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MDA5MjUyODgsImV4cCI6MTcwMDkyODg4OCwiYXVkIjoiMzRjNWQ0YWJlYmY2YjU0YzQxNzJkYzRkNjhiODI5NWYwMWM5ZDUyYSIsImRhdGEiOnsidXN1YXJpbyI6ImFkbWluIiwidGlwbyI6ImFkbWluIiwic2VjdG9yIjoiYWRtaW4ifSwiYXBwIjoiQVBJIFJFU1QgQ0QgMjAyMyJ9.315dGuUhISJAQGWrOqP9kWWEpuHvwi5KhI4mpK85Mq4"
+                ],
+                "User-Agent": [
+                    "PostmanRuntime\/7.35.0"
+                ],
+                "Accept": [
+                    "*\/*"
+                ],
+                "Postman-Token": [
+                    "b083a654-7797-411c-b63e-fe08226de5e2"
+                ],
+                "Host": [
+                    "localhost"
+                ],
+                "Accept-Encoding": [
+                    "gzip, deflate, br"
+                ],
+                "Connection": [
+                    "keep-alive"
+                ]
+            },
+            "body": ""
+        },
+        "response": {
+            "statusCode": 200,
+            "headers": {
+                "Content-Type": [
+                    "application\/json"
+                ]
+            },
+            "body": "[{\"idEncuesta\":1,\"idPedido\":1000,\"idMesa\":1000,\"idMozo\":2,\"idCocinero\":3,\"puntuacionMesa\":10,\"puntuacionRestaurante\":8,\"puntuacionMozo\":6,\"puntuacionCocinero\":5,\"experienciaTexto\":\"\\\"Muy bueno el pedido, aunque el mozo tardo demasiado\\\"\",\"fechaCreacion\":{\"date\":\"2023-11-25 12:37:38.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"}}]"
+        },
+        "timestamp": "2023-11-25 17:12:21"
+    }
+],
+[
+    {
+        "request": {
+            "method": "GET",
+            "uri": "http:\/\/localhost:666\/app\/encuestas?puntuacionRestaurante=10",
+            "headers": {
+                "PHP-AUTH-USER": [
+                    "cristobal_socio"
+                ],
+                "Authorization": [
+                    "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MDA5MjUyODgsImV4cCI6MTcwMDkyODg4OCwiYXVkIjoiMzRjNWQ0YWJlYmY2YjU0YzQxNzJkYzRkNjhiODI5NWYwMWM5ZDUyYSIsImRhdGEiOnsidXN1YXJpbyI6ImFkbWluIiwidGlwbyI6ImFkbWluIiwic2VjdG9yIjoiYWRtaW4ifSwiYXBwIjoiQVBJIFJFU1QgQ0QgMjAyMyJ9.315dGuUhISJAQGWrOqP9kWWEpuHvwi5KhI4mpK85Mq4"
+                ],
+                "User-Agent": [
+                    "PostmanRuntime\/7.35.0"
+                ],
+                "Accept": [
+                    "*\/*"
+                ],
+                "Postman-Token": [
+                    "784ec5b8-1b34-4af7-93d1-05406048707f"
+                ],
+                "Host": [
+                    "localhost"
+                ],
+                "Accept-Encoding": [
+                    "gzip, deflate, br"
+                ],
+                "Connection": [
+                    "keep-alive"
+                ]
+            },
+            "body": ""
+        },
+        "response": {
+            "statusCode": 200,
+            "headers": {
+                "Content-Type": [
+                    "application\/json"
+                ]
+            },
+            "body": "[]"
+        },
+        "timestamp": "2023-11-25 17:12:30"
+    }
+],
+[
+    {
+        "request": {
+            "method": "GET",
+            "uri": "http:\/\/localhost:666\/app\/encuestas?puntuacionRestaurante=8",
+            "headers": {
+                "PHP-AUTH-USER": [
+                    "cristobal_socio"
+                ],
+                "Authorization": [
+                    "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MDA5MjUyODgsImV4cCI6MTcwMDkyODg4OCwiYXVkIjoiMzRjNWQ0YWJlYmY2YjU0YzQxNzJkYzRkNjhiODI5NWYwMWM5ZDUyYSIsImRhdGEiOnsidXN1YXJpbyI6ImFkbWluIiwidGlwbyI6ImFkbWluIiwic2VjdG9yIjoiYWRtaW4ifSwiYXBwIjoiQVBJIFJFU1QgQ0QgMjAyMyJ9.315dGuUhISJAQGWrOqP9kWWEpuHvwi5KhI4mpK85Mq4"
+                ],
+                "User-Agent": [
+                    "PostmanRuntime\/7.35.0"
+                ],
+                "Accept": [
+                    "*\/*"
+                ],
+                "Postman-Token": [
+                    "0fa0c657-5a17-4d71-8b16-f052f9963851"
+                ],
+                "Host": [
+                    "localhost"
+                ],
+                "Accept-Encoding": [
+                    "gzip, deflate, br"
+                ],
+                "Connection": [
+                    "keep-alive"
+                ]
+            },
+            "body": ""
+        },
+        "response": {
+            "statusCode": 200,
+            "headers": {
+                "Content-Type": [
+                    "application\/json"
+                ]
+            },
+            "body": "[{\"idEncuesta\":1,\"idPedido\":1000,\"idMesa\":1000,\"idMozo\":2,\"idCocinero\":3,\"puntuacionMesa\":10,\"puntuacionRestaurante\":8,\"puntuacionMozo\":6,\"puntuacionCocinero\":5,\"experienciaTexto\":\"\\\"Muy bueno el pedido, aunque el mozo tardo demasiado\\\"\",\"fechaCreacion\":{\"date\":\"2023-11-25 12:37:38.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"}}]"
+        },
+        "timestamp": "2023-11-25 17:12:34"
+    }
+],
+[
+    {
+        "request": {
+            "method": "GET",
+            "uri": "http:\/\/localhost:666\/app\/encuestas?puntuacionRestaurante=1",
+            "headers": {
+                "PHP-AUTH-USER": [
+                    "cristobal_socio"
+                ],
+                "Authorization": [
+                    "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MDA5MjUyODgsImV4cCI6MTcwMDkyODg4OCwiYXVkIjoiMzRjNWQ0YWJlYmY2YjU0YzQxNzJkYzRkNjhiODI5NWYwMWM5ZDUyYSIsImRhdGEiOnsidXN1YXJpbyI6ImFkbWluIiwidGlwbyI6ImFkbWluIiwic2VjdG9yIjoiYWRtaW4ifSwiYXBwIjoiQVBJIFJFU1QgQ0QgMjAyMyJ9.315dGuUhISJAQGWrOqP9kWWEpuHvwi5KhI4mpK85Mq4"
+                ],
+                "User-Agent": [
+                    "PostmanRuntime\/7.35.0"
+                ],
+                "Accept": [
+                    "*\/*"
+                ],
+                "Postman-Token": [
+                    "97c75e75-5411-4ac8-b7d9-30ad2e43379c"
+                ],
+                "Host": [
+                    "localhost"
+                ],
+                "Accept-Encoding": [
+                    "gzip, deflate, br"
+                ],
+                "Connection": [
+                    "keep-alive"
+                ]
+            },
+            "body": ""
+        },
+        "response": {
+            "statusCode": 200,
+            "headers": {
+                "Content-Type": [
+                    "application\/json"
+                ]
+            },
+            "body": "[{\"idEncuesta\":1,\"idPedido\":1000,\"idMesa\":1000,\"idMozo\":2,\"idCocinero\":3,\"puntuacionMesa\":10,\"puntuacionRestaurante\":8,\"puntuacionMozo\":6,\"puntuacionCocinero\":5,\"experienciaTexto\":\"\\\"Muy bueno el pedido, aunque el mozo tardo demasiado\\\"\",\"fechaCreacion\":{\"date\":\"2023-11-25 12:37:38.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"}}]"
+        },
+        "timestamp": "2023-11-25 17:12:37"
+    }
+],
+[
+    {
+        "request": {
+            "method": "GET",
+            "uri": "http:\/\/localhost:666\/app\/encuestas?puntuacionMozo=6",
+            "headers": {
+                "PHP-AUTH-USER": [
+                    "cristobal_socio"
+                ],
+                "Authorization": [
+                    "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MDA5MjUyODgsImV4cCI6MTcwMDkyODg4OCwiYXVkIjoiMzRjNWQ0YWJlYmY2YjU0YzQxNzJkYzRkNjhiODI5NWYwMWM5ZDUyYSIsImRhdGEiOnsidXN1YXJpbyI6ImFkbWluIiwidGlwbyI6ImFkbWluIiwic2VjdG9yIjoiYWRtaW4ifSwiYXBwIjoiQVBJIFJFU1QgQ0QgMjAyMyJ9.315dGuUhISJAQGWrOqP9kWWEpuHvwi5KhI4mpK85Mq4"
+                ],
+                "User-Agent": [
+                    "PostmanRuntime\/7.35.0"
+                ],
+                "Accept": [
+                    "*\/*"
+                ],
+                "Postman-Token": [
+                    "e06ad16d-c1a3-480e-9679-2cd165e13e47"
+                ],
+                "Host": [
+                    "localhost"
+                ],
+                "Accept-Encoding": [
+                    "gzip, deflate, br"
+                ],
+                "Connection": [
+                    "keep-alive"
+                ]
+            },
+            "body": ""
+        },
+        "response": {
+            "statusCode": 200,
+            "headers": {
+                "Content-Type": [
+                    "application\/json"
+                ]
+            },
+            "body": "[{\"idEncuesta\":1,\"idPedido\":1000,\"idMesa\":1000,\"idMozo\":2,\"idCocinero\":3,\"puntuacionMesa\":10,\"puntuacionRestaurante\":8,\"puntuacionMozo\":6,\"puntuacionCocinero\":5,\"experienciaTexto\":\"\\\"Muy bueno el pedido, aunque el mozo tardo demasiado\\\"\",\"fechaCreacion\":{\"date\":\"2023-11-25 12:37:38.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"}}]"
+        },
+        "timestamp": "2023-11-25 17:12:57"
+    }
+],
+[
+    {
+        "request": {
+            "method": "GET",
+            "uri": "http:\/\/localhost:666\/app\/encuestas?puntuacionMozo=5",
+            "headers": {
+                "PHP-AUTH-USER": [
+                    "cristobal_socio"
+                ],
+                "Authorization": [
+                    "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MDA5MjUyODgsImV4cCI6MTcwMDkyODg4OCwiYXVkIjoiMzRjNWQ0YWJlYmY2YjU0YzQxNzJkYzRkNjhiODI5NWYwMWM5ZDUyYSIsImRhdGEiOnsidXN1YXJpbyI6ImFkbWluIiwidGlwbyI6ImFkbWluIiwic2VjdG9yIjoiYWRtaW4ifSwiYXBwIjoiQVBJIFJFU1QgQ0QgMjAyMyJ9.315dGuUhISJAQGWrOqP9kWWEpuHvwi5KhI4mpK85Mq4"
+                ],
+                "User-Agent": [
+                    "PostmanRuntime\/7.35.0"
+                ],
+                "Accept": [
+                    "*\/*"
+                ],
+                "Postman-Token": [
+                    "aed67df7-3999-400b-85a9-8121082c320f"
+                ],
+                "Host": [
+                    "localhost"
+                ],
+                "Accept-Encoding": [
+                    "gzip, deflate, br"
+                ],
+                "Connection": [
+                    "keep-alive"
+                ]
+            },
+            "body": ""
+        },
+        "response": {
+            "statusCode": 200,
+            "headers": {
+                "Content-Type": [
+                    "application\/json"
+                ]
+            },
+            "body": "[{\"idEncuesta\":1,\"idPedido\":1000,\"idMesa\":1000,\"idMozo\":2,\"idCocinero\":3,\"puntuacionMesa\":10,\"puntuacionRestaurante\":8,\"puntuacionMozo\":6,\"puntuacionCocinero\":5,\"experienciaTexto\":\"\\\"Muy bueno el pedido, aunque el mozo tardo demasiado\\\"\",\"fechaCreacion\":{\"date\":\"2023-11-25 12:37:38.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"}}]"
+        },
+        "timestamp": "2023-11-25 17:13:00"
+    }
+],
+[
+    {
+        "request": {
+            "method": "GET",
+            "uri": "http:\/\/localhost:666\/app\/encuestas?puntuacionMozo=10",
+            "headers": {
+                "PHP-AUTH-USER": [
+                    "cristobal_socio"
+                ],
+                "Authorization": [
+                    "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MDA5MjUyODgsImV4cCI6MTcwMDkyODg4OCwiYXVkIjoiMzRjNWQ0YWJlYmY2YjU0YzQxNzJkYzRkNjhiODI5NWYwMWM5ZDUyYSIsImRhdGEiOnsidXN1YXJpbyI6ImFkbWluIiwidGlwbyI6ImFkbWluIiwic2VjdG9yIjoiYWRtaW4ifSwiYXBwIjoiQVBJIFJFU1QgQ0QgMjAyMyJ9.315dGuUhISJAQGWrOqP9kWWEpuHvwi5KhI4mpK85Mq4"
+                ],
+                "User-Agent": [
+                    "PostmanRuntime\/7.35.0"
+                ],
+                "Accept": [
+                    "*\/*"
+                ],
+                "Postman-Token": [
+                    "c436d29c-cb17-4ba4-9e0b-28fb85f3b6ae"
+                ],
+                "Host": [
+                    "localhost"
+                ],
+                "Accept-Encoding": [
+                    "gzip, deflate, br"
+                ],
+                "Connection": [
+                    "keep-alive"
+                ]
+            },
+            "body": ""
+        },
+        "response": {
+            "statusCode": 200,
+            "headers": {
+                "Content-Type": [
+                    "application\/json"
+                ]
+            },
+            "body": "[]"
+        },
+        "timestamp": "2023-11-25 17:13:03"
+    }
+],
+[
+    {
+        "request": {
+            "method": "GET",
+            "uri": "http:\/\/localhost:666\/app\/encuestas?puntuacionMozo=6",
+            "headers": {
+                "PHP-AUTH-USER": [
+                    "cristobal_socio"
+                ],
+                "Authorization": [
+                    "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MDA5MjUyODgsImV4cCI6MTcwMDkyODg4OCwiYXVkIjoiMzRjNWQ0YWJlYmY2YjU0YzQxNzJkYzRkNjhiODI5NWYwMWM5ZDUyYSIsImRhdGEiOnsidXN1YXJpbyI6ImFkbWluIiwidGlwbyI6ImFkbWluIiwic2VjdG9yIjoiYWRtaW4ifSwiYXBwIjoiQVBJIFJFU1QgQ0QgMjAyMyJ9.315dGuUhISJAQGWrOqP9kWWEpuHvwi5KhI4mpK85Mq4"
+                ],
+                "User-Agent": [
+                    "PostmanRuntime\/7.35.0"
+                ],
+                "Accept": [
+                    "*\/*"
+                ],
+                "Postman-Token": [
+                    "421bc565-710b-454d-b9d5-bd27a2fd5c3f"
+                ],
+                "Host": [
+                    "localhost"
+                ],
+                "Accept-Encoding": [
+                    "gzip, deflate, br"
+                ],
+                "Connection": [
+                    "keep-alive"
+                ]
+            },
+            "body": ""
+        },
+        "response": {
+            "statusCode": 200,
+            "headers": {
+                "Content-Type": [
+                    "application\/json"
+                ]
+            },
+            "body": "[{\"idEncuesta\":1,\"idPedido\":1000,\"idMesa\":1000,\"idMozo\":2,\"idCocinero\":3,\"puntuacionMesa\":10,\"puntuacionRestaurante\":8,\"puntuacionMozo\":6,\"puntuacionCocinero\":5,\"experienciaTexto\":\"\\\"Muy bueno el pedido, aunque el mozo tardo demasiado\\\"\",\"fechaCreacion\":{\"date\":\"2023-11-25 12:37:38.000000\",\"timezone_type\":3,\"timezone\":\"America\\\/Argentina\\\/Buenos_Aires\"}}]"
+        },
+        "timestamp": "2023-11-25 17:13:06"
+    }
 ]

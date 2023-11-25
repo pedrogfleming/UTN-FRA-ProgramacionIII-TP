@@ -52,17 +52,59 @@ class Encuesta
         return null;
     }
 
-    public static function obtenerTodos()
+    public static function obtenerTodos($idMesa = null, $idMozo = null, $idCocinero = null, $puntuacionMesa = null, $puntuacionRestaurante = null, $puntuacionMozo = null)
     {
         $objAccesoDatos = AccesoDatos::obtenerInstancia();
-        $consulta = $objAccesoDatos->prepararConsulta("SELECT * FROM Encuestas WHERE eliminado = " . ACTIVO);
+        $consultaStr = "SELECT * FROM Encuestas WHERE eliminado = " . ACTIVO;
+    
+        // Agrega los filtros a la consulta SQL
+        if ($idMesa) {
+            $consultaStr .= " AND id_mesa = :idMesa";
+        }
+        if ($idMozo) {
+            $consultaStr .= " AND id_mozo = :idMozo";
+        }
+        if ($idCocinero) {
+            $consultaStr .= " AND id_cocinero = :idCocinero";
+        }
+        if ($puntuacionMesa) {
+            $consultaStr .= " AND puntuacion_mesa >= :puntuacionMesa";
+        }
+        if ($puntuacionRestaurante) {
+            $consultaStr .= " AND puntuacion_restaurante >= :puntuacionRestaurante";
+        }
+        if ($puntuacionMozo) {
+            $consultaStr .= " AND puntuacion_mozo >= :puntuacionMozo";
+        }
+    
+        $consulta = $objAccesoDatos->prepararConsulta($consultaStr);
+        
+        if ($idMesa) {
+            $consulta->bindValue(':idMesa', $idMesa, PDO::PARAM_INT);
+        }
+        if ($idMozo) {
+            $consulta->bindValue(':idMozo', $idMozo, PDO::PARAM_INT);
+        }
+        if ($idCocinero) {
+            $consulta->bindValue(':idCocinero', $idCocinero, PDO::PARAM_INT);
+        }
+        if ($puntuacionMesa) {
+            $consulta->bindValue(':puntuacionMesa', $puntuacionMesa, PDO::PARAM_INT);
+        }
+        if ($puntuacionRestaurante) {
+            $consulta->bindValue(':puntuacionRestaurante', $puntuacionRestaurante, PDO::PARAM_INT);
+        }
+        if ($puntuacionMozo) {
+            $consulta->bindValue(':puntuacionMozo', $puntuacionMozo, PDO::PARAM_INT);
+        }
+    
         $consulta->execute();
-
+    
         $arrayEncuestas = array();
         foreach ($consulta->fetchAll(PDO::FETCH_OBJ) as $encuesta) {
             array_push($arrayEncuestas, self::transformarEncuesta($encuesta));
         }
-
+    
         return $arrayEncuestas;
     }
 

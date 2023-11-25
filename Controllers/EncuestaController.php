@@ -29,14 +29,17 @@ class EncuestaController implements IApiUsable
         $encuesta->puntuacionCocinero = $puntuacionCocinero;
         $encuesta->experienciaTexto = $experienciaTexto;
         $encuesta->fechaCreacion = new DateTime("now", new DateTimeZone("America/Argentina/Buenos_Aires"));
-        $encuesta->guardarEncuesta();
+        $idEncuesta = $encuesta->guardarEncuesta();
 
         require_once MODELS . '/Mesa.php';
         $mesaCerrada = Mesa::obtenerMesa($encuesta->idMesa);
         $mesaCerrada->estado = Mesa::ESTADO_CERRADA;
         Mesa::actualizarMesa($mesaCerrada);
 
-        $payload = json_encode(array("mensaje" => "Encuesta creada con éxito"));
+        $payload = json_encode(array(
+            "mensaje" => "Encuesta creada con éxito",
+            "id" => $idEncuesta
+        ));
 
         $response->getBody()->write($payload);
         return $response->withHeader('Content-Type', 'application/json');
@@ -61,8 +64,16 @@ class EncuestaController implements IApiUsable
 
     public function TraerTodos($request, $response, $args)
     {
-        $lista = Encuesta::obtenerTodos();
-        $payload = json_encode(array("listaEncuestas" => $lista));
+        $queryParams = $request->getQueryParams();
+        $idMesa = isset($queryParams['idMesa']) ? $queryParams['idMesa'] : null;
+        $idMozo = isset($queryParams['idMozo']) ? $queryParams['idMozo'] : null;
+        $idCocinero = isset($queryParams['idCocinero']) ? $queryParams['idCocinero'] : null;
+        $puntuacionMesa = isset($queryParams['puntuacionMesa']) ? $queryParams['puntuacionMesa'] : null;
+        $puntuacionRestaurante = isset($queryParams['puntuacionRestaurante']) ? $queryParams['puntuacionRestaurante'] : null;
+        $puntuacionMozo = isset($queryParams['puntuacionMozo']) ? $queryParams['puntuacionMozo'] : null;
+    
+        $lista = Encuesta::obtenerTodos($idMesa, $idMozo, $idCocinero, $puntuacionMesa, $puntuacionRestaurante, $puntuacionMozo);
+        $payload = json_encode($lista);
         $response->getBody()->write($payload);
         return $response->withHeader('Content-Type', 'application/json');
     }
