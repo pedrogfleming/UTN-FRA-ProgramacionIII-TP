@@ -13,13 +13,7 @@
 					"name": "ObtenerUsuarios No autorizado",
 					"request": {
 						"method": "GET",
-						"header": [
-							{
-								"key": "PHP_AUTH_USER",
-								"value": "oscar_mozo",
-								"type": "text"
-							}
-						],
+						"header": [],
 						"url": {
 							"raw": "{{protocolo}}://{{server}}:{{puerto}}/{{app}}/{{usuarios}}",
 							"protocol": "{{protocolo}}",
@@ -86,13 +80,7 @@
 					"name": "ObtenerUsuarios Autorizado",
 					"request": {
 						"method": "GET",
-						"header": [
-							{
-								"key": "PHP_AUTH_USER",
-								"value": "cristobal_socio",
-								"type": "text"
-							}
-						],
+						"header": [],
 						"url": {
 							"raw": "{{protocolo}}://{{server}}:{{puerto}}/{{app}}/{{usuarios}}",
 							"protocol": "{{protocolo}}",
@@ -159,13 +147,7 @@
 					"name": "CargarUsuario No autorizado",
 					"request": {
 						"method": "POST",
-						"header": [
-							{
-								"key": "PHP_AUTH_USER",
-								"value": "oscar_mozo",
-								"type": "text"
-							}
-						],
+						"header": [],
 						"body": {
 							"mode": "formdata",
 							"formdata": [
@@ -215,13 +197,7 @@
 					"name": "CargarUsuario Autorizado",
 					"request": {
 						"method": "POST",
-						"header": [
-							{
-								"key": "PHP_AUTH_USER",
-								"value": "cristobal_socio",
-								"type": "text"
-							}
-						],
+						"header": [],
 						"body": {
 							"mode": "formdata",
 							"formdata": [
@@ -271,13 +247,7 @@
 					"name": "CargarUsuario Autorizado 2",
 					"request": {
 						"method": "POST",
-						"header": [
-							{
-								"key": "PHP_AUTH_USER",
-								"value": "cristobal_socio",
-								"type": "text"
-							}
-						],
+						"header": [],
 						"body": {
 							"mode": "formdata",
 							"formdata": [
@@ -329,7 +299,7 @@
 				"bearer": [
 					{
 						"key": "token",
-						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MDA1ODU4ODksImV4cCI6MTcwMDU4OTQ4OSwiYXVkIjoiMzRjNWQ0YWJlYmY2YjU0YzQxNzJkYzRkNjhiODI5NWYwMWM5ZDUyYSIsImRhdGEiOnsidXN1YXJpbyI6ImNyaXN0b2JhbF9zb2NpbyJ9LCJhcHAiOiJBUEkgUkVTVCBDRCAyMDIzIn0.5PZDcloqpnDWvx3eDXuBnfTp_5jQo8A7JrwCzyGcX50",
+						"value": "{{token}}",
 						"type": "string"
 					}
 				]
@@ -362,13 +332,7 @@
 					"name": "ObtenerProductos No  Autorizado",
 					"request": {
 						"method": "GET",
-						"header": [
-							{
-								"key": "PHP_AUTH_USER",
-								"value": "",
-								"type": "text"
-							}
-						],
+						"header": [],
 						"url": {
 							"raw": "{{protocolo}}://{{server}}:{{puerto}}/{{app}}/{{productos}}",
 							"protocol": "{{protocolo}}",
@@ -508,13 +472,7 @@
 					"name": "CargarProducto No autorizado",
 					"request": {
 						"method": "POST",
-						"header": [
-							{
-								"key": "PHP_AUTH_USER",
-								"value": "",
-								"type": "text"
-							}
-						],
+						"header": [],
 						"body": {
 							"mode": "formdata",
 							"formdata": [
@@ -641,13 +599,7 @@
 					"name": "CargarProducto  Autorizado",
 					"request": {
 						"method": "POST",
-						"header": [
-							{
-								"key": "PHP_AUTH_USER",
-								"value": "cristobal_socio",
-								"type": "text"
-							}
-						],
+						"header": [],
 						"body": {
 							"mode": "formdata",
 							"formdata": [
@@ -850,13 +802,7 @@
 					"name": "Cargar Masiva Productos",
 					"request": {
 						"method": "POST",
-						"header": [
-							{
-								"key": "PHP_AUTH_USER",
-								"value": "cristobal_socio",
-								"type": "text"
-							}
-						],
+						"header": [],
 						"body": {
 							"mode": "formdata",
 							"formdata": [
@@ -864,6 +810,11 @@
 									"key": "productos",
 									"type": "file",
 									"src": "/D:/Environments/XAMP/htdocs/UTN-ProgramacionIII-TP/app-comanda/assets/productos.csv"
+								},
+								{
+									"key": "omitirRepetidos",
+									"value": "false",
+									"type": "text"
 								}
 							]
 						},
@@ -884,7 +835,7 @@
 					"response": []
 				},
 				{
-					"name": "Cargar Masiva Productos Copy",
+					"name": "Cargar Masiva Productos",
 					"request": {
 						"method": "GET",
 						"header": [],
@@ -911,7 +862,7 @@
 				"bearer": [
 					{
 						"key": "token",
-						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MDA1ODU4ODksImV4cCI6MTcwMDU4OTQ4OSwiYXVkIjoiMzRjNWQ0YWJlYmY2YjU0YzQxNzJkYzRkNjhiODI5NWYwMWM5ZDUyYSIsImRhdGEiOnsidXN1YXJpbyI6ImNyaXN0b2JhbF9zb2NpbyJ9LCJhcHAiOiJBUEkgUkVTVCBDRCAyMDIzIn0.5PZDcloqpnDWvx3eDXuBnfTp_5jQo8A7JrwCzyGcX50",
+						"value": "{{token}}",
 						"type": "string"
 					}
 				]
@@ -944,13 +895,7 @@
 					"name": "ObtenerMesas Autorizado",
 					"request": {
 						"method": "GET",
-						"header": [
-							{
-								"key": "PHP_AUTH_USER",
-								"value": "cristobal_socio",
-								"type": "text"
-							}
-						],
+						"header": [],
 						"url": {
 							"raw": "{{protocolo}}://{{server}}:{{puerto}}/{{app}}/{{mesas}}",
 							"protocol": "{{protocolo}}",
@@ -1017,13 +962,7 @@
 					"name": "ObtenerMesas No Autorizado",
 					"request": {
 						"method": "GET",
-						"header": [
-							{
-								"key": "PHP_AUTH_USER",
-								"value": "susana_cocinera",
-								"type": "text"
-							}
-						],
+						"header": [],
 						"url": {
 							"raw": "{{protocolo}}://{{server}}:{{puerto}}/{{app}}/{{mesas}}",
 							"protocol": "{{protocolo}}",
@@ -1090,13 +1029,7 @@
 					"name": "CargarMesa Autorizado",
 					"request": {
 						"method": "POST",
-						"header": [
-							{
-								"key": "PHP_AUTH_USER",
-								"value": "cristobal_socio",
-								"type": "text"
-							}
-						],
+						"header": [],
 						"url": {
 							"raw": "{{protocolo}}://{{server}}:{{puerto}}/{{app}}/{{mesas}}",
 							"protocol": "{{protocolo}}",
@@ -1163,13 +1096,7 @@
 					"name": "CargarMesa No Autorizado",
 					"request": {
 						"method": "POST",
-						"header": [
-							{
-								"key": "PHP_AUTH_USER",
-								"value": "susana_cocinera",
-								"type": "text"
-							}
-						],
+						"header": [],
 						"url": {
 							"raw": "{{protocolo}}://{{server}}:{{puerto}}/{{app}}/{{mesas}}",
 							"protocol": "{{protocolo}}",
@@ -1238,7 +1165,7 @@
 				"bearer": [
 					{
 						"key": "token",
-						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MDA1ODU4ODksImV4cCI6MTcwMDU4OTQ4OSwiYXVkIjoiMzRjNWQ0YWJlYmY2YjU0YzQxNzJkYzRkNjhiODI5NWYwMWM5ZDUyYSIsImRhdGEiOnsidXN1YXJpbyI6ImNyaXN0b2JhbF9zb2NpbyJ9LCJhcHAiOiJBUEkgUkVTVCBDRCAyMDIzIn0.5PZDcloqpnDWvx3eDXuBnfTp_5jQo8A7JrwCzyGcX50",
+						"value": "{{token}}",
 						"type": "string"
 					}
 				]
@@ -1271,13 +1198,7 @@
 					"name": "CambiarEstado Pedido Autenticado",
 					"request": {
 						"method": "PUT",
-						"header": [
-							{
-								"key": "PHP_AUTH_USER",
-								"value": "cristobal_socio",
-								"type": "text"
-							}
-						],
+						"header": [],
 						"body": {
 							"mode": "raw",
 							"raw": "{\r\n    \"idMesa\": 1001,\r\n    \"nombreUsuario\": \"Pedro\",\r\n    \"nombreCliente\": \"Federico\",\r\n    \"estado\": \"en preparación\",\r\n    \"items\": [\r\n        {\"nombreProducto\": \"Gancia\", \"cantidad\": 5 , \"estado\": \"en preparación\"},\r\n        {\"nombreProducto\": \"Fernet\", \"cantidad\": 7, \"estado\": \"en preparación\"},\r\n        {\"nombreProducto\": \"Fernet 1984\", \"cantidad\": 1 , \"estado\": \"en preparación\"}\r\n    ]\r\n}",
@@ -1364,15 +1285,9 @@
 					"name": "ObtenerPedidos Autorizado",
 					"request": {
 						"method": "GET",
-						"header": [
-							{
-								"key": "PHP_AUTH_USER",
-								"value": "cristobal_socio",
-								"type": "text"
-							}
-						],
+						"header": [],
 						"url": {
-							"raw": "{{protocolo}}://{{server}}:{{puerto}}/{{app}}/{{pedidos}}",
+							"raw": "{{protocolo}}://{{server}}:{{puerto}}/{{app}}/{{pedidos}}?estado=pendiente&idMesa=1000",
 							"protocol": "{{protocolo}}",
 							"host": [
 								"{{server}}"
@@ -1381,6 +1296,17 @@
 							"path": [
 								"{{app}}",
 								"{{pedidos}}"
+							],
+							"query": [
+								{
+									"key": "estado",
+									"value": "pendiente",
+									"description": "pendiente, en preparación, listo para servir, cancelado"
+								},
+								{
+									"key": "idMesa",
+									"value": "1000"
+								}
 							]
 						}
 					},
@@ -1391,7 +1317,7 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{protocolo}}://{{server}}:{{puerto}}/{{app}}/{{pedidos}}",
+									"raw": "{{protocolo}}://{{server}}:{{puerto}}/{{app}}/{{pedidos}}?estado=pendiente",
 									"protocol": "{{protocolo}}",
 									"host": [
 										"{{server}}"
@@ -1400,6 +1326,13 @@
 									"path": [
 										"{{app}}",
 										"{{pedidos}}"
+									],
+									"query": [
+										{
+											"key": "estado",
+											"value": "pendiente",
+											"description": "pendiente, en preparación, listo para servir, cancelado"
+										}
 									]
 								}
 							},
@@ -1413,7 +1346,7 @@
 								},
 								{
 									"key": "Date",
-									"value": "Tue, 14 Nov 2023 22:40:08 GMT"
+									"value": "Fri, 24 Nov 2023 00:54:55 GMT"
 								},
 								{
 									"key": "Connection",
@@ -1429,7 +1362,82 @@
 								}
 							],
 							"cookie": [],
-							"body": "{\n    \"listaPedido\": [\n        {\n            \"idPedido\": 1000,\n            \"idMesa\": 1000,\n            \"usuarioAsignado\": 1,\n            \"producto\": 1,\n            \"cantidad\": 2,\n            \"fechaCreacion\": \"2023-11-14 16:40:04\",\n            \"fechaEstimadaDeFinalizacion\": {\n                \"date\": \"2023-11-14 17:00:04.000000\",\n                \"timezone_type\": 3,\n                \"timezone\": \"America/Argentina/Buenos_Aires\"\n            },\n            \"fechaFinalizacion\": null,\n            \"sector\": \"bar\",\n            \"estado\": \"listo para servir\",\n            \"importeTotal\": \"341\",\n            \"nombreCliente\": \"Oscar\"\n        }\n    ]\n}"
+							"body": "{\n    \"listaPedido\": [\n        {\n            \"idPedido\": 1001,\n            \"idMesa\": 1000,\n            \"usuarioAsignado\": 2,\n            \"itemsPedidos\": [],\n            \"fechaCreacion\": {\n                \"date\": \"2023-11-23 21:20:20.000000\",\n                \"timezone_type\": 3,\n                \"timezone\": \"America/Argentina/Buenos_Aires\"\n            },\n            \"fechaEstimadaDeFinalizacion\": {\n                \"date\": \"2023-11-23 22:07:20.000000\",\n                \"timezone_type\": 3,\n                \"timezone\": \"America/Argentina/Buenos_Aires\"\n            },\n            \"fechaFinalizacion\": null,\n            \"estado\": \"pendiente\",\n            \"importeTotal\": 720,\n            \"nombreCliente\": \"Franco\",\n            \"minutosEstimados\": 47\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "ObtenerPedido Autorizado",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{protocolo}}://{{server}}:{{puerto}}/{{app}}/{{pedidos}}/1001",
+							"protocol": "{{protocolo}}",
+							"host": [
+								"{{server}}"
+							],
+							"port": "{{puerto}}",
+							"path": [
+								"{{app}}",
+								"{{pedidos}}",
+								"1001"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "ObtenerPedido Autorizado",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{protocolo}}://{{server}}:{{puerto}}/{{app}}/{{pedidos}}/1001?idMesa=1000",
+									"protocol": "{{protocolo}}",
+									"host": [
+										"{{server}}"
+									],
+									"port": "{{puerto}}",
+									"path": [
+										"{{app}}",
+										"{{pedidos}}",
+										"1001"
+									],
+									"query": [
+										{
+											"key": "idMesa",
+											"value": "1000"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:666"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 24 Nov 2023 01:07:55 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.4"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"idPedido\": 1001,\n    \"idMesa\": 1000,\n    \"usuarioAsignado\": 2,\n    \"itemsPedidos\": [],\n    \"fechaCreacion\": {\n        \"date\": \"2023-11-23 21:20:20.000000\",\n        \"timezone_type\": 3,\n        \"timezone\": \"America/Argentina/Buenos_Aires\"\n    },\n    \"fechaEstimadaDeFinalizacion\": {\n        \"date\": \"2023-11-23 22:07:20.000000\",\n        \"timezone_type\": 3,\n        \"timezone\": \"America/Argentina/Buenos_Aires\"\n    },\n    \"fechaFinalizacion\": null,\n    \"estado\": \"pendiente\",\n    \"importeTotal\": 720,\n    \"nombreCliente\": \"Franco\",\n    \"minutosEstimados\": 47\n}"
 						}
 					]
 				},
@@ -1437,13 +1445,7 @@
 					"name": "ObtenerPedidos No Autorizado",
 					"request": {
 						"method": "GET",
-						"header": [
-							{
-								"key": "PHP_AUTH_USER",
-								"value": "no_existe",
-								"type": "text"
-							}
-						],
+						"header": [],
 						"url": {
 							"raw": "{{protocolo}}://{{server}}:{{puerto}}/{{app}}/{{pedidos}}",
 							"protocol": "{{protocolo}}",
@@ -1510,13 +1512,7 @@
 					"name": "CargarPedido Autorizado",
 					"request": {
 						"method": "POST",
-						"header": [
-							{
-								"key": "PHP_AUTH_USER",
-								"value": "cristobal_socio",
-								"type": "text"
-							}
-						],
+						"header": [],
 						"body": {
 							"mode": "formdata",
 							"formdata": [
@@ -1685,13 +1681,7 @@
 					"name": "CargarPedido No Autorizado",
 					"request": {
 						"method": "POST",
-						"header": [
-							{
-								"key": "PHP_AUTH_USER",
-								"value": "susana_cocinera",
-								"type": "text"
-							}
-						],
+						"header": [],
 						"body": {
 							"mode": "formdata",
 							"formdata": [
@@ -1761,7 +1751,7 @@
 				"bearer": [
 					{
 						"key": "token",
-						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MDA1ODU4ODksImV4cCI6MTcwMDU4OTQ4OSwiYXVkIjoiMzRjNWQ0YWJlYmY2YjU0YzQxNzJkYzRkNjhiODI5NWYwMWM5ZDUyYSIsImRhdGEiOnsidXN1YXJpbyI6ImNyaXN0b2JhbF9zb2NpbyJ9LCJhcHAiOiJBUEkgUkVTVCBDRCAyMDIzIn0.5PZDcloqpnDWvx3eDXuBnfTp_5jQo8A7JrwCzyGcX50",
+						"value": "{{token}}",
 						"type": "string"
 					}
 				]
@@ -1794,13 +1784,7 @@
 					"name": "CargarEncuesta Autorizado",
 					"request": {
 						"method": "POST",
-						"header": [
-							{
-								"key": "PHP_AUTH_USER",
-								"value": "cristobal_socio",
-								"type": "text"
-							}
-						],
+						"header": [],
 						"body": {
 							"mode": "formdata",
 							"formdata": [
@@ -1979,13 +1963,7 @@
 					"name": "ObtenerEncuesta Autorizado",
 					"request": {
 						"method": "GET",
-						"header": [
-							{
-								"key": "PHP_AUTH_USER",
-								"value": "cristobal_socio",
-								"type": "text"
-							}
-						],
+						"header": [],
 						"url": {
 							"raw": "{{protocolo}}://{{server}}:{{puerto}}/{{app}}/{{encuestas}}",
 							"protocol": "{{protocolo}}",
@@ -2058,13 +2036,7 @@
 					"name": "ObtenerEncuesta Autorizado",
 					"request": {
 						"method": "GET",
-						"header": [
-							{
-								"key": "PHP_AUTH_USER",
-								"value": "cristobal_socio",
-								"type": "text"
-							}
-						],
+						"header": [],
 						"url": {
 							"raw": "{{protocolo}}://{{server}}:{{puerto}}/{{app}}/{{encuestas}}/1000",
 							"protocol": "{{protocolo}}",
@@ -2087,7 +2059,7 @@
 				"bearer": [
 					{
 						"key": "token",
-						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MDA1ODU4ODksImV4cCI6MTcwMDU4OTQ4OSwiYXVkIjoiMzRjNWQ0YWJlYmY2YjU0YzQxNzJkYzRkNjhiODI5NWYwMWM5ZDUyYSIsImRhdGEiOnsidXN1YXJpbyI6ImNyaXN0b2JhbF9zb2NpbyJ9LCJhcHAiOiJBUEkgUkVTVCBDRCAyMDIzIn0.5PZDcloqpnDWvx3eDXuBnfTp_5jQo8A7JrwCzyGcX50",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MDA2MDU1MzUsImV4cCI6MTcwMDYwOTEzNSwiYXVkIjoiMzRjNWQ0YWJlYmY2YjU0YzQxNzJkYzRkNjhiODI5NWYwMWM5ZDUyYSIsImRhdGEiOnsidXN1YXJpbyI6ImNyaXN0b2JhbF9zb2NpbyJ9LCJhcHAiOiJBUEkgUkVTVCBDRCAyMDIzIn0.d2HS_Q2pwqeveIN5RscPxkGDfErY6kXlgN8txi1VK04",
 						"type": "string"
 					}
 				]
@@ -2114,7 +2086,1930 @@
 			]
 		},
 		{
-			"name": "Generar Token",
+			"name": "Setup Funcionalidades Evaluadas",
+			"item": [
+				{
+					"name": "CargarUsuario Sofia Moza",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token_admin}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "nombre",
+									"value": "Sofia",
+									"type": "text"
+								},
+								{
+									"key": "user",
+									"value": "sofi_moza",
+									"type": "text"
+								},
+								{
+									"key": "sector",
+									"value": "mesas",
+									"type": "text"
+								},
+								{
+									"key": "tipo",
+									"value": "mozo",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "sofia123",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{protocolo}}://{{server}}:{{puerto}}/{{app}}/{{usuarios}}",
+							"protocol": "{{protocolo}}",
+							"host": [
+								"{{server}}"
+							],
+							"port": "{{puerto}}",
+							"path": [
+								"{{app}}",
+								"{{usuarios}}"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "{{token}}",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Funcionalidades Evaluadas",
+			"item": [
+				{
+					"name": "Login Moza Sofia",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "usuario",
+									"value": "sofi_moza",
+									"type": "text"
+								},
+								{
+									"key": "contraseña",
+									"value": "sofia123",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{protocolo}}://{{server}}:{{puerto}}/{{app}}/auth/login",
+							"protocol": "{{protocolo}}",
+							"host": [
+								"{{server}}"
+							],
+							"port": "{{puerto}}",
+							"path": [
+								"{{app}}",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Login Moza",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "usuario",
+											"value": "sofi_moza",
+											"type": "text"
+										},
+										{
+											"key": "contraseña",
+											"value": "sofia123",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{protocolo}}://{{server}}:{{puerto}}/{{app}}/auth/login",
+									"protocol": "{{protocolo}}",
+									"host": [
+										"{{server}}"
+									],
+									"port": "{{puerto}}",
+									"path": [
+										"{{app}}",
+										"auth",
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:666"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 25 Nov 2023 21:19:57 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.4"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"jwt\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MDA5NDcxOTcsImV4cCI6MTcwMDk1MDc5NywiYXVkIjoiMzRjNWQ0YWJlYmY2YjU0YzQxNzJkYzRkNjhiODI5NWYwMWM5ZDUyYSIsImRhdGEiOnsidXN1YXJpbyI6InNvZmlfbW96YSIsInRpcG8iOiJtb3pvIiwic2VjdG9yIjoibWVzYXMifSwiYXBwIjoiQVBJIFJFU1QgQ0QgMjAyMyJ9.Gn2ZtLDtsSJLzv0cunGBHidc3yMn-TiKH06WKW76V30\"\n}"
+						}
+					]
+				},
+				{
+					"name": "0-CargarMesa Autorizado",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token_moza_sofia}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{protocolo}}://{{server}}:{{puerto}}/{{app}}/{{mesas}}",
+							"protocol": "{{protocolo}}",
+							"host": [
+								"{{server}}"
+							],
+							"port": "{{puerto}}",
+							"path": [
+								"{{app}}",
+								"{{mesas}}"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "0-CargarMesa Autorizado",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{protocolo}}://{{server}}:{{puerto}}/{{app}}/{{mesas}}",
+									"protocol": "{{protocolo}}",
+									"host": [
+										"{{server}}"
+									],
+									"port": "{{puerto}}",
+									"path": [
+										"{{app}}",
+										"{{mesas}}"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:666"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 25 Nov 2023 21:22:44 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.4"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"mensaje\": \"Mesa creada con éxito\",\n    \"id\": \"1000\"\n}"
+						}
+					]
+				},
+				{
+					"name": "2-CargarPedido Autorizado",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token_moza_sofia}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "idMesa",
+									"value": "1000",
+									"type": "text"
+								},
+								{
+									"key": "nombreMozo",
+									"value": "oscar",
+									"type": "text"
+								},
+								{
+									"key": "nombreCliente",
+									"value": "Franco",
+									"type": "text"
+								},
+								{
+									"key": "fotoPedido",
+									"contentType": "",
+									"type": "file",
+									"src": "/D:/Environments/XAMP/htdocs/UTN-ProgramacionIII-TP/app-comanda/assets/comidaTragos.jpg"
+								},
+								{
+									"key": "items[0][nombreProducto]",
+									"value": "Milanesa a Caballo",
+									"contentType": "",
+									"type": "text"
+								},
+								{
+									"key": "items[0][cantidad]",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "items[1][nombreProducto]",
+									"value": "Hamburguesa de Garbanzo",
+									"type": "text"
+								},
+								{
+									"key": "items[1][cantidad]",
+									"value": "2",
+									"contentType": "",
+									"type": "text"
+								},
+								{
+									"key": "items[2][nombreProducto]",
+									"value": "Corona",
+									"type": "text"
+								},
+								{
+									"key": "items[2][cantidad]",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "items[3][nombreProducto]",
+									"value": "Daiquiri",
+									"type": "text"
+								},
+								{
+									"key": "items[3][cantidad]",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{protocolo}}://{{server}}:{{puerto}}/{{app}}/{{pedidos}}",
+							"protocol": "{{protocolo}}",
+							"host": [
+								"{{server}}"
+							],
+							"port": "{{puerto}}",
+							"path": [
+								"{{app}}",
+								"{{pedidos}}"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "2-CargarPedido Autorizado",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "idMesa",
+											"value": "1000",
+											"type": "text"
+										},
+										{
+											"key": "nombreMozo",
+											"value": "oscar",
+											"type": "text"
+										},
+										{
+											"key": "nombreCliente",
+											"value": "Franco",
+											"type": "text"
+										},
+										{
+											"key": "fotoPedido",
+											"contentType": "",
+											"type": "file",
+											"src": "/D:/Environments/XAMP/htdocs/UTN-ProgramacionIII-TP/app-comanda/assets/comidaTragos.jpg"
+										},
+										{
+											"key": "items[0][nombreProducto]",
+											"value": "Milanesa a Caballo",
+											"contentType": "",
+											"type": "text"
+										},
+										{
+											"key": "items[0][cantidad]",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "items[1][nombreProducto]",
+											"value": "Hamburguesa de Garbanzo",
+											"type": "text"
+										},
+										{
+											"key": "items[1][cantidad]",
+											"value": "2",
+											"contentType": "",
+											"type": "text"
+										},
+										{
+											"key": "items[2][nombreProducto]",
+											"value": "Corona",
+											"type": "text"
+										},
+										{
+											"key": "items[2][cantidad]",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "items[3][nombreProducto]",
+											"value": "Daiquiri",
+											"type": "text"
+										},
+										{
+											"key": "items[3][cantidad]",
+											"value": "1",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{protocolo}}://{{server}}:{{puerto}}/{{app}}/{{pedidos}}",
+									"protocol": "{{protocolo}}",
+									"host": [
+										"{{server}}"
+									],
+									"port": "{{puerto}}",
+									"path": [
+										"{{app}}",
+										"{{pedidos}}"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:666"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 25 Nov 2023 21:23:29 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.4"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"mensaje\": \"Pedido creado con exito\",\n    \"id\": \"1000\"\n}"
+						}
+					]
+				},
+				{
+					"name": "4-SignUp Cliente",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "nombre",
+									"value": "Franco Perez",
+									"type": "text"
+								},
+								{
+									"key": "usuario",
+									"value": "franco_perez_cliente",
+									"type": "text"
+								},
+								{
+									"key": "contraseña",
+									"value": "franco123",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{protocolo}}://{{server}}:{{puerto}}/{{app}}/auth/signUp",
+							"protocol": "{{protocolo}}",
+							"host": [
+								"{{server}}"
+							],
+							"port": "{{puerto}}",
+							"path": [
+								"{{app}}",
+								"auth",
+								"signUp"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "SignUp Cliente Error Usuario ya existe",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "nombre",
+											"value": "Franco Perez",
+											"type": "text"
+										},
+										{
+											"key": "usuario",
+											"value": "franco_perez_cliente",
+											"type": "text"
+										},
+										{
+											"key": "contraseña",
+											"value": "franco123",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{protocolo}}://{{server}}:{{puerto}}/{{app}}/auth/signUp",
+									"protocol": "{{protocolo}}",
+									"host": [
+										"{{server}}"
+									],
+									"port": "{{puerto}}",
+									"path": [
+										"{{app}}",
+										"auth",
+										"signUp"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:666"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 26 Nov 2023 01:09:08 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.4"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"error\": \"Ya existe el nombre de usuario suministrado, elija otro\"\n}"
+						}
+					]
+				},
+				{
+					"name": "4-Generar Token Cliente",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "usuario",
+									"value": "franco_perez_cliente",
+									"type": "text"
+								},
+								{
+									"key": "contraseña",
+									"value": "franco123",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{protocolo}}://{{server}}:{{puerto}}/{{app}}/auth/login",
+							"protocol": "{{protocolo}}",
+							"host": [
+								"{{server}}"
+							],
+							"port": "{{puerto}}",
+							"path": [
+								"{{app}}",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "4-ObtenerPedido Autorizado",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token_cliente_1}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{protocolo}}://{{server}}:{{puerto}}/{{app}}/{{pedidos}}/1000?idMesa=1000",
+							"protocol": "{{protocolo}}",
+							"host": [
+								"{{server}}"
+							],
+							"port": "{{puerto}}",
+							"path": [
+								"{{app}}",
+								"{{pedidos}}",
+								"1000"
+							],
+							"query": [
+								{
+									"key": "idMesa",
+									"value": "1000"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "4-ObtenerPedido Autorizado",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{protocolo}}://{{server}}:{{puerto}}/{{app}}/{{pedidos}}/1000?idMesa=1000",
+									"protocol": "{{protocolo}}",
+									"host": [
+										"{{server}}"
+									],
+									"port": "{{puerto}}",
+									"path": [
+										"{{app}}",
+										"{{pedidos}}",
+										"1000"
+									],
+									"query": [
+										{
+											"key": "idMesa",
+											"value": "1000"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:666"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 26 Nov 2023 01:08:34 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.4"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"idPedido\": 1000,\n    \"idMesa\": 1000,\n    \"tiempoDemoraPedido\": 47\n}"
+						}
+					]
+				},
+				{
+					"name": "5-ObtenerPedidos Autorizado",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token_cliente_1}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{protocolo}}://{{server}}:{{puerto}}/{{app}}/{{pedidos}}?idMesa=1000&idPedido=1001&incluirItems=true",
+							"protocol": "{{protocolo}}",
+							"host": [
+								"{{server}}"
+							],
+							"port": "{{puerto}}",
+							"path": [
+								"{{app}}",
+								"{{pedidos}}"
+							],
+							"query": [
+								{
+									"key": "estado",
+									"value": "pendiente",
+									"description": "pendiente, en preparación, listo para servir, cancelado",
+									"disabled": true
+								},
+								{
+									"key": "idMesa",
+									"value": "1000"
+								},
+								{
+									"key": "idPedido",
+									"value": "1001"
+								},
+								{
+									"key": "incluirItems",
+									"value": "true"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "6-ObtenerPedidos Autorizado",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{protocolo}}://{{server}}:{{puerto}}/{{app}}/{{pedidos}}?incluirItems=true",
+							"protocol": "{{protocolo}}",
+							"host": [
+								"{{server}}"
+							],
+							"port": "{{puerto}}",
+							"path": [
+								"{{app}}",
+								"{{pedidos}}"
+							],
+							"query": [
+								{
+									"key": "estado",
+									"value": "pendiente",
+									"description": "pendiente, en preparación, listo para servir, cancelado",
+									"disabled": true
+								},
+								{
+									"key": "idMesa",
+									"value": "1000",
+									"disabled": true
+								},
+								{
+									"key": "idPedido",
+									"value": "1001",
+									"disabled": true
+								},
+								{
+									"key": "incluirItems",
+									"value": "true",
+									"description": "true,false"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "ObtenerPedidos Autorizado",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{protocolo}}://{{server}}:{{puerto}}/{{app}}/{{pedidos}}?idMesa=1000&idPedido=1001",
+									"protocol": "{{protocolo}}",
+									"host": [
+										"{{server}}"
+									],
+									"port": "{{puerto}}",
+									"path": [
+										"{{app}}",
+										"{{pedidos}}"
+									],
+									"query": [
+										{
+											"key": "estado",
+											"value": "pendiente",
+											"description": "pendiente, en preparación, listo para servir, cancelado",
+											"disabled": true
+										},
+										{
+											"key": "idMesa",
+											"value": "1000"
+										},
+										{
+											"key": "idPedido",
+											"value": "1001"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:666"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 24 Nov 2023 01:10:38 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.4"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"listaPedido\": [\n        {\n            \"idPedido\": 1001,\n            \"idMesa\": 1000,\n            \"usuarioAsignado\": 2,\n            \"itemsPedidos\": [],\n            \"fechaCreacion\": {\n                \"date\": \"2023-11-23 21:20:20.000000\",\n                \"timezone_type\": 3,\n                \"timezone\": \"America/Argentina/Buenos_Aires\"\n            },\n            \"fechaEstimadaDeFinalizacion\": {\n                \"date\": \"2023-11-23 22:07:20.000000\",\n                \"timezone_type\": 3,\n                \"timezone\": \"America/Argentina/Buenos_Aires\"\n            },\n            \"fechaFinalizacion\": null,\n            \"estado\": \"pendiente\",\n            \"importeTotal\": 720,\n            \"nombreCliente\": \"Franco\",\n            \"minutosEstimados\": 47\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "6B-CambiarEstado Pedido Autenticado",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idMesa\": 1000,\r\n    \"nombreUsuario\": \"oscar\",\r\n    \"nombreCliente\": \"Franco\",\r\n    \"estado\": \"listo para servir\",\r\n    \"items\": [\r\n        {\"nombreProducto\": \"Milanesa a Caballo\", \"cantidad\": 1 , \"estado\": \"listo para servir\"},\r\n        {\"nombreProducto\": \"Hamburguesa de Garbanzo\", \"cantidad\": 2, \"estado\": \"listo para servir\"},\r\n        {\"nombreProducto\": \"Corona\", \"cantidad\": 1 , \"estado\": \"listo para servir\"},\r\n        {\"nombreProducto\": \"Daiquiri\", \"cantidad\": 1 , \"estado\": \"listo para servir\"}\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{protocolo}}://{{server}}:{{puerto}}/{{app}}/{{pedidos}}/1000",
+							"protocol": "{{protocolo}}",
+							"host": [
+								"{{server}}"
+							],
+							"port": "{{puerto}}",
+							"path": [
+								"{{app}}",
+								"{{pedidos}}",
+								"1000"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "7-CambiarEstado Pedido Autenticado",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"idMesa\": 1000,\r\n    \"nombreUsuario\": \"oscar\",\r\n    \"nombreCliente\": \"Franco\",\r\n    \"estado\": \"listo para servir\",\r\n    \"items\": [\r\n        {\"nombreProducto\": \"Milanesa a Caballo\", \"cantidad\": 1 , \"estado\": \"listo para servir\"},\r\n        {\"nombreProducto\": \"Hamburguesa de Garbanzo\", \"cantidad\": 2, \"estado\": \"listo para servir\"},\r\n        {\"nombreProducto\": \"Corona\", \"cantidad\": 1 , \"estado\": \"listo para servir\"},\r\n        {\"nombreProducto\": \"Daiquiri\", \"cantidad\": 1 , \"estado\": \"listo para servir\"}\r\n    ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{protocolo}}://{{server}}:{{puerto}}/{{app}}/{{pedidos}}/1000",
+									"protocol": "{{protocolo}}",
+									"host": [
+										"{{server}}"
+									],
+									"port": "{{puerto}}",
+									"path": [
+										"{{app}}",
+										"{{pedidos}}",
+										"1000"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:666"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 24 Nov 2023 04:14:22 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.4"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"mensaje\": \"Pedido modificado con éxito\",\n    \"Pedido\": {\n        \"idPedido\": 1000,\n        \"idMesa\": 1000,\n        \"usuarioAsignado\": 2,\n        \"itemsPedidos\": [\n            {\n                \"idPedido\": 1000,\n                \"idProducto\": 11,\n                \"cantidad\": 1,\n                \"fechaCreacion\": {\n                    \"date\": \"2023-11-24 01:14:20.000000\",\n                    \"timezone_type\": 3,\n                    \"timezone\": \"America/Argentina/Buenos_Aires\"\n                },\n                \"fechaEstimadaFinalizacion\": {\n                    \"date\": \"2023-11-24 01:29:20.000000\",\n                    \"timezone_type\": 3,\n                    \"timezone\": \"America/Argentina/Buenos_Aires\"\n                },\n                \"fechaFinalizacion\": null,\n                \"estado\": \"listo para servir\",\n                \"minutosEstimados\": 15\n            },\n            {\n                \"idPedido\": 1000,\n                \"idProducto\": 12,\n                \"cantidad\": 2,\n                \"fechaCreacion\": {\n                    \"date\": \"2023-11-24 01:14:20.000000\",\n                    \"timezone_type\": 3,\n                    \"timezone\": \"America/Argentina/Buenos_Aires\"\n                },\n                \"fechaEstimadaFinalizacion\": {\n                    \"date\": \"2023-11-24 01:34:20.000000\",\n                    \"timezone_type\": 3,\n                    \"timezone\": \"America/Argentina/Buenos_Aires\"\n                },\n                \"fechaFinalizacion\": null,\n                \"estado\": \"listo para servir\",\n                \"minutosEstimados\": 20\n            },\n            {\n                \"idPedido\": 1000,\n                \"idProducto\": 13,\n                \"cantidad\": 1,\n                \"fechaCreacion\": {\n                    \"date\": \"2023-11-24 01:14:20.000000\",\n                    \"timezone_type\": 3,\n                    \"timezone\": \"America/Argentina/Buenos_Aires\"\n                },\n                \"fechaEstimadaFinalizacion\": {\n                    \"date\": \"2023-11-24 01:19:20.000000\",\n                    \"timezone_type\": 3,\n                    \"timezone\": \"America/Argentina/Buenos_Aires\"\n                },\n                \"fechaFinalizacion\": null,\n                \"estado\": \"listo para servir\",\n                \"minutosEstimados\": 5\n            },\n            {\n                \"idPedido\": 1000,\n                \"idProducto\": 2,\n                \"cantidad\": 1,\n                \"fechaCreacion\": {\n                    \"date\": \"2023-11-24 01:14:20.000000\",\n                    \"timezone_type\": 3,\n                    \"timezone\": \"America/Argentina/Buenos_Aires\"\n                },\n                \"fechaEstimadaFinalizacion\": {\n                    \"date\": \"2023-11-24 01:21:20.000000\",\n                    \"timezone_type\": 3,\n                    \"timezone\": \"America/Argentina/Buenos_Aires\"\n                },\n                \"fechaFinalizacion\": null,\n                \"estado\": \"listo para servir\",\n                \"minutosEstimados\": 7\n            }\n        ],\n        \"fechaCreacion\": {\n            \"date\": \"2023-11-23 23:01:30.000000\",\n            \"timezone_type\": 3,\n            \"timezone\": \"America/Argentina/Buenos_Aires\"\n        },\n        \"fechaEstimadaDeFinalizacion\": {\n            \"date\": \"2023-11-23 23:48:30.000000\",\n            \"timezone_type\": 3,\n            \"timezone\": \"America/Argentina/Buenos_Aires\"\n        },\n        \"fechaFinalizacion\": null,\n        \"estado\": \"listo para servir\",\n        \"importeTotal\": 720,\n        \"nombreCliente\": \"Franco\",\n        \"minutosEstimados\": 47\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "7-ModificarMesa Autorizado",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "X-Http-Method-Override",
+								"value": "PUT",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"estado\": \"con_cliente_comiendo\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server}}:{{puerto}}/{{app}}/{{mesas}}/1000",
+							"host": [
+								"{{server}}"
+							],
+							"port": "{{puerto}}",
+							"path": [
+								"{{app}}",
+								"{{mesas}}",
+								"1000"
+							],
+							"query": [
+								{
+									"key": "idMesa",
+									"value": "1000",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "7-ModificarMesa Autorizado",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "X-Http-Method-Override",
+										"value": "PUT",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"estado\": \"con_cliente_comiendo\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{server}}:{{puerto}}/{{app}}/{{mesas}}/1000",
+									"host": [
+										"{{server}}"
+									],
+									"port": "{{puerto}}",
+									"path": [
+										"{{app}}",
+										"{{mesas}}",
+										"1000"
+									],
+									"query": [
+										{
+											"key": "idMesa",
+											"value": "1000",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:666"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 25 Nov 2023 00:10:14 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.4"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"mensaje\": \"Mesa modificada con éxito\"\n}"
+						}
+					]
+				},
+				{
+					"name": "8-ObtenerPedidos Autorizado",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{protocolo}}://{{server}}:{{puerto}}/{{app}}/{{pedidos}}?incluirItems=true",
+							"protocol": "{{protocolo}}",
+							"host": [
+								"{{server}}"
+							],
+							"port": "{{puerto}}",
+							"path": [
+								"{{app}}",
+								"{{pedidos}}"
+							],
+							"query": [
+								{
+									"key": "estado",
+									"value": "pendiente",
+									"description": "pendiente, en preparación, listo para servir, cancelado",
+									"disabled": true
+								},
+								{
+									"key": "idMesa",
+									"value": "1000",
+									"disabled": true
+								},
+								{
+									"key": "idPedido",
+									"value": "1001",
+									"disabled": true
+								},
+								{
+									"key": "incluirItems",
+									"value": "true",
+									"description": "true,false"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "8-ObtenerPedidos Autorizado",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{protocolo}}://{{server}}:{{puerto}}/{{app}}/{{pedidos}}?incluirItems=true",
+									"protocol": "{{protocolo}}",
+									"host": [
+										"{{server}}"
+									],
+									"port": "{{puerto}}",
+									"path": [
+										"{{app}}",
+										"{{pedidos}}"
+									],
+									"query": [
+										{
+											"key": "estado",
+											"value": "pendiente",
+											"description": "pendiente, en preparación, listo para servir, cancelado",
+											"disabled": true
+										},
+										{
+											"key": "idMesa",
+											"value": "1000",
+											"disabled": true
+										},
+										{
+											"key": "idPedido",
+											"value": "1001",
+											"disabled": true
+										},
+										{
+											"key": "incluirItems",
+											"value": "true",
+											"description": "true,false"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:666"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 25 Nov 2023 00:15:19 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.4"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"listaPedido\": [\n        {\n            \"idPedido\": 1000,\n            \"idMesa\": 1000,\n            \"usuarioAsignado\": 2,\n            \"itemsPedidos\": [\n                {\n                    \"idPedido\": 1000,\n                    \"idProducto\": 11,\n                    \"cantidad\": 1,\n                    \"fechaCreacion\": {\n                        \"date\": \"2023-11-24 01:14:20.000000\",\n                        \"timezone_type\": 3,\n                        \"timezone\": \"America/Argentina/Buenos_Aires\"\n                    },\n                    \"fechaEstimadaFinalizacion\": {\n                        \"date\": \"2023-11-24 01:29:20.000000\",\n                        \"timezone_type\": 3,\n                        \"timezone\": \"America/Argentina/Buenos_Aires\"\n                    },\n                    \"fechaFinalizacion\": null,\n                    \"estado\": \"listo para servir\",\n                    \"minutosEstimados\": 15\n                },\n                {\n                    \"idPedido\": 1000,\n                    \"idProducto\": 12,\n                    \"cantidad\": 2,\n                    \"fechaCreacion\": {\n                        \"date\": \"2023-11-24 01:14:20.000000\",\n                        \"timezone_type\": 3,\n                        \"timezone\": \"America/Argentina/Buenos_Aires\"\n                    },\n                    \"fechaEstimadaFinalizacion\": {\n                        \"date\": \"2023-11-24 01:34:20.000000\",\n                        \"timezone_type\": 3,\n                        \"timezone\": \"America/Argentina/Buenos_Aires\"\n                    },\n                    \"fechaFinalizacion\": null,\n                    \"estado\": \"listo para servir\",\n                    \"minutosEstimados\": 20\n                },\n                {\n                    \"idPedido\": 1000,\n                    \"idProducto\": 13,\n                    \"cantidad\": 1,\n                    \"fechaCreacion\": {\n                        \"date\": \"2023-11-24 01:14:20.000000\",\n                        \"timezone_type\": 3,\n                        \"timezone\": \"America/Argentina/Buenos_Aires\"\n                    },\n                    \"fechaEstimadaFinalizacion\": {\n                        \"date\": \"2023-11-24 01:19:20.000000\",\n                        \"timezone_type\": 3,\n                        \"timezone\": \"America/Argentina/Buenos_Aires\"\n                    },\n                    \"fechaFinalizacion\": null,\n                    \"estado\": \"listo para servir\",\n                    \"minutosEstimados\": 5\n                },\n                {\n                    \"idPedido\": 1000,\n                    \"idProducto\": 2,\n                    \"cantidad\": 1,\n                    \"fechaCreacion\": {\n                        \"date\": \"2023-11-24 01:14:20.000000\",\n                        \"timezone_type\": 3,\n                        \"timezone\": \"America/Argentina/Buenos_Aires\"\n                    },\n                    \"fechaEstimadaFinalizacion\": {\n                        \"date\": \"2023-11-24 01:21:20.000000\",\n                        \"timezone_type\": 3,\n                        \"timezone\": \"America/Argentina/Buenos_Aires\"\n                    },\n                    \"fechaFinalizacion\": null,\n                    \"estado\": \"listo para servir\",\n                    \"minutosEstimados\": 7\n                }\n            ],\n            \"fechaCreacion\": {\n                \"date\": \"2023-11-23 23:01:30.000000\",\n                \"timezone_type\": 3,\n                \"timezone\": \"America/Argentina/Buenos_Aires\"\n            },\n            \"fechaEstimadaDeFinalizacion\": {\n                \"date\": \"2023-11-23 23:48:30.000000\",\n                \"timezone_type\": 3,\n                \"timezone\": \"America/Argentina/Buenos_Aires\"\n            },\n            \"fechaFinalizacion\": null,\n            \"estado\": \"listo para servir\",\n            \"importeTotal\": 720,\n            \"nombreCliente\": \"Franco\",\n            \"minutosEstimados\": 47\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "9-ModificarMesa Autorizado",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "X-Http-Method-Override",
+								"value": "PUT",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"estado\": \"con_cliente_pagando\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server}}:{{puerto}}/{{app}}/{{mesas}}/1000",
+							"host": [
+								"{{server}}"
+							],
+							"port": "{{puerto}}",
+							"path": [
+								"{{app}}",
+								"{{mesas}}",
+								"1000"
+							],
+							"query": [
+								{
+									"key": "idMesa",
+									"value": "1000",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "9-ModificarMesa Autorizado",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "X-Http-Method-Override",
+										"value": "PUT",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"estado\": \"con_cliente_pagando\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{server}}:{{puerto}}/{{app}}/{{mesas}}/1000",
+									"host": [
+										"{{server}}"
+									],
+									"port": "{{puerto}}",
+									"path": [
+										"{{app}}",
+										"{{mesas}}",
+										"1000"
+									],
+									"query": [
+										{
+											"key": "idMesa",
+											"value": "1000",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:666"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 25 Nov 2023 00:15:36 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.4"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"mensaje\": \"Mesa modificada con éxito\"\n}"
+						}
+					]
+				},
+				{
+					"name": "9B-CambiarEstado Pedido Autenticado",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idMesa\": 1000,\r\n    \"nombreUsuario\": \"oscar\",\r\n    \"nombreCliente\": \"Franco\",\r\n    \"estado\": \"pagado\",\r\n    \"items\": [\r\n        {\"nombreProducto\": \"Milanesa a Caballo\", \"cantidad\": 1 , \"estado\": \"listo para servir\"},\r\n        {\"nombreProducto\": \"Hamburguesa de Garbanzo\", \"cantidad\": 2, \"estado\": \"listo para servir\"},\r\n        {\"nombreProducto\": \"Corona\", \"cantidad\": 1 , \"estado\": \"listo para servir\"},\r\n        {\"nombreProducto\": \"Daiquiri\", \"cantidad\": 1 , \"estado\": \"listo para servir\"}\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{protocolo}}://{{server}}:{{puerto}}/{{app}}/{{pedidos}}/1000",
+							"protocol": "{{protocolo}}",
+							"host": [
+								"{{server}}"
+							],
+							"port": "{{puerto}}",
+							"path": [
+								"{{app}}",
+								"{{pedidos}}",
+								"1000"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "9B-CambiarEstado Pedido Autenticado",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"idMesa\": 1000,\r\n    \"nombreUsuario\": \"oscar\",\r\n    \"nombreCliente\": \"Franco\",\r\n    \"estado\": \"pagado\",\r\n    \"items\": [\r\n        {\"nombreProducto\": \"Milanesa a Caballo\", \"cantidad\": 1 , \"estado\": \"listo para servir\"},\r\n        {\"nombreProducto\": \"Hamburguesa de Garbanzo\", \"cantidad\": 2, \"estado\": \"listo para servir\"},\r\n        {\"nombreProducto\": \"Corona\", \"cantidad\": 1 , \"estado\": \"listo para servir\"},\r\n        {\"nombreProducto\": \"Daiquiri\", \"cantidad\": 1 , \"estado\": \"listo para servir\"}\r\n    ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{protocolo}}://{{server}}:{{puerto}}/{{app}}/{{pedidos}}/1000",
+									"protocol": "{{protocolo}}",
+									"host": [
+										"{{server}}"
+									],
+									"port": "{{puerto}}",
+									"path": [
+										"{{app}}",
+										"{{pedidos}}",
+										"1000"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:666"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 25 Nov 2023 15:33:40 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.4"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"mensaje\": \"Pedido modificado con éxito\",\n    \"Pedido\": {\n        \"idPedido\": 1000,\n        \"idMesa\": 1000,\n        \"usuarioAsignado\": 2,\n        \"itemsPedidos\": [\n            {\n                \"idPedido\": 1000,\n                \"idProducto\": 11,\n                \"cantidad\": 1,\n                \"fechaCreacion\": {\n                    \"date\": \"2023-11-25 12:33:32.000000\",\n                    \"timezone_type\": 3,\n                    \"timezone\": \"America/Argentina/Buenos_Aires\"\n                },\n                \"fechaEstimadaFinalizacion\": {\n                    \"date\": \"2023-11-25 12:48:32.000000\",\n                    \"timezone_type\": 3,\n                    \"timezone\": \"America/Argentina/Buenos_Aires\"\n                },\n                \"fechaFinalizacion\": {\n                    \"date\": \"2023-11-25 12:33:32.000000\",\n                    \"timezone_type\": 3,\n                    \"timezone\": \"America/Argentina/Buenos_Aires\"\n                },\n                \"estado\": \"listo para servir\",\n                \"minutosEstimados\": 15\n            },\n            {\n                \"idPedido\": 1000,\n                \"idProducto\": 12,\n                \"cantidad\": 2,\n                \"fechaCreacion\": {\n                    \"date\": \"2023-11-25 12:33:32.000000\",\n                    \"timezone_type\": 3,\n                    \"timezone\": \"America/Argentina/Buenos_Aires\"\n                },\n                \"fechaEstimadaFinalizacion\": {\n                    \"date\": \"2023-11-25 12:53:32.000000\",\n                    \"timezone_type\": 3,\n                    \"timezone\": \"America/Argentina/Buenos_Aires\"\n                },\n                \"fechaFinalizacion\": {\n                    \"date\": \"2023-11-25 12:33:32.000000\",\n                    \"timezone_type\": 3,\n                    \"timezone\": \"America/Argentina/Buenos_Aires\"\n                },\n                \"estado\": \"listo para servir\",\n                \"minutosEstimados\": 20\n            },\n            {\n                \"idPedido\": 1000,\n                \"idProducto\": 13,\n                \"cantidad\": 1,\n                \"fechaCreacion\": {\n                    \"date\": \"2023-11-25 12:33:32.000000\",\n                    \"timezone_type\": 3,\n                    \"timezone\": \"America/Argentina/Buenos_Aires\"\n                },\n                \"fechaEstimadaFinalizacion\": {\n                    \"date\": \"2023-11-25 12:38:32.000000\",\n                    \"timezone_type\": 3,\n                    \"timezone\": \"America/Argentina/Buenos_Aires\"\n                },\n                \"fechaFinalizacion\": {\n                    \"date\": \"2023-11-25 12:33:32.000000\",\n                    \"timezone_type\": 3,\n                    \"timezone\": \"America/Argentina/Buenos_Aires\"\n                },\n                \"estado\": \"listo para servir\",\n                \"minutosEstimados\": 5\n            },\n            {\n                \"idPedido\": 1000,\n                \"idProducto\": 2,\n                \"cantidad\": 1,\n                \"fechaCreacion\": {\n                    \"date\": \"2023-11-25 12:33:32.000000\",\n                    \"timezone_type\": 3,\n                    \"timezone\": \"America/Argentina/Buenos_Aires\"\n                },\n                \"fechaEstimadaFinalizacion\": {\n                    \"date\": \"2023-11-25 12:40:32.000000\",\n                    \"timezone_type\": 3,\n                    \"timezone\": \"America/Argentina/Buenos_Aires\"\n                },\n                \"fechaFinalizacion\": {\n                    \"date\": \"2023-11-25 12:33:32.000000\",\n                    \"timezone_type\": 3,\n                    \"timezone\": \"America/Argentina/Buenos_Aires\"\n                },\n                \"estado\": \"listo para servir\",\n                \"minutosEstimados\": 7\n            }\n        ],\n        \"fechaCreacion\": {\n            \"date\": \"2023-11-23 23:01:30.000000\",\n            \"timezone_type\": 3,\n            \"timezone\": \"America/Argentina/Buenos_Aires\"\n        },\n        \"fechaEstimadaDeFinalizacion\": {\n            \"date\": \"2023-11-23 23:48:30.000000\",\n            \"timezone_type\": 3,\n            \"timezone\": \"America/Argentina/Buenos_Aires\"\n        },\n        \"fechaFinalizacion\": {\n            \"date\": \"2023-11-25 12:33:32.000000\",\n            \"timezone_type\": 3,\n            \"timezone\": \"America/Argentina/Buenos_Aires\"\n        },\n        \"estado\": \"pagado\",\n        \"importeTotal\": 720,\n        \"nombreCliente\": \"Franco\",\n        \"minutosEstimados\": 47\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "10-ModificarMesa Autorizado Copy",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "X-Http-Method-Override",
+								"value": "PUT",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"estado\": \"cerrada\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server}}:{{puerto}}/{{app}}/{{mesas}}/1000",
+							"host": [
+								"{{server}}"
+							],
+							"port": "{{puerto}}",
+							"path": [
+								"{{app}}",
+								"{{mesas}}",
+								"1000"
+							],
+							"query": [
+								{
+									"key": "idMesa",
+									"value": "1000",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "10-ModificarMesa Autorizado",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "X-Http-Method-Override",
+										"value": "PUT",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"estado\": \"cerrada\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{server}}:{{puerto}}/{{app}}/{{mesas}}/1000",
+									"host": [
+										"{{server}}"
+									],
+									"port": "{{puerto}}",
+									"path": [
+										"{{app}}",
+										"{{mesas}}",
+										"1000"
+									],
+									"query": [
+										{
+											"key": "idMesa",
+											"value": "1000",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:666"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 25 Nov 2023 00:27:48 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.4"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"mensaje\": \"Mesa modificada con éxito\"\n}"
+						}
+					]
+				},
+				{
+					"name": "11-CargarEncuesta Autorizado",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "idPedido",
+									"value": "1000",
+									"type": "text"
+								},
+								{
+									"key": "idMesa",
+									"value": "1000",
+									"type": "text"
+								},
+								{
+									"key": "idMozo",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "idCocinero",
+									"value": "3",
+									"type": "text"
+								},
+								{
+									"key": "puntuacionMesa",
+									"value": "10",
+									"contentType": "",
+									"type": "text"
+								},
+								{
+									"key": "puntuacionRestaurante",
+									"value": "8",
+									"contentType": "",
+									"type": "text"
+								},
+								{
+									"key": "puntuacionMozo",
+									"value": "6",
+									"type": "text"
+								},
+								{
+									"key": "puntuacionCocinero",
+									"value": "5",
+									"type": "text"
+								},
+								{
+									"key": "experienciaTexto",
+									"value": "\"Muy bueno el pedido, aunque el mozo tardo demasiado\"",
+									"contentType": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{protocolo}}://{{server}}:{{puerto}}/{{app}}/{{encuestas}}",
+							"protocol": "{{protocolo}}",
+							"host": [
+								"{{server}}"
+							],
+							"port": "{{puerto}}",
+							"path": [
+								"{{app}}",
+								"{{encuestas}}"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "11-CargarEncuesta Autorizado",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "PHP_AUTH_USER",
+										"value": "cristobal_socio",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "idPedido",
+											"value": "1000",
+											"type": "text"
+										},
+										{
+											"key": "idMesa",
+											"value": "1000",
+											"type": "text"
+										},
+										{
+											"key": "idMozo",
+											"value": "2",
+											"type": "text"
+										},
+										{
+											"key": "idCocinero",
+											"value": "3",
+											"type": "text"
+										},
+										{
+											"key": "puntuacionMesa",
+											"value": "10",
+											"contentType": "",
+											"type": "text"
+										},
+										{
+											"key": "puntuacionRestaurante",
+											"value": "8",
+											"contentType": "",
+											"type": "text"
+										},
+										{
+											"key": "puntuacionMozo",
+											"value": "6",
+											"type": "text"
+										},
+										{
+											"key": "puntuacionCocinero",
+											"value": "5",
+											"type": "text"
+										},
+										{
+											"key": "experienciaTexto",
+											"value": "\"Muy bueno el pedido, aunque el mozo tardo demasiado\"",
+											"contentType": "",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{protocolo}}://{{server}}:{{puerto}}/{{app}}/{{encuestas}}",
+									"protocol": "{{protocolo}}",
+									"host": [
+										"{{server}}"
+									],
+									"port": "{{puerto}}",
+									"path": [
+										"{{app}}",
+										"{{encuestas}}"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:666"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 25 Nov 2023 15:37:38 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.4"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"mensaje\": \"Encuesta creada con éxito\",\n    \"id\": \"1\"\n}"
+						}
+					]
+				},
+				{
+					"name": "12-ObtenerEncuesta Autorizado",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{protocolo}}://{{server}}:{{puerto}}/{{app}}/{{encuestas}}?idMesa=1000&idMozo=2&idCocinero=3&puntuacionMesa=10&puntuacionRestaurante=8&puntuacionMozo=6",
+							"protocol": "{{protocolo}}",
+							"host": [
+								"{{server}}"
+							],
+							"port": "{{puerto}}",
+							"path": [
+								"{{app}}",
+								"{{encuestas}}"
+							],
+							"query": [
+								{
+									"key": "idMesa",
+									"value": "1000"
+								},
+								{
+									"key": "idMozo",
+									"value": "2"
+								},
+								{
+									"key": "idCocinero",
+									"value": "3"
+								},
+								{
+									"key": "puntuacionMesa",
+									"value": "10"
+								},
+								{
+									"key": "puntuacionRestaurante",
+									"value": "8"
+								},
+								{
+									"key": "puntuacionMozo",
+									"value": "6"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "12-ObtenerEncuesta Autorizado",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "PHP_AUTH_USER",
+										"value": "cristobal_socio",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{protocolo}}://{{server}}:{{puerto}}/{{app}}/{{encuestas}}?idMesa=1000&idMozo=2&idCocinero=3&puntuacionMesa=10&puntuacionRestaurante=8&puntuacionMozo=6",
+									"protocol": "{{protocolo}}",
+									"host": [
+										"{{server}}"
+									],
+									"port": "{{puerto}}",
+									"path": [
+										"{{app}}",
+										"{{encuestas}}"
+									],
+									"query": [
+										{
+											"key": "idMesa",
+											"value": "1000"
+										},
+										{
+											"key": "idMozo",
+											"value": "2"
+										},
+										{
+											"key": "idCocinero",
+											"value": "3"
+										},
+										{
+											"key": "puntuacionMesa",
+											"value": "10"
+										},
+										{
+											"key": "puntuacionRestaurante",
+											"value": "8"
+										},
+										{
+											"key": "puntuacionMozo",
+											"value": "6"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:666"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 25 Nov 2023 16:15:57 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.4"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"idEncuesta\": 1,\n        \"idPedido\": 1000,\n        \"idMesa\": 1000,\n        \"idMozo\": 2,\n        \"idCocinero\": 3,\n        \"puntuacionMesa\": 10,\n        \"puntuacionRestaurante\": 8,\n        \"puntuacionMozo\": 6,\n        \"puntuacionCocinero\": 5,\n        \"experienciaTexto\": \"\\\"Muy bueno el pedido, aunque el mozo tardo demasiado\\\"\",\n        \"fechaCreacion\": {\n            \"date\": \"2023-11-25 12:37:38.000000\",\n            \"timezone_type\": 3,\n            \"timezone\": \"America/Argentina/Buenos_Aires\"\n        }\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "13-ObtenerMesas Autorizado",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{protocolo}}://{{server}}:{{puerto}}/{{app}}/{{mesas}}?traerMesaMasUsada=true",
+							"protocol": "{{protocolo}}",
+							"host": [
+								"{{server}}"
+							],
+							"port": "{{puerto}}",
+							"path": [
+								"{{app}}",
+								"{{mesas}}"
+							],
+							"query": [
+								{
+									"key": "traerMesaMasUsada",
+									"value": "true"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "ObtenerMesas Autorizado Copy",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "PHP_AUTH_USER",
+										"value": "cristobal_socio",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{protocolo}}://{{server}}:{{puerto}}/{{app}}/{{mesas}}?traerMesaMasUsada=true",
+									"protocol": "{{protocolo}}",
+									"host": [
+										"{{server}}"
+									],
+									"port": "{{puerto}}",
+									"path": [
+										"{{app}}",
+										"{{mesas}}"
+									],
+									"query": [
+										{
+											"key": "traerMesaMasUsada",
+											"value": "true"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:666"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 25 Nov 2023 16:31:07 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.4"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"mesa_mas_usada\": {\n        \"id_mesa\": 1000,\n        \"cantidad\": 1\n    }\n}"
+						}
+					]
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "{{token}}",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Generar Token Admin",
 			"request": {
 				"method": "POST",
 				"header": [],
@@ -2123,12 +4018,12 @@
 					"formdata": [
 						{
 							"key": "usuario",
-							"value": "cristobal_socio",
+							"value": "admin",
 							"type": "text"
 						},
 						{
 							"key": "contraseña",
-							"value": "*4D78C66DBC6FA11E7084240C135637D650FECAB7",
+							"value": "admin123",
 							"type": "text"
 						}
 					]
@@ -2197,6 +4092,47 @@
 				}
 			},
 			"response": []
+		},
+		{
+			"name": "SignUp Cliente",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "nombre",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "user",
+							"value": "admin",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "admin123",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{protocolo}}://{{server}}:{{puerto}}/{{app}}/auth/signUp",
+					"protocol": "{{protocolo}}",
+					"host": [
+						"{{server}}"
+					],
+					"port": "{{puerto}}",
+					"path": [
+						"{{app}}",
+						"auth",
+						"signUp"
+					]
+				}
+			},
+			"response": []
 		}
 	],
 	"event": [
@@ -2226,13 +4162,13 @@
 			"type": "string"
 		},
 		{
-			"key": "server",
-			"value": "localhost",
+			"key": "protocolo",
+			"value": "http",
 			"type": "string"
 		},
 		{
-			"key": "protocolo",
-			"value": "http",
+			"key": "server",
+			"value": "localhost",
 			"type": "string"
 		},
 		{
@@ -2268,6 +4204,26 @@
 		{
 			"key": "encuestas",
 			"value": "encuestas",
+			"type": "string"
+		},
+		{
+			"key": "token_admin",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "token",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "token_moza_sofia",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "token_cliente_1",
+			"value": "",
 			"type": "string"
 		}
 	]

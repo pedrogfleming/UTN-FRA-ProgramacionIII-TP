@@ -18,21 +18,25 @@ class Usuario{
     const TIPO_COCINERO = "cocinero";
     const TIPO_SOCIO = "socio";
     const TIPO_ADMIN = "admin";
+    const TIPO_CLIENTE = "cliente";
 
     const SECTOR_COCINA = "cocina";
     const SECTOR_CERVECERIA = "cerveza";
     const SECTOR_MESAS = "mesas";
-    const SECTOR_ADMINISTRACION = "adminisracion";
+    const SECTOR_ADMINISTRACION = "administracion";
     const SECTOR_BAR = "bar";
+    const SECTOR_CLIENTE = "cliente";
 
     public function crearUsuario()
     {
         $objAccesoDatos = AccesoDatos::obtenerInstancia();
         $consulta = $objAccesoDatos->prepararConsulta("INSERT INTO usuarios (nombre, fechaCreacion,user,password,sector,tipo) VALUES (?,?,?,?,?,?)");
-        $fecha = new DateTime("now",new DateTimeZone("America/Argentina/Buenos_Aires"));
+        $fechaCreacion = new DateTime("now",new DateTimeZone("America/Argentina/Buenos_Aires"));
+        $fechaCreacionString = date_format($fechaCreacion, 'Y-m-d H:i:s');
+
         $claveHash = password_hash($this->password, PASSWORD_DEFAULT);
         $consulta->bindParam(1, $this->nombre);
-        $consulta->bindParam(2, date_format($fecha, 'Y-m-d H:i:s'));
+        $consulta->bindParam(2, $fechaCreacionString);
         $consulta->bindParam(3, $this->user);
         $consulta->bindParam(4, $claveHash);
         $consulta->bindParam(5, $this->sector);

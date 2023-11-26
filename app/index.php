@@ -55,8 +55,17 @@ if (!file_exists(SETTINGS)) {
 
 // JWT en login
 $app->group('/auth', function (RouteCollectorProxy $group) {
-    $group->post('/login', \AuthController::class . ':GenerarToken');
+    $contenidos = file_get_contents(SETTINGS);
+    $settings = json_decode($contenidos, true);
+    if ($settings === null) {
+        echo 'Error al decodificar el archivo settings.';
+        exit;
+    }
+    $loginReqValidatorKeys = $settings['usuarios']['Login']['validation_config'];
+    $signUpReqValidatoryKeys = $settings['usuarios']['SignUp']['validation_config'];
+    $group->post('/login', \AuthController::class . ':GenerarToken')->add(new RequestValidatorMiddleware($loginReqValidatorKeys));
     $group->get('/verificarToken', \AuthController::class . ':VerificarToken');
+    $group->post('/signUp', \AuthController::class . ':SignUp')->add(new RequestValidatorMiddleware($signUpReqValidatoryKeys));
 });
 
 
@@ -122,11 +131,12 @@ $app->group('/pedidos', function (RouteCollectorProxy $group) {
 
     $cargarUnoPedido = new AuthorizationMiddleware([ROL_ADMIN, ROL_SOCIO, ROL_MOZO]);
     $traerTodosPedido = new AuthorizationMiddleware([ROL_ADMIN, ROL_SOCIO,  ROL_CERVECERO, ROL_MOZO, ROL_COCINERO]);
+    $traerUnoPedido = new AuthorizationMiddleware([ROL_ADMIN, ROL_SOCIO,  ROL_CERVECERO, ROL_MOZO, ROL_COCINERO, ROL_CLIENTE]);
     $modificarUnoPedido = new AuthorizationMiddleware([ROL_ADMIN, ROL_SOCIO, ROL_MOZO]);
     $borrarUnoPedido = new AuthorizationMiddleware([ROL_ADMIN, ROL_SOCIO, ROL_MOZO]);
 
     $group->get('[/]', \PedidoController::class . ':TraerTodos')->add($traerTodosPedido);
-    $group->get('/{pedido}', \PedidoController::class . ':TraerUno')->add($traerTodosPedido);
+    $group->get('/{pedido}', \PedidoController::class . ':TraerUno')->add($traerUnoPedido);
     $group->post('[/]', \PedidoController::class . ':CargarUno')->add($cargarUnoPedido)->add(new RequestValidatorMiddleware($cargarUnoReqValidatorKeys));
     $group->put('/{pedido}', \PedidoController::class . ':ModificarUno')->add($modificarUnoPedido);
     $group->delete('/{pedido}', \PedidoController::class . ':BorrarUno')->add($borrarUnoPedido);

@@ -16,7 +16,7 @@ define("ROL_BARTENDER", "bartender");
 define("ROL_CERVECERO", "cervecero");
 define("ROL_MOZO", "mozo");
 define("ROL_COCINERO", "cocinero");
-
+define("ROL_CLIENTE", "cliente");
 
 // Sectores
 define("SECTOR_COCINA", "cocina");
@@ -24,7 +24,7 @@ define("SECTOR_CERVECERIA", "cerveza");
 define("SECTOR_MESAS", "mesas");
 define("SECTOR_ADMINISTRACION", "administracion");
 define("SECTOR_BAR", "bar");
-
+define("SECTOR_CLIENTE", "cliente");
 // eliminacion logica
 
 define("ACTIVO", 0);

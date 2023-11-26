@@ -42,6 +42,25 @@
                 "required_keys": [],
                 "nested_keys": {}
             }
+        },
+        "SignUp":{
+            "validation_config": {
+                "required_keys": [
+                    "nombre",
+                    "usuario",
+                    "contraseña"
+                ],
+                "nested_keys": {}
+            }
+        },
+        "Login": {
+            "validation_config": {
+                "required_keys": [
+                    "usuario",
+                    "contraseña"
+                ],
+                "nested_keys": {}
+            }
         }
     },
     "productos": {

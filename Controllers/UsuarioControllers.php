@@ -21,6 +21,15 @@ class UsuarioController
         $usr->tipo = $tipo;
         $usr->password = $password;
 
+        $existeNombreUsuario = Usuario::obtenerUsuarioByName($usr->nombre);
+        if($existeNombreUsuario) {
+            throw new Exception("Ya existe el nombre de usuario suministrado, elija otro");
+        }
+        $existeUsername = Usuario::obtenerUsuarioByUsername($user);
+        if($existeUsername) {
+            throw new Exception("Ya existe el username suministrado, elija otro");
+        }
+
         $usr->crearUsuario();
 
         $payload = json_encode(array("mensaje" => "Usuario creado con exito"));

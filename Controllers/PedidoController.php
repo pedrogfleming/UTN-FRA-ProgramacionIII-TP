@@ -85,12 +85,22 @@ class PedidoController implements IApiUsable
         $filtroIdMesa = isset($filtroIdMesa['idMesa']) ? $filtroIdMesa['idMesa'] : null;
 
         $pedido = Pedido::obtenerPedido($id);
-        if (!$pedido || $pedido->idMesa != $filtroIdMesa) {
+        if (!$pedido || ($filtroIdMesa && $pedido->idMesa != $filtroIdMesa)) {
             $ret = new stdClass();
             $ret->err = "no se encontro el pedido con el id solicitado";
             $err_payload = json_encode($ret);
             $response->getBody()->write($err_payload);
         } else {
+            $header = $request->getHeaderLine('Authorization');
+            $token = trim(explode("Bearer", $header)[1]);
+            $data = AutentificadorJWT::ObtenerData($token);
+            if($data->tipo == Usuario::TIPO_CLIENTE){
+                $pedido = array(
+                    "idPedido" => $pedido->idPedido,
+                    "idMesa" => $pedido->idMesa,
+                    "tiempoDemoraPedido" => $pedido->minutosEstimados
+                );
+            }
             $payload = json_encode($pedido);
             $response->getBody()->write($payload);
         }
