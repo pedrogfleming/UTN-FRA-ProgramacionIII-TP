@@ -2147,6 +2147,52 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "Cargar Masiva Productos Copy",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token_admin}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "productos",
+									"type": "file",
+									"src": "/D:/Repos/UTN-FRA-ProgramacionIII-TP/assets/productos.csv"
+								},
+								{
+									"key": "omitirRepetidos",
+									"value": "false",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{protocolo}}://{{server}}:{{puerto}}/{{app}}/{{productos}}/cargaMasiva",
+							"protocol": "{{protocolo}}",
+							"host": [
+								"{{server}}"
+							],
+							"port": "{{puerto}}",
+							"path": [
+								"{{app}}",
+								"{{productos}}",
+								"cargaMasiva"
+							]
+						}
+					},
+					"response": []
 				}
 			],
 			"auth": {
@@ -2384,7 +2430,7 @@
 								},
 								{
 									"key": "nombreMozo",
-									"value": "oscar",
+									"value": "Sofia",
 									"type": "text"
 								},
 								{
@@ -2396,7 +2442,7 @@
 									"key": "fotoPedido",
 									"contentType": "",
 									"type": "file",
-									"src": "/D:/Environments/XAMP/htdocs/UTN-ProgramacionIII-TP/app-comanda/assets/comidaTragos.jpg"
+									"src": "/D:/Repos/UTN-FRA-ProgramacionIII-TP/assets/comidaTragos.jpg"
 								},
 								{
 									"key": "items[0][nombreProducto]",
